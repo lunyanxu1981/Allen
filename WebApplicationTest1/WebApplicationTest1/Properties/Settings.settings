@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebApplicationTest1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebApplicationTest1_IPGWebReference_IPGApiOrderService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://ipg-dev-1.1dc.com:443/ipgapi/services</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

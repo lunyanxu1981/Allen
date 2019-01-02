@@ -1,0 +1,36 @@
+﻿@model WebApplicationTest1.Models.Product
+@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .paTextArea {
+        height:300px;
+        width:800px;
+    }
+
+</style>
+<div class="jumbotron">
+    <h1>My Test</h1>
+    
+</div>
+
+<div class="row">
+    <div >
+        <h2>Getting started</h2>
+        @using (Html.BeginForm()){ 
+        <p>
+            @Html.TextAreaFor(m=>m.PayerAuthHTML, new { @class= "paTextArea"})
+
+            <br /><br />
+            <input type="submit" value="Encrypt" formaction=@Url.Action("Encrypt") />&nbsp;&nbsp;
+            <input type="submit" value="Encrypt" formaction=@Url.Action("Decrypt") />
+        </p>
+        <p>
+            @Html.TextAreaFor(m=>m.PayerAuthHTMLEncrypted, new { @class = "paTextArea" })
+            
+        </p>
+        }
+        
+    </div>
+   
+</div>

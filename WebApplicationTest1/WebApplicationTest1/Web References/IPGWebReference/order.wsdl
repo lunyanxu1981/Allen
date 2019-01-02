@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:tns="http://ipg-online.com/ipgapi/schemas/ipgapi" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1" elementFormDefault="qualified" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="../schemas/v1.xsd" namespace="http://ipg-online.com/ipgapi/schemas/v1" />
+      <xs:import schemaLocation="../schemas/a1.xsd" namespace="http://ipg-online.com/ipgapi/schemas/a1" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IPGApiOrderResponse">
+    <wsdl:part name="IPGApiOrderResponse" element="tns:IPGApiOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiActionRequest">
+    <wsdl:part name="IPGApiActionRequest" element="tns:IPGApiActionRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiOrderRequest">
+    <wsdl:part name="IPGApiOrderRequest" element="tns:IPGApiOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiActionResponse">
+    <wsdl:part name="IPGApiActionResponse" element="tns:IPGApiActionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPGApiOrder">
+    <wsdl:operation name="IPGApiOrder">
+      <wsdl:input name="IPGApiOrderRequest" message="tns:IPGApiOrderRequest" />
+      <wsdl:output name="IPGApiOrderResponse" message="tns:IPGApiOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="IPGApiAction">
+      <wsdl:input name="IPGApiActionRequest" message="tns:IPGApiActionRequest" />
+      <wsdl:output name="IPGApiActionResponse" message="tns:IPGApiActionResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IPGApiOrderSoap11" type="tns:IPGApiOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IPGApiOrder">
+      <soap:operation soapAction="" />
+      <wsdl:input name="IPGApiOrderRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IPGApiOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPGApiAction">
+      <soap:operation soapAction="" />
+      <wsdl:input name="IPGApiActionRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IPGApiActionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPGApiOrderService">
+    <wsdl:port name="IPGApiOrderSoap11" binding="tns:IPGApiOrderSoap11">
+      <soap:address location="https://ipg-dev-1.1dc.com:443/ipgapi/services" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
