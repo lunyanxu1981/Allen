@@ -7,11 +7,18 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
-
 using System.Diagnostics;
+using Newtonsoft.Json;
 
 namespace ConsoleAppTest
 {
+
+    public class JsonTestObject
+    {
+        public string Name { get; set; }
+        public int Status { get; set; }
+        public string Description { get; set; }
+    }
     public class AbcClass
     {
         public bool IsYes { get; set; }
@@ -95,12 +102,18 @@ namespace ConsoleAppTest
 
         static void Main(string[] args)
         {
-            string str = string.Empty;
-            string upper = str.ToUpper();
+            JsonConvertTest();
 
             Console.ReadLine();
         }
-        
+
+        public static void JsonConvertTest()
+        {
+            JsonTestObject obj = new JsonTestObject() { Name = "Allen", Status = 1, Description = "This is a test1" };
+            string jsonStr = JsonConvert.SerializeObject(obj);
+            var obj2 = JsonConvert.DeserializeObject<JsonTestObject>(jsonStr);
+        }
+
         public static void TestSubString()
         {
             var str = TestMD5Calc();
