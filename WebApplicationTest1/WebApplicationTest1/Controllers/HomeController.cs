@@ -11,6 +11,7 @@ using WebApplicationTest1.App_Start;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using WebApplicationTest1.IPGWebReference;
+using System.Text;
 
 namespace WebApplicationTest1.Controllers
 {
@@ -73,16 +74,15 @@ namespace WebApplicationTest1.Controllers
             {
                 Request.ClientCertificates.Add(certificate);
                 Request.Url = @"https://test.ipg-online.com:443/ipgapi/services";
-                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+                NetworkCredential nc = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+                Request.Credentials = nc;
 
                 InquiryOrder oInquiryOrder = new InquiryOrder()
                 {
-                    StoreId = "4700000018", OrderId = "84521240216"
+                    StoreId = "4700000018", OrderId = "20191288"
                 };
                 
-                IWebProxy webProxy = new WebProxy("test.ipg-online.com", 443);
-                webProxy.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
-                Request.Proxy = webProxy;
+                
 
                 IPGWebReference.Action oAction = new IPGWebReference.Action()
                 {
@@ -110,8 +110,39 @@ namespace WebApplicationTest1.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+            ViewBag.ResultText = CalculateXYZ();
 
             return View();
+        }
+
+        /// <summary>
+        /// X + Y + Z = 3600
+        /// 2X + 3Y + 4Z = 13000
+        /// Z = 2200 + X
+        /// Y = 1400 - 2X
+        /// </summary>
+        /// <returns></returns>
+        private string CalculateXYZ()
+        {
+            StringBuilder result = new StringBuilder();
+
+            const int HEAD_COUNT = 3600;
+            const int FEET_COUNT = 13000;
+
+            int X = 0;
+            Func<int, int> Y = x => 1400 - 2 * x;
+            Func<int, int> Z = x => 2200 + x;
+            while (Y(X) >= 0)
+            {
+                if ((X + Y(X) + Z(X)) == HEAD_COUNT && (2 * X + 3 * Y(X) + 4 * Z(X)) == FEET_COUNT)
+                {
+                    result.AppendLine($"X={X} Y={Y(X)} Z={Z(X)} <br>");
+                }
+
+                X++;
+            }
+
+            return result.ToString();
         }
 
         public ActionResult Encrypt(Models.Product product)
