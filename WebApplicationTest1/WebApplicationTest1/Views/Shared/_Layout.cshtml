@@ -18,11 +18,27 @@
                 </button>
                 @Html.ActionLink("Allen Quick Test", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <ul class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Encrypt/Decrypt", "Index", "Home")</li>
-                    <li>@Html.ActionLink("FD Inquiry", "About", "Home")</li>
-                    <li>@Html.ActionLink("CalucateXYZ", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            FirstData <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Encrypt/Decrypt", "Index", "Home")</li>
+                            <li>@Html.ActionLink("FD Inquiry", "About", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                            Quick Test <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("CalucateXYZ", "Contact", "Home")</li>
+                        </ul>
+                    
+                    </li>
+                    
                 </ul>
             </div>
         </div>
