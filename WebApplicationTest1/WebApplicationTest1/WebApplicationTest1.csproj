@@ -154,6 +154,17 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.Action.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.CreidtCard.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.CustomerCard.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.DE_DirectDebit.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.Order.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.PayPal.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.Response.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.Sofort.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.TopUp.cs" />
+    <Compile Include="FirstDataExtentions\IPGApiExtensionMethods.Transaction.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +194,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="certs\WS4700000018._.1.p12" />
+    <None Include="FirstDataWSDL\schemas\a1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirstDataWSDL\schemas\ipgapi.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirstDataWSDL\schemas\v1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirstDataWSDL\wsdl\order.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -225,10 +246,10 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\IPGWebReference\order.wsdl" />
-    <Content Include="Web References\IPGWebReference\Reference.map">
+    <None Include="Web References\IPGWebReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Web References\IPGWebReference\v1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -256,10 +277,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="D:\Work\Document\LocalDeals\FirstData\IPGService\wsdl\order.wsdl">
+    <WebReferenceUrl Include="http://dev.webmvc-test.com/FirstDataWSDL/wsdl/order.wsdl">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\IPGWebReference\</RelPath>
-      <UpdateFromURL>D:\Work\Document\LocalDeals\FirstData\IPGService\wsdl\order.wsdl</UpdateFromURL>
+      <UpdateFromURL>http://dev.webmvc-test.com/FirstDataWSDL/wsdl/order.wsdl</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

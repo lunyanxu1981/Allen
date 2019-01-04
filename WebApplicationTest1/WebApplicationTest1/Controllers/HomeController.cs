@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -11,7 +12,8 @@ using WebApplicationTest1.App_Start;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using WebApplicationTest1.IPGWebReference;
-using System.Text;
+using WebApplicationTest1.FirstDataExtentions;
+
 
 namespace WebApplicationTest1.Controllers
 {
@@ -32,117 +34,11 @@ namespace WebApplicationTest1.Controllers
             //sharedsecret + approval_code + chargetotal + currency + txndatetime + storename
             var orderstring = $"v14Kx72QxdY:000000:4521240216:PPX :20000182771.001562018:12:24-05:21:124700000018";
             bool validated = FirstDataSHA256HashValidation(responseHash, orderstring);
+
+            var qs = "a=1&b=2&c=3";
+            var dic = HttpUtility.ParseQueryString(qs);
+
             return View(product);
-        }
-
-        private async Task<Models.Product> GetProduct()
-        {
-            Models.Product result = null;
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri(WEBAPI_BASEURL);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage res = await client.GetAsync("products/GetProduct?id=1").ConfigureAwait(false);
-                if (res.IsSuccessStatusCode)
-                {
-                    var resStr = res.Content.ReadAsStringAsync().Result;
-                    result = JsonConvert.DeserializeObject<Models.Product>(resStr);
-                }
-                return result;
-            }
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-
-            ServicePointManager.Expect100Continue = false;
-            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-            X509Certificate2 certificate = null;
-            try
-            { 
-                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, 
-                                                    @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
-            }
-            catch {}
-
-            IPGApiOrderService Request = new IPGApiOrderService();
-            String RequestResponse = "";
-            if (certificate != null)
-            {
-                Request.ClientCertificates.Add(certificate);
-                Request.Url = @"https://test.ipg-online.com:443/ipgapi/services";
-                NetworkCredential nc = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
-                Request.Credentials = nc;
-
-                InquiryOrder oInquiryOrder = new InquiryOrder()
-                {
-                    StoreId = "4700000018", OrderId = "20191288"
-                };
-                
-                
-
-                IPGWebReference.Action oAction = new IPGWebReference.Action()
-                {
-                    Item = oInquiryOrder,
-                    ClientLocale = new ClientLocale()
-                    {
-                        Country = "UK",
-                        Language = "en"
-                    }
-                };
-                
-                IPGApiActionRequest ActionRequest = new IPGApiActionRequest();
-                ActionRequest.Item = oAction;
-                try
-                {
-                    IPGApiActionResponse oResponse = Request.IPGApiAction(ActionRequest);
-                    RequestResponse += "Succesfully:" + oResponse.successfully;
-                }
-                catch (Exception e) { }
-            }
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-            ViewBag.ResultText = CalculateXYZ();
-
-            return View();
-        }
-
-        /// <summary>
-        /// X + Y + Z = 3600
-        /// 2X + 3Y + 4Z = 13000
-        /// Z = 2200 + X
-        /// Y = 1400 - 2X
-        /// </summary>
-        /// <returns></returns>
-        private string CalculateXYZ()
-        {
-            StringBuilder result = new StringBuilder();
-
-            const int HEAD_COUNT = 3600;
-            const int FEET_COUNT = 13000;
-
-            int X = 0;
-            Func<int, int> Y = x => 1400 - 2 * x;
-            Func<int, int> Z = x => 2200 + x;
-            while (Y(X) >= 0)
-            {
-                if ((X + Y(X) + Z(X)) == HEAD_COUNT && (2 * X + 3 * Y(X) + 4 * Z(X)) == FEET_COUNT)
-                {
-                    result.AppendLine($"X={X} Y={Y(X)} Z={Z(X)} <br>");
-                }
-
-                X++;
-            }
-
-            return result.ToString();
         }
 
         public ActionResult Encrypt(Models.Product product)
@@ -205,6 +101,126 @@ namespace WebApplicationTest1.Controllers
                 throw ex;
             }
         }
+
+        private async Task<Models.Product> GetProduct()
+        {
+            Models.Product result = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(WEBAPI_BASEURL);
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage res = await client.GetAsync("products/GetProduct?id=1").ConfigureAwait(false);
+                if (res.IsSuccessStatusCode)
+                {
+                    var resStr = res.Content.ReadAsStringAsync().Result;
+                    result = JsonConvert.DeserializeObject<Models.Product>(resStr);
+                }
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// FirstData Inquiry
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult About(string id)
+        {
+            ViewBag.Message = "FirstData order inquiry.";
+            if (String.IsNullOrEmpty(id))
+                id = "20191288";
+
+            ServicePointManager.Expect100Continue = false;
+            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            X509Certificate2 certificate = null;
+            try
+            { 
+                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, 
+                                                    @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
+            }
+            catch {}
+
+            if (certificate != null)
+            {
+                IPGApiOrderService Request = new IPGApiOrderService();
+                Request.ClientCertificates.Add(certificate);
+                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
+                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+
+                InquiryOrder oInquiryOrder = new InquiryOrder()
+                {
+                    StoreId = "4700000018", OrderId = id
+                };
+                
+                
+
+                IPGWebReference.Action oAction = new IPGWebReference.Action()
+                {
+                    Item = oInquiryOrder,
+                    ClientLocale = new ClientLocale()
+                    {
+                        Country = "CN",
+                        Language = "zh"
+                    }
+                };
+                
+                IPGApiActionRequest ActionRequest = new IPGApiActionRequest();
+                ActionRequest.Item = oAction;
+                try
+                {
+                    IPGApiActionResponse oResponse = Request.IPGApiAction(ActionRequest);
+                    ViewBag.RequestResponse += oResponse.IPGApiActionResponseToString();
+                }
+                catch { }
+            }
+
+            return View();
+        }
+
+        /// <summary>
+        /// CalculateXYZ
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "CalculateXYZ";
+            ViewBag.ResultText = CalculateXYZ();
+
+            return View();
+        }
+
+        /// <summary>
+        /// X + Y + Z = 3600
+        /// 2X + 3Y + 4Z = 13000
+        /// Z = 2200 + X
+        /// Y = 1400 - 2X
+        /// </summary>
+        /// <returns></returns>
+        private string CalculateXYZ()
+        {
+            StringBuilder result = new StringBuilder();
+
+            const int HEAD_COUNT = 3600;
+            const int FEET_COUNT = 13000;
+
+            int X = 0;
+            Func<int, int> Y = x => 1400 - 2 * x;
+            Func<int, int> Z = x => 2200 + x;
+            while (Y(X) >= 0)
+            {
+                if ((X + Y(X) + Z(X)) == HEAD_COUNT && (2 * X + 3 * Y(X) + 4 * Z(X)) == FEET_COUNT)
+                {
+                    result.AppendLine($"X={X} Y={Y(X)} Z={Z(X)} <br>");
+                }
+
+                X++;
+            }
+
+            return result.ToString();
+        }
+
+        
 
     }
 }

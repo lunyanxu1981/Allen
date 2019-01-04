@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Results>
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///D:/Work/Document/LocalDeals/FirstData/IPGService/schemas/a1.xsd" filename="a1.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///D:/Work/Document/LocalDeals/FirstData/IPGService/schemas/v1.xsd" filename="v1.xsd" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///D:/Work/Document/LocalDeals/FirstData/IPGService/wsdl/order.wsdl" filename="order.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="file:///D:/Work/Document/LocalDeals/FirstData/IPGService/schemas/ipgapi.xsd" filename="ipgapi.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/v1.xsd" filename="v1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://dev.webmvc-test.com/FirstDataWSDL/wsdl/order.wsdl" filename="order.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/ipgapi.xsd" filename="ipgapi.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/a1.xsd" filename="a1.xsd" />
   </Results>
 </DiscoveryClientResultsFile>
