@@ -4,4 +4,10 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>@Html.Raw(ViewBag.RequestResponse)</p>
+<p>Request: <br />
+    @Html.Raw(Html.Encode(ViewBag.RequestString))</p>
+
+<p>
+    Response: <br />
+    @Html.Raw(Html.Encode(ViewBag.ResponseString))
+</p>

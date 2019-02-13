@@ -110,6 +110,7 @@ namespace WebApplicationTest1.FirstDataExtentions
                 { "ProcessorResponseCode",  oIPGApiOrderResponse.ProcessorResponseCode},
                 { "ProcessorResponseMessage",  oIPGApiOrderResponse.ProcessorResponseMessage},
                 { "ProcessorTraceNumber",  oIPGApiOrderResponse.ProcessorTraceNumber},
+                { "IpgTransactionId", oIPGApiOrderResponse.IpgTransactionIdSpecified ? oIPGApiOrderResponse.IpgTransactionId.ToString() : string.Empty},
                 { "TDate",  oIPGApiOrderResponse.TDate},
                 { "TDateFormatted",  oIPGApiOrderResponse.TDateFormatted},
                 { "TerminalID",  oIPGApiOrderResponse.TerminalID},

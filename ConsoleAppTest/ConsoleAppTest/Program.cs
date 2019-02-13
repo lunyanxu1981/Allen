@@ -102,9 +102,21 @@ namespace ConsoleAppTest
 
         static void Main(string[] args)
         {
-            JsonConvertTest();
+            NullStringTrim();
 
             Console.ReadLine();
+        }
+
+        public static void NullStringTrim()
+        {
+            string original = "hello\0 there\0\0\0";
+            
+            string replaced = original.Replace("\0", "");
+
+            Console.WriteLine(original);
+            Console.WriteLine(original.Length);
+            Console.WriteLine(replaced);
+            Console.WriteLine(replaced.Length);
         }
 
         public static void JsonConvertTest()

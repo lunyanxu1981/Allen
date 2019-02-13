@@ -17,16 +17,19 @@
 <div>
     <div>
         @using (Html.BeginForm())
-            {
+        {
             <p>
                 @Html.TextAreaFor(m => m.PayerAuthHTML, new { @class = "paTextArea" })
                 <br /><br />
                 <input type="submit" value="Encrypt" formaction=@Url.Action("Encrypt") />&nbsp;&nbsp;
                 <input type="submit" value="Decrypt" formaction=@Url.Action("Decrypt") />
             </p>
-                <p>
-                    @Html.TextAreaFor(m => m.PayerAuthHTMLEncrypted, new { @class = "paTextArea" })
-                </p>
+            <p>
+                @Html.TextAreaFor(m => m.PayerAuthHTMLEncrypted, new { @class = "paTextArea" })
+            </p>
+            <script>
+                var isValid = '@Model.IsValidItem.ToString()';
+            </script>
         }
     </div>
 </div>

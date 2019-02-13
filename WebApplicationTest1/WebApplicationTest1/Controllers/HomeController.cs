@@ -13,7 +13,9 @@ using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using WebApplicationTest1.IPGWebReference;
 using WebApplicationTest1.FirstDataExtentions;
-
+using System.Security.Cryptography;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace WebApplicationTest1.Controllers
 {
@@ -120,6 +122,106 @@ namespace WebApplicationTest1.Controllers
             }
         }
 
+        private void TestGET(string request)
+        {
+            using (var client = new HttpClient())
+            {
+                
+            }
+        }
+
+        public string getHMAC_MD5(string key, string data)
+        {
+            byte[] bKey, bData, bRet;
+            string ret = "";
+            UTF8Encoding encoder = new UTF8Encoding();
+            bKey = encoder.GetBytes(key);
+            bData = encoder.GetBytes(data);
+
+            HMACMD5 c = new HMACMD5(bKey);
+            bRet = c.ComputeHash(bData);
+            foreach (byte b in bRet)
+            {
+                ret += String.Format("{0:x2}", b);
+            }
+
+            return ret;
+        }
+
+        public ActionResult PayeaseGiftCardRefundInquiry()
+        {
+            return View("GiftCardRefundInquiry", new Models.VirtualCard()
+            {
+                CardNo = string.Empty,
+                Password = string.Empty,
+                Ymd = System.DateTime.Now.ToString("yyyyMMdd"),
+                RequesString = string.Empty,
+                ResponseString = string.Empty
+            });
+        }
+
+        public ActionResult PerformPayeaseGiftCardRefundInquiry(VirtualCard virtualCard)
+        {
+            string privateKey = "75cdf8e01fa354774b1fd7bfa969ff2f";
+            string v_mid = "5911";
+            string v_mac = getHMAC_MD5(privateKey, $"{v_mid}{virtualCard.Ymd}");
+            string requestString = $"https://pay.yizhifubj.com/merchant/ack/virtualcard_refund_list.jsp?v_mid={v_mid}" +
+                $"&v_ymd={virtualCard.Ymd}" +
+                $"&v_mac={v_mac}";
+            HttpWebRequester r = new HttpWebRequester(Encoding.UTF8);
+            string resonse = r.Get(requestString);
+            virtualCard.RequesString = requestString;
+            virtualCard.ResponseString = resonse;
+            return View("GiftCardRefundInquiry", virtualCard);
+        }
+
+        public ActionResult PayeaseGiftCardOrderInquiry()
+        {
+            return  View("GiftCardOrderInquiry", new Models.VirtualCard() {
+                CardNo = string.Empty,
+                Password = string.Empty,
+                Ymd = System.DateTime.Now.ToString("yyyyMMdd"),
+                RequesString = string.Empty,ResponseString=string.Empty });
+        }
+
+        public ActionResult PerformPayeaseGiftCardOrderInquiry(VirtualCard virtualCard)
+        {
+            string privateKey = "75cdf8e01fa354774b1fd7bfa969ff2f";
+            string v_mid = "5911";
+            string v_mac = getHMAC_MD5(privateKey, $"{v_mid}{virtualCard.Ymd}");
+            string requestString = $"https://pay.yizhifubj.com/merchant/ack/virtualcard_order_list.jsp?v_mid={v_mid}" +
+                $"&v_ymd={virtualCard.Ymd}" +
+                $"&v_mac={v_mac}";
+            HttpWebRequester r = new HttpWebRequester(Encoding.UTF8);
+            string resonse = r.Get(requestString);
+            virtualCard.RequesString = requestString;
+            virtualCard.ResponseString = resonse;
+            return View("GiftCardOrderInquiry", virtualCard);
+        }
+
+        public ActionResult PayeaseGiftCardInquiry()
+        {
+            return View("GiftCardInquiry", new Models.VirtualCard() { CardNo =string.Empty, Password = string.Empty, RequesString = string.Empty, ResponseString = string.Empty});
+        }
+
+        public ActionResult PerformPayeaseGiftCardInquiry(Models.VirtualCard virtualCard)
+        {
+            //string publicKey = "m=b831414e0b4613922bd35b4b36802bc1e1e81c95a27c958f5382003df646154ca92fc1ce02c3be047a45e9b02a9089b4b90278237c965192a0fcc86bb49bc82ae6fdc2de709006b86c7676efdf597626fad633a4f7dc48c445d37eb55fcb3b1abb95baaa826d5390e15fd14ed403fa2d0cb841c650609524ec555e3bc56ca957;e=010001;";
+            string privateKey = "75cdf8e01fa354774b1fd7bfa969ff2f";
+            //string v_cardpass = string.Empty;
+            //string v_cardno = string.Empty;
+            string v_mid = "5911";
+            string v_mac = getHMAC_MD5(privateKey, $"{v_mid}{virtualCard.CardNo}{virtualCard.Password}");
+            string requestString = $"https://pay.yizhifubj.com/merchant/ack/virtualcard_card_list.jsp?v_mid={v_mid}" +
+                $"&v_cardno={HttpUtility.UrlEncode(virtualCard.CardNo, Encoding.UTF8)}" +
+                $"&v_cardpass={HttpUtility.UrlEncode(virtualCard.Password, Encoding.UTF8)}&v_mac={v_mac}";
+            HttpWebRequester r = new HttpWebRequester(Encoding.UTF8);
+            string resonse = r.Get(requestString);
+            virtualCard.RequesString = requestString;
+            virtualCard.ResponseString = resonse;
+            return View("GiftCardInquiry", virtualCard);
+        }
+
         /// <summary>
         /// FirstData Inquiry
         /// </summary>
@@ -170,9 +272,32 @@ namespace WebApplicationTest1.Controllers
                 try
                 {
                     IPGApiActionResponse oResponse = Request.IPGApiAction(ActionRequest);
-                    ViewBag.RequestResponse += oResponse.IPGApiActionResponseToString();
+
+                    XmlSerializer reqXmlSerializer = new XmlSerializer(ActionRequest.GetType());
+                    string request = string.Empty;
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        reqXmlSerializer.Serialize(textWriter, ActionRequest);
+                        request = textWriter.ToString();
+                    }
+
+                    XmlSerializer respXmlSerializer = new XmlSerializer(oResponse.GetType());
+                    string response = string.Empty;
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        respXmlSerializer.Serialize(textWriter, oResponse);
+                        response = textWriter.ToString();
+                    }
+                    ViewBag.RequestString = request;
+                    ViewBag.ResponseString = response;
+                        
+
+                        
                 }
-                catch { }
+                catch (Exception ex)
+                {
+                    ViewBag.ResponseString += ex.ToString();
+                }
             }
 
             return View();
@@ -223,4 +348,6 @@ namespace WebApplicationTest1.Controllers
         
 
     }
+
+    
 }

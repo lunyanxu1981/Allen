@@ -186,7 +186,8 @@ D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Microsoft.AI.De
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Microsoft.AI.WindowsServer.xml
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Microsoft.AI.Web.xml
-D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csprojResolveAssemblyReference.cache
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csproj.CoreCompileInputs.cache
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.dll
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.pdb
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csprojAssemblyReference.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csproj.CopyComplete

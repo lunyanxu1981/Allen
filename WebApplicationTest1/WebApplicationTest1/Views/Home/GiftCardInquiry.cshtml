@@ -1,0 +1,23 @@
+﻿@model WebApplicationTest1.Models.VirtualCard
+@{
+    ViewBag.Title = "Gift Card Inquiry";
+}
+
+<h2>Payease Gift Card Inquiry</h2>
+<p>
+    @using (Html.BeginForm())
+    {
+        <div>Card No: @Html.TextBoxFor(m => m.CardNo)</div><br />
+        <div>Card Password: @Html.TextBoxFor(m => m.Password)</div><br />
+        <input type="submit" value="Inquire" formaction="@Url.Action("PerformPayeaseGiftCardInquiry")" />
+        <p>
+            <b>Request:</b><br />
+            @Html.Raw(Html.Encode(Model.RequesString))
+        </p>
+        <p>
+            <b>Response:</b><br />
+            @Html.Raw(Html.Encode(Model.ResponseString))
+        </p>
+    }
+</p>
+

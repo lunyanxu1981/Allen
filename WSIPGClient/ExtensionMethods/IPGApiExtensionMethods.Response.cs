@@ -111,6 +111,8 @@ namespace WSIPGClient.ExtensionMethods
                 { "ProcessorResponseMessage",  oIPGApiOrderResponse.ProcessorResponseMessage},
                 { "ProcessorTraceNumber",  oIPGApiOrderResponse.ProcessorTraceNumber},
                 { "TDate",  oIPGApiOrderResponse.TDate},
+                { "ipgTransactionId",  oIPGApiOrderResponse.IpgTransactionIdSpecified ? 
+                                            oIPGApiOrderResponse.IpgTransactionId.ToString() : string.Empty},
                 { "TDateFormatted",  oIPGApiOrderResponse.TDateFormatted},
                 { "TerminalID",  oIPGApiOrderResponse.TerminalID},
                 { "TransactionResult",  oIPGApiOrderResponse.TransactionResult},

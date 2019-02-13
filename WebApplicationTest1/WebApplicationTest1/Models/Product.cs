@@ -14,10 +14,26 @@ namespace WebApplicationTest1.Models
         public string Category { get; set; }
         public decimal Price { get; set; }
 
+        public ProductItem Item { get; set; }
+
+        public bool IsValidItem
+        {
+            get
+            {
+                return Item == null? false : Item.IsValid;
+            }
+        }
+
         [AllowHtml]
         public string PayerAuthHTML { get; set; }
 
         [AllowHtml]
         public string PayerAuthHTMLEncrypted { get; set; }
+    }
+
+    public class ProductItem
+    {
+        public string Name { get; set; }
+        public bool IsValid { get; set; }
     }
 }
