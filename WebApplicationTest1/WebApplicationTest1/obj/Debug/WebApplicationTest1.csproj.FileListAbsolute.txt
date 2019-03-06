@@ -191,3 +191,9 @@ D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplic
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.pdb
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csprojAssemblyReference.cache
 D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\obj\Debug\WebApplicationTest1.csproj.CopyComplete
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Unity.Abstractions.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Unity.Container.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Unity.Abstractions.pdb
+D:\Work\GitHub\Allen\WebApplicationTest1\WebApplicationTest1\bin\Unity.Container.pdb

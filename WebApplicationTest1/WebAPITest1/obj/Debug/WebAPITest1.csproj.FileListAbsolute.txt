@@ -128,3 +128,13 @@ D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\obj\Debug\WebAPITest1.cspro
 D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\obj\Debug\WebAPITest1.csproj.CopyComplete
 D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\obj\Debug\WebAPITest1.dll
 D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\obj\Debug\WebAPITest1.pdb
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\DnsClient.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Bson.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Driver.Core.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Driver.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\System.Buffers.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\DnsClient.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Bson.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Driver.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\WebAPITest1\bin\MongoDB.Driver.Core.xml

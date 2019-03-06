@@ -16,7 +16,6 @@
 					<xs:element ref="a1:InitiateClearing" />
 					<xs:element ref="a1:InquiryCardInformation" />
 					<xs:element ref="a1:InquiryOrder" />
-					<xs:element ref="a1:InquiryTransaction" />
 					<xs:element ref="a1:StoreHostedData" />
 					<xs:element name="RecurringPayment" type="a1:RecurringPayment" />
 					<xs:element ref="a1:Validate" />
@@ -29,7 +28,6 @@
 					<xs:element ref="a1:ManageProductStock" />
 					<xs:element ref="a1:RequestCardRateForDCC" />
 					<xs:element ref="a1:RequestMerchantRateForDynamicPricing" />
-					<xs:element ref="a1:CreatePaymentURL" />
 				</xs:choice>
 				<xs:element ref="v1:ClientLocale" minOccurs="0" />
 			</xs:sequence>
@@ -54,7 +52,6 @@
 					</xs:annotation>
 				</xs:element>
 				<xs:element ref="v1:Terminal" minOccurs="0" />
-				<xs:element name="traceNumber" type="v1:TraceNumber-DF8260" minOccurs="0" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -102,37 +99,6 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="InquiryTransaction">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="StoreId" type="v1:String20max" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Please submit a Store ID in case you manage multiple Store IDs with your integration.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:choice>
-					<xs:sequence>
-						<xs:element name="OrderId" type="v1:String100max" />
-						<xs:element name="TDate">
-							<xs:simpleType>
-								<xs:restriction base="xs:string">
-									<xs:pattern value="[0-9]{10}" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:element>
-					</xs:sequence>
-					<xs:element name="IpgTransactionId" type="v1:PositiveNumeric14max" />
-					<xs:element name="MerchantTransactionId" type="v1:String40max" />
-				</xs:choice>
-				<xs:element ref="v1:MerchantDetails" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Please use MerchantDetails instead of StoreId if you are integrating based on the Payment Provider API.</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
 	<xs:element name="SendEMailNotification">
 		<xs:complexType>
 			<xs:all>
@@ -149,7 +115,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="Email" type="v1:String254max" minOccurs="0" />
+				<xs:element name="Email" type="v1:String64max" minOccurs="0" />
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -176,27 +142,21 @@
 
 	<xs:element name="GetExternalTransactionStatus">
 		<xs:complexType>
-			<xs:sequence>
+			<xs:all>
 				<xs:element name="StoreId" type="v1:String20max" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Please submit a Store ID in case you manage multiple Store IDs with your integration.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:choice>
-					<xs:sequence>
-						<xs:element name="OrderId" type="v1:String100max" />
-						<xs:element name="TDate">
-							<xs:simpleType>
-								<xs:restriction base="xs:string">
-									<xs:pattern value="[0-9]{10}" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:element>
-					</xs:sequence>
-					<xs:element name="IpgTransactionId" type="v1:PositiveNumeric14max" />
-					<xs:element name="MerchantTransactionId" type="v1:String40max" />
-				</xs:choice>
-			</xs:sequence>
+				<xs:element name="OrderId" type="v1:String100max" />
+				<xs:element name="TDate" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]{10}|" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
 		</xs:complexType>
 	</xs:element>
 
@@ -300,7 +260,7 @@
 						<xs:documentation>Please submit a Store ID in case you manage multiple Store IDs with your integration.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-				<xs:element name="BIN" type="v1:String6max" />
+				<xs:element name="BIN" type="v1:BINType" />
 				<xs:element name="BaseAmount" type="v1:AmountValueType" minOccurs="0" />
 				<xs:element ref="v1:MerchantDetails" minOccurs="0">
 					<xs:annotation>
@@ -326,18 +286,6 @@
 						<xs:documentation>Please use MerchantDetails instead of StoreId if you are integrating based on the Payment Provider API.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="CreatePaymentURL">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Transaction" type="v1:Transaction" />
-				<xs:element name="TransactionNotificationURL" type="xs:string" minOccurs="0" />
-				<xs:element name="AuthenticateTransaction" type="xs:boolean" minOccurs="0" />
-				<xs:element name="Expiration" type="xs:long" minOccurs="0" />
-				<xs:element ref="v1:MCC6012Details" minOccurs="0" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -379,14 +327,10 @@
 					</xs:simpleType>
 				</xs:element>
 			</xs:choice>
-			<xs:element name="HostedDataID" type="v1:String128max" minOccurs="0"/>
+			<xs:element name="HostedDataID" type="v1:String128max" />
 			<xs:element name="DeclineHostedDataDuplicates" type="xs:boolean" minOccurs="0" default="false" />
-			<xs:element name="TokenType" type="v1:TokenType" minOccurs="0"/>
-			<xs:element name="AssignToken" type="v1:AssignToken" minOccurs="0" default="false"/>
-			<xs:element name="cardFunction" type="v1:CardFunctionType" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-	
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- Product Inventory - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -494,7 +438,6 @@
 			<xs:element ref="v1:Basket" minOccurs="0" />
 			<xs:element ref="v1:Billing" minOccurs="0" />
 			<xs:element ref="v1:CreditCard3DSecure" minOccurs="0" />
-			<xs:element ref="v1:Upop" minOccurs="0" />
 			<xs:element ref="v1:Shipping" minOccurs="0" />
 			<xs:element name="Ip" minOccurs="0">
 				<xs:simpleType>
@@ -591,7 +534,7 @@
 			<xs:element name="MoreResultsAvailable" type="xs:boolean" />
 		</xs:sequence>
 	</xs:complexType>
-
+	
 	<xs:complexType name="OrderValueType">
 		<xs:sequence>
 			<xs:element name="OrderId" type="xs:string" />
@@ -626,7 +569,6 @@
 						<xs:element name="AccountOwner" type="xs:string" minOccurs="0" />
 						<xs:element name="IBAN" type="xs:string" minOccurs="0" />
 						<xs:element name="BIC" type="xs:string" minOccurs="0" />
-						<xs:element ref="v1:AdditionalRequestParameters" minOccurs="0" />
 					</xs:sequence>
 				</xs:extension>
 			</xs:complexContent>
@@ -678,7 +620,7 @@
   			<xs:element name="ExchangeRateSourceTimestamp" type="xs:dateTime" minOccurs="0" maxOccurs="1" />
 		</xs:sequence>
 	</xs:complexType>
-
+	
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- simple types - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

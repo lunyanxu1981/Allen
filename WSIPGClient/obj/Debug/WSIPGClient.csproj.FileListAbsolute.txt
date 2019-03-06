@@ -14,7 +14,6 @@ D:\Work\GitHub\Allen\WSIPGClient\bin\Debug\WSIPGClient.exe.manifest
 D:\Work\GitHub\Allen\WSIPGClient\bin\Debug\WSIPGClient.application
 D:\Work\GitHub\Allen\WSIPGClient\bin\Debug\WSIPGClient.exe
 D:\Work\GitHub\Allen\WSIPGClient\bin\Debug\WSIPGClient.pdb
-D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.csprojResolveAssemblyReference.cache
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.Properties.Resources.resources
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.csproj.GenerateResource.Cache
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.csproj.CoreCompileInputs.cache
@@ -22,3 +21,4 @@ D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.exe.manifest
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.application
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.exe
 D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.pdb
+D:\Work\GitHub\Allen\WSIPGClient\obj\Debug\WSIPGClient.csprojAssemblyReference.cache

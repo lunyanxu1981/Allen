@@ -18,6 +18,7 @@ using WSIPGClient.ExtensionMethods;
 using WSIPGClient.RequestSamples.Action;
 using WSIPGClient.RequestSamples.Order;
 using WSIPGClient.Certificate;
+using System.Xml.Serialization;
 
 namespace WSIPGClient
 {
@@ -32,25 +33,38 @@ namespace WSIPGClient
         {
             // Disable Expect100Continue, when set to true I get an error
             // The request was aborted: Could not create SSL/TLS secure channel.
-            //ServicePointManager.Expect100Continue = false;
+            ServicePointManager.Expect100Continue = false;
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             String RequestResponseMessage = "";
 
+
+
             //Action
-           // RequestResponseMessage = doInitiateClearingActionRequest();
+            //RequestResponseMessage = doInitiateClearingActionRequest();
+            //RequestResponseMessage = doInquiryOrderActionRequest();
             RequestResponseMessage = doInquiryOrderActionRequest();
 
 
             //Order
             //RequestResponseMessage = doCreditCardTransactionOrderRequest();
-            // RequestResponseMessage = doCreatePaymentURLActionRequest();
-          //   RequestResponseMessage = doValidateOrderRequest();
-          //  RequestResponseMessage = doRefundOrderRequest();
+            //RequestResponseMessage = doCreatePaymentURLActionRequest();
+            //RequestResponseMessage = doValidateOrderRequest();
+            //RequestResponseMessage = doRefundOrderRequest();
+            //RequestResponseMessage = StringJoinArray();
 
-         
             Console.WriteLine(RequestResponseMessage);
             Console.ReadLine();
         }
+
+        private static string StringJoinArray()
+        {
+            int[] bookIds = { 1, 2, 3, 4 };
+            string Ids = string.Join<int>(",", bookIds);
+            string sql = $"delete from XXX where id in ({Ids})";
+            return sql;
+            
+        }
+
 
         /// <summary>
         /// Method creates a IPG API Action Request, sends and recieves IPG API Action Response.
@@ -66,7 +80,8 @@ namespace WSIPGClient
             if (cert != null)
             {
                 oIPGApiOrderService.ClientCertificates.Add(cert);
-                oIPGApiOrderService.Url = @"https://test.ipg-online.com:443/ipgapi/services";
+                
+                oIPGApiOrderService.Url = @"https://test.ipg-online.com/ipgapi/services";
                 // oIPGApiOrderService.Url = @"https://www4.ipg-online.com:443/ipgapi/services";  // Prod URL
                 NetworkCredential nc = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
                 // NetworkCredential nc = new NetworkCredential("WS330995000._.1", "tester02@");
@@ -109,7 +124,7 @@ namespace WSIPGClient
             if (cert != null)
             {
                 oIPGApiOrderService.ClientCertificates.Add(cert);
-                oIPGApiOrderService.Url = @"https://test.ipg-online.com:443/ipgapi/services";
+                oIPGApiOrderService.Url = @"https://test.ipg-online.com/ipgapi/services";
                 // oIPGApiOrderService.Url = @"https://www4.ipg-online.com:443/ipgapi/services";  // Prod URL
 
                 //NetworkCredential nc = new NetworkCredential("tester02@", "tester02@");

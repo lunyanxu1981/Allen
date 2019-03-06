@@ -16,6 +16,7 @@ using WebApplicationTest1.FirstDataExtentions;
 using System.Security.Cryptography;
 using System.Xml.Serialization;
 using System.IO;
+using System.Web.Services.Protocols;
 
 namespace WebApplicationTest1.Controllers
 {
@@ -222,86 +223,7 @@ namespace WebApplicationTest1.Controllers
             return View("GiftCardInquiry", virtualCard);
         }
 
-        /// <summary>
-        /// FirstData Inquiry
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public ActionResult About(string id)
-        {
-            ViewBag.Message = "FirstData order inquiry.";
-            if (String.IsNullOrEmpty(id))
-                id = "20191288";
-
-            ServicePointManager.Expect100Continue = false;
-            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
-            X509Certificate2 certificate = null;
-            try
-            { 
-                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, 
-                                                    @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
-            }
-            catch {}
-
-            if (certificate != null)
-            {
-                IPGApiOrderService Request = new IPGApiOrderService();
-                Request.ClientCertificates.Add(certificate);
-                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
-                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
-
-                InquiryOrder oInquiryOrder = new InquiryOrder()
-                {
-                    StoreId = "4700000018", OrderId = id
-                };
-                
-                
-
-                IPGWebReference.Action oAction = new IPGWebReference.Action()
-                {
-                    Item = oInquiryOrder,
-                    ClientLocale = new ClientLocale()
-                    {
-                        Country = "CN",
-                        Language = "zh"
-                    }
-                };
-                
-                IPGApiActionRequest ActionRequest = new IPGApiActionRequest();
-                ActionRequest.Item = oAction;
-                try
-                {
-                    IPGApiActionResponse oResponse = Request.IPGApiAction(ActionRequest);
-
-                    XmlSerializer reqXmlSerializer = new XmlSerializer(ActionRequest.GetType());
-                    string request = string.Empty;
-                    using (StringWriter textWriter = new StringWriter())
-                    {
-                        reqXmlSerializer.Serialize(textWriter, ActionRequest);
-                        request = textWriter.ToString();
-                    }
-
-                    XmlSerializer respXmlSerializer = new XmlSerializer(oResponse.GetType());
-                    string response = string.Empty;
-                    using (StringWriter textWriter = new StringWriter())
-                    {
-                        respXmlSerializer.Serialize(textWriter, oResponse);
-                        response = textWriter.ToString();
-                    }
-                    ViewBag.RequestString = request;
-                    ViewBag.ResponseString = response;
-                        
-
-                        
-                }
-                catch (Exception ex)
-                {
-                    ViewBag.ResponseString += ex.ToString();
-                }
-            }
-
-            return View();
-        }
+       
 
         /// <summary>
         /// CalculateXYZ
@@ -345,8 +267,271 @@ namespace WebApplicationTest1.Controllers
             return result.ToString();
         }
 
-        
+        [HttpPost]
+        public ActionResult FirstDataFailCallbackTest()
+        {
+            string htmlStr = string.Empty;
+            foreach (var key in Request.Form.AllKeys)
+            {
+                htmlStr += $"{key}={Request.Form[key]}<br>";
+            }
+            return Content(htmlStr);
+        }
 
+        [HttpPost]
+        public ActionResult FirstDataSuccessCallbackTest()
+        {
+            string htmlStr = string.Empty;
+            foreach (var key in Request.Form.AllKeys)
+            {
+                htmlStr += $"{key}={Request.Form[key]}<br>";
+            }
+            return Content(htmlStr);
+        }
+
+        public ActionResult FirstDataSaleTest()
+        {
+            string orderForm = string.Empty;
+            string responseFailURL = "http://dev.webmvc-test.com/Home/FirstDataFailCallbackTest/";
+            string responseSuccessURL = "http://dev.webmvc-test.com/Home/FirstDataSuccessCallbackTest/";
+            string merchantOrderId = $"{ DateTime.Now.Year.ToString()}{ DateTime.Now.Month.ToString()}{ DateTime.Now.Day.ToString()}{ DateTime.Now.Millisecond.ToString()}";
+            string storeName = "4700000018";
+            string trxnDate = DateTime.UtcNow.ToString("yyyy:MM:dd-HH:mm:ss");
+            string chargetotal = "10.00";
+            string currency = "156";
+            string sharedsecret = "v14Kx72Qxd";
+            string sharaw = $"{storeName}{trxnDate}{chargetotal}{currency}{sharedsecret}";
+            string sha256HashASCII = SHA256Gen2(sharaw);
+            string line1 = $"400005;Voucher;1;{chargetotal}";
+
+            orderForm += "<form method=\"post\" action=\"https://test.ipg-online.com/connect/gateway/processing\">";
+            orderForm += "txntype:<input type=\"input\" name=\"txntype\" value=\"sale\"><br>";
+            orderForm += $"storename:<input type=\"input\" name=\"storename\" value=\"{storeName}\"><br>";
+            orderForm += $"merchantTransactionId:<input type=\"input\" name=\"merchantTransactionId\" value=\"{merchantOrderId}\"><br>";
+            orderForm += $"oid:<input type=\"input\" name=\"oid\" value=\"{merchantOrderId}\"><br>";
+            orderForm += "timezone:<input type=\"input\" name=\"timezone\" value=\"GMT\"><br>";
+            orderForm += $"txndatetime:<input type=\"input\" name=\"txndatetime\" value=\"{trxnDate}\"><br>";
+            orderForm += "paymentMethod:<input type=\"input\" name=\"paymentMethod\" value=\"CUP_domestic\"><br>";
+            orderForm += "mobileMode:<input type=\"input\" name=\"mobileMode\" value=\"false\"><br>";
+            orderForm += "mode:<input type=\"input\" name=\"mode\" value=\"payonly\"><br>";
+            orderForm += "full_bypass:<input type=\"input\" name=\"full_bypass\" value=\"true\"><br>";
+            orderForm += "language:<input type=\"input\" name=\"language\" value=\"zh_CN\"><br>";
+            orderForm += $"item1:<input type=\"input\" name=\"item1\" value=\"{line1}\"><br>";
+            orderForm += $"currency:<input type=\"input\" name=\"currency\" value=\"{currency}\"><br>"; //CNY
+            orderForm += $"chargetotal:<input type=\"input\" name=\"chargetotal\" value=\"{chargetotal}\"><br>";
+            //orderForm += $"customParam_domesticBankId:<input type=\"input\" name=\"customParam_domesticBankId\" value=\"ccb\"><br>";
+            orderForm += $"responseFailURL:<input type=\"input\" name=\"responseFailURL\" value=\"{responseFailURL}\"><br>";
+            orderForm += $"responseSuccessURL:<input type=\"input\" name=\"responseSuccessURL\" value=\"{responseSuccessURL}\"><br>";
+            orderForm += "hash_algorithm:<input type=\"input\" name=\"hash_algorithm\" value=\"SHA256\"><br>";
+            orderForm += $"hash:<input type=\"input\" name=\"hash\" value=\"{sha256HashASCII}\"><br>"; //storename, txndatetime, chargetotal, currency and sharedsecret
+            orderForm += "<input type=\"submit\" value=\"Submit\" id=\"btnFDSubmit\">";
+            orderForm += $"<br><br>SHARaw: {sharaw} <br><br>SHA256Hash_ASCII={sha256HashASCII}<br>";
+            //orderForm += "<script type='text/javascript'>window.onload = function() { document.getElementById('btnFDSubmit').click(); };</script>";
+            orderForm += "</form>";
+
+            return Content(orderForm);
+        }
+
+        private string SHA256Gen2(string raw)
+        {
+            byte[] asciiArray = System.Text.Encoding.ASCII.GetBytes(raw);
+            //ASCII Hex 
+            System.Text.StringBuilder asciiHexStr = new System.Text.StringBuilder();
+
+
+            for (int i = 0; i < asciiArray.Length; i++)
+            {
+                asciiHexStr.Append(asciiArray[i].ToString("x2"));
+            }
+
+            using (var hash = System.Security.Cryptography.SHA256.Create())
+            {
+                // Convert the input string to a byte array and compute the hash.
+                byte[] data = hash.ComputeHash(System.Text.Encoding.ASCII.GetBytes(asciiHexStr.ToString()));
+
+                // Create a new Stringbuilder to collect the bytes
+                // and create a string.
+                System.Text.StringBuilder sBuilder = new System.Text.StringBuilder();
+
+                // Loop through each byte of the hashed data 
+                // and format each one as a hexadecimal string.
+                for (int i = 0; i < data.Length; i++)
+                {
+                    sBuilder.Append(data[i].ToString("x2"));
+                }
+                // Return the hexadecimal string.
+                return sBuilder.ToString();
+            }
+        }
+
+
+        public ActionResult FirstDataRefund(string id)
+        {
+            ViewBag.Message = "FirstData order refund.";
+            if (String.IsNullOrEmpty(id))
+                return View();
+
+            ServicePointManager.Expect100Continue = false;
+            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            X509Certificate2 certificate = null;
+            try
+            {
+                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                    @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
+            }
+            catch { }
+            if (certificate != null)
+            {
+                IPGApiOrderService Request = new IPGApiOrderService();
+                Request.ClientCertificates.Add(certificate);
+                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
+                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+
+                IPGApiOrderRequest oRefundOrderRequest = new IPGApiOrderRequest();
+                Transaction oTransaction = new Transaction();
+                CreditCardTxType oCreditCardTxType = new CreditCardTxType();
+
+                oCreditCardTxType.StoreId = "4700000018";
+                oCreditCardTxType.Type = CreditCardTxTypeType.@return;
+
+                oTransaction.Items = new Object[] { oCreditCardTxType };
+
+                Payment oPayment = new Payment();
+                oPayment.SubTotal = 1;
+                oPayment.ChargeTotal = 1;
+                oPayment.Currency = "156";
+                oTransaction.Payment = oPayment;
+
+                TransactionDetails oTransactionDetails = new TransactionDetails();
+                oTransactionDetails.OrderId = id;
+                oTransaction.TransactionDetails = oTransactionDetails;
+
+                oRefundOrderRequest = new IPGApiOrderRequest();
+                oRefundOrderRequest.Item = oTransaction;
+                string request = string.Empty;
+                try
+                {
+                    XmlSerializer reqXmlSerializer = new XmlSerializer(oRefundOrderRequest.GetType());
+                    
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        reqXmlSerializer.Serialize(textWriter, oRefundOrderRequest);
+                        request = textWriter.ToString();
+                    }
+
+                    IPGApiOrderResponse oResponse = Request.IPGApiOrder(oRefundOrderRequest);
+
+
+
+                    XmlSerializer respXmlSerializer = new XmlSerializer(oResponse.GetType());
+                    string response = string.Empty;
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        respXmlSerializer.Serialize(textWriter, oResponse);
+                        response = textWriter.ToString();
+                    }
+                    ViewBag.RequestString = request;
+                    ViewBag.ResponseString = response;
+
+
+
+                }
+                catch (SoapException se)
+                {//SoapException: MerchantException or ProcessingException
+                    ViewBag.ResponseString = se.SoapExceptionResponseToString() ?? "";
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.RequestString = request;
+                    ViewBag.ResponseString += ex.ToString();
+                }
+            }
+
+            return View();
+        }
+
+        /// <summary>
+        /// FirstData Inquiry
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ActionResult About(string id)
+        {
+            ViewBag.Message = "FirstData order inquiry.";
+            if (String.IsNullOrEmpty(id))
+                id = "20191288";
+
+            ServicePointManager.Expect100Continue = false;
+            ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            X509Certificate2 certificate = null;
+            try
+            {
+                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                    @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
+            }
+            catch { }
+
+            if (certificate != null)
+            {
+                IPGApiOrderService Request = new IPGApiOrderService();
+                Request.ClientCertificates.Add(certificate);
+                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
+                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+
+                InquiryOrder oInquiryOrder = new InquiryOrder()
+                {
+                    StoreId = "4700000018",
+                    OrderId = id
+                };
+
+
+
+                IPGWebReference.Action oAction = new IPGWebReference.Action()
+                {
+                    Item = oInquiryOrder,
+                    ClientLocale = new ClientLocale()
+                    {
+                        Country = "CN",
+                        Language = "zh"
+                    }
+                };
+
+                IPGApiActionRequest ActionRequest = new IPGApiActionRequest();
+                ActionRequest.Item = oAction;
+                string request = string.Empty;
+                try
+                {
+                    XmlSerializer reqXmlSerializer = new XmlSerializer(ActionRequest.GetType());
+
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        reqXmlSerializer.Serialize(textWriter, ActionRequest);
+                        request = textWriter.ToString();
+                    }
+                    IPGApiActionResponse oResponse = Request.IPGApiAction(ActionRequest);
+
+                    XmlSerializer respXmlSerializer = new XmlSerializer(oResponse.GetType());
+                    string response = string.Empty;
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        respXmlSerializer.Serialize(textWriter, oResponse);
+                        response = textWriter.ToString();
+                    }
+                    ViewBag.RequestString = request;
+                    ViewBag.ResponseString = response;
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.RequestString += request;
+                    ViewBag.ResponseString += ex.ToString();
+                }
+            }
+
+            return View();
+        }
     }
 
     

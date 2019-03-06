@@ -3,7 +3,9 @@
   <Results>
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/v1.xsd" filename="v1.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://dev.webmvc-test.com/FirstDataWSDL/wsdl/order.wsdl" filename="order.wsdl" />
-    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/ipgapi.xsd" filename="ipgapi.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/ClickAndBuy/PayTypes_1_0_0.xsd" filename="PayTypes_1_0_0.xsd" />
     <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/a1.xsd" filename="a1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/ipgapi.xsd" filename="ipgapi.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://dev.webmvc-test.com/FirstDataWSDL/schemas/ClickAndBuy/SOAPTypes_1_0_0.xsd" filename="SOAPTypes_1_0_0.xsd" />
   </Results>
 </DiscoveryClientResultsFile>

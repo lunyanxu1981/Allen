@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="WebApplicationTest1_IPGWebReference_IPGApiOrderService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://ipg-dev-1.1dc.com:443/ipgapi/services</Value>
+      <Value Profile="(Default)">https://test.ipg-online.com:443/ipgapi/services</Value>
     </Setting>
   </Settings>
 </SettingsFile>

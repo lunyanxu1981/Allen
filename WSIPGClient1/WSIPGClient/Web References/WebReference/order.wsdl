@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sch="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:tns="http://ipg-online.com/ipgapi/schemas/ipgapi" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1" elementFormDefault="qualified" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="../schemas/v1.xsd" namespace="http://ipg-online.com/ipgapi/schemas/v1" />
+      <xs:import schemaLocation="../schemas/a1.xsd" namespace="http://ipg-online.com/ipgapi/schemas/a1" />
+      <xs:element name="IPGApiOrderRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:choice>
+              <xs:element ref="v1:Transaction" />
+              <xs:element ref="v1:SubsequentTransaction" />
+            </xs:choice>
+            <xs:element minOccurs="0" ref="v1:MerchantDetails" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IPGApiActionRequest">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element ref="a1:Action" />
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IPGApiOrderResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="0" name="DebugInformation" type="xs:string" />
+            <xs:element minOccurs="0" name="ApprovalCode" type="xs:string" />
+            <xs:element minOccurs="0" name="AVSResponse" type="xs:string" />
+            <xs:element minOccurs="0" name="Brand" type="xs:string" />
+            <xs:element minOccurs="0" name="Country" type="xs:string" />
+            <xs:element minOccurs="0" name="CommercialServiceProvider" type="xs:string" />
+            <xs:element minOccurs="0" name="ErrorMessage" type="xs:string" />
+            <xs:element minOccurs="0" name="OrderId" type="xs:string" />
+            <xs:element minOccurs="0" name="IpgTransactionId" type="v1:PositiveNumeric14max" />
+            <xs:element minOccurs="0" name="PayerSecurityLevel" type="xs:string" />
+            <xs:element minOccurs="0" name="PaymentType" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorApprovalCode" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorReceiptNumber" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorCCVResponse" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorReferenceNumber" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorResponseCode" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorResponseMessage" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorTraceNumber" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentFirstAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentOtherAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentIssuerFeeAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentTaxesAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentInsuranceAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentOtherExpensesAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentTotalAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorInstallmentRatePerYear" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorVoucherRemainingAmount" type="v1:AmountValueType" />
+            <xs:element minOccurs="0" name="ProcessorVoucherType" type="xs:string" />
+            <xs:element minOccurs="0" name="ReferencedTDate" type="xs:string" />
+            <xs:element minOccurs="0" name="TDate" type="xs:string" />
+            <xs:element minOccurs="0" name="TDateFormatted" type="xs:string" />
+            <xs:element minOccurs="0" name="TerminalID" type="xs:string" />
+            <xs:element minOccurs="0" name="TransactionResult" type="xs:string" />
+            <xs:element minOccurs="0" name="TransactionTime" type="xs:string" />
+            <xs:element minOccurs="0" ref="ipgapi:EMVCardPresentResponse" />
+            <xs:element minOccurs="0" ref="v1:MandateReference" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EMVCardPresentResponse">
+        <xs:complexType>
+          <xs:all>
+            <xs:element ref="ipgapi:EMVResponseData" />
+            <xs:element ref="v1:TLVData" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="EMVResponseData">
+        <xs:complexType>
+          <xs:all>
+            <xs:element minOccurs="0" name="AuthorizationIdentification-DF817E">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary">
+                  <xs:minLength value="1" />
+                  <xs:maxLength value="8" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="AuthorizationParameter-DF817D">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary">
+                  <xs:length value="8" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="IssuerAuthenticationData-91">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary">
+                  <xs:minLength value="8" />
+                  <xs:maxLength value="16" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="IssuerScriptTemplate1-71">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary">
+                  <xs:minLength value="9" />
+                  <xs:maxLength value="746" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="IssuerScriptTemplate2-72">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary">
+                  <xs:minLength value="9" />
+                  <xs:maxLength value="746" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="IssuerAuthorizationResponseCode-8A" type="v1:IssuerAuthorizationResponseCode-8A" />
+            <xs:element minOccurs="0" name="MessageControlField-DF4F">
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:pattern value="[0-9]{2}" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="ReceiptNumber-DF8161">
+              <xs:simpleType>
+                <xs:restriction base="xs:int">
+                  <xs:minInclusive value="0" />
+                  <xs:maxInclusive value="9999" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="SpecialDataBlock-DF817F">
+              <xs:simpleType>
+                <xs:restriction base="xs:hexBinary" />
+              </xs:simpleType>
+            </xs:element>
+            <xs:element minOccurs="0" name="TraceNumber-DF8260" type="v1:TraceNumber-DF8260" />
+          </xs:all>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ClearingDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="ipgapi:ClearingElement" />
+          <xs:element name="BatchTimeStamp" type="v1:StringDateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ClearingElement">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Brand" type="xs:string" />
+            <xs:element name="Value" type="xs:long" />
+            <xs:element name="Count" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="IPGApiActionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="successfully" type="xs:boolean" />
+            <xs:element minOccurs="0" name="OrderId" type="xs:string" />
+            <xs:element minOccurs="0" name="TransactionId" type="v1:PositiveNumeric14max" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:Error" />
+            <xs:element minOccurs="0" name="ResultInfo" type="a1:ResultInfoType" />
+            <xs:element minOccurs="0" ref="v1:Basket" />
+            <xs:element minOccurs="0" ref="v1:Billing" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:Product" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:ProductStock" />
+            <xs:element minOccurs="0" ref="v1:MandateReference" />
+            <xs:element minOccurs="0" ref="v1:Shipping" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:TransactionValues" />
+            <xs:element minOccurs="0" name="RecurringPaymentInformation" type="a1:RecurringPaymentValues" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="DataStorageItem" type="a1:DataStorageItem" />
+            <xs:element minOccurs="0" name="ProcessorResponseCode" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorRequestMessage" type="xs:string" />
+            <xs:element minOccurs="0" name="ProcessorResponseMessage" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderValues" type="a1:OrderValueType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="CardRateForDCC" type="a1:InquiryRateType" />
+            <xs:element minOccurs="0" maxOccurs="1" name="MerchantRateForDynamicPricing" type="a1:InquiryRateType" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="CardInformation" type="a1:CardInformation">
+              <xs:annotation>
+                <xs:documentation>Sorted by the priority of the supported brands.</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" name="ClearingDetails" type="ipgapi:ClearingDetails" />
+            <xs:element minOccurs="0" name="paymentUrl" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IPGApiOrderResponse">
+    <wsdl:part name="IPGApiOrderResponse" element="tns:IPGApiOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiActionRequest">
+    <wsdl:part name="IPGApiActionRequest" element="tns:IPGApiActionRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiOrderRequest">
+    <wsdl:part name="IPGApiOrderRequest" element="tns:IPGApiOrderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPGApiActionResponse">
+    <wsdl:part name="IPGApiActionResponse" element="tns:IPGApiActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="EMVCardPresentResponse">
+    <wsdl:part name="EMVCardPresentResponse" element="tns:EMVCardPresentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPGApiOrder">
+    <wsdl:operation name="IPGApiOrder">
+      <wsdl:input name="IPGApiOrderRequest" message="tns:IPGApiOrderRequest" />
+      <wsdl:output name="IPGApiOrderResponse" message="tns:IPGApiOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="IPGApiAction">
+      <wsdl:input name="IPGApiActionRequest" message="tns:IPGApiActionRequest" />
+      <wsdl:output name="IPGApiActionResponse" message="tns:IPGApiActionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EMVCardPresent">
+      <wsdl:output name="EMVCardPresentResponse" message="tns:EMVCardPresentResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IPGApiOrderSoap11" type="tns:IPGApiOrder">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IPGApiOrder">
+      <soap:operation soapAction="" />
+      <wsdl:input name="IPGApiOrderRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IPGApiOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IPGApiAction">
+      <soap:operation soapAction="" />
+      <wsdl:input name="IPGApiActionRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="IPGApiActionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EMVCardPresent">
+      <soap:operation soapAction="" />
+      <wsdl:output name="EMVCardPresentResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IPGApiOrderService">
+    <wsdl:port name="IPGApiOrderSoap11" binding="tns:IPGApiOrderSoap11">
+      <soap:address location="https://test.ipg-online.com:443/ipgapi/services" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

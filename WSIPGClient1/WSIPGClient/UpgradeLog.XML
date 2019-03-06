@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WSIPGClient">
+</Property><Property Name="Solution File" Value="C:\Users\f82bqal\Documents\dot-net\WSIPGClient\WSIPGClient.sln">
+</Property><Property Name="User Options File" Value="C:\Users\f82bqal\Documents\dot-net\WSIPGClient\WSIPGClient.suo">
+</Property><Property Name="Date" Value="14. augusta 2013">
+</Property><Property Name="Time" Value="12:25">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WSIPGClient.sln" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\WSIPGClient.sln">
+</Event><Event ErrorLevel="0" Project="" Source="WSIPGClient.suo" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\WSIPGClient.suo">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="WSIPGClient.csproj" Description="Project file successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\WSIPGClient.csproj">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="WSIPGClient.csproj.user" Description="Project user file successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\WSIPGClient.csproj.user">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Program.cs" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\Reference.cs" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\Reference.cs">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="app.config" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\app.config">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Properties\Settings.settings" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\a1.xsd" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\a1.xsd">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\a1.xsx" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\a1.xsx">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\ipgapi.xsd" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\ipgapi.xsd">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\IPGApiActionResponse.datasource" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\IPGApiActionResponse.datasource">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\IPGApiOrderResponse.datasource" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\IPGApiOrderResponse.datasource">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\order.wsdl" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\order.wsdl">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\Reference.map" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\Reference.map">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Web References\WebReference\v1.xsd" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Web References\WebReference\v1.xsd">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="Properties\Resources.resx" Description="File successfully backed up as C:\Users\f82bqal\Documents\dot-net\WSIPGClient\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="WSIPGClient" Source="WSIPGClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WSIPGClient" Source="WSIPGClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="2" Project="" Source="WSIPGClient.sln" Description="Solution file 'C:\Users\f82bqal\Documents\dot-net\WSIPGClient\WSIPGClient.sln' cannot be converted because it cannot be modified. To convert the solution, change the permissions on the solution file to allow modification and re-open it.">
+</Event><Event ErrorLevel="3" Project="" Source="WSIPGClient.sln" Description="Not Converted">
+</Event></UpgradeLog>

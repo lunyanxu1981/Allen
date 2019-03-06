@@ -33,8 +33,8 @@ namespace WebApplicationTest1.FirstDataExtentions
                 { "ProcessorResponseCode", oIPGApiActionResponse.ProcessorResponseCode},
                 { "ProcessorResponseMessage", oIPGApiActionResponse.ProcessorResponseMessage},
                 { "MandateReference", oIPGApiActionResponse.MandateReference},
-                { "ResultInfo:MoreResultsAvailable", oIPGApiActionResponse.ResultInfo.ResultInfoToString()},
-                { "paymentUrl", oIPGApiActionResponse.paymentUrl}
+                { "ResultInfo:MoreResultsAvailable", oIPGApiActionResponse.ResultInfo.ResultInfoToString()}//,
+                //{ "paymentUrl", oIPGApiActionResponse.paymentUrl}
             };
 
             result.Append(items.NotNullDataToString());

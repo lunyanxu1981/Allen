@@ -174,8 +174,8 @@ namespace WebApplicationTest1.FirstDataExtentions
 
             var items = new Dictionary<string, string>()
             {
-                { "DccApplied", oInquiryRateReference.DccApplied.ToString()},
-                { "DccAppliedSpecified", oInquiryRateReference.DccAppliedSpecified.ToString()},
+                //{ "DccApplied", oInquiryRateReference.DccApplied.ToString()},
+                //{ "DccAppliedSpecified", oInquiryRateReference.DccAppliedSpecified.ToString()},
                 { "InquiryRateId", oInquiryRateReference.InquiryRateId.ToString()}
             };
 

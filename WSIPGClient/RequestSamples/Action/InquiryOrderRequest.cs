@@ -14,7 +14,7 @@ namespace WSIPGClient.RequestSamples.Action
         {
             InquiryOrder oInquiryOrder = new InquiryOrder();
             oInquiryOrder.StoreId = "4700000018";
-            oInquiryOrder.OrderId = "20191288";
+            oInquiryOrder.OrderId = "2019228764";
 
             ClientLocale oClientLocale = new ClientLocale();
             oClientLocale.Country = "UK";

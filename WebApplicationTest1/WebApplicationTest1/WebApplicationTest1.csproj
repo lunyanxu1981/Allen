@@ -53,6 +53,11 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -102,6 +107,12 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.9.6\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.9.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.9.6\lib\net46\Unity.Container.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -199,6 +210,12 @@
     <None Include="FirstDataWSDL\schemas\a1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="FirstDataWSDL\schemas\ClickAndBuy\PayTypes_1_0_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirstDataWSDL\schemas\ClickAndBuy\SOAPTypes_1_0_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="FirstDataWSDL\schemas\ipgapi.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -238,6 +255,7 @@
     <Content Include="Views\Home\GiftCardInquiry.cshtml" />
     <Content Include="Views\Home\GiftCardOrderInquiry.cshtml" />
     <Content Include="Views\Home\GiftCardRefundInquiry.cshtml" />
+    <Content Include="Views\Home\FirstDataRefund.cshtml" />
     <None Include="Web References\IPGWebReference\a1.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -251,9 +269,15 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\IPGWebReference\order.wsdl" />
+    <None Include="Web References\IPGWebReference\PayTypes_1_0_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web References\IPGWebReference\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\IPGWebReference\SOAPTypes_1_0_0.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web References\IPGWebReference\v1.xsd">
       <SubType>Designer</SubType>

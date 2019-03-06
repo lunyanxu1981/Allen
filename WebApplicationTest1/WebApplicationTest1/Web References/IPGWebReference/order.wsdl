@@ -51,7 +51,7 @@
   </wsdl:binding>
   <wsdl:service name="IPGApiOrderService">
     <wsdl:port name="IPGApiOrderSoap11" binding="tns:IPGApiOrderSoap11">
-      <soap:address location="https://ipg-dev-1.1dc.com:443/ipgapi/services" />
+      <soap:address location="https://test.ipg-online.com:443/ipgapi/services" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

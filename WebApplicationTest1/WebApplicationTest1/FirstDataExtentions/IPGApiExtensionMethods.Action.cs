@@ -175,13 +175,13 @@ namespace WebApplicationTest1.FirstDataExtentions
 
             var items = new Dictionary<string, string>();
             items.Add("StoreId", oGetExternalTransactionStatus.StoreId);
-            if (oGetExternalTransactionStatus.Items != null && oGetExternalTransactionStatus.ItemsElementName != null)
-            {
-                for (int i = 0; i < oGetExternalTransactionStatus.Items.Length; i++)
-                {
-                    items.Add(oGetExternalTransactionStatus.ItemsElementName[i].ToString(), oGetExternalTransactionStatus.Items[i].ToString());
-                }
-            }
+            //if (oGetExternalTransactionStatus.Items != null && oGetExternalTransactionStatus.ItemsElementName != null)
+            //{
+            //    for (int i = 0; i < oGetExternalTransactionStatus.Items.Length; i++)
+            //    {
+            //        items.Add(oGetExternalTransactionStatus.ItemsElementName[i].ToString(), oGetExternalTransactionStatus.Items[i].ToString());
+            //    }
+            //}
 
             return Environment.NewLine + "GetExternalTransactionStatus Information : " + Environment.NewLine + items.NotNullDataToString();
         }

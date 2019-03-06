@@ -27,6 +27,40 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="IPGApiOrderSoap11", Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StatusRequest_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StatusRequest_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RefundRequest_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RefundRequest_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayRequest_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayRequest_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayRequestRecurring_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayRequestRecurring_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBatchStatus_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(GetBatchStatus_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecuteBatch_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ExecuteBatch_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreditRequest_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreditRequest_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateBatch_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreateBatch_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CancelRequest_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CancelRequest_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CancelBatch_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CancelBatch_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AddBatchItem_Response))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(AddBatchItem_Request))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ThreeDRedirect))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TargetBankAccount))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(StartDate))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SessionListItem))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(OnlineTransferRedirect))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(MessageContext))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Identity))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Expiry))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(EWalletRedirect))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Digest))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(BankAccount))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Options))]
     public partial class IPGApiOrderService : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback IPGApiOrderOperationCompleted;
@@ -164,14 +198,13 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
     public partial class IPGApiOrderRequest {
         
-        private object itemField;
+        private Transaction itemField;
         
         private MerchantDetails merchantDetailsField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SubsequentTransaction", typeof(SubsequentTransaction), Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        [System.Xml.Serialization.XmlElementAttribute("Transaction", typeof(Transaction), Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public object Item {
+        [System.Xml.Serialization.XmlElementAttribute("Transaction", Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public Transaction Item {
             get {
                 return this.itemField;
             }
@@ -198,28 +231,46 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SubsequentTransaction {
+    public partial class Transaction {
         
         private object[] itemsField;
         
-        private ItemsChoiceType4[] itemsElementNameField;
-        
-        private string merchantTransactionIdField;
-        
-        private Options optionsField;
-        
-        private SubsequentTransactionType transactionTypeField;
-        
         private Payment paymentField;
+        
+        private TransactionDetails transactionDetailsField;
+        
+        private Billing billingField;
+        
+        private Shipping shippingField;
+        
+        private ClientLocale clientLocaleField;
         
         private Basket basketField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IpgTransactionId", typeof(long))]
-        [System.Xml.Serialization.XmlElementAttribute("OrderId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("ReferencedMerchantTransactionId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("TDate", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
+        [System.Xml.Serialization.XmlElementAttribute("ClickandBuyData", typeof(ClickandBuyData))]
+        [System.Xml.Serialization.XmlElementAttribute("ClickandBuyTxType", typeof(ClickandBuyTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("CreditCard3DSecure", typeof(CreditCard3DSecure))]
+        [System.Xml.Serialization.XmlElementAttribute("CreditCardData", typeof(CreditCardData))]
+        [System.Xml.Serialization.XmlElementAttribute("CreditCardTxType", typeof(CreditCardTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("CustomerCardData", typeof(CustomerCardData))]
+        [System.Xml.Serialization.XmlElementAttribute("CustomerCardTxType", typeof(CustomerCardTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitData", typeof(DE_DirectDebitData))]
+        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitTxType", typeof(DE_DirectDebitTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("EMVCardPresentRequest", typeof(EMVCardPresentRequest))]
+        [System.Xml.Serialization.XmlElementAttribute("IdealTxType", typeof(IdealTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("KlarnaPClassID", typeof(int))]
+        [System.Xml.Serialization.XmlElementAttribute("KlarnaTxType", typeof(KlarnaTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("MCC6012Details", typeof(MCC6012Details))]
+        [System.Xml.Serialization.XmlElementAttribute("PayPalTxType", typeof(PayPalTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("PaymentFacilitator", typeof(PaymentFacilitator))]
+        [System.Xml.Serialization.XmlElementAttribute("SofortTxType", typeof(SofortTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("TopUpTxType", typeof(TopUpTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("UK_DebitCardData", typeof(UK_DebitCardData))]
+        [System.Xml.Serialization.XmlElementAttribute("UK_DebitCardTxType", typeof(UK_DebitCardTxType))]
+        [System.Xml.Serialization.XmlElementAttribute("Wallet", typeof(Wallet))]
+        [System.Xml.Serialization.XmlElementAttribute("cardFunction", typeof(CardFunctionType))]
+        [System.Xml.Serialization.XmlElementAttribute("recurringType", typeof(RecurringType))]
         public object[] Items {
             get {
                 return this.itemsField;
@@ -230,54 +281,52 @@ namespace WebApplicationTest1.IPGWebReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType4[] ItemsElementName {
-            get {
-                return this.itemsElementNameField;
-            }
-            set {
-                this.itemsElementNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string MerchantTransactionId {
-            get {
-                return this.merchantTransactionIdField;
-            }
-            set {
-                this.merchantTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Options Options {
-            get {
-                return this.optionsField;
-            }
-            set {
-                this.optionsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SubsequentTransactionType TransactionType {
-            get {
-                return this.transactionTypeField;
-            }
-            set {
-                this.transactionTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
         public Payment Payment {
             get {
                 return this.paymentField;
             }
             set {
                 this.paymentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionDetails TransactionDetails {
+            get {
+                return this.transactionDetailsField;
+            }
+            set {
+                this.transactionDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Billing Billing {
+            get {
+                return this.billingField;
+            }
+            set {
+                this.billingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Shipping Shipping {
+            get {
+                return this.shippingField;
+            }
+            set {
+                this.shippingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ClientLocale ClientLocale {
+            get {
+                return this.clientLocaleField;
+            }
+            set {
+                this.clientLocaleField = value;
             }
         }
         
@@ -295,51 +344,3773 @@ namespace WebApplicationTest1.IPGWebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1", IncludeInSchema=false)]
-    public enum ItemsChoiceType4 {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class ClickandBuyData {
+        
+        private OrderDetails orderDetailsField;
         
         /// <remarks/>
-        IpgTransactionId,
-        
-        /// <remarks/>
-        OrderId,
-        
-        /// <remarks/>
-        ReferencedMerchantTransactionId,
-        
-        /// <remarks/>
-        TDate,
+        public OrderDetails orderDetails {
+            get {
+                return this.orderDetailsField;
+            }
+            set {
+                this.orderDetailsField = value;
+            }
+        }
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SepaTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(KlarnaTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SofortTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayPalTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdealTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DE_DirectDebitTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerCardTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PaymentUrlTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreditCardTxType))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TopUpTxType))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Options {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class OrderDetails {
         
-        private string storeIdField;
+        private string textField;
+        
+        private OrderDetailItem[] itemListField;
         
         /// <remarks/>
-        public string StoreId {
+        public string text {
             get {
-                return this.storeIdField;
+                return this.textField;
             }
             set {
-                this.storeIdField = value;
+                this.textField = value;
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("item", IsNullable=false)]
+        public OrderDetailItem[] itemList {
+            get {
+                return this.itemListField;
+            }
+            set {
+                this.itemListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class OrderDetailItem {
+        
+        private OrderDetailItemType itemTypeField;
+        
+        private string descriptionField;
+        
+        private int quantityField;
+        
+        private bool quantityFieldSpecified;
+        
+        private Money unitPriceField;
+        
+        private Money totalPriceField;
+        
+        /// <remarks/>
+        public OrderDetailItemType itemType {
+            get {
+                return this.itemTypeField;
+            }
+            set {
+                this.itemTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                this.quantityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool quantitySpecified {
+            get {
+                return this.quantityFieldSpecified;
+            }
+            set {
+                this.quantityFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Money unitPrice {
+            get {
+                return this.unitPriceField;
+            }
+            set {
+                this.unitPriceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Money totalPrice {
+            get {
+                return this.totalPriceField;
+            }
+            set {
+                this.totalPriceField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum OrderDetailItemType {
+        
+        /// <remarks/>
+        TEXT,
+        
+        /// <remarks/>
+        ITEM,
+        
+        /// <remarks/>
+        SUBTOTAL,
+        
+        /// <remarks/>
+        VAT,
+        
+        /// <remarks/>
+        TOTAL,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Money {
+        
+        private decimal amountField;
+        
+        private string currencyField;
+        
+        /// <remarks/>
+        public decimal amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                this.currencyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class StatusRequest_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus[] transactionListField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("transaction", IsNullable=false)]
+        public TransactionIDStatus[] transactionList {
+            get {
+                return this.transactionListField;
+            }
+            set {
+                this.transactionListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class TransactionIDStatus {
+        
+        private long transactionIDField;
+        
+        private bool transactionIDFieldSpecified;
+        
+        private string externalIDField;
+        
+        private TransactionStatus transactionStatusField;
+        
+        private bool transactionStatusFieldSpecified;
+        
+        private TransactionType transactionTypeField;
+        
+        private bool transactionTypeFieldSpecified;
+        
+        private ErrorDetails errorDetailsField;
+        
+        private string redirectURLField;
+        
+        private RecurringPaymentAuthorizationIDStatus createdRecurringPaymentAuthorizationField;
+        
+        /// <remarks/>
+        public long transactionID {
+            get {
+                return this.transactionIDField;
+            }
+            set {
+                this.transactionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool transactionIDSpecified {
+            get {
+                return this.transactionIDFieldSpecified;
+            }
+            set {
+                this.transactionIDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionStatus transactionStatus {
+            get {
+                return this.transactionStatusField;
+            }
+            set {
+                this.transactionStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool transactionStatusSpecified {
+            get {
+                return this.transactionStatusFieldSpecified;
+            }
+            set {
+                this.transactionStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionType transactionType {
+            get {
+                return this.transactionTypeField;
+            }
+            set {
+                this.transactionTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool transactionTypeSpecified {
+            get {
+                return this.transactionTypeFieldSpecified;
+            }
+            set {
+                this.transactionTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ErrorDetails errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string redirectURL {
+            get {
+                return this.redirectURLField;
+            }
+            set {
+                this.redirectURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RecurringPaymentAuthorizationIDStatus createdRecurringPaymentAuthorization {
+            get {
+                return this.createdRecurringPaymentAuthorizationField;
+            }
+            set {
+                this.createdRecurringPaymentAuthorizationField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum TransactionStatus {
+        
+        /// <remarks/>
+        CREATED,
+        
+        /// <remarks/>
+        PENDING_VERIFICATION,
+        
+        /// <remarks/>
+        EXPIRED,
+        
+        /// <remarks/>
+        ABORTED,
+        
+        /// <remarks/>
+        DECLINED,
+        
+        /// <remarks/>
+        CANCELLED,
+        
+        /// <remarks/>
+        IN_PROGRESS,
+        
+        /// <remarks/>
+        SUCCESS,
+        
+        /// <remarks/>
+        PAYMENT_PENDING,
+        
+        /// <remarks/>
+        BOOKED_OUT,
+        
+        /// <remarks/>
+        BOOKED_IN,
+        
+        /// <remarks/>
+        PAYMENT_GUARANTEE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum TransactionType {
+        
+        /// <remarks/>
+        PAY,
+        
+        /// <remarks/>
+        CREDIT,
+        
+        /// <remarks/>
+        REFUND,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ErrorDetails {
+        
+        private string requestTrackingIDField;
+        
+        private int codeField;
+        
+        private uint detailCodeField;
+        
+        private string descriptionField;
+        
+        private bool retryField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int code {
+            get {
+                return this.codeField;
+            }
+            set {
+                this.codeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public uint detailCode {
+            get {
+                return this.detailCodeField;
+            }
+            set {
+                this.detailCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool retry {
+            get {
+                return this.retryField;
+            }
+            set {
+                this.retryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RecurringPaymentAuthorizationIDStatus {
+        
+        private long recurringPaymentAuthorizationIDField;
+        
+        private RecurringPaymentAuthorizationStatus recurringPaymentAuthorizationStatusField;
+        
+        /// <remarks/>
+        public long recurringPaymentAuthorizationID {
+            get {
+                return this.recurringPaymentAuthorizationIDField;
+            }
+            set {
+                this.recurringPaymentAuthorizationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RecurringPaymentAuthorizationStatus recurringPaymentAuthorizationStatus {
+            get {
+                return this.recurringPaymentAuthorizationStatusField;
+            }
+            set {
+                this.recurringPaymentAuthorizationStatusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum RecurringPaymentAuthorizationStatus {
+        
+        /// <remarks/>
+        CREATED,
+        
+        /// <remarks/>
+        PENDING_VERIFICATION,
+        
+        /// <remarks/>
+        EXPIRED,
+        
+        /// <remarks/>
+        ABORTED,
+        
+        /// <remarks/>
+        DECLINED,
+        
+        /// <remarks/>
+        CANCELLED,
+        
+        /// <remarks/>
+        AUTHORIZED,
+        
+        /// <remarks/>
+        EXHAUSTED,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class StatusRequest_Request {
+        
+        private Authentication authenticationField;
+        
+        private StatusRequestDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public StatusRequestDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Authentication {
+        
+        private long merchantIDField;
+        
+        private long projectIDField;
+        
+        private string tokenField;
+        
+        /// <remarks/>
+        public long merchantID {
+            get {
+                return this.merchantIDField;
+            }
+            set {
+                this.merchantIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long projectID {
+            get {
+                return this.projectIDField;
+            }
+            set {
+                this.projectIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string token {
+            get {
+                return this.tokenField;
+            }
+            set {
+                this.tokenField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class StatusRequestDetails {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("externalIDList", typeof(ExternalIDList))]
+        [System.Xml.Serialization.XmlElementAttribute("transactionIDList", typeof(TransactionIDList))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ExternalIDList {
+        
+        private string[] externalIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("externalID")]
+        public string[] externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class TransactionIDList {
+        
+        private long[] transactionIDField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("transactionID")]
+        public long[] transactionID {
+            get {
+                return this.transactionIDField;
+            }
+            set {
+                this.transactionIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RefundRequest_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus transactionField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionIDStatus transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RefundRequest_Request {
+        
+        private Authentication authenticationField;
+        
+        private RefundRequestDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RefundRequestDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RefundRequestDetails {
+        
+        private Money amountField;
+        
+        private long transactionIDField;
+        
+        private OrderDetails orderDetailsField;
+        
+        private string externalIDField;
+        
+        /// <remarks/>
+        public Money amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long transactionID {
+            get {
+                return this.transactionIDField;
+            }
+            set {
+                this.transactionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public OrderDetails orderDetails {
+            get {
+                return this.orderDetailsField;
+            }
+            set {
+                this.orderDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequest_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus transactionField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionIDStatus transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequest_Request {
+        
+        private Authentication authenticationField;
+        
+        private PayRequestDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PayRequestDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequestDetails {
+        
+        private Money amountField;
+        
+        private OrderDetails orderDetailsField;
+        
+        private LegalEntity billingField;
+        
+        private LegalEntity shippingField;
+        
+        private int basketRiskField;
+        
+        private bool basketRiskFieldSpecified;
+        
+        private int clientRiskField;
+        
+        private bool clientRiskFieldSpecified;
+        
+        private int authExpirationField;
+        
+        private bool authExpirationFieldSpecified;
+        
+        private int confirmExpirationField;
+        
+        private bool confirmExpirationFieldSpecified;
+        
+        private int successExpirationField;
+        
+        private bool successExpirationFieldSpecified;
+        
+        private string successURLField;
+        
+        private string failureURLField;
+        
+        private RecurringPaymentAuthorization createRecurringField;
+        
+        private string externalIDField;
+        
+        private string consumerIPAddressField;
+        
+        private string consumerLanguageField;
+        
+        private string consumerCountryField;
+        
+        /// <remarks/>
+        public Money amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public OrderDetails orderDetails {
+            get {
+                return this.orderDetailsField;
+            }
+            set {
+                this.orderDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LegalEntity billing {
+            get {
+                return this.billingField;
+            }
+            set {
+                this.billingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LegalEntity shipping {
+            get {
+                return this.shippingField;
+            }
+            set {
+                this.shippingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int basketRisk {
+            get {
+                return this.basketRiskField;
+            }
+            set {
+                this.basketRiskField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool basketRiskSpecified {
+            get {
+                return this.basketRiskFieldSpecified;
+            }
+            set {
+                this.basketRiskFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int clientRisk {
+            get {
+                return this.clientRiskField;
+            }
+            set {
+                this.clientRiskField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool clientRiskSpecified {
+            get {
+                return this.clientRiskFieldSpecified;
+            }
+            set {
+                this.clientRiskFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int authExpiration {
+            get {
+                return this.authExpirationField;
+            }
+            set {
+                this.authExpirationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool authExpirationSpecified {
+            get {
+                return this.authExpirationFieldSpecified;
+            }
+            set {
+                this.authExpirationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int confirmExpiration {
+            get {
+                return this.confirmExpirationField;
+            }
+            set {
+                this.confirmExpirationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool confirmExpirationSpecified {
+            get {
+                return this.confirmExpirationFieldSpecified;
+            }
+            set {
+                this.confirmExpirationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int successExpiration {
+            get {
+                return this.successExpirationField;
+            }
+            set {
+                this.successExpirationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool successExpirationSpecified {
+            get {
+                return this.successExpirationFieldSpecified;
+            }
+            set {
+                this.successExpirationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string successURL {
+            get {
+                return this.successURLField;
+            }
+            set {
+                this.successURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string failureURL {
+            get {
+                return this.failureURLField;
+            }
+            set {
+                this.failureURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RecurringPaymentAuthorization createRecurring {
+            get {
+                return this.createRecurringField;
+            }
+            set {
+                this.createRecurringField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string consumerIPAddress {
+            get {
+                return this.consumerIPAddressField;
+            }
+            set {
+                this.consumerIPAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string consumerLanguage {
+            get {
+                return this.consumerLanguageField;
+            }
+            set {
+                this.consumerLanguageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string consumerCountry {
+            get {
+                return this.consumerCountryField;
+            }
+            set {
+                this.consumerCountryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class LegalEntity {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("company", typeof(Company))]
+        [System.Xml.Serialization.XmlElementAttribute("consumer", typeof(Consumer))]
+        [System.Xml.Serialization.XmlElementAttribute("externalID", typeof(string))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Company {
+        
+        private string nameField;
+        
+        private string vatIDField;
+        
+        private Registry registryField;
+        
+        private Address addressField;
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vatID {
+            get {
+                return this.vatIDField;
+            }
+            set {
+                this.vatIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Registry registry {
+            get {
+                return this.registryField;
+            }
+            set {
+                this.registryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Address address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Registry {
+        
+        private string registryIDField;
+        
+        private string zipField;
+        
+        private string cityField;
+        
+        /// <remarks/>
+        public string registryID {
+            get {
+                return this.registryIDField;
+            }
+            set {
+                this.registryIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string zip {
+            get {
+                return this.zipField;
+            }
+            set {
+                this.zipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Address {
+        
+        private string streetField;
+        
+        private string houseNumberField;
+        
+        private string houseNumberSuffixField;
+        
+        private string zipField;
+        
+        private string cityField;
+        
+        private string countryField;
+        
+        private string stateField;
+        
+        private string addressSuffixField;
+        
+        /// <remarks/>
+        public string street {
+            get {
+                return this.streetField;
+            }
+            set {
+                this.streetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string houseNumber {
+            get {
+                return this.houseNumberField;
+            }
+            set {
+                this.houseNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string houseNumberSuffix {
+            get {
+                return this.houseNumberSuffixField;
+            }
+            set {
+                this.houseNumberSuffixField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string zip {
+            get {
+                return this.zipField;
+            }
+            set {
+                this.zipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string city {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string state {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string addressSuffix {
+            get {
+                return this.addressSuffixField;
+            }
+            set {
+                this.addressSuffixField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Consumer {
+        
+        private Salutation salutationField;
+        
+        private bool salutationFieldSpecified;
+        
+        private string titleField;
+        
+        private string firstNameField;
+        
+        private string lastNameField;
+        
+        private string maidenNameField;
+        
+        private Gender genderField;
+        
+        private bool genderFieldSpecified;
+        
+        private System.DateTime dateOfBirthField;
+        
+        private bool dateOfBirthFieldSpecified;
+        
+        private string languageField;
+        
+        private Address addressField;
+        
+        /// <remarks/>
+        public Salutation salutation {
+            get {
+                return this.salutationField;
+            }
+            set {
+                this.salutationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool salutationSpecified {
+            get {
+                return this.salutationFieldSpecified;
+            }
+            set {
+                this.salutationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string title {
+            get {
+                return this.titleField;
+            }
+            set {
+                this.titleField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string firstName {
+            get {
+                return this.firstNameField;
+            }
+            set {
+                this.firstNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string lastName {
+            get {
+                return this.lastNameField;
+            }
+            set {
+                this.lastNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string maidenName {
+            get {
+                return this.maidenNameField;
+            }
+            set {
+                this.maidenNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Gender gender {
+            get {
+                return this.genderField;
+            }
+            set {
+                this.genderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool genderSpecified {
+            get {
+                return this.genderFieldSpecified;
+            }
+            set {
+                this.genderFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        public System.DateTime dateOfBirth {
+            get {
+                return this.dateOfBirthField;
+            }
+            set {
+                this.dateOfBirthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dateOfBirthSpecified {
+            get {
+                return this.dateOfBirthFieldSpecified;
+            }
+            set {
+                this.dateOfBirthFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string language {
+            get {
+                return this.languageField;
+            }
+            set {
+                this.languageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Address address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum Salutation {
+        
+        /// <remarks/>
+        MR,
+        
+        /// <remarks/>
+        MS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum Gender {
+        
+        /// <remarks/>
+        UNKNOWN,
+        
+        /// <remarks/>
+        MALE,
+        
+        /// <remarks/>
+        FEMALE,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RecurringPaymentAuthorization {
+        
+        private string descriptionField;
+        
+        private int numberLimitField;
+        
+        private bool numberLimitFieldSpecified;
+        
+        private Money amountLimitField;
+        
+        private System.DateTime expireDateField;
+        
+        private bool expireDateFieldSpecified;
+        
+        private bool revokableByConsumerField;
+        
+        private bool revokableByConsumerFieldSpecified;
+        
+        /// <remarks/>
+        public string description {
+            get {
+                return this.descriptionField;
+            }
+            set {
+                this.descriptionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int numberLimit {
+            get {
+                return this.numberLimitField;
+            }
+            set {
+                this.numberLimitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool numberLimitSpecified {
+            get {
+                return this.numberLimitFieldSpecified;
+            }
+            set {
+                this.numberLimitFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Money amountLimit {
+            get {
+                return this.amountLimitField;
+            }
+            set {
+                this.amountLimitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="date")]
+        public System.DateTime expireDate {
+            get {
+                return this.expireDateField;
+            }
+            set {
+                this.expireDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool expireDateSpecified {
+            get {
+                return this.expireDateFieldSpecified;
+            }
+            set {
+                this.expireDateFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool revokableByConsumer {
+            get {
+                return this.revokableByConsumerField;
+            }
+            set {
+                this.revokableByConsumerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool revokableByConsumerSpecified {
+            get {
+                return this.revokableByConsumerFieldSpecified;
+            }
+            set {
+                this.revokableByConsumerFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequestRecurring_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus transactionField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionIDStatus transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequestRecurring_Request {
+        
+        private Authentication authenticationField;
+        
+        private PayRequestRecurringDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PayRequestRecurringDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class PayRequestRecurringDetails {
+        
+        private Money amountField;
+        
+        private long recurringPaymentAuthorizationIDField;
+        
+        private OrderDetails orderDetailsField;
+        
+        private LegalEntity billingField;
+        
+        private LegalEntity shippingField;
+        
+        private int basketRiskField;
+        
+        private bool basketRiskFieldSpecified;
+        
+        private int clientRiskField;
+        
+        private bool clientRiskFieldSpecified;
+        
+        private int successExpirationField;
+        
+        private bool successExpirationFieldSpecified;
+        
+        private string externalIDField;
+        
+        /// <remarks/>
+        public Money amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long recurringPaymentAuthorizationID {
+            get {
+                return this.recurringPaymentAuthorizationIDField;
+            }
+            set {
+                this.recurringPaymentAuthorizationIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public OrderDetails orderDetails {
+            get {
+                return this.orderDetailsField;
+            }
+            set {
+                this.orderDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LegalEntity billing {
+            get {
+                return this.billingField;
+            }
+            set {
+                this.billingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public LegalEntity shipping {
+            get {
+                return this.shippingField;
+            }
+            set {
+                this.shippingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int basketRisk {
+            get {
+                return this.basketRiskField;
+            }
+            set {
+                this.basketRiskField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool basketRiskSpecified {
+            get {
+                return this.basketRiskFieldSpecified;
+            }
+            set {
+                this.basketRiskFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int clientRisk {
+            get {
+                return this.clientRiskField;
+            }
+            set {
+                this.clientRiskField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool clientRiskSpecified {
+            get {
+                return this.clientRiskFieldSpecified;
+            }
+            set {
+                this.clientRiskFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int successExpiration {
+            get {
+                return this.successExpirationField;
+            }
+            set {
+                this.successExpirationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool successExpirationSpecified {
+            get {
+                return this.successExpirationFieldSpecified;
+            }
+            set {
+                this.successExpirationFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class GetBatchStatus_Response {
+        
+        private string requestTrackingIDField;
+        
+        private BatchIDStatus batchField;
+        
+        private BatchItemIDStatus[] batchItemListField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchIDStatus batch {
+            get {
+                return this.batchField;
+            }
+            set {
+                this.batchField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("batchItem", IsNullable=false)]
+        public BatchItemIDStatus[] batchItemList {
+            get {
+                return this.batchItemListField;
+            }
+            set {
+                this.batchItemListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class BatchIDStatus {
+        
+        private long batchIDField;
+        
+        private string externalBatchIDField;
+        
+        private BatchStatus batchStatusField;
+        
+        private bool batchStatusFieldSpecified;
+        
+        /// <remarks/>
+        public long batchID {
+            get {
+                return this.batchIDField;
+            }
+            set {
+                this.batchIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalBatchID {
+            get {
+                return this.externalBatchIDField;
+            }
+            set {
+                this.externalBatchIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchStatus batchStatus {
+            get {
+                return this.batchStatusField;
+            }
+            set {
+                this.batchStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool batchStatusSpecified {
+            get {
+                return this.batchStatusFieldSpecified;
+            }
+            set {
+                this.batchStatusFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum BatchStatus {
+        
+        /// <remarks/>
+        CREATED,
+        
+        /// <remarks/>
+        CANCELLED,
+        
+        /// <remarks/>
+        PENDING_EXECUTION,
+        
+        /// <remarks/>
+        EXECUTING,
+        
+        /// <remarks/>
+        EXECUTED,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class BatchItemIDStatus {
+        
+        private long batchItemIDField;
+        
+        private string externalIDField;
+        
+        private BatchItemStatus batchItemStatusField;
+        
+        private bool batchItemStatusFieldSpecified;
+        
+        private long resultTransactionIDField;
+        
+        private bool resultTransactionIDFieldSpecified;
+        
+        private ErrorDetails errorDetailsField;
+        
+        /// <remarks/>
+        public long batchItemID {
+            get {
+                return this.batchItemIDField;
+            }
+            set {
+                this.batchItemIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchItemStatus batchItemStatus {
+            get {
+                return this.batchItemStatusField;
+            }
+            set {
+                this.batchItemStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool batchItemStatusSpecified {
+            get {
+                return this.batchItemStatusFieldSpecified;
+            }
+            set {
+                this.batchItemStatusFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long resultTransactionID {
+            get {
+                return this.resultTransactionIDField;
+            }
+            set {
+                this.resultTransactionIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool resultTransactionIDSpecified {
+            get {
+                return this.resultTransactionIDFieldSpecified;
+            }
+            set {
+                this.resultTransactionIDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ErrorDetails errorDetails {
+            get {
+                return this.errorDetailsField;
+            }
+            set {
+                this.errorDetailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum BatchItemStatus {
+        
+        /// <remarks/>
+        CREATED,
+        
+        /// <remarks/>
+        CANCELLED,
+        
+        /// <remarks/>
+        SUCCESS,
+        
+        /// <remarks/>
+        PENDING_EXECUTION,
+        
+        /// <remarks/>
+        EXECUTING,
+        
+        /// <remarks/>
+        ERROR,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class GetBatchStatus_Request {
+        
+        private Authentication authenticationField;
+        
+        private GetBatchStatusDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public GetBatchStatusDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class GetBatchStatusDetails {
+        
+        private long batchIDField;
+        
+        private bool batchIDFieldSpecified;
+        
+        private string externalBatchIDField;
+        
+        private long[] batchItemIDListField;
+        
+        /// <remarks/>
+        public long batchID {
+            get {
+                return this.batchIDField;
+            }
+            set {
+                this.batchIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool batchIDSpecified {
+            get {
+                return this.batchIDFieldSpecified;
+            }
+            set {
+                this.batchIDFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalBatchID {
+            get {
+                return this.externalBatchIDField;
+            }
+            set {
+                this.externalBatchIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("batchItemID", IsNullable=false)]
+        public long[] batchItemIDList {
+            get {
+                return this.batchItemIDListField;
+            }
+            set {
+                this.batchItemIDListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ExecuteBatch_Response {
+        
+        private string requestTrackingIDField;
+        
+        private BatchIDStatus batchField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchIDStatus batch {
+            get {
+                return this.batchField;
+            }
+            set {
+                this.batchField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ExecuteBatch_Request {
+        
+        private Authentication authenticationField;
+        
+        private ExecuteBatchDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ExecuteBatchDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ExecuteBatchDetails {
+        
+        private long batchIDField;
+        
+        /// <remarks/>
+        public long batchID {
+            get {
+                return this.batchIDField;
+            }
+            set {
+                this.batchIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreditRequest_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus transactionField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionIDStatus transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreditRequest_Request {
+        
+        private Authentication authenticationField;
+        
+        private CreditRequestDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CreditRequestDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreditRequestDetails {
+        
+        private Money amountField;
+        
+        private string emailAddressField;
+        
+        private string consumerLanguageField;
+        
+        private OrderDetails orderDetailsField;
+        
+        private string externalIDField;
+        
+        /// <remarks/>
+        public Money amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string emailAddress {
+            get {
+                return this.emailAddressField;
+            }
+            set {
+                this.emailAddressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string consumerLanguage {
+            get {
+                return this.consumerLanguageField;
+            }
+            set {
+                this.consumerLanguageField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public OrderDetails orderDetails {
+            get {
+                return this.orderDetailsField;
+            }
+            set {
+                this.orderDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreateBatch_Response {
+        
+        private string requestTrackingIDField;
+        
+        private BatchIDStatus batchField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchIDStatus batch {
+            get {
+                return this.batchField;
+            }
+            set {
+                this.batchField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreateBatch_Request {
+        
+        private Authentication authenticationField;
+        
+        private CreateBatchDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CreateBatchDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CreateBatchDetails {
+        
+        private string externalBatchIDField;
+        
+        /// <remarks/>
+        public string externalBatchID {
+            get {
+                return this.externalBatchIDField;
+            }
+            set {
+                this.externalBatchIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelRequest_Response {
+        
+        private string requestTrackingIDField;
+        
+        private TransactionIDStatus transactionField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionIDStatus transaction {
+            get {
+                return this.transactionField;
+            }
+            set {
+                this.transactionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelRequest_Request {
+        
+        private Authentication authenticationField;
+        
+        private CancelRequestDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CancelRequestDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelRequestDetails {
+        
+        private long transactionIDField;
+        
+        /// <remarks/>
+        public long transactionID {
+            get {
+                return this.transactionIDField;
+            }
+            set {
+                this.transactionIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelBatch_Response {
+        
+        private string requestTrackingIDField;
+        
+        private BatchIDStatus batchField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchIDStatus batch {
+            get {
+                return this.batchField;
+            }
+            set {
+                this.batchField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelBatch_Request {
+        
+        private Authentication authenticationField;
+        
+        private CancelBatchDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CancelBatchDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class CancelBatchDetails {
+        
+        private long batchIDField;
+        
+        /// <remarks/>
+        public long batchID {
+            get {
+                return this.batchIDField;
+            }
+            set {
+                this.batchIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class AddBatchItem_Response {
+        
+        private string requestTrackingIDField;
+        
+        private BatchIDStatus batchField;
+        
+        private BatchItemIDStatus[] batchItemListField;
+        
+        /// <remarks/>
+        public string requestTrackingID {
+            get {
+                return this.requestTrackingIDField;
+            }
+            set {
+                this.requestTrackingIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BatchIDStatus batch {
+            get {
+                return this.batchField;
+            }
+            set {
+                this.batchField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("batchItem", IsNullable=false)]
+        public BatchItemIDStatus[] batchItemList {
+            get {
+                return this.batchItemListField;
+            }
+            set {
+                this.batchItemListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class AddBatchItem_Request {
+        
+        private Authentication authenticationField;
+        
+        private AddBatchItemDetails detailsField;
+        
+        /// <remarks/>
+        public Authentication authentication {
+            get {
+                return this.authenticationField;
+            }
+            set {
+                this.authenticationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AddBatchItemDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class AddBatchItemDetails {
+        
+        private long batchIDField;
+        
+        private BatchItemDetails[] batchItemDetailsListField;
+        
+        /// <remarks/>
+        public long batchID {
+            get {
+                return this.batchIDField;
+            }
+            set {
+                this.batchIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayItemAttribute("batchItemDetails", IsNullable=false)]
+        public BatchItemDetails[] batchItemDetailsList {
+            get {
+                return this.batchItemDetailsListField;
+            }
+            set {
+                this.batchItemDetailsListField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class BatchItemDetails {
+        
+        private string externalIDField;
+        
+        private AddBatchItemProcessingDetails detailsField;
+        
+        /// <remarks/>
+        public string externalID {
+            get {
+                return this.externalIDField;
+            }
+            set {
+                this.externalIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AddBatchItemProcessingDetails details {
+            get {
+                return this.detailsField;
+            }
+            set {
+                this.detailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class AddBatchItemProcessingDetails {
+        
+        private object itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cancelRequestDetails", typeof(CancelRequestDetails))]
+        [System.Xml.Serialization.XmlElementAttribute("creditRequestDetails", typeof(CreditRequestDetails))]
+        [System.Xml.Serialization.XmlElementAttribute("payRequestDetails", typeof(PayRequestDetails))]
+        [System.Xml.Serialization.XmlElementAttribute("payRequestRecurringDetails", typeof(PayRequestRecurringDetails))]
+        [System.Xml.Serialization.XmlElementAttribute("refundRequestDetails", typeof(RefundRequestDetails))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ThreeDRedirectElement {
+        
+        private ThreeDRedirectElementItem itemField;
+        
+        private string valueField;
+        
+        private ThreeDRedirectElementType typeField;
+        
+        private string patternField;
+        
+        /// <remarks/>
+        public ThreeDRedirectElementItem item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ThreeDRedirectElementType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string pattern {
+            get {
+                return this.patternField;
+            }
+            set {
+                this.patternField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum ThreeDRedirectElementItem {
+        
+        /// <remarks/>
+        TermURL,
+        
+        /// <remarks/>
+        PaReq,
+        
+        /// <remarks/>
+        MD,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum ThreeDRedirectElementType {
+        
+        /// <remarks/>
+        URL,
+        
+        /// <remarks/>
+        PAReq,
+        
+        /// <remarks/>
+        ThreeDMerchantData,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ThreeDRedirect {
+        
+        private string acsURLField;
+        
+        private ThreeDRedirectElement[] elementField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string acsURL {
+            get {
+                return this.acsURLField;
+            }
+            set {
+                this.acsURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("element")]
+        public ThreeDRedirectElement[] element {
+            get {
+                return this.elementField;
+            }
+            set {
+                this.elementField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class TargetBankAccount {
+        
+        private string bankNameField;
+        
+        private string accountHolderField;
+        
+        private AccountDetails accountDetailsField;
+        
+        /// <remarks/>
+        public string bankName {
+            get {
+                return this.bankNameField;
+            }
+            set {
+                this.bankNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string accountHolder {
+            get {
+                return this.accountHolderField;
+            }
+            set {
+                this.accountHolderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AccountDetails accountDetails {
+            get {
+                return this.accountDetailsField;
+            }
+            set {
+                this.accountDetailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class AccountDetails {
+        
+        private DomesticAccount domesticAccountField;
+        
+        private InternationalAccount internationalAccountField;
+        
+        /// <remarks/>
+        public DomesticAccount domesticAccount {
+            get {
+                return this.domesticAccountField;
+            }
+            set {
+                this.domesticAccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InternationalAccount internationalAccount {
+            get {
+                return this.internationalAccountField;
+            }
+            set {
+                this.internationalAccountField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class DomesticAccount {
+        
+        private string accountNumberField;
+        
+        private string bankZipCodeField;
+        
+        /// <remarks/>
+        public string accountNumber {
+            get {
+                return this.accountNumberField;
+            }
+            set {
+                this.accountNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string bankZipCode {
+            get {
+                return this.bankZipCodeField;
+            }
+            set {
+                this.bankZipCodeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class InternationalAccount {
+        
+        private string iBANField;
+        
+        private string bICField;
+        
+        /// <remarks/>
+        public string IBAN {
+            get {
+                return this.iBANField;
+            }
+            set {
+                this.iBANField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string BIC {
+            get {
+                return this.bICField;
+            }
+            set {
+                this.bICField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class StartDate {
+        
+        private byte monthField;
+        
+        private string yearField;
+        
+        /// <remarks/>
+        public byte month {
+            get {
+                return this.monthField;
+            }
+            set {
+                this.monthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string year {
+            get {
+                return this.yearField;
+            }
+            set {
+                this.yearField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class SessionListItem {
+        
+        private long idField;
+        
+        private string listNameField;
+        
+        private string shortNameField;
+        
+        private string labelField;
+        
+        private string sequenceNumberField;
+        
+        /// <remarks/>
+        public long id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string listName {
+            get {
+                return this.listNameField;
+            }
+            set {
+                this.listNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string shortName {
+            get {
+                return this.shortNameField;
+            }
+            set {
+                this.shortNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string label {
+            get {
+                return this.labelField;
+            }
+            set {
+                this.labelField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        public string sequenceNumber {
+            get {
+                return this.sequenceNumberField;
+            }
+            set {
+                this.sequenceNumberField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class OnlineTransferRedirect {
+        
+        private string otURLField;
+        
+        private RedirectType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        private RedirectParameter[] parameterField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string otURL {
+            get {
+                return this.otURLField;
+            }
+            set {
+                this.otURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RedirectType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified {
+            get {
+                return this.typeFieldSpecified;
+            }
+            set {
+                this.typeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        public RedirectParameter[] parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum RedirectType {
+        
+        /// <remarks/>
+        POST,
+        
+        /// <remarks/>
+        GET,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class RedirectParameter {
+        
+        private string nameField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class MessageContext {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Identity {
+        
+        private IdentificationDocument documentTypeField;
+        
+        private string identifierField;
+        
+        /// <remarks/>
+        public IdentificationDocument documentType {
+            get {
+                return this.documentTypeField;
+            }
+            set {
+                this.documentTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string identifier {
+            get {
+                return this.identifierField;
+            }
+            set {
+                this.identifierField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum IdentificationDocument {
+        
+        /// <remarks/>
+        PASSPORT,
+        
+        /// <remarks/>
+        ID_CARD,
+        
+        /// <remarks/>
+        DRIVERS_LICENSE,
+        
+        /// <remarks/>
+        TAX_STATEMENT,
+        
+        /// <remarks/>
+        POST_IDENT,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Expiry {
+        
+        private byte monthField;
+        
+        private string yearField;
+        
+        /// <remarks/>
+        public byte month {
+            get {
+                return this.monthField;
+            }
+            set {
+                this.monthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string year {
+            get {
+                return this.yearField;
+            }
+            set {
+                this.yearField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class EWalletRedirect {
+        
+        private string walletURLField;
+        
+        private RedirectType typeField;
+        
+        private bool typeFieldSpecified;
+        
+        private RedirectParameter[] parameterField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="anyURI")]
+        public string walletURL {
+            get {
+                return this.walletURLField;
+            }
+            set {
+                this.walletURLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RedirectType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool typeSpecified {
+            get {
+                return this.typeFieldSpecified;
+            }
+            set {
+                this.typeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("parameter")]
+        public RedirectParameter[] parameter {
+            get {
+                return this.parameterField;
+            }
+            set {
+                this.parameterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class Digest {
+        
+        private string hmacField;
+        
+        /// <remarks/>
+        public string hmac {
+            get {
+                return this.hmacField;
+            }
+            set {
+                this.hmacField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class ContactDataElement {
+        
+        private ContactDataElementItem itemField;
+        
+        private string valueField;
+        
+        private ContactDataElementType typeField;
+        
+        private string patternField;
+        
+        /// <remarks/>
+        public ContactDataElementItem item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ContactDataElementType type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string pattern {
+            get {
+                return this.patternField;
+            }
+            set {
+                this.patternField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum ContactDataElementItem {
+        
+        /// <remarks/>
+        type,
+        
+        /// <remarks/>
+        department,
+        
+        /// <remarks/>
+        phone,
+        
+        /// <remarks/>
+        mobile,
+        
+        /// <remarks/>
+        fax,
+        
+        /// <remarks/>
+        ip,
+        
+        /// <remarks/>
+        email,
+        
+        /// <remarks/>
+        www,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum ContactDataElementType {
+        
+        /// <remarks/>
+        ContactType,
+        
+        /// <remarks/>
+        Department,
+        
+        /// <remarks/>
+        Phone,
+        
+        /// <remarks/>
+        IPAddress,
+        
+        /// <remarks/>
+        Email,
+        
+        /// <remarks/>
+        URL,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public partial class BankAccount {
+        
+        private string countryField;
+        
+        private string bankNameField;
+        
+        private string accountHolderField;
+        
+        private BankAccountType bankAccountTypeField;
+        
+        private decimal limitField;
+        
+        private bool limitFieldSpecified;
+        
+        private AccountDetails accountDetailsField;
+        
+        /// <remarks/>
+        public string country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string bankName {
+            get {
+                return this.bankNameField;
+            }
+            set {
+                this.bankNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string accountHolder {
+            get {
+                return this.accountHolderField;
+            }
+            set {
+                this.accountHolderField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public BankAccountType bankAccountType {
+            get {
+                return this.bankAccountTypeField;
+            }
+            set {
+                this.bankAccountTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal limit {
+            get {
+                return this.limitField;
+            }
+            set {
+                this.limitField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool limitSpecified {
+            get {
+                return this.limitFieldSpecified;
+            }
+            set {
+                this.limitFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AccountDetails accountDetails {
+            get {
+                return this.accountDetailsField;
+            }
+            set {
+                this.accountDetailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/")]
+    public enum BankAccountType {
+        
+        /// <remarks/>
+        DOMESTIC,
+        
+        /// <remarks/>
+        INTERNATIONAL,
+        
+        /// <remarks/>
+        BOTH,
     }
     
     /// <remarks/>
@@ -736,10 +4507,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private bool valueAddedTaxFieldSpecified;
         
-        private decimal localTaxField;
-        
-        private bool localTaxFieldSpecified;
-        
         private decimal deliveryAmountField;
         
         private bool deliveryAmountFieldSpecified;
@@ -800,27 +4567,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.valueAddedTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal localTax {
-            get {
-                return this.localTaxField;
-            }
-            set {
-                this.localTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool localTaxSpecified {
-            get {
-                return this.localTaxFieldSpecified;
-            }
-            set {
-                this.localTaxFieldSpecified = value;
             }
         }
         
@@ -1377,8 +5123,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string bICField;
         
-        private keyValuePair[] additionalRequestParametersField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
         public IPGApiOrderResponse IPGApiOrderResponse {
@@ -1519,18 +5263,6 @@ namespace WebApplicationTest1.IPGWebReference {
                 this.bICField = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        [System.Xml.Serialization.XmlArrayItemAttribute("keyValuePair", IsNullable=false)]
-        public keyValuePair[] AdditionalRequestParameters {
-            get {
-                return this.additionalRequestParametersField;
-            }
-            set {
-                this.additionalRequestParametersField = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -1555,12 +5287,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string errorMessageField;
         
-        private string externalMerchantIDField;
-        
-        private int fraudScoreField;
-        
-        private bool fraudScoreFieldSpecified;
-        
         private string orderIdField;
         
         private long ipgTransactionIdField;
@@ -1574,8 +5300,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private string processorApprovalCodeField;
         
         private string processorReceiptNumberField;
-        
-        private string processorBatchNumberField;
         
         private string processorCCVResponseField;
         
@@ -1627,8 +5351,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string referencedTDateField;
         
-        private string schemeTransactionIdField;
-        
         private string tDateField;
         
         private string tDateFormattedField;
@@ -1642,18 +5364,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private EMVCardPresentResponse eMVCardPresentResponseField;
         
         private string mandateReferenceField;
-        
-        private string redirectUrlField;
-        
-        private string[] hostedDataField;
-        
-        private Secure3DResponse secure3DResponseField;
-        
-        private SecurePlusResponse securePlusResponseField;
-        
-        private decimal convenienceFeeField;
-        
-        private bool convenienceFeeFieldSpecified;
         
         /// <remarks/>
         public string DebugInformation {
@@ -1726,37 +5436,6 @@ namespace WebApplicationTest1.IPGWebReference {
         }
         
         /// <remarks/>
-        public string ExternalMerchantID {
-            get {
-                return this.externalMerchantIDField;
-            }
-            set {
-                this.externalMerchantIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int FraudScore {
-            get {
-                return this.fraudScoreField;
-            }
-            set {
-                this.fraudScoreField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FraudScoreSpecified {
-            get {
-                return this.fraudScoreFieldSpecified;
-            }
-            set {
-                this.fraudScoreFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
         public string OrderId {
             get {
                 return this.orderIdField;
@@ -1824,16 +5503,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.processorReceiptNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ProcessorBatchNumber {
-            get {
-                return this.processorBatchNumberField;
-            }
-            set {
-                this.processorBatchNumberField = value;
             }
         }
         
@@ -2097,16 +5766,6 @@ namespace WebApplicationTest1.IPGWebReference {
         }
         
         /// <remarks/>
-        public string SchemeTransactionId {
-            get {
-                return this.schemeTransactionIdField;
-            }
-            set {
-                this.schemeTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
         public string TDate {
             get {
                 return this.tDateField;
@@ -2176,68 +5835,6 @@ namespace WebApplicationTest1.IPGWebReference {
                 this.mandateReferenceField = value;
             }
         }
-        
-        /// <remarks/>
-        public string RedirectUrl {
-            get {
-                return this.redirectUrlField;
-            }
-            set {
-                this.redirectUrlField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("HostedDataID", IsNullable=false)]
-        public string[] HostedData {
-            get {
-                return this.hostedDataField;
-            }
-            set {
-                this.hostedDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Secure3DResponse Secure3DResponse {
-            get {
-                return this.secure3DResponseField;
-            }
-            set {
-                this.secure3DResponseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SecurePlusResponse SecurePlusResponse {
-            get {
-                return this.securePlusResponseField;
-            }
-            set {
-                this.securePlusResponseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal ConvenienceFee {
-            get {
-                return this.convenienceFeeField;
-            }
-            set {
-                this.convenienceFeeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ConvenienceFeeSpecified {
-            get {
-                return this.convenienceFeeFieldSpecified;
-            }
-            set {
-                this.convenienceFeeFieldSpecified = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -2251,8 +5848,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private EMVResponseData eMVResponseDataField;
         
         private byte[] tLVDataField;
-        
-        private CryptDataType cryptDataField;
         
         /// <remarks/>
         public EMVResponseData EMVResponseData {
@@ -2272,16 +5867,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.tLVDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CryptDataType CryptData {
-            get {
-                return this.cryptDataField;
-            }
-            set {
-                this.cryptDataField = value;
             }
         }
     }
@@ -2456,397 +6041,6 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
-    public partial class CryptDataType {
-        
-        private MACType mACField;
-        
-        /// <remarks/>
-        public MACType MAC {
-            get {
-                return this.mACField;
-            }
-            set {
-                this.mACField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class MACType {
-        
-        private byte[] valueField;
-        
-        private byte[] kSNField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="hexBinary")]
-        public byte[] Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="hexBinary")]
-        public byte[] KSN {
-            get {
-                return this.kSNField;
-            }
-            set {
-                this.kSNField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Secure3DResponse {
-        
-        private string responseCode3dSecureField;
-        
-        private Secure3DVerificationResponse itemField;
-        
-        /// <remarks/>
-        public string ResponseCode3dSecure {
-            get {
-                return this.responseCode3dSecureField;
-            }
-            set {
-                this.responseCode3dSecureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Secure3DVerificationResponse")]
-        public Secure3DVerificationResponse Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Secure3DVerificationResponse {
-        
-        private VerificationRedirectResponse verificationRedirectResponseField;
-        
-        private IVRAuthData[] iVRVerificationResponseField;
-        
-        /// <remarks/>
-        public VerificationRedirectResponse VerificationRedirectResponse {
-            get {
-                return this.verificationRedirectResponseField;
-            }
-            set {
-                this.verificationRedirectResponseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute(IsNullable=false)]
-        public IVRAuthData[] IVRVerificationResponse {
-            get {
-                return this.iVRVerificationResponseField;
-            }
-            set {
-                this.iVRVerificationResponseField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class VerificationRedirectResponse {
-        
-        private string acsURLField;
-        
-        private string paReqField;
-        
-        private string termUrlField;
-        
-        private string mdField;
-        
-        /// <remarks/>
-        public string AcsURL {
-            get {
-                return this.acsURLField;
-            }
-            set {
-                this.acsURLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PaReq {
-            get {
-                return this.paReqField;
-            }
-            set {
-                this.paReqField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TermUrl {
-            get {
-                return this.termUrlField;
-            }
-            set {
-                this.termUrlField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string MD {
-            get {
-                return this.mdField;
-            }
-            set {
-                this.mdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class IVRAuthData {
-        
-        private IVRAuthDataName iVRAuthDataNameField;
-        
-        private int iVRAuthDataMaxLenField;
-        
-        private bool iVRAuthDataMaxLenFieldSpecified;
-        
-        private IVRAuthDataType iVRAuthDataTypeField;
-        
-        private string iVRAuthDataLabelField;
-        
-        private string iVRAuthDataPromptField;
-        
-        private bool iVRAuthDataEncryptedField;
-        
-        private bool iVRAuthDataEncryptedFieldSpecified;
-        
-        /// <remarks/>
-        public IVRAuthDataName IVRAuthDataName {
-            get {
-                return this.iVRAuthDataNameField;
-            }
-            set {
-                this.iVRAuthDataNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int IVRAuthDataMaxLen {
-            get {
-                return this.iVRAuthDataMaxLenField;
-            }
-            set {
-                this.iVRAuthDataMaxLenField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IVRAuthDataMaxLenSpecified {
-            get {
-                return this.iVRAuthDataMaxLenFieldSpecified;
-            }
-            set {
-                this.iVRAuthDataMaxLenFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public IVRAuthDataType IVRAuthDataType {
-            get {
-                return this.iVRAuthDataTypeField;
-            }
-            set {
-                this.iVRAuthDataTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string IVRAuthDataLabel {
-            get {
-                return this.iVRAuthDataLabelField;
-            }
-            set {
-                this.iVRAuthDataLabelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string IVRAuthDataPrompt {
-            get {
-                return this.iVRAuthDataPromptField;
-            }
-            set {
-                this.iVRAuthDataPromptField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool IVRAuthDataEncrypted {
-            get {
-                return this.iVRAuthDataEncryptedField;
-            }
-            set {
-                this.iVRAuthDataEncryptedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IVRAuthDataEncryptedSpecified {
-            get {
-                return this.iVRAuthDataEncryptedFieldSpecified;
-            }
-            set {
-                this.iVRAuthDataEncryptedFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRAuthDataName {
-        
-        /// <remarks/>
-        SP,
-        
-        /// <remarks/>
-        OTP1,
-        
-        /// <remarks/>
-        OTP2,
-        
-        /// <remarks/>
-        TTP,
-        
-        /// <remarks/>
-        ICB,
-        
-        /// <remarks/>
-        other,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRAuthDataType {
-        
-        /// <remarks/>
-        A,
-        
-        /// <remarks/>
-        N,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SecurePlusResponse {
-        
-        private object itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AuthenticateResponse", typeof(AuthenticateResponse))]
-        [System.Xml.Serialization.XmlElementAttribute("VerifySmsCodeResponse", typeof(VerifySmsCodeResponse))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class AuthenticateResponse {
-        
-        private bool smsSentField;
-        
-        /// <remarks/>
-        public bool smsSent {
-            get {
-                return this.smsSentField;
-            }
-            set {
-                this.smsSentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class VerifySmsCodeResponse {
-        
-        private string responseCodeField;
-        
-        /// <remarks/>
-        public string responseCode {
-            get {
-                return this.responseCodeField;
-            }
-            set {
-                this.responseCodeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
     public partial class DE_DirectDebitTxType : Options {
         
@@ -2880,6 +6074,483 @@ namespace WebApplicationTest1.IPGWebReference {
         
         /// <remarks/>
         @void,
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(KlarnaTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(SofortTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(PayPalTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(IdealTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(ClickandBuyTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(UK_DebitCardTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(DE_DirectDebitTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CustomerCardTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(CreditCardTxType))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(TopUpTxType))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class Options {
+        
+        private string storeIdField;
+        
+        /// <remarks/>
+        public string StoreId {
+            get {
+                return this.storeIdField;
+            }
+            set {
+                this.storeIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class KlarnaTxType : Options {
+        
+        private KlarnaTxTypeType typeField;
+        
+        /// <remarks/>
+        public KlarnaTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum KlarnaTxTypeType {
+        
+        /// <remarks/>
+        preAuth,
+        
+        /// <remarks/>
+        preauth,
+        
+        /// <remarks/>
+        postAuth,
+        
+        /// <remarks/>
+        postauth,
+        
+        /// <remarks/>
+        @void,
+        
+        /// <remarks/>
+        @return,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class SofortTxType : Options {
+        
+        private SofortTxTypeType typeField;
+        
+        /// <remarks/>
+        public SofortTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum SofortTxTypeType {
+        
+        /// <remarks/>
+        @return,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class PayPalTxType : Options {
+        
+        private PayPalTxTypeType typeField;
+        
+        /// <remarks/>
+        public PayPalTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum PayPalTxTypeType {
+        
+        /// <remarks/>
+        credit,
+        
+        /// <remarks/>
+        postAuth,
+        
+        /// <remarks/>
+        postauth,
+        
+        /// <remarks/>
+        @return,
+        
+        /// <remarks/>
+        @void,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class IdealTxType : Options {
+        
+        private IdealTxTypeType typeField;
+        
+        /// <remarks/>
+        public IdealTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum IdealTxTypeType {
+        
+        /// <remarks/>
+        @return,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class ClickandBuyTxType : Options {
+        
+        private ClickandBuyTxTypeType typeField;
+        
+        /// <remarks/>
+        public ClickandBuyTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum ClickandBuyTxTypeType {
+        
+        /// <remarks/>
+        credit,
+        
+        /// <remarks/>
+        postAuth,
+        
+        /// <remarks/>
+        postauth,
+        
+        /// <remarks/>
+        @return,
+        
+        /// <remarks/>
+        @void,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class UK_DebitCardTxType : Options {
+        
+        private UK_DebitCardTxTypeType typeField;
+        
+        /// <remarks/>
+        public UK_DebitCardTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum UK_DebitCardTxTypeType {
+        
+        /// <remarks/>
+        credit,
+        
+        /// <remarks/>
+        @return,
+        
+        /// <remarks/>
+        sale,
+        
+        /// <remarks/>
+        @void,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class CustomerCardTxType : Options {
+        
+        private CustomerCardTxTypeType typeField;
+        
+        /// <remarks/>
+        public CustomerCardTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CustomerCardTxTypeType {
+        
+        /// <remarks/>
+        forceTicket,
+        
+        /// <remarks/>
+        forceticket,
+        
+        /// <remarks/>
+        BWListCheck,
+        
+        /// <remarks/>
+        bwlistcheck,
+        
+        /// <remarks/>
+        sale,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class CreditCardTxType : Options {
+        
+        private CreditCardTxTypeType typeField;
+        
+        /// <remarks/>
+        public CreditCardTxTypeType Type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CreditCardTxTypeType {
+        
+        /// <remarks/>
+        credit,
+        
+        /// <remarks/>
+        forceTicket,
+        
+        /// <remarks/>
+        forceticket,
+        
+        /// <remarks/>
+        postAuth,
+        
+        /// <remarks/>
+        postauth,
+        
+        /// <remarks/>
+        preAuth,
+        
+        /// <remarks/>
+        preauth,
+        
+        /// <remarks/>
+        @return,
+        
+        /// <remarks/>
+        sale,
+        
+        /// <remarks/>
+        @void,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class TopUpTxType : Options {
+        
+        private TopUpTxTypeMPCharge itemField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("MPCharge")]
+        public TopUpTxTypeMPCharge Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class TopUpTxTypeMPCharge {
+        
+        private MNSP mNSPField;
+        
+        private string mSISDNField;
+        
+        private PaymentType paymentTypeField;
+        
+        /// <remarks/>
+        public MNSP MNSP {
+            get {
+                return this.mNSPField;
+            }
+            set {
+                this.mNSPField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string MSISDN {
+            get {
+                return this.mSISDNField;
+            }
+            set {
+                this.mSISDNField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PaymentType PaymentType {
+            get {
+                return this.paymentTypeField;
+            }
+            set {
+                this.paymentTypeField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum MNSP {
+        
+        /// <remarks/>
+        D1,
+        
+        /// <remarks/>
+        D2,
+        
+        /// <remarks/>
+        EP,
+        
+        /// <remarks/>
+        VI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum PaymentType {
+        
+        /// <remarks/>
+        Amex,
+        
+        /// <remarks/>
+        Cash,
+        
+        /// <remarks/>
+        Diners,
+        
+        /// <remarks/>
+        ECMC,
+        
+        /// <remarks/>
+        JCB,
+        
+        /// <remarks/>
+        VISA,
     }
     
     /// <remarks/>
@@ -3012,9 +6683,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         /// <remarks/>
         FIRST_COLLECTION,
-        
-        /// <remarks/>
-        FINAL_COLLECTION,
     }
     
     /// <remarks/>
@@ -3022,503 +6690,449 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class keyValuePair {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class ResultInfoType {
         
-        private string keyField;
-        
-        private string valueField;
+        private bool moreResultsAvailableField;
         
         /// <remarks/>
-        public string key {
+        public bool MoreResultsAvailable {
             get {
-                return this.keyField;
+                return this.moreResultsAvailableField;
             }
             set {
-                this.keyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
+                this.moreResultsAvailableField = value;
             }
         }
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RecurringPaymentValues))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Transaction {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class RecurringPaymentInformation {
         
-        private object[] itemsField;
+        private string recurringStartDateField;
         
-        private ItemsChoiceType3[] itemsElementNameField;
+        private string installmentCountField;
         
-        private Payment paymentField;
+        private string maximumFailuresField;
         
-        private TransactionDetails transactionDetailsField;
+        private string installmentFrequencyField;
         
-        private Billing billingField;
+        private RecurringPaymentInformationInstallmentPeriod installmentPeriodField;
         
-        private Shipping shippingField;
-        
-        private ClientLocale clientLocaleField;
-        
-        private Basket basketField;
+        private bool installmentPeriodFieldSpecified;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CreditCard3DSecure", typeof(CreditCard3DSecure))]
-        [System.Xml.Serialization.XmlElementAttribute("CreditCardData", typeof(CreditCardData))]
-        [System.Xml.Serialization.XmlElementAttribute("CreditCardTxType", typeof(CreditCardTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("CustomerCardData", typeof(CustomerCardData))]
-        [System.Xml.Serialization.XmlElementAttribute("CustomerCardTxType", typeof(CustomerCardTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitData", typeof(DE_DirectDebitData))]
-        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitEMV", typeof(EMVCardPresentRequest))]
-        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitTxType", typeof(DE_DirectDebitTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("EMVCardPresentRequest", typeof(EMVCardPresentRequest))]
-        [System.Xml.Serialization.XmlElementAttribute("IdealTxType", typeof(IdealTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("KlarnaPClassID", typeof(int))]
-        [System.Xml.Serialization.XmlElementAttribute("KlarnaTxType", typeof(KlarnaTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("MCC6012Details", typeof(MCC6012Details))]
-        [System.Xml.Serialization.XmlElementAttribute("PayPalTxType", typeof(PayPalTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("PaymentFacilitator", typeof(PaymentFacilitator))]
-        [System.Xml.Serialization.XmlElementAttribute("PaymentUrlTxType", typeof(PaymentUrlTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("SepaData", typeof(TransactionSepaData))]
-        [System.Xml.Serialization.XmlElementAttribute("SepaTxType", typeof(SepaTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("SofortTxType", typeof(SofortTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("SubMerchant", typeof(MerchantMasterData))]
-        [System.Xml.Serialization.XmlElementAttribute("TopUpTxType", typeof(TopUpTxType))]
-        [System.Xml.Serialization.XmlElementAttribute("Upop", typeof(Upop))]
-        [System.Xml.Serialization.XmlElementAttribute("Wallet", typeof(Wallet))]
-        [System.Xml.Serialization.XmlElementAttribute("cardAccount", typeof(CardAccountType))]
-        [System.Xml.Serialization.XmlElementAttribute("cardFunction", typeof(CardFunctionType))]
-        [System.Xml.Serialization.XmlElementAttribute("recurringType", typeof(RecurringType))]
-        [System.Xml.Serialization.XmlElementAttribute("unscheduledCredentialOnFileType", typeof(UnscheduledCredentialOnFileType))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public object[] Items {
+        public string RecurringStartDate {
             get {
-                return this.itemsField;
+                return this.recurringStartDateField;
             }
             set {
-                this.itemsField = value;
+                this.recurringStartDateField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType3[] ItemsElementName {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        public string InstallmentCount {
             get {
-                return this.itemsElementNameField;
+                return this.installmentCountField;
             }
             set {
-                this.itemsElementNameField = value;
+                this.installmentCountField = value;
             }
         }
         
         /// <remarks/>
-        public Payment Payment {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        public string MaximumFailures {
             get {
-                return this.paymentField;
+                return this.maximumFailuresField;
             }
             set {
-                this.paymentField = value;
+                this.maximumFailuresField = value;
             }
         }
         
         /// <remarks/>
-        public TransactionDetails TransactionDetails {
+        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
+        public string InstallmentFrequency {
             get {
-                return this.transactionDetailsField;
+                return this.installmentFrequencyField;
             }
             set {
-                this.transactionDetailsField = value;
+                this.installmentFrequencyField = value;
             }
         }
         
         /// <remarks/>
-        public Billing Billing {
+        public RecurringPaymentInformationInstallmentPeriod InstallmentPeriod {
             get {
-                return this.billingField;
+                return this.installmentPeriodField;
             }
             set {
-                this.billingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Shipping Shipping {
-            get {
-                return this.shippingField;
-            }
-            set {
-                this.shippingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ClientLocale ClientLocale {
-            get {
-                return this.clientLocaleField;
-            }
-            set {
-                this.clientLocaleField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Basket Basket {
-            get {
-                return this.basketField;
-            }
-            set {
-                this.basketField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class CreditCard3DSecure {
-        
-        private CardEnrolledType verificationResponseField;
-        
-        private bool verificationResponseFieldSpecified;
-        
-        private CreditCard3DSecurePayerAuthenticationResponse payerAuthenticationResponseField;
-        
-        private bool payerAuthenticationResponseFieldSpecified;
-        
-        private string dSRPECIField;
-        
-        private string authenticationValueField;
-        
-        private string xIDField;
-        
-        private bool authenticateTransactionField;
-        
-        private bool authenticateTransactionFieldSpecified;
-        
-        private Secure3DRequest secure3DRequestField;
-        
-        /// <remarks/>
-        public CardEnrolledType VerificationResponse {
-            get {
-                return this.verificationResponseField;
-            }
-            set {
-                this.verificationResponseField = value;
+                this.installmentPeriodField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool VerificationResponseSpecified {
+        public bool InstallmentPeriodSpecified {
             get {
-                return this.verificationResponseFieldSpecified;
+                return this.installmentPeriodFieldSpecified;
             }
             set {
-                this.verificationResponseFieldSpecified = value;
+                this.installmentPeriodFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public enum RecurringPaymentInformationInstallmentPeriod {
+        
+        /// <remarks/>
+        day,
+        
+        /// <remarks/>
+        week,
+        
+        /// <remarks/>
+        month,
+        
+        /// <remarks/>
+        year,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class RecurringPaymentValues : RecurringPaymentInformation {
+        
+        private RecurringPaymentValuesState stateField;
+        
+        private string creationDateField;
+        
+        private int failureCountField;
+        
+        private bool failureCountFieldSpecified;
+        
+        private string nextAttemptDateField;
+        
+        private int runCountField;
+        
+        private bool runCountFieldSpecified;
+        
+        private CreditCardData creditCardDataField;
+        
+        private DE_DirectDebitData dE_DirectDebitDataField;
+        
+        private string hostedDataIDField;
+        
+        private string hostedDataStoreIDField;
+        
+        private decimal subTotalField;
+        
+        private decimal valueAddedTaxField;
+        
+        private bool valueAddedTaxFieldSpecified;
+        
+        private decimal deliveryAmountField;
+        
+        private bool deliveryAmountFieldSpecified;
+        
+        private decimal cashbackAmountField;
+        
+        private bool cashbackAmountFieldSpecified;
+        
+        private decimal chargeTotalField;
+        
+        private string currencyField;
+        
+        private TransactionOrigin transactionOriginField;
+        
+        private bool transactionOriginFieldSpecified;
+        
+        private string invoiceNumberField;
+        
+        private string pONumberField;
+        
+        private string commentsField;
+        
+        public RecurringPaymentValues() {
+            this.transactionOriginField = TransactionOrigin.ECI;
+        }
+        
+        /// <remarks/>
+        public RecurringPaymentValuesState State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
             }
         }
         
         /// <remarks/>
-        public CreditCard3DSecurePayerAuthenticationResponse PayerAuthenticationResponse {
+        public string CreationDate {
             get {
-                return this.payerAuthenticationResponseField;
+                return this.creationDateField;
             }
             set {
-                this.payerAuthenticationResponseField = value;
+                this.creationDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int FailureCount {
+            get {
+                return this.failureCountField;
+            }
+            set {
+                this.failureCountField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool PayerAuthenticationResponseSpecified {
+        public bool FailureCountSpecified {
             get {
-                return this.payerAuthenticationResponseFieldSpecified;
+                return this.failureCountFieldSpecified;
             }
             set {
-                this.payerAuthenticationResponseFieldSpecified = value;
+                this.failureCountFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        public string DSRPECI {
+        public string NextAttemptDate {
             get {
-                return this.dSRPECIField;
+                return this.nextAttemptDateField;
             }
             set {
-                this.dSRPECIField = value;
+                this.nextAttemptDateField = value;
             }
         }
         
         /// <remarks/>
-        public string AuthenticationValue {
+        public int RunCount {
             get {
-                return this.authenticationValueField;
+                return this.runCountField;
             }
             set {
-                this.authenticationValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string XID {
-            get {
-                return this.xIDField;
-            }
-            set {
-                this.xIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool AuthenticateTransaction {
-            get {
-                return this.authenticateTransactionField;
-            }
-            set {
-                this.authenticateTransactionField = value;
+                this.runCountField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AuthenticateTransactionSpecified {
+        public bool RunCountSpecified {
             get {
-                return this.authenticateTransactionFieldSpecified;
+                return this.runCountFieldSpecified;
             }
             set {
-                this.authenticateTransactionFieldSpecified = value;
+                this.runCountFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        public Secure3DRequest Secure3DRequest {
+        public CreditCardData CreditCardData {
             get {
-                return this.secure3DRequestField;
+                return this.creditCardDataField;
             }
             set {
-                this.secure3DRequestField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CardEnrolledType {
-        
-        /// <remarks/>
-        N,
-        
-        /// <remarks/>
-        U,
-        
-        /// <remarks/>
-        Y,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CreditCard3DSecurePayerAuthenticationResponse {
-        
-        /// <remarks/>
-        A,
-        
-        /// <remarks/>
-        N,
-        
-        /// <remarks/>
-        U,
-        
-        /// <remarks/>
-        Y,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Secure3DRequest {
-        
-        private object itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Secure3DAuthenticationRequest", typeof(Secure3DAuthenticationRequest))]
-        [System.Xml.Serialization.XmlElementAttribute("Secure3DVerificationRequest", typeof(Secure3DVerificationRequest))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Secure3DAuthenticationRequest {
-        
-        private object itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AcsResponse", typeof(AcsResponse))]
-        [System.Xml.Serialization.XmlElementAttribute("IVRAuthenticationRequest", typeof(IVRAuthenticationRequest))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class AcsResponse {
-        
-        private string mdField;
-        
-        private string paResField;
-        
-        /// <remarks/>
-        public string MD {
-            get {
-                return this.mdField;
-            }
-            set {
-                this.mdField = value;
+                this.creditCardDataField = value;
             }
         }
         
         /// <remarks/>
-        public string PaRes {
+        public DE_DirectDebitData DE_DirectDebitData {
             get {
-                return this.paResField;
+                return this.dE_DirectDebitDataField;
             }
             set {
-                this.paResField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class IVRAuthenticationRequest {
-        
-        private IVRAuthUserData[] iVRAuthUserDataField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IVRAuthUserData")]
-        public IVRAuthUserData[] IVRAuthUserData {
-            get {
-                return this.iVRAuthUserDataField;
-            }
-            set {
-                this.iVRAuthUserDataField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class IVRAuthUserData {
-        
-        private string iVRUserDataNameField;
-        
-        private string iVRUserDataValueField;
-        
-        private IVRUserDataStatus iVRUserDataStatusField;
-        
-        private bool iVRUserDataEncryptedField;
-        
-        private bool iVRUserDataEncryptedFieldSpecified;
-        
-        /// <remarks/>
-        public string IVRUserDataName {
-            get {
-                return this.iVRUserDataNameField;
-            }
-            set {
-                this.iVRUserDataNameField = value;
+                this.dE_DirectDebitDataField = value;
             }
         }
         
         /// <remarks/>
-        public string IVRUserDataValue {
+        public string HostedDataID {
             get {
-                return this.iVRUserDataValueField;
+                return this.hostedDataIDField;
             }
             set {
-                this.iVRUserDataValueField = value;
+                this.hostedDataIDField = value;
             }
         }
         
         /// <remarks/>
-        public IVRUserDataStatus IVRUserDataStatus {
+        public string HostedDataStoreID {
             get {
-                return this.iVRUserDataStatusField;
+                return this.hostedDataStoreIDField;
             }
             set {
-                this.iVRUserDataStatusField = value;
+                this.hostedDataStoreIDField = value;
             }
         }
         
         /// <remarks/>
-        public bool IVRUserDataEncrypted {
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public decimal SubTotal {
             get {
-                return this.iVRUserDataEncryptedField;
+                return this.subTotalField;
             }
             set {
-                this.iVRUserDataEncryptedField = value;
+                this.subTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public decimal ValueAddedTax {
+            get {
+                return this.valueAddedTaxField;
+            }
+            set {
+                this.valueAddedTaxField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IVRUserDataEncryptedSpecified {
+        public bool ValueAddedTaxSpecified {
             get {
-                return this.iVRUserDataEncryptedFieldSpecified;
+                return this.valueAddedTaxFieldSpecified;
             }
             set {
-                this.iVRUserDataEncryptedFieldSpecified = value;
+                this.valueAddedTaxFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public decimal DeliveryAmount {
+            get {
+                return this.deliveryAmountField;
+            }
+            set {
+                this.deliveryAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryAmountSpecified {
+            get {
+                return this.deliveryAmountFieldSpecified;
+            }
+            set {
+                this.deliveryAmountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public decimal CashbackAmount {
+            get {
+                return this.cashbackAmountField;
+            }
+            set {
+                this.cashbackAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CashbackAmountSpecified {
+            get {
+                return this.cashbackAmountFieldSpecified;
+            }
+            set {
+                this.cashbackAmountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public decimal ChargeTotal {
+            get {
+                return this.chargeTotalField;
+            }
+            set {
+                this.chargeTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public string Currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                this.currencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public TransactionOrigin TransactionOrigin {
+            get {
+                return this.transactionOriginField;
+            }
+            set {
+                this.transactionOriginField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TransactionOriginSpecified {
+            get {
+                return this.transactionOriginFieldSpecified;
+            }
+            set {
+                this.transactionOriginFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string InvoiceNumber {
+            get {
+                return this.invoiceNumberField;
+            }
+            set {
+                this.invoiceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PONumber {
+            get {
+                return this.pONumberField;
+            }
+            set {
+                this.pONumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
             }
         }
     }
@@ -3526,156 +7140,17 @@ namespace WebApplicationTest1.IPGWebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRUserDataStatus {
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public enum RecurringPaymentValuesState {
         
         /// <remarks/>
-        Y,
+        Cancelled,
         
         /// <remarks/>
-        N,
+        Inactivated,
         
         /// <remarks/>
-        T,
-        
-        /// <remarks/>
-        U,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Secure3DVerificationRequest {
-        
-        private IVRVerificationRequest iVRVerificationRequestField;
-        
-        /// <remarks/>
-        public IVRVerificationRequest IVRVerificationRequest {
-            get {
-                return this.iVRVerificationRequestField;
-            }
-            set {
-                this.iVRVerificationRequestField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class IVRVerificationRequest {
-        
-        private IVRDeviceIdFormat iVRDeviceIdFormatField;
-        
-        private long iVRDeviceIdField;
-        
-        private IVRShoppingChannel iVRShoppingChannelField;
-        
-        private IVRAuthenticationChannel iVRAuthenticationChannelField;
-        
-        /// <remarks/>
-        public IVRDeviceIdFormat IVRDeviceIdFormat {
-            get {
-                return this.iVRDeviceIdFormatField;
-            }
-            set {
-                this.iVRDeviceIdFormatField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long IVRDeviceId {
-            get {
-                return this.iVRDeviceIdField;
-            }
-            set {
-                this.iVRDeviceIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public IVRShoppingChannel IVRShoppingChannel {
-            get {
-                return this.iVRShoppingChannelField;
-            }
-            set {
-                this.iVRShoppingChannelField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public IVRAuthenticationChannel IVRAuthenticationChannel {
-            get {
-                return this.iVRAuthenticationChannelField;
-            }
-            set {
-                this.iVRAuthenticationChannelField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRDeviceIdFormat {
-        
-        /// <remarks/>
-        I,
-        
-        /// <remarks/>
-        D,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRShoppingChannel {
-        
-        /// <remarks/>
-        IVR,
-        
-        /// <remarks/>
-        CLIENT,
-        
-        /// <remarks/>
-        TTP,
-        
-        /// <remarks/>
-        SMS,
-        
-        /// <remarks/>
-        WAP,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("native-app")]
-        nativeapp,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IVRAuthenticationChannel {
-        
-        /// <remarks/>
-        SMS,
-        
-        /// <remarks/>
-        IVR,
-        
-        /// <remarks/>
-        USSD,
-        
-        /// <remarks/>
-        WAP,
+        Installed,
     }
     
     /// <remarks/>
@@ -3757,8 +7232,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private CryptDataPINBlock pINBlockField;
         
-        private MACType mACField;
-        
         /// <remarks/>
         public CryptDataSRED SRED {
             get {
@@ -3776,16 +7249,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.pINBlockField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MACType MAC {
-            get {
-                return this.mACField;
-            }
-            set {
-                this.mACField = value;
             }
         }
     }
@@ -3905,19 +7368,16 @@ namespace WebApplicationTest1.IPGWebReference {
         DINERSDISCOVER,
         
         /// <remarks/>
-        DINACARD,
+        JCB,
         
         /// <remarks/>
-        JCB,
+        LASER,
         
         /// <remarks/>
         MAESTRO,
         
         /// <remarks/>
         MASTERCARD,
-        
-        /// <remarks/>
-        MEXICOLOCAL,
         
         /// <remarks/>
         SOROCRED,
@@ -3932,20 +7392,548 @@ namespace WebApplicationTest1.IPGWebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class CreditCardTxType : Options {
-        
-        private CreditCardTxTypeType typeField;
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum TransactionOrigin {
         
         /// <remarks/>
-        public CreditCardTxTypeType Type {
+        ECI,
+        
+        /// <remarks/>
+        MOTO,
+        
+        /// <remarks/>
+        RETAIL,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class RecurringPayment {
+        
+        private Function functionField;
+        
+        private string orderIdField;
+        
+        private string storeIdField;
+        
+        private string commentsField;
+        
+        private string invoiceNumberField;
+        
+        private string dynamicMerchantNameField;
+        
+        private string pONumberField;
+        
+        private RecurringPaymentInformation recurringPaymentInformationField;
+        
+        private CreditCardData creditCardDataField;
+        
+        private DE_DirectDebitData dE_DirectDebitDataField;
+        
+        private CardFunctionType cardFunctionField;
+        
+        private bool cardFunctionFieldSpecified;
+        
+        private string mandateReferenceField;
+        
+        private string referencedOrderIdField;
+        
+        private Payment paymentField;
+        
+        private Basket basketField;
+        
+        private Billing billingField;
+        
+        private CreditCard3DSecure creditCard3DSecureField;
+        
+        private Shipping shippingField;
+        
+        private string ipField;
+        
+        private RecurringPaymentTransactionOrigin transactionOriginField;
+        
+        private Wallet walletField;
+        
+        private MerchantDetails merchantDetailsField;
+        
+        public RecurringPayment() {
+            this.transactionOriginField = RecurringPaymentTransactionOrigin.ECI;
+        }
+        
+        /// <remarks/>
+        public Function Function {
             get {
-                return this.typeField;
+                return this.functionField;
             }
             set {
-                this.typeField = value;
+                this.functionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string OrderId {
+            get {
+                return this.orderIdField;
+            }
+            set {
+                this.orderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string StoreId {
+            get {
+                return this.storeIdField;
+            }
+            set {
+                this.storeIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string InvoiceNumber {
+            get {
+                return this.invoiceNumberField;
+            }
+            set {
+                this.invoiceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DynamicMerchantName {
+            get {
+                return this.dynamicMerchantNameField;
+            }
+            set {
+                this.dynamicMerchantNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PONumber {
+            get {
+                return this.pONumberField;
+            }
+            set {
+                this.pONumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RecurringPaymentInformation RecurringPaymentInformation {
+            get {
+                return this.recurringPaymentInformationField;
+            }
+            set {
+                this.recurringPaymentInformationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CreditCardData CreditCardData {
+            get {
+                return this.creditCardDataField;
+            }
+            set {
+                this.creditCardDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DE_DirectDebitData DE_DirectDebitData {
+            get {
+                return this.dE_DirectDebitDataField;
+            }
+            set {
+                this.dE_DirectDebitDataField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CardFunctionType cardFunction {
+            get {
+                return this.cardFunctionField;
+            }
+            set {
+                this.cardFunctionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool cardFunctionSpecified {
+            get {
+                return this.cardFunctionFieldSpecified;
+            }
+            set {
+                this.cardFunctionFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public string MandateReference {
+            get {
+                return this.mandateReferenceField;
+            }
+            set {
+                this.mandateReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ReferencedOrderId {
+            get {
+                return this.referencedOrderIdField;
+            }
+            set {
+                this.referencedOrderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public Payment Payment {
+            get {
+                return this.paymentField;
+            }
+            set {
+                this.paymentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public Basket Basket {
+            get {
+                return this.basketField;
+            }
+            set {
+                this.basketField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public Billing Billing {
+            get {
+                return this.billingField;
+            }
+            set {
+                this.billingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public CreditCard3DSecure CreditCard3DSecure {
+            get {
+                return this.creditCard3DSecureField;
+            }
+            set {
+                this.creditCard3DSecureField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public Shipping Shipping {
+            get {
+                return this.shippingField;
+            }
+            set {
+                this.shippingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Ip {
+            get {
+                return this.ipField;
+            }
+            set {
+                this.ipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DefaultValueAttribute(RecurringPaymentTransactionOrigin.ECI)]
+        public RecurringPaymentTransactionOrigin TransactionOrigin {
+            get {
+                return this.transactionOriginField;
+            }
+            set {
+                this.transactionOriginField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Wallet Wallet {
+            get {
+                return this.walletField;
+            }
+            set {
+                this.walletField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+        public MerchantDetails MerchantDetails {
+            get {
+                return this.merchantDetailsField;
+            }
+            set {
+                this.merchantDetailsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public enum Function {
+        
+        /// <remarks/>
+        cancel,
+        
+        /// <remarks/>
+        install,
+        
+        /// <remarks/>
+        modify,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("perform only in test environment")]
+        performonlyintestenvironment,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CardFunctionType {
+        
+        /// <remarks/>
+        credit,
+        
+        /// <remarks/>
+        debit,
+        
+        /// <remarks/>
+        voucher,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class Payment {
+        
+        private string hostedDataIDField;
+        
+        private string hostedDataStoreIDField;
+        
+        private bool declineHostedDataDuplicatesField;
+        
+        private decimal subTotalField;
+        
+        private decimal valueAddedTaxField;
+        
+        private bool valueAddedTaxFieldSpecified;
+        
+        private decimal deliveryAmountField;
+        
+        private bool deliveryAmountFieldSpecified;
+        
+        private decimal cashbackAmountField;
+        
+        private bool cashbackAmountFieldSpecified;
+        
+        private decimal chargeTotalField;
+        
+        private string currencyField;
+        
+        private string numberOfInstallmentsField;
+        
+        private PaymentInstallmentsInterest installmentsInterestField;
+        
+        private bool installmentsInterestFieldSpecified;
+        
+        public Payment() {
+            this.declineHostedDataDuplicatesField = false;
+        }
+        
+        /// <remarks/>
+        public string HostedDataID {
+            get {
+                return this.hostedDataIDField;
+            }
+            set {
+                this.hostedDataIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string HostedDataStoreID {
+            get {
+                return this.hostedDataStoreIDField;
+            }
+            set {
+                this.hostedDataStoreIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool DeclineHostedDataDuplicates {
+            get {
+                return this.declineHostedDataDuplicatesField;
+            }
+            set {
+                this.declineHostedDataDuplicatesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal SubTotal {
+            get {
+                return this.subTotalField;
+            }
+            set {
+                this.subTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal ValueAddedTax {
+            get {
+                return this.valueAddedTaxField;
+            }
+            set {
+                this.valueAddedTaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ValueAddedTaxSpecified {
+            get {
+                return this.valueAddedTaxFieldSpecified;
+            }
+            set {
+                this.valueAddedTaxFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal DeliveryAmount {
+            get {
+                return this.deliveryAmountField;
+            }
+            set {
+                this.deliveryAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DeliveryAmountSpecified {
+            get {
+                return this.deliveryAmountFieldSpecified;
+            }
+            set {
+                this.deliveryAmountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal CashbackAmount {
+            get {
+                return this.cashbackAmountField;
+            }
+            set {
+                this.cashbackAmountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool CashbackAmountSpecified {
+            get {
+                return this.cashbackAmountFieldSpecified;
+            }
+            set {
+                this.cashbackAmountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal ChargeTotal {
+            get {
+                return this.chargeTotalField;
+            }
+            set {
+                this.chargeTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Currency {
+            get {
+                return this.currencyField;
+            }
+            set {
+                this.currencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
+        public string numberOfInstallments {
+            get {
+                return this.numberOfInstallmentsField;
+            }
+            set {
+                this.numberOfInstallmentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public PaymentInstallmentsInterest installmentsInterest {
+            get {
+                return this.installmentsInterestField;
+            }
+            set {
+                this.installmentsInterestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool installmentsInterestSpecified {
+            get {
+                return this.installmentsInterestFieldSpecified;
+            }
+            set {
+                this.installmentsInterestFieldSpecified = value;
             }
         }
     }
@@ -3954,43 +7942,1907 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CreditCardTxTypeType {
+    public enum PaymentInstallmentsInterest {
         
         /// <remarks/>
-        credit,
+        yes,
         
         /// <remarks/>
-        forceTicket,
+        no,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class CreditCard3DSecure {
+        
+        private CreditCard3DSecureVerificationResponse verificationResponseField;
+        
+        private bool verificationResponseFieldSpecified;
+        
+        private CreditCard3DSecurePayerAuthenticationResponse payerAuthenticationResponseField;
+        
+        private bool payerAuthenticationResponseFieldSpecified;
+        
+        private string dSRPECIField;
+        
+        private string authenticationValueField;
+        
+        private string xIDField;
         
         /// <remarks/>
-        forceticket,
+        public CreditCard3DSecureVerificationResponse VerificationResponse {
+            get {
+                return this.verificationResponseField;
+            }
+            set {
+                this.verificationResponseField = value;
+            }
+        }
         
         /// <remarks/>
-        postAuth,
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool VerificationResponseSpecified {
+            get {
+                return this.verificationResponseFieldSpecified;
+            }
+            set {
+                this.verificationResponseFieldSpecified = value;
+            }
+        }
         
         /// <remarks/>
-        postauth,
+        public CreditCard3DSecurePayerAuthenticationResponse PayerAuthenticationResponse {
+            get {
+                return this.payerAuthenticationResponseField;
+            }
+            set {
+                this.payerAuthenticationResponseField = value;
+            }
+        }
         
         /// <remarks/>
-        preAuth,
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool PayerAuthenticationResponseSpecified {
+            get {
+                return this.payerAuthenticationResponseFieldSpecified;
+            }
+            set {
+                this.payerAuthenticationResponseFieldSpecified = value;
+            }
+        }
         
         /// <remarks/>
-        preauth,
+        public string DSRPECI {
+            get {
+                return this.dSRPECIField;
+            }
+            set {
+                this.dSRPECIField = value;
+            }
+        }
         
         /// <remarks/>
-        @return,
+        public string AuthenticationValue {
+            get {
+                return this.authenticationValueField;
+            }
+            set {
+                this.authenticationValueField = value;
+            }
+        }
         
         /// <remarks/>
-        sale,
+        public string XID {
+            get {
+                return this.xIDField;
+            }
+            set {
+                this.xIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CreditCard3DSecureVerificationResponse {
         
         /// <remarks/>
-        @void,
+        N,
         
         /// <remarks/>
-        payerAuth,
+        U,
         
         /// <remarks/>
-        payerauth,
+        Y,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CreditCard3DSecurePayerAuthenticationResponse {
+        
+        /// <remarks/>
+        A,
+        
+        /// <remarks/>
+        N,
+        
+        /// <remarks/>
+        U,
+        
+        /// <remarks/>
+        Y,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public enum RecurringPaymentTransactionOrigin {
+        
+        /// <remarks/>
+        ECI,
+        
+        /// <remarks/>
+        MOTO,
+        
+        /// <remarks/>
+        RETAIL,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class Wallet {
+        
+        private WalletType walletTypeField;
+        
+        private string walletIDField;
+        
+        /// <remarks/>
+        public WalletType WalletType {
+            get {
+                return this.walletTypeField;
+            }
+            set {
+                this.walletTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string WalletID {
+            get {
+                return this.walletIDField;
+            }
+            set {
+                this.walletIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum WalletType {
+        
+        /// <remarks/>
+        MASTERPASS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class MerchantDetails {
+        
+        private string externalMerchantIDField;
+        
+        private string alternateExternalMerchantIDField;
+        
+        private string endpointIDField;
+        
+        private Terminal terminalField;
+        
+        private MerchantMasterData merchantMasterDataField;
+        
+        /// <remarks/>
+        public string ExternalMerchantID {
+            get {
+                return this.externalMerchantIDField;
+            }
+            set {
+                this.externalMerchantIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AlternateExternalMerchantID {
+            get {
+                return this.alternateExternalMerchantIDField;
+            }
+            set {
+                this.alternateExternalMerchantIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string EndpointID {
+            get {
+                return this.endpointIDField;
+            }
+            set {
+                this.endpointIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Terminal Terminal {
+            get {
+                return this.terminalField;
+            }
+            set {
+                this.terminalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MerchantMasterData MerchantMasterData {
+            get {
+                return this.merchantMasterDataField;
+            }
+            set {
+                this.merchantMasterDataField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class Terminal {
+        
+        private string terminalIDField;
+        
+        /// <remarks/>
+        public string TerminalID {
+            get {
+                return this.terminalIDField;
+            }
+            set {
+                this.terminalIDField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class MerchantMasterData {
+        
+        private string mccField;
+        
+        private string legalNameField;
+        
+        private string dbaField;
+        
+        private string emailField;
+        
+        private string urlField;
+        
+        private string defaultCurrencyField;
+        
+        private string timezoneField;
+        
+        private AddressType addressField;
+        
+        private MerchantMasterDataDccEnrollment dccEnrollmentField;
+        
+        private bool dccEnrollmentFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
+        public string Mcc {
+            get {
+                return this.mccField;
+            }
+            set {
+                this.mccField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string LegalName {
+            get {
+                return this.legalNameField;
+            }
+            set {
+                this.legalNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Dba {
+            get {
+                return this.dbaField;
+            }
+            set {
+                this.dbaField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Url {
+            get {
+                return this.urlField;
+            }
+            set {
+                this.urlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DefaultCurrency {
+            get {
+                return this.defaultCurrencyField;
+            }
+            set {
+                this.defaultCurrencyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Timezone {
+            get {
+                return this.timezoneField;
+            }
+            set {
+                this.timezoneField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AddressType Address {
+            get {
+                return this.addressField;
+            }
+            set {
+                this.addressField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public MerchantMasterDataDccEnrollment dccEnrollment {
+            get {
+                return this.dccEnrollmentField;
+            }
+            set {
+                this.dccEnrollmentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool dccEnrollmentSpecified {
+            get {
+                return this.dccEnrollmentFieldSpecified;
+            }
+            set {
+                this.dccEnrollmentFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class AddressType {
+        
+        private string address1Field;
+        
+        private string address2Field;
+        
+        private string zipField;
+        
+        private string cityField;
+        
+        private string stateField;
+        
+        private string countryField;
+        
+        /// <remarks/>
+        public string Address1 {
+            get {
+                return this.address1Field;
+            }
+            set {
+                this.address1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Address2 {
+            get {
+                return this.address2Field;
+            }
+            set {
+                this.address2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Zip {
+            get {
+                return this.zipField;
+            }
+            set {
+                this.zipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string City {
+            get {
+                return this.cityField;
+            }
+            set {
+                this.cityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string State {
+            get {
+                return this.stateField;
+            }
+            set {
+                this.stateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Country {
+            get {
+                return this.countryField;
+            }
+            set {
+                this.countryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum MerchantMasterDataDccEnrollment {
+        
+        /// <remarks/>
+        activate,
+        
+        /// <remarks/>
+        deactivate,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class ProductChoice {
+        
+        private string optionNameField;
+        
+        private string nameField;
+        
+        /// <remarks/>
+        public string OptionName {
+            get {
+                return this.optionNameField;
+            }
+            set {
+                this.optionNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class DataStorageItem {
+        
+        private object itemField;
+        
+        private string hostedDataIDField;
+        
+        private bool declineHostedDataDuplicatesField;
+        
+        public DataStorageItem() {
+            this.declineHostedDataDuplicatesField = false;
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CreditCardData", typeof(CreditCardData))]
+        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitData", typeof(DE_DirectDebitData))]
+        [System.Xml.Serialization.XmlElementAttribute("Function", typeof(DataStorageItemFunction))]
+        [System.Xml.Serialization.XmlElementAttribute("OrderId", typeof(string))]
+        public object Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string HostedDataID {
+            get {
+                return this.hostedDataIDField;
+            }
+            set {
+                this.hostedDataIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.ComponentModel.DefaultValueAttribute(false)]
+        public bool DeclineHostedDataDuplicates {
+            get {
+                return this.declineHostedDataDuplicatesField;
+            }
+            set {
+                this.declineHostedDataDuplicatesField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public enum DataStorageItemFunction {
+        
+        /// <remarks/>
+        delete,
+        
+        /// <remarks/>
+        display,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
+    public partial class CardInformation {
+        
+        private string brandField;
+        
+        private string[] cardFunctionField;
+        
+        /// <remarks/>
+        public string Brand {
+            get {
+                return this.brandField;
+            }
+            set {
+                this.brandField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CardFunction")]
+        public string[] CardFunction {
+            get {
+                return this.cardFunctionField;
+            }
+            set {
+                this.cardFunctionField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
+    public partial class ClearingDetails {
+        
+        private ClearingElement[] clearingElementField;
+        
+        private string batchTimeStampField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ClearingElement")]
+        public ClearingElement[] ClearingElement {
+            get {
+                return this.clearingElementField;
+            }
+            set {
+                this.clearingElementField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string BatchTimeStamp {
+            get {
+                return this.batchTimeStampField;
+            }
+            set {
+                this.batchTimeStampField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
+    public partial class ClearingElement {
+        
+        private string brandField;
+        
+        private long valueField;
+        
+        private int countField;
+        
+        /// <remarks/>
+        public string Brand {
+            get {
+                return this.brandField;
+            }
+            set {
+                this.brandField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public int Count {
+            get {
+                return this.countField;
+            }
+            set {
+                this.countField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class InquiryRateReference {
+        
+        private long inquiryRateIdField;
+        
+        private bool dccAppliedField;
+        
+        private bool dccAppliedFieldSpecified;
+        
+        /// <remarks/>
+        public long InquiryRateId {
+            get {
+                return this.inquiryRateIdField;
+            }
+            set {
+                this.inquiryRateIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool DccApplied {
+            get {
+                return this.dccAppliedField;
+            }
+            set {
+                this.dccAppliedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool DccAppliedSpecified {
+            get {
+                return this.dccAppliedFieldSpecified;
+            }
+            set {
+                this.dccAppliedFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class SplitShipment {
+        
+        private int sequenceCountField;
+        
+        private bool sequenceCountFieldSpecified;
+        
+        private bool finalShipmentField;
+        
+        /// <remarks/>
+        public int SequenceCount {
+            get {
+                return this.sequenceCountField;
+            }
+            set {
+                this.sequenceCountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool SequenceCountSpecified {
+            get {
+                return this.sequenceCountFieldSpecified;
+            }
+            set {
+                this.sequenceCountFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool FinalShipment {
+            get {
+                return this.finalShipmentField;
+            }
+            set {
+                this.finalShipmentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class HotelLodging {
+        
+        private string arrivalDateField;
+        
+        private string departureDateField;
+        
+        private string folioNumberField;
+        
+        private HotelLodgingExtraCharges[] extraChargesField;
+        
+        private bool noShowIndicatorField;
+        
+        private bool noShowIndicatorFieldSpecified;
+        
+        /// <remarks/>
+        public string ArrivalDate {
+            get {
+                return this.arrivalDateField;
+            }
+            set {
+                this.arrivalDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DepartureDate {
+            get {
+                return this.departureDateField;
+            }
+            set {
+                this.departureDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FolioNumber {
+            get {
+                return this.folioNumberField;
+            }
+            set {
+                this.folioNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ExtraCharges")]
+        public HotelLodgingExtraCharges[] ExtraCharges {
+            get {
+                return this.extraChargesField;
+            }
+            set {
+                this.extraChargesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool NoShowIndicator {
+            get {
+                return this.noShowIndicatorField;
+            }
+            set {
+                this.noShowIndicatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NoShowIndicatorSpecified {
+            get {
+                return this.noShowIndicatorFieldSpecified;
+            }
+            set {
+                this.noShowIndicatorFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum HotelLodgingExtraCharges {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gift Shop")]
+        GiftShop,
+        
+        /// <remarks/>
+        Laundry,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Mini Bar")]
+        MiniBar,
+        
+        /// <remarks/>
+        Other,
+        
+        /// <remarks/>
+        Restaurant,
+        
+        /// <remarks/>
+        Telephone,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class CarRental {
+        
+        private string agreementNumberField;
+        
+        private string renterNameField;
+        
+        private string returnCityField;
+        
+        private string returnDateField;
+        
+        private string pickupDateField;
+        
+        private string rentalClassIDField;
+        
+        private CarRentalExtraCharges[] extraChargesField;
+        
+        private bool noShowIndicatorField;
+        
+        private bool noShowIndicatorFieldSpecified;
+        
+        /// <remarks/>
+        public string AgreementNumber {
+            get {
+                return this.agreementNumberField;
+            }
+            set {
+                this.agreementNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string RenterName {
+            get {
+                return this.renterNameField;
+            }
+            set {
+                this.renterNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ReturnCity {
+            get {
+                return this.returnCityField;
+            }
+            set {
+                this.returnCityField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ReturnDate {
+            get {
+                return this.returnDateField;
+            }
+            set {
+                this.returnDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PickupDate {
+            get {
+                return this.pickupDateField;
+            }
+            set {
+                this.pickupDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string RentalClassID {
+            get {
+                return this.rentalClassIDField;
+            }
+            set {
+                this.rentalClassIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ExtraCharges")]
+        public CarRentalExtraCharges[] ExtraCharges {
+            get {
+                return this.extraChargesField;
+            }
+            set {
+                this.extraChargesField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool NoShowIndicator {
+            get {
+                return this.noShowIndicatorField;
+            }
+            set {
+                this.noShowIndicatorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool NoShowIndicatorSpecified {
+            get {
+                return this.noShowIndicatorFieldSpecified;
+            }
+            set {
+                this.noShowIndicatorFieldSpecified = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum CarRentalExtraCharges {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Extra Mileage")]
+        ExtraMileage,
+        
+        /// <remarks/>
+        Gas,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Late Return")]
+        LateReturn,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("One Way Ser Fee")]
+        OneWaySerFee,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Parking Violation")]
+        ParkingViolation,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class AirlineDetails {
+        
+        private string passengerNameField;
+        
+        private string ticketNumberField;
+        
+        private string issuingCarrierField;
+        
+        private string carrierNameField;
+        
+        private string travelAgencyCodeOrIATACodeField;
+        
+        private string travelAgencyNameField;
+        
+        private string airlinePlanNumberField;
+        
+        private string airlineInvoiceNumberField;
+        
+        private AirlineDetailsComputerizedReservationSystem computerizedReservationSystemField;
+        
+        private bool computerizedReservationSystemFieldSpecified;
+        
+        private bool restrictedField;
+        
+        private bool restrictedFieldSpecified;
+        
+        private TravelRoute[] travelRouteField;
+        
+        private AirlineDetailsAncillaryServiceCategory[] ancillaryServiceCategoryField;
+        
+        /// <remarks/>
+        public string PassengerName {
+            get {
+                return this.passengerNameField;
+            }
+            set {
+                this.passengerNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TicketNumber {
+            get {
+                return this.ticketNumberField;
+            }
+            set {
+                this.ticketNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string IssuingCarrier {
+            get {
+                return this.issuingCarrierField;
+            }
+            set {
+                this.issuingCarrierField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CarrierName {
+            get {
+                return this.carrierNameField;
+            }
+            set {
+                this.carrierNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TravelAgencyCodeOrIATACode {
+            get {
+                return this.travelAgencyCodeOrIATACodeField;
+            }
+            set {
+                this.travelAgencyCodeOrIATACodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TravelAgencyName {
+            get {
+                return this.travelAgencyNameField;
+            }
+            set {
+                this.travelAgencyNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AirlinePlanNumber {
+            get {
+                return this.airlinePlanNumberField;
+            }
+            set {
+                this.airlinePlanNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string AirlineInvoiceNumber {
+            get {
+                return this.airlineInvoiceNumberField;
+            }
+            set {
+                this.airlineInvoiceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public AirlineDetailsComputerizedReservationSystem ComputerizedReservationSystem {
+            get {
+                return this.computerizedReservationSystemField;
+            }
+            set {
+                this.computerizedReservationSystemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool ComputerizedReservationSystemSpecified {
+            get {
+                return this.computerizedReservationSystemFieldSpecified;
+            }
+            set {
+                this.computerizedReservationSystemFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public bool Restricted {
+            get {
+                return this.restrictedField;
+            }
+            set {
+                this.restrictedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool RestrictedSpecified {
+            get {
+                return this.restrictedFieldSpecified;
+            }
+            set {
+                this.restrictedFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TravelRoute")]
+        public TravelRoute[] TravelRoute {
+            get {
+                return this.travelRouteField;
+            }
+            set {
+                this.travelRouteField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AncillaryServiceCategory")]
+        public AirlineDetailsAncillaryServiceCategory[] AncillaryServiceCategory {
+            get {
+                return this.ancillaryServiceCategoryField;
+            }
+            set {
+                this.ancillaryServiceCategoryField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum AirlineDetailsComputerizedReservationSystem {
+        
+        /// <remarks/>
+        Start,
+        
+        /// <remarks/>
+        TWA,
+        
+        /// <remarks/>
+        Delta,
+        
+        /// <remarks/>
+        Sabre,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Covia-Apollo")]
+        CoviaApollo,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Dr.Blank")]
+        DrBlank,
+        
+        /// <remarks/>
+        DER,
+        
+        /// <remarks/>
+        TUI,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class TravelRoute {
+        
+        private string departureDateField;
+        
+        private string originField;
+        
+        private string destinationField;
+        
+        private string carrierCodeField;
+        
+        private string serviceClassField;
+        
+        private TravelRouteStopoverType stopoverTypeField;
+        
+        private string fareBasisCodeField;
+        
+        private decimal departureTaxField;
+        
+        private string flightNumberField;
+        
+        /// <remarks/>
+        public string DepartureDate {
+            get {
+                return this.departureDateField;
+            }
+            set {
+                this.departureDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Origin {
+            get {
+                return this.originField;
+            }
+            set {
+                this.originField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Destination {
+            get {
+                return this.destinationField;
+            }
+            set {
+                this.destinationField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CarrierCode {
+            get {
+                return this.carrierCodeField;
+            }
+            set {
+                this.carrierCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ServiceClass {
+            get {
+                return this.serviceClassField;
+            }
+            set {
+                this.serviceClassField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TravelRouteStopoverType StopoverType {
+            get {
+                return this.stopoverTypeField;
+            }
+            set {
+                this.stopoverTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FareBasisCode {
+            get {
+                return this.fareBasisCodeField;
+            }
+            set {
+                this.fareBasisCodeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public decimal DepartureTax {
+            get {
+                return this.departureTaxField;
+            }
+            set {
+                this.departureTaxField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string FlightNumber {
+            get {
+                return this.flightNumberField;
+            }
+            set {
+                this.flightNumberField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum TravelRouteStopoverType {
+        
+        /// <remarks/>
+        DIRECT,
+        
+        /// <remarks/>
+        STOPOVER,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum AirlineDetailsAncillaryServiceCategory {
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Bundled Service")]
+        BundledService,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Baggage Fee")]
+        BaggageFee,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Change Fee")]
+        ChangeFee,
+        
+        /// <remarks/>
+        Cargo,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Carbon Offset")]
+        CarbonOffset,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Frequent Flyer")]
+        FrequentFlyer,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Gift Card")]
+        GiftCard,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Ground Transport")]
+        GroundTransport,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("In-flight Entertainment")]
+        InflightEntertainment,
+        
+        /// <remarks/>
+        Lounge,
+        
+        /// <remarks/>
+        Medical,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Meal / Beverage")]
+        MealBeverage,
+        
+        /// <remarks/>
+        Other,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Passenger Assist Fee")]
+        PassengerAssistFee,
+        
+        /// <remarks/>
+        Pets,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Seat Fees")]
+        SeatFees,
+        
+        /// <remarks/>
+        Standby,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Service Fee")]
+        ServiceFee,
+        
+        /// <remarks/>
+        Store,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Travel Service")]
+        TravelService,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Unaccompanied Travel")]
+        UnaccompaniedTravel,
+        
+        /// <remarks/>
+        Upgrades,
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlEnumAttribute("Wi-Fi")]
+        WiFi,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class TransactionDetails {
+        
+        private AirlineDetails airlineDetailsField;
+        
+        private CarRental carRentalField;
+        
+        private HotelLodging hotelLodgingField;
+        
+        private string commentsField;
+        
+        private string invoiceNumberField;
+        
+        private string dynamicMerchantNameField;
+        
+        private string pONumberField;
+        
+        private string orderIdField;
+        
+        private string merchantTransactionIdField;
+        
+        private string referencedMerchantTransactionIdField;
+        
+        private long ipgTransactionIdField;
+        
+        private bool ipgTransactionIdFieldSpecified;
+        
+        private OfflineApprovalType offlineApprovalTypeField;
+        
+        private bool offlineApprovalTypeFieldSpecified;
+        
+        private string ipField;
+        
+        private string referenceNumberField;
+        
+        private SplitShipment splitShipmentField;
+        
+        private string tDateField;
+        
+        private TransactionOrigin transactionOriginField;
+        
+        private bool transactionOriginFieldSpecified;
+        
+        private Terminal terminalField;
+        
+        private InquiryRateReference inquiryRateReferenceField;
+        
+        private byte[] signatureField;
+        
+        public TransactionDetails() {
+            this.transactionOriginField = TransactionOrigin.ECI;
+        }
+        
+        /// <remarks/>
+        public AirlineDetails AirlineDetails {
+            get {
+                return this.airlineDetailsField;
+            }
+            set {
+                this.airlineDetailsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public CarRental CarRental {
+            get {
+                return this.carRentalField;
+            }
+            set {
+                this.carRentalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public HotelLodging HotelLodging {
+            get {
+                return this.hotelLodgingField;
+            }
+            set {
+                this.hotelLodgingField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Comments {
+            get {
+                return this.commentsField;
+            }
+            set {
+                this.commentsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string InvoiceNumber {
+            get {
+                return this.invoiceNumberField;
+            }
+            set {
+                this.invoiceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string DynamicMerchantName {
+            get {
+                return this.dynamicMerchantNameField;
+            }
+            set {
+                this.dynamicMerchantNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string PONumber {
+            get {
+                return this.pONumberField;
+            }
+            set {
+                this.pONumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string OrderId {
+            get {
+                return this.orderIdField;
+            }
+            set {
+                this.orderIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string MerchantTransactionId {
+            get {
+                return this.merchantTransactionIdField;
+            }
+            set {
+                this.merchantTransactionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ReferencedMerchantTransactionId {
+            get {
+                return this.referencedMerchantTransactionIdField;
+            }
+            set {
+                this.referencedMerchantTransactionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long IpgTransactionId {
+            get {
+                return this.ipgTransactionIdField;
+            }
+            set {
+                this.ipgTransactionIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool IpgTransactionIdSpecified {
+            get {
+                return this.ipgTransactionIdFieldSpecified;
+            }
+            set {
+                this.ipgTransactionIdFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public OfflineApprovalType OfflineApprovalType {
+            get {
+                return this.offlineApprovalTypeField;
+            }
+            set {
+                this.offlineApprovalTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool OfflineApprovalTypeSpecified {
+            get {
+                return this.offlineApprovalTypeFieldSpecified;
+            }
+            set {
+                this.offlineApprovalTypeFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Ip {
+            get {
+                return this.ipField;
+            }
+            set {
+                this.ipField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ReferenceNumber {
+            get {
+                return this.referenceNumberField;
+            }
+            set {
+                this.referenceNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SplitShipment SplitShipment {
+            get {
+                return this.splitShipmentField;
+            }
+            set {
+                this.splitShipmentField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string TDate {
+            get {
+                return this.tDateField;
+            }
+            set {
+                this.tDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TransactionOrigin TransactionOrigin {
+            get {
+                return this.transactionOriginField;
+            }
+            set {
+                this.transactionOriginField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool TransactionOriginSpecified {
+            get {
+                return this.transactionOriginFieldSpecified;
+            }
+            set {
+                this.transactionOriginFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Terminal Terminal {
+            get {
+                return this.terminalField;
+            }
+            set {
+                this.terminalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public InquiryRateReference InquiryRateReference {
+            get {
+                return this.inquiryRateReferenceField;
+            }
+            set {
+                this.inquiryRateReferenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                this.signatureField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public enum OfflineApprovalType {
+        
+        /// <remarks/>
+        OFFLINE_APPROVAL,
+        
+        /// <remarks/>
+        OFFLINE_DECLINED,
+        
+        /// <remarks/>
+        FALLBACK,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    public partial class UK_DebitCardData {
+        
+        private string cardNumberField;
+        
+        private string expMonthField;
+        
+        private string expYearField;
+        
+        private string itemField;
+        
+        private ItemChoiceType itemElementNameField;
+        
+        /// <remarks/>
+        public string CardNumber {
+            get {
+                return this.cardNumberField;
+            }
+            set {
+                this.cardNumberField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ExpMonth {
+            get {
+                return this.expMonthField;
+            }
+            set {
+                this.expMonthField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ExpYear {
+            get {
+                return this.expYearField;
+            }
+            set {
+                this.expYearField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CardCodeValue", typeof(string))]
+        [System.Xml.Serialization.XmlElementAttribute("IssueNo", typeof(string))]
+        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
+        public string Item {
+            get {
+                return this.itemField;
+            }
+            set {
+                this.itemField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ItemChoiceType ItemElementName {
+            get {
+                return this.itemElementNameField;
+            }
+            set {
+                this.itemElementNameField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1", IncludeInSchema=false)]
+    public enum ItemChoiceType {
+        
+        /// <remarks/>
+        CardCodeValue,
+        
+        /// <remarks/>
+        IssueNo,
     }
     
     /// <remarks/>
@@ -4058,17 +9910,41 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class CustomerCardTxType : Options {
+    public partial class PaymentFacilitator {
         
-        private CustomerCardTxTypeType typeField;
+        private string externalMerchantIDField;
+        
+        private string idField;
+        
+        private string nameField;
         
         /// <remarks/>
-        public CustomerCardTxTypeType Type {
+        public string ExternalMerchantID {
             get {
-                return this.typeField;
+                return this.externalMerchantIDField;
             }
             set {
-                this.typeField = value;
+                this.externalMerchantIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Name {
+            get {
+                return this.nameField;
+            }
+            set {
+                this.nameField = value;
             }
         }
     }
@@ -4076,31 +9952,9 @@ namespace WebApplicationTest1.IPGWebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CustomerCardTxTypeType {
-        
-        /// <remarks/>
-        forceTicket,
-        
-        /// <remarks/>
-        forceticket,
-        
-        /// <remarks/>
-        BWListCheck,
-        
-        /// <remarks/>
-        bwlistcheck,
-        
-        /// <remarks/>
-        sale,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
     public partial class EMVCardPresentRequest {
         
         private CryptData cryptDataField;
@@ -4140,8 +9994,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private byte[] additionalTerminalCapabilities9F40Field;
         
-        private byte[] additionalTerminalReadCapabilitiesDF8301Field;
-        
         private long amountAuthorised9F02Field;
         
         private bool amountAuthorised9F02FieldSpecified;
@@ -4169,8 +10021,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private byte[] applicationUsageControl9F07Field;
         
         private byte[] applicationVersionNumber9F09Field;
-        
-        private byte[] cardTypeDF60Field;
         
         private byte[] commandDataInternalAuthenticateDF03Field;
         
@@ -4209,10 +10059,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private int pointOfServiceEntryMode9F39Field;
         
         private bool pointOfServiceEntryMode9F39FieldSpecified;
-        
-        private int receiptNumberDF8161Field;
-        
-        private bool receiptNumberDF8161FieldSpecified;
         
         private byte[] responseDataInternalAuthenticateDF04Field;
         
@@ -4262,12 +10108,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private byte[] unpredictableNumber9F37Field;
         
-        private byte[] issuerScriptResultsDF31Field;
-        
-        private int applicationEffectiveDate5F25Field;
-        
-        private bool applicationEffectiveDate5F25FieldSpecified;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("AdditionalTerminalCapabilities-9F40", DataType="hexBinary")]
         public byte[] AdditionalTerminalCapabilities9F40 {
@@ -4276,17 +10116,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.additionalTerminalCapabilities9F40Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AdditionalTerminalReadCapabilities-DF8301", DataType="hexBinary")]
-        public byte[] AdditionalTerminalReadCapabilitiesDF8301 {
-            get {
-                return this.additionalTerminalReadCapabilitiesDF8301Field;
-            }
-            set {
-                this.additionalTerminalReadCapabilitiesDF8301Field = value;
             }
         }
         
@@ -4441,17 +10270,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.applicationVersionNumber9F09Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CardType-DF60", DataType="hexBinary")]
-        public byte[] CardTypeDF60 {
-            get {
-                return this.cardTypeDF60Field;
-            }
-            set {
-                this.cardTypeDF60Field = value;
             }
         }
         
@@ -4661,28 +10479,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.pointOfServiceEntryMode9F39FieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ReceiptNumber-DF8161")]
-        public int ReceiptNumberDF8161 {
-            get {
-                return this.receiptNumberDF8161Field;
-            }
-            set {
-                this.receiptNumberDF8161Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ReceiptNumberDF8161Specified {
-            get {
-                return this.receiptNumberDF8161FieldSpecified;
-            }
-            set {
-                this.receiptNumberDF8161FieldSpecified = value;
             }
         }
         
@@ -4949,116 +10745,6 @@ namespace WebApplicationTest1.IPGWebReference {
                 this.unpredictableNumber9F37Field = value;
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IssuerScriptResults-DF31", DataType="hexBinary")]
-        public byte[] IssuerScriptResultsDF31 {
-            get {
-                return this.issuerScriptResultsDF31Field;
-            }
-            set {
-                this.issuerScriptResultsDF31Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ApplicationEffectiveDate-5F25")]
-        public int ApplicationEffectiveDate5F25 {
-            get {
-                return this.applicationEffectiveDate5F25Field;
-            }
-            set {
-                this.applicationEffectiveDate5F25Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ApplicationEffectiveDate5F25Specified {
-            get {
-                return this.applicationEffectiveDate5F25FieldSpecified;
-            }
-            set {
-                this.applicationEffectiveDate5F25FieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class IdealTxType : Options {
-        
-        private IdealTxTypeType typeField;
-        
-        /// <remarks/>
-        public IdealTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum IdealTxTypeType {
-        
-        /// <remarks/>
-        @return,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class KlarnaTxType : Options {
-        
-        private KlarnaTxTypeType typeField;
-        
-        /// <remarks/>
-        public KlarnaTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum KlarnaTxTypeType {
-        
-        /// <remarks/>
-        preAuth,
-        
-        /// <remarks/>
-        preauth,
-        
-        /// <remarks/>
-        postAuth,
-        
-        /// <remarks/>
-        postauth,
-        
-        /// <remarks/>
-        @void,
-        
-        /// <remarks/>
-        @return,
     }
     
     /// <remarks/>
@@ -5145,945 +10831,6 @@ namespace WebApplicationTest1.IPGWebReference {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
     [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class PayPalTxType : Options {
-        
-        private PayPalTxTypeType typeField;
-        
-        /// <remarks/>
-        public PayPalTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum PayPalTxTypeType {
-        
-        /// <remarks/>
-        credit,
-        
-        /// <remarks/>
-        postAuth,
-        
-        /// <remarks/>
-        postauth,
-        
-        /// <remarks/>
-        @return,
-        
-        /// <remarks/>
-        @void,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class PaymentFacilitator {
-        
-        private string externalMerchantIDField;
-        
-        private string idField;
-        
-        private string saleOrganizationIDField;
-        
-        private string nameField;
-        
-        /// <remarks/>
-        public string ExternalMerchantID {
-            get {
-                return this.externalMerchantIDField;
-            }
-            set {
-                this.externalMerchantIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ID {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string SaleOrganizationID {
-            get {
-                return this.saleOrganizationIDField;
-            }
-            set {
-                this.saleOrganizationIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class PaymentUrlTxType : Options {
-        
-        private PaymentUrlTxTypeType typeField;
-        
-        /// <remarks/>
-        public PaymentUrlTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum PaymentUrlTxTypeType {
-        
-        /// <remarks/>
-        preAuth,
-        
-        /// <remarks/>
-        preauth,
-        
-        /// <remarks/>
-        sale,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class TransactionSepaData {
-        
-        private string iBANField;
-        
-        private Mandate mandateField;
-        
-        /// <remarks/>
-        public string IBAN {
-            get {
-                return this.iBANField;
-            }
-            set {
-                this.iBANField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Mandate Mandate {
-            get {
-                return this.mandateField;
-            }
-            set {
-                this.mandateField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Mandate {
-        
-        private string referenceField;
-        
-        private MandateType1 typeField;
-        
-        private string dateField;
-        
-        private string urlField;
-        
-        public Mandate() {
-            this.typeField = MandateType1.SINGLE;
-        }
-        
-        /// <remarks/>
-        public string Reference {
-            get {
-                return this.referenceField;
-            }
-            set {
-                this.referenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MandateType1 Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Date {
-            get {
-                return this.dateField;
-            }
-            set {
-                this.dateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Url {
-            get {
-                return this.urlField;
-            }
-            set {
-                this.urlField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="MandateType", Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum MandateType1 {
-        
-        /// <remarks/>
-        SINGLE,
-        
-        /// <remarks/>
-        RECURRING_COLLECTION,
-        
-        /// <remarks/>
-        FIRST_COLLECTION,
-        
-        /// <remarks/>
-        FINAL_COLLECTION,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SepaTxType : Options {
-        
-        private SepaTxTypeType typeField;
-        
-        /// <remarks/>
-        public SepaTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum SepaTxTypeType {
-        
-        /// <remarks/>
-        credit,
-        
-        /// <remarks/>
-        sale,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SofortTxType : Options {
-        
-        private SofortTxTypeType typeField;
-        
-        /// <remarks/>
-        public SofortTxTypeType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum SofortTxTypeType {
-        
-        /// <remarks/>
-        @return,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class MerchantMasterData {
-        
-        private string mccField;
-        
-        private string legalNameField;
-        
-        private string dbaField;
-        
-        private string emailField;
-        
-        private string urlField;
-        
-        private string defaultCurrencyField;
-        
-        private string timezoneField;
-        
-        private AddressType addressField;
-        
-        private MerchantMasterDataDccEnrollment dccEnrollmentField;
-        
-        private bool dccEnrollmentFieldSpecified;
-        
-        private Document documentField;
-        
-        private string merchantIDField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="nonNegativeInteger")]
-        public string Mcc {
-            get {
-                return this.mccField;
-            }
-            set {
-                this.mccField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string LegalName {
-            get {
-                return this.legalNameField;
-            }
-            set {
-                this.legalNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Dba {
-            get {
-                return this.dbaField;
-            }
-            set {
-                this.dbaField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Url {
-            get {
-                return this.urlField;
-            }
-            set {
-                this.urlField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DefaultCurrency {
-            get {
-                return this.defaultCurrencyField;
-            }
-            set {
-                this.defaultCurrencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Timezone {
-            get {
-                return this.timezoneField;
-            }
-            set {
-                this.timezoneField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AddressType Address {
-            get {
-                return this.addressField;
-            }
-            set {
-                this.addressField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MerchantMasterDataDccEnrollment dccEnrollment {
-            get {
-                return this.dccEnrollmentField;
-            }
-            set {
-                this.dccEnrollmentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dccEnrollmentSpecified {
-            get {
-                return this.dccEnrollmentFieldSpecified;
-            }
-            set {
-                this.dccEnrollmentFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Document Document {
-            get {
-                return this.documentField;
-            }
-            set {
-                this.documentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string MerchantID {
-            get {
-                return this.merchantIDField;
-            }
-            set {
-                this.merchantIDField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class AddressType {
-        
-        private string address1Field;
-        
-        private string address2Field;
-        
-        private string zipField;
-        
-        private string cityField;
-        
-        private string stateField;
-        
-        private string countryField;
-        
-        /// <remarks/>
-        public string Address1 {
-            get {
-                return this.address1Field;
-            }
-            set {
-                this.address1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Address2 {
-            get {
-                return this.address2Field;
-            }
-            set {
-                this.address2Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Zip {
-            get {
-                return this.zipField;
-            }
-            set {
-                this.zipField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string City {
-            get {
-                return this.cityField;
-            }
-            set {
-                this.cityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Country {
-            get {
-                return this.countryField;
-            }
-            set {
-                this.countryField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum MerchantMasterDataDccEnrollment {
-        
-        /// <remarks/>
-        activate,
-        
-        /// <remarks/>
-        deactivate,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Document {
-        
-        private DocumentType typeField;
-        
-        private string numberField;
-        
-        /// <remarks/>
-        public DocumentType Type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Number {
-            get {
-                return this.numberField;
-            }
-            set {
-                this.numberField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum DocumentType {
-        
-        /// <remarks/>
-        NATIONAL_IDENTITY,
-        
-        /// <remarks/>
-        SINGLE_TAX_IDENTIFICATION,
-        
-        /// <remarks/>
-        SINGLE_CODE_OF_LABOR_IDENTIFICATION,
-        
-        /// <remarks/>
-        BOOK_ENLISTMENT,
-        
-        /// <remarks/>
-        CIVIC_NOTEBOOK,
-        
-        /// <remarks/>
-        PASSPORT,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class TopUpTxType : Options {
-        
-        private TopUpTxTypeMPCharge itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("MPCharge")]
-        public TopUpTxTypeMPCharge Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class TopUpTxTypeMPCharge {
-        
-        private MNSP mNSPField;
-        
-        private string mSISDNField;
-        
-        private PaymentType paymentTypeField;
-        
-        /// <remarks/>
-        public MNSP MNSP {
-            get {
-                return this.mNSPField;
-            }
-            set {
-                this.mNSPField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string MSISDN {
-            get {
-                return this.mSISDNField;
-            }
-            set {
-                this.mSISDNField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public PaymentType PaymentType {
-            get {
-                return this.paymentTypeField;
-            }
-            set {
-                this.paymentTypeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum MNSP {
-        
-        /// <remarks/>
-        D1,
-        
-        /// <remarks/>
-        D2,
-        
-        /// <remarks/>
-        EP,
-        
-        /// <remarks/>
-        VI,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum PaymentType {
-        
-        /// <remarks/>
-        Amex,
-        
-        /// <remarks/>
-        Cash,
-        
-        /// <remarks/>
-        Diners,
-        
-        /// <remarks/>
-        ECMC,
-        
-        /// <remarks/>
-        JCB,
-        
-        /// <remarks/>
-        VISA,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Upop {
-        
-        private string sendSmsResponseCodeField;
-        
-        private string vCodeField;
-        
-        private string activateStatusField;
-        
-        private bool authenticateTransactionField;
-        
-        private bool authenticateTransactionFieldSpecified;
-        
-        private SecurePlusRequest securePlusRequestField;
-        
-        /// <remarks/>
-        public string SendSmsResponseCode {
-            get {
-                return this.sendSmsResponseCodeField;
-            }
-            set {
-                this.sendSmsResponseCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string VCode {
-            get {
-                return this.vCodeField;
-            }
-            set {
-                this.vCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ActivateStatus {
-            get {
-                return this.activateStatusField;
-            }
-            set {
-                this.activateStatusField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool AuthenticateTransaction {
-            get {
-                return this.authenticateTransactionField;
-            }
-            set {
-                this.authenticateTransactionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AuthenticateTransactionSpecified {
-            get {
-                return this.authenticateTransactionFieldSpecified;
-            }
-            set {
-                this.authenticateTransactionFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SecurePlusRequest SecurePlusRequest {
-            get {
-                return this.securePlusRequestField;
-            }
-            set {
-                this.securePlusRequestField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SecurePlusRequest {
-        
-        private SecurePlusVerifySmsCodeRequest itemField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SecurePlusVerifySmsCodeRequest")]
-        public SecurePlusVerifySmsCodeRequest Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SecurePlusVerifySmsCodeRequest {
-        
-        private string smsCodeField;
-        
-        /// <remarks/>
-        public string smsCode {
-            get {
-                return this.smsCodeField;
-            }
-            set {
-                this.smsCodeField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Wallet {
-        
-        private WalletType walletTypeField;
-        
-        private string walletIDField;
-        
-        /// <remarks/>
-        public WalletType WalletType {
-            get {
-                return this.walletTypeField;
-            }
-            set {
-                this.walletTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string WalletID {
-            get {
-                return this.walletIDField;
-            }
-            set {
-                this.walletIDField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum WalletType {
-        
-        /// <remarks/>
-        ANDROID_PAY,
-        
-        /// <remarks/>
-        APPLE_PAY,
-        
-        /// <remarks/>
-        MASTERPASS,
-        
-        /// <remarks/>
-        SAMSUNG_PAY,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CardAccountType {
-        
-        /// <remarks/>
-        saving,
-        
-        /// <remarks/>
-        checking,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CardFunctionType {
-        
-        /// <remarks/>
-        credit,
-        
-        /// <remarks/>
-        debit,
-        
-        /// <remarks/>
-        voucher,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
     public enum RecurringType {
         
@@ -6092,1879 +10839,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         /// <remarks/>
         REPEAT,
-        
-        /// <remarks/>
-        STANDIN,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum UnscheduledCredentialOnFileType {
-        
-        /// <remarks/>
-        FIRST,
-        
-        /// <remarks/>
-        CARDHOLDER_INITIATED,
-        
-        /// <remarks/>
-        MERCHANT_INITIATED,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1", IncludeInSchema=false)]
-    public enum ItemsChoiceType3 {
-        
-        /// <remarks/>
-        CreditCard3DSecure,
-        
-        /// <remarks/>
-        CreditCardData,
-        
-        /// <remarks/>
-        CreditCardTxType,
-        
-        /// <remarks/>
-        CustomerCardData,
-        
-        /// <remarks/>
-        CustomerCardTxType,
-        
-        /// <remarks/>
-        DE_DirectDebitData,
-        
-        /// <remarks/>
-        DE_DirectDebitEMV,
-        
-        /// <remarks/>
-        DE_DirectDebitTxType,
-        
-        /// <remarks/>
-        EMVCardPresentRequest,
-        
-        /// <remarks/>
-        IdealTxType,
-        
-        /// <remarks/>
-        KlarnaPClassID,
-        
-        /// <remarks/>
-        KlarnaTxType,
-        
-        /// <remarks/>
-        MCC6012Details,
-        
-        /// <remarks/>
-        PayPalTxType,
-        
-        /// <remarks/>
-        PaymentFacilitator,
-        
-        /// <remarks/>
-        PaymentUrlTxType,
-        
-        /// <remarks/>
-        SepaData,
-        
-        /// <remarks/>
-        SepaTxType,
-        
-        /// <remarks/>
-        SofortTxType,
-        
-        /// <remarks/>
-        SubMerchant,
-        
-        /// <remarks/>
-        TopUpTxType,
-        
-        /// <remarks/>
-        Upop,
-        
-        /// <remarks/>
-        Wallet,
-        
-        /// <remarks/>
-        cardAccount,
-        
-        /// <remarks/>
-        cardFunction,
-        
-        /// <remarks/>
-        recurringType,
-        
-        /// <remarks/>
-        unscheduledCredentialOnFileType,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Payment {
-        
-        private string[] hostedDataIDField;
-        
-        private string hostedDataStoreIDField;
-        
-        private bool declineHostedDataDuplicatesField;
-        
-        private decimal subTotalField;
-        
-        private decimal valueAddedTaxField;
-        
-        private bool valueAddedTaxFieldSpecified;
-        
-        private decimal localTaxField;
-        
-        private bool localTaxFieldSpecified;
-        
-        private decimal deliveryAmountField;
-        
-        private bool deliveryAmountFieldSpecified;
-        
-        private decimal cashbackAmountField;
-        
-        private bool cashbackAmountFieldSpecified;
-        
-        private decimal tipAmountField;
-        
-        private bool tipAmountFieldSpecified;
-        
-        private decimal chargeTotalField;
-        
-        private string currencyField;
-        
-        private string numberOfInstallmentsField;
-        
-        private PaymentInstallmentsInterest installmentsInterestField;
-        
-        private bool installmentsInterestFieldSpecified;
-        
-        private string installmentDelayMonthsField;
-        
-        private string installmentPlanIDField;
-        
-        private TokenType tokenTypeField;
-        
-        private bool tokenTypeFieldSpecified;
-        
-        private bool assignTokenField;
-        
-        public Payment() {
-            this.declineHostedDataDuplicatesField = false;
-            this.assignTokenField = false;
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("HostedDataID")]
-        public string[] HostedDataID {
-            get {
-                return this.hostedDataIDField;
-            }
-            set {
-                this.hostedDataIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string HostedDataStoreID {
-            get {
-                return this.hostedDataStoreIDField;
-            }
-            set {
-                this.hostedDataStoreIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool DeclineHostedDataDuplicates {
-            get {
-                return this.declineHostedDataDuplicatesField;
-            }
-            set {
-                this.declineHostedDataDuplicatesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal SubTotal {
-            get {
-                return this.subTotalField;
-            }
-            set {
-                this.subTotalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal ValueAddedTax {
-            get {
-                return this.valueAddedTaxField;
-            }
-            set {
-                this.valueAddedTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ValueAddedTaxSpecified {
-            get {
-                return this.valueAddedTaxFieldSpecified;
-            }
-            set {
-                this.valueAddedTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal localTax {
-            get {
-                return this.localTaxField;
-            }
-            set {
-                this.localTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool localTaxSpecified {
-            get {
-                return this.localTaxFieldSpecified;
-            }
-            set {
-                this.localTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal DeliveryAmount {
-            get {
-                return this.deliveryAmountField;
-            }
-            set {
-                this.deliveryAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DeliveryAmountSpecified {
-            get {
-                return this.deliveryAmountFieldSpecified;
-            }
-            set {
-                this.deliveryAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal CashbackAmount {
-            get {
-                return this.cashbackAmountField;
-            }
-            set {
-                this.cashbackAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CashbackAmountSpecified {
-            get {
-                return this.cashbackAmountFieldSpecified;
-            }
-            set {
-                this.cashbackAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal TipAmount {
-            get {
-                return this.tipAmountField;
-            }
-            set {
-                this.tipAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TipAmountSpecified {
-            get {
-                return this.tipAmountFieldSpecified;
-            }
-            set {
-                this.tipAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal ChargeTotal {
-            get {
-                return this.chargeTotalField;
-            }
-            set {
-                this.chargeTotalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Currency {
-            get {
-                return this.currencyField;
-            }
-            set {
-                this.currencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        public string numberOfInstallments {
-            get {
-                return this.numberOfInstallmentsField;
-            }
-            set {
-                this.numberOfInstallmentsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public PaymentInstallmentsInterest installmentsInterest {
-            get {
-                return this.installmentsInterestField;
-            }
-            set {
-                this.installmentsInterestField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool installmentsInterestSpecified {
-            get {
-                return this.installmentsInterestFieldSpecified;
-            }
-            set {
-                this.installmentsInterestFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="positiveInteger")]
-        public string installmentDelayMonths {
-            get {
-                return this.installmentDelayMonthsField;
-            }
-            set {
-                this.installmentDelayMonthsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string installmentPlanID {
-            get {
-                return this.installmentPlanIDField;
-            }
-            set {
-                this.installmentPlanIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TokenType TokenType {
-            get {
-                return this.tokenTypeField;
-            }
-            set {
-                this.tokenTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TokenTypeSpecified {
-            get {
-                return this.tokenTypeFieldSpecified;
-            }
-            set {
-                this.tokenTypeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool AssignToken {
-            get {
-                return this.assignTokenField;
-            }
-            set {
-                this.assignTokenField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum PaymentInstallmentsInterest {
-        
-        /// <remarks/>
-        yes,
-        
-        /// <remarks/>
-        no,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum TokenType {
-        
-        /// <remarks/>
-        ONETIME,
-        
-        /// <remarks/>
-        MULTIPAY,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class TransactionDetails {
-        
-        private AirlineDetails airlineDetailsField;
-        
-        private keyValuePair[] additionalRequestParametersField;
-        
-        private CarRental carRentalField;
-        
-        private HotelLodging hotelLodgingField;
-        
-        private PurchaseCard purchaseCardField;
-        
-        private string commentsField;
-        
-        private string invoiceNumberField;
-        
-        private string dynamicMerchantNameField;
-        
-        private string pONumberField;
-        
-        private string orderIdField;
-        
-        private string merchantTransactionIdField;
-        
-        private string referencedMerchantTransactionIdField;
-        
-        private string referencedSchemeTransactionIdField;
-        
-        private long ipgTransactionIdField;
-        
-        private bool ipgTransactionIdFieldSpecified;
-        
-        private OfflineApprovalType offlineApprovalTypeField;
-        
-        private bool offlineApprovalTypeFieldSpecified;
-        
-        private string ipField;
-        
-        private string referenceNumberField;
-        
-        private SplitShipment splitShipmentField;
-        
-        private string tDateField;
-        
-        private TransactionOrigin transactionOriginField;
-        
-        private bool transactionOriginFieldSpecified;
-        
-        private Terminal terminalField;
-        
-        private InquiryRateReference inquiryRateReferenceField;
-        
-        private byte[] signatureField;
-        
-        public TransactionDetails() {
-            this.transactionOriginField = TransactionOrigin.ECI;
-        }
-        
-        /// <remarks/>
-        public AirlineDetails AirlineDetails {
-            get {
-                return this.airlineDetailsField;
-            }
-            set {
-                this.airlineDetailsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlArrayItemAttribute("keyValuePair", IsNullable=false)]
-        public keyValuePair[] AdditionalRequestParameters {
-            get {
-                return this.additionalRequestParametersField;
-            }
-            set {
-                this.additionalRequestParametersField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CarRental CarRental {
-            get {
-                return this.carRentalField;
-            }
-            set {
-                this.carRentalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public HotelLodging HotelLodging {
-            get {
-                return this.hotelLodgingField;
-            }
-            set {
-                this.hotelLodgingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public PurchaseCard PurchaseCard {
-            get {
-                return this.purchaseCardField;
-            }
-            set {
-                this.purchaseCardField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comments {
-            get {
-                return this.commentsField;
-            }
-            set {
-                this.commentsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string InvoiceNumber {
-            get {
-                return this.invoiceNumberField;
-            }
-            set {
-                this.invoiceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DynamicMerchantName {
-            get {
-                return this.dynamicMerchantNameField;
-            }
-            set {
-                this.dynamicMerchantNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PONumber {
-            get {
-                return this.pONumberField;
-            }
-            set {
-                this.pONumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string OrderId {
-            get {
-                return this.orderIdField;
-            }
-            set {
-                this.orderIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string MerchantTransactionId {
-            get {
-                return this.merchantTransactionIdField;
-            }
-            set {
-                this.merchantTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReferencedMerchantTransactionId {
-            get {
-                return this.referencedMerchantTransactionIdField;
-            }
-            set {
-                this.referencedMerchantTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReferencedSchemeTransactionId {
-            get {
-                return this.referencedSchemeTransactionIdField;
-            }
-            set {
-                this.referencedSchemeTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long IpgTransactionId {
-            get {
-                return this.ipgTransactionIdField;
-            }
-            set {
-                this.ipgTransactionIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool IpgTransactionIdSpecified {
-            get {
-                return this.ipgTransactionIdFieldSpecified;
-            }
-            set {
-                this.ipgTransactionIdFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public OfflineApprovalType OfflineApprovalType {
-            get {
-                return this.offlineApprovalTypeField;
-            }
-            set {
-                this.offlineApprovalTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool OfflineApprovalTypeSpecified {
-            get {
-                return this.offlineApprovalTypeFieldSpecified;
-            }
-            set {
-                this.offlineApprovalTypeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Ip {
-            get {
-                return this.ipField;
-            }
-            set {
-                this.ipField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReferenceNumber {
-            get {
-                return this.referenceNumberField;
-            }
-            set {
-                this.referenceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SplitShipment SplitShipment {
-            get {
-                return this.splitShipmentField;
-            }
-            set {
-                this.splitShipmentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TDate {
-            get {
-                return this.tDateField;
-            }
-            set {
-                this.tDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TransactionOrigin TransactionOrigin {
-            get {
-                return this.transactionOriginField;
-            }
-            set {
-                this.transactionOriginField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TransactionOriginSpecified {
-            get {
-                return this.transactionOriginFieldSpecified;
-            }
-            set {
-                this.transactionOriginFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Terminal Terminal {
-            get {
-                return this.terminalField;
-            }
-            set {
-                this.terminalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public InquiryRateReference InquiryRateReference {
-            get {
-                return this.inquiryRateReferenceField;
-            }
-            set {
-                this.inquiryRateReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Signature {
-            get {
-                return this.signatureField;
-            }
-            set {
-                this.signatureField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class AirlineDetails {
-        
-        private string passengerNameField;
-        
-        private string ticketNumberField;
-        
-        private string issuingCarrierField;
-        
-        private string carrierNameField;
-        
-        private string travelAgencyCodeOrIATACodeField;
-        
-        private string travelAgencyNameField;
-        
-        private string airlinePlanNumberField;
-        
-        private string airlineInvoiceNumberField;
-        
-        private AirlineDetailsComputerizedReservationSystem computerizedReservationSystemField;
-        
-        private bool computerizedReservationSystemFieldSpecified;
-        
-        private bool restrictedField;
-        
-        private bool restrictedFieldSpecified;
-        
-        private TravelRoute[] travelRouteField;
-        
-        private string relatedTicketNumberField;
-        
-        private AirlineDetailsAncillaryServiceCategory[] ancillaryServiceCategoryField;
-        
-        private bool ticketPurchaseField;
-        
-        public AirlineDetails() {
-            this.ticketPurchaseField = true;
-        }
-        
-        /// <remarks/>
-        public string PassengerName {
-            get {
-                return this.passengerNameField;
-            }
-            set {
-                this.passengerNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TicketNumber {
-            get {
-                return this.ticketNumberField;
-            }
-            set {
-                this.ticketNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string IssuingCarrier {
-            get {
-                return this.issuingCarrierField;
-            }
-            set {
-                this.issuingCarrierField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CarrierName {
-            get {
-                return this.carrierNameField;
-            }
-            set {
-                this.carrierNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TravelAgencyCodeOrIATACode {
-            get {
-                return this.travelAgencyCodeOrIATACodeField;
-            }
-            set {
-                this.travelAgencyCodeOrIATACodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TravelAgencyName {
-            get {
-                return this.travelAgencyNameField;
-            }
-            set {
-                this.travelAgencyNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string AirlinePlanNumber {
-            get {
-                return this.airlinePlanNumberField;
-            }
-            set {
-                this.airlinePlanNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string AirlineInvoiceNumber {
-            get {
-                return this.airlineInvoiceNumberField;
-            }
-            set {
-                this.airlineInvoiceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AirlineDetailsComputerizedReservationSystem ComputerizedReservationSystem {
-            get {
-                return this.computerizedReservationSystemField;
-            }
-            set {
-                this.computerizedReservationSystemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ComputerizedReservationSystemSpecified {
-            get {
-                return this.computerizedReservationSystemFieldSpecified;
-            }
-            set {
-                this.computerizedReservationSystemFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool Restricted {
-            get {
-                return this.restrictedField;
-            }
-            set {
-                this.restrictedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool RestrictedSpecified {
-            get {
-                return this.restrictedFieldSpecified;
-            }
-            set {
-                this.restrictedFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("TravelRoute")]
-        public TravelRoute[] TravelRoute {
-            get {
-                return this.travelRouteField;
-            }
-            set {
-                this.travelRouteField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string RelatedTicketNumber {
-            get {
-                return this.relatedTicketNumberField;
-            }
-            set {
-                this.relatedTicketNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("AncillaryServiceCategory")]
-        public AirlineDetailsAncillaryServiceCategory[] AncillaryServiceCategory {
-            get {
-                return this.ancillaryServiceCategoryField;
-            }
-            set {
-                this.ancillaryServiceCategoryField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(true)]
-        public bool TicketPurchase {
-            get {
-                return this.ticketPurchaseField;
-            }
-            set {
-                this.ticketPurchaseField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum AirlineDetailsComputerizedReservationSystem {
-        
-        /// <remarks/>
-        Start,
-        
-        /// <remarks/>
-        TWA,
-        
-        /// <remarks/>
-        Delta,
-        
-        /// <remarks/>
-        Sabre,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Covia-Apollo")]
-        CoviaApollo,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Dr.Blank")]
-        DrBlank,
-        
-        /// <remarks/>
-        DER,
-        
-        /// <remarks/>
-        TUI,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class TravelRoute {
-        
-        private string departureDateField;
-        
-        private string originField;
-        
-        private string destinationField;
-        
-        private string carrierCodeField;
-        
-        private string serviceClassField;
-        
-        private TravelRouteStopoverType stopoverTypeField;
-        
-        private string fareBasisCodeField;
-        
-        private decimal departureTaxField;
-        
-        private string flightNumberField;
-        
-        /// <remarks/>
-        public string DepartureDate {
-            get {
-                return this.departureDateField;
-            }
-            set {
-                this.departureDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Origin {
-            get {
-                return this.originField;
-            }
-            set {
-                this.originField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Destination {
-            get {
-                return this.destinationField;
-            }
-            set {
-                this.destinationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CarrierCode {
-            get {
-                return this.carrierCodeField;
-            }
-            set {
-                this.carrierCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ServiceClass {
-            get {
-                return this.serviceClassField;
-            }
-            set {
-                this.serviceClassField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TravelRouteStopoverType StopoverType {
-            get {
-                return this.stopoverTypeField;
-            }
-            set {
-                this.stopoverTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string FareBasisCode {
-            get {
-                return this.fareBasisCodeField;
-            }
-            set {
-                this.fareBasisCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal DepartureTax {
-            get {
-                return this.departureTaxField;
-            }
-            set {
-                this.departureTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string FlightNumber {
-            get {
-                return this.flightNumberField;
-            }
-            set {
-                this.flightNumberField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum TravelRouteStopoverType {
-        
-        /// <remarks/>
-        DIRECT,
-        
-        /// <remarks/>
-        STOPOVER,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum AirlineDetailsAncillaryServiceCategory {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Bundled Service")]
-        BundledService,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Baggage Fee")]
-        BaggageFee,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Change Fee")]
-        ChangeFee,
-        
-        /// <remarks/>
-        Cargo,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Carbon Offset")]
-        CarbonOffset,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Frequent Flyer")]
-        FrequentFlyer,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Gift Card")]
-        GiftCard,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Ground Transport")]
-        GroundTransport,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("In-flight Entertainment")]
-        InflightEntertainment,
-        
-        /// <remarks/>
-        Lounge,
-        
-        /// <remarks/>
-        Medical,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Meal / Beverage")]
-        MealBeverage,
-        
-        /// <remarks/>
-        Other,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Passenger Assist Fee")]
-        PassengerAssistFee,
-        
-        /// <remarks/>
-        Pets,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Seat Fees")]
-        SeatFees,
-        
-        /// <remarks/>
-        Standby,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Service Fee")]
-        ServiceFee,
-        
-        /// <remarks/>
-        Store,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Travel Service")]
-        TravelService,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Unaccompanied Travel")]
-        UnaccompaniedTravel,
-        
-        /// <remarks/>
-        Upgrades,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Wi-Fi")]
-        WiFi,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class CarRental {
-        
-        private string agreementNumberField;
-        
-        private string renterNameField;
-        
-        private string returnCityField;
-        
-        private string returnDateField;
-        
-        private string pickupDateField;
-        
-        private string rentalClassIDField;
-        
-        private CarRentalExtraCharges[] extraChargesField;
-        
-        private bool noShowIndicatorField;
-        
-        private bool noShowIndicatorFieldSpecified;
-        
-        /// <remarks/>
-        public string AgreementNumber {
-            get {
-                return this.agreementNumberField;
-            }
-            set {
-                this.agreementNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string RenterName {
-            get {
-                return this.renterNameField;
-            }
-            set {
-                this.renterNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReturnCity {
-            get {
-                return this.returnCityField;
-            }
-            set {
-                this.returnCityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReturnDate {
-            get {
-                return this.returnDateField;
-            }
-            set {
-                this.returnDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PickupDate {
-            get {
-                return this.pickupDateField;
-            }
-            set {
-                this.pickupDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string RentalClassID {
-            get {
-                return this.rentalClassIDField;
-            }
-            set {
-                this.rentalClassIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtraCharges")]
-        public CarRentalExtraCharges[] ExtraCharges {
-            get {
-                return this.extraChargesField;
-            }
-            set {
-                this.extraChargesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool NoShowIndicator {
-            get {
-                return this.noShowIndicatorField;
-            }
-            set {
-                this.noShowIndicatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NoShowIndicatorSpecified {
-            get {
-                return this.noShowIndicatorFieldSpecified;
-            }
-            set {
-                this.noShowIndicatorFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum CarRentalExtraCharges {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Extra Mileage")]
-        ExtraMileage,
-        
-        /// <remarks/>
-        Gas,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Late Return")]
-        LateReturn,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("One Way Ser Fee")]
-        OneWaySerFee,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Parking Violation")]
-        ParkingViolation,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class HotelLodging {
-        
-        private string arrivalDateField;
-        
-        private string departureDateField;
-        
-        private string folioNumberField;
-        
-        private HotelLodgingExtraCharges[] extraChargesField;
-        
-        private bool noShowIndicatorField;
-        
-        private bool noShowIndicatorFieldSpecified;
-        
-        /// <remarks/>
-        public string ArrivalDate {
-            get {
-                return this.arrivalDateField;
-            }
-            set {
-                this.arrivalDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DepartureDate {
-            get {
-                return this.departureDateField;
-            }
-            set {
-                this.departureDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string FolioNumber {
-            get {
-                return this.folioNumberField;
-            }
-            set {
-                this.folioNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ExtraCharges")]
-        public HotelLodgingExtraCharges[] ExtraCharges {
-            get {
-                return this.extraChargesField;
-            }
-            set {
-                this.extraChargesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool NoShowIndicator {
-            get {
-                return this.noShowIndicatorField;
-            }
-            set {
-                this.noShowIndicatorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool NoShowIndicatorSpecified {
-            get {
-                return this.noShowIndicatorFieldSpecified;
-            }
-            set {
-                this.noShowIndicatorFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum HotelLodgingExtraCharges {
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Gift Shop")]
-        GiftShop,
-        
-        /// <remarks/>
-        Laundry,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("Mini Bar")]
-        MiniBar,
-        
-        /// <remarks/>
-        Other,
-        
-        /// <remarks/>
-        Restaurant,
-        
-        /// <remarks/>
-        Telephone,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class PurchaseCard {
-        
-        private string customerReferenceIDField;
-        
-        private string supplierInvoiceNumberField;
-        
-        private string supplierVATRegistrationNumberField;
-        
-        private AdditionalAmountAndRate totalDiscountAmountAndRateField;
-        
-        private AdditionalAmountAndRate vATShippingAmountAndRateField;
-        
-        private LineItemData[] lineItemDataField;
-        
-        /// <remarks/>
-        public string CustomerReferenceID {
-            get {
-                return this.customerReferenceIDField;
-            }
-            set {
-                this.customerReferenceIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string SupplierInvoiceNumber {
-            get {
-                return this.supplierInvoiceNumberField;
-            }
-            set {
-                this.supplierInvoiceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string SupplierVATRegistrationNumber {
-            get {
-                return this.supplierVATRegistrationNumberField;
-            }
-            set {
-                this.supplierVATRegistrationNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AdditionalAmountAndRate TotalDiscountAmountAndRate {
-            get {
-                return this.totalDiscountAmountAndRateField;
-            }
-            set {
-                this.totalDiscountAmountAndRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AdditionalAmountAndRate VATShippingAmountAndRate {
-            get {
-                return this.vATShippingAmountAndRateField;
-            }
-            set {
-                this.vATShippingAmountAndRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("LineItemData")]
-        public LineItemData[] LineItemData {
-            get {
-                return this.lineItemDataField;
-            }
-            set {
-                this.lineItemDataField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class AdditionalAmountAndRate {
-        
-        private decimal amountField;
-        
-        private decimal rateField;
-        
-        /// <remarks/>
-        public decimal Amount {
-            get {
-                return this.amountField;
-            }
-            set {
-                this.amountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal Rate {
-            get {
-                return this.rateField;
-            }
-            set {
-                this.rateField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class LineItemData {
-        
-        private int commodityCodeField;
-        
-        private string productCodeField;
-        
-        private string descriptionField;
-        
-        private int quantityField;
-        
-        private string unitOfMeasureField;
-        
-        private decimal unitPriceField;
-        
-        private AdditionalAmountAndRate vATAmountAndRateField;
-        
-        private AdditionalAmountAndRate discountAmountAndRateField;
-        
-        private decimal lineItemTotalField;
-        
-        /// <remarks/>
-        public int CommodityCode {
-            get {
-                return this.commodityCodeField;
-            }
-            set {
-                this.commodityCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ProductCode {
-            get {
-                return this.productCodeField;
-            }
-            set {
-                this.productCodeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Description {
-            get {
-                return this.descriptionField;
-            }
-            set {
-                this.descriptionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Quantity {
-            get {
-                return this.quantityField;
-            }
-            set {
-                this.quantityField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string UnitOfMeasure {
-            get {
-                return this.unitOfMeasureField;
-            }
-            set {
-                this.unitOfMeasureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal UnitPrice {
-            get {
-                return this.unitPriceField;
-            }
-            set {
-                this.unitPriceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AdditionalAmountAndRate VATAmountAndRate {
-            get {
-                return this.vATAmountAndRateField;
-            }
-            set {
-                this.vATAmountAndRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public AdditionalAmountAndRate DiscountAmountAndRate {
-            get {
-                return this.discountAmountAndRateField;
-            }
-            set {
-                this.discountAmountAndRateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public decimal LineItemTotal {
-            get {
-                return this.lineItemTotalField;
-            }
-            set {
-                this.lineItemTotalField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum OfflineApprovalType {
-        
-        /// <remarks/>
-        OFFLINE_APPROVAL,
-        
-        /// <remarks/>
-        OFFLINE_DECLINED,
-        
-        /// <remarks/>
-        FALLBACK,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class SplitShipment {
-        
-        private int sequenceCountField;
-        
-        private bool sequenceCountFieldSpecified;
-        
-        private bool finalShipmentField;
-        
-        /// <remarks/>
-        public int SequenceCount {
-            get {
-                return this.sequenceCountField;
-            }
-            set {
-                this.sequenceCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool SequenceCountSpecified {
-            get {
-                return this.sequenceCountFieldSpecified;
-            }
-            set {
-                this.sequenceCountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool FinalShipment {
-            get {
-                return this.finalShipmentField;
-            }
-            set {
-                this.finalShipmentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum TransactionOrigin {
-        
-        /// <remarks/>
-        ECI,
-        
-        /// <remarks/>
-        MOTO,
-        
-        /// <remarks/>
-        RETAIL,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class Terminal {
-        
-        private string terminalIDField;
-        
-        /// <remarks/>
-        public string TerminalID {
-            get {
-                return this.terminalIDField;
-            }
-            set {
-                this.terminalIDField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class InquiryRateReference {
-        
-        private long inquiryRateIdField;
-        
-        private bool dccAppliedField;
-        
-        private bool dccAppliedFieldSpecified;
-        
-        /// <remarks/>
-        public long InquiryRateId {
-            get {
-                return this.inquiryRateIdField;
-            }
-            set {
-                this.inquiryRateIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool DccApplied {
-            get {
-                return this.dccAppliedField;
-            }
-            set {
-                this.dccAppliedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DccAppliedSpecified {
-            get {
-                return this.dccAppliedFieldSpecified;
-            }
-            set {
-                this.dccAppliedFieldSpecified = value;
-            }
-        }
     }
     
     /// <remarks/>
@@ -8005,1307 +10879,6 @@ namespace WebApplicationTest1.IPGWebReference {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class ResultInfoType {
-        
-        private bool moreResultsAvailableField;
-        
-        /// <remarks/>
-        public bool MoreResultsAvailable {
-            get {
-                return this.moreResultsAvailableField;
-            }
-            set {
-                this.moreResultsAvailableField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(RecurringPaymentValues))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class RecurringPaymentInformation {
-        
-        private string recurringStartDateField;
-        
-        private string installmentCountField;
-        
-        private string maximumFailuresField;
-        
-        private string installmentFrequencyField;
-        
-        private RecurringPaymentInformationInstallmentPeriod installmentPeriodField;
-        
-        private bool installmentPeriodFieldSpecified;
-        
-        /// <remarks/>
-        public string RecurringStartDate {
-            get {
-                return this.recurringStartDateField;
-            }
-            set {
-                this.recurringStartDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        public string InstallmentCount {
-            get {
-                return this.installmentCountField;
-            }
-            set {
-                this.installmentCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        public string MaximumFailures {
-            get {
-                return this.maximumFailuresField;
-            }
-            set {
-                this.maximumFailuresField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="integer")]
-        public string InstallmentFrequency {
-            get {
-                return this.installmentFrequencyField;
-            }
-            set {
-                this.installmentFrequencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public RecurringPaymentInformationInstallmentPeriod InstallmentPeriod {
-            get {
-                return this.installmentPeriodField;
-            }
-            set {
-                this.installmentPeriodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool InstallmentPeriodSpecified {
-            get {
-                return this.installmentPeriodFieldSpecified;
-            }
-            set {
-                this.installmentPeriodFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public enum RecurringPaymentInformationInstallmentPeriod {
-        
-        /// <remarks/>
-        day,
-        
-        /// <remarks/>
-        week,
-        
-        /// <remarks/>
-        month,
-        
-        /// <remarks/>
-        year,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class RecurringPaymentValues : RecurringPaymentInformation {
-        
-        private RecurringPaymentValuesState stateField;
-        
-        private string creationDateField;
-        
-        private int failureCountField;
-        
-        private bool failureCountFieldSpecified;
-        
-        private string nextAttemptDateField;
-        
-        private int runCountField;
-        
-        private bool runCountFieldSpecified;
-        
-        private CreditCardData creditCardDataField;
-        
-        private DE_DirectDebitData dE_DirectDebitDataField;
-        
-        private string hostedDataIDField;
-        
-        private string hostedDataStoreIDField;
-        
-        private decimal subTotalField;
-        
-        private decimal valueAddedTaxField;
-        
-        private bool valueAddedTaxFieldSpecified;
-        
-        private decimal localTaxField;
-        
-        private bool localTaxFieldSpecified;
-        
-        private decimal deliveryAmountField;
-        
-        private bool deliveryAmountFieldSpecified;
-        
-        private decimal cashbackAmountField;
-        
-        private bool cashbackAmountFieldSpecified;
-        
-        private decimal tipAmountField;
-        
-        private bool tipAmountFieldSpecified;
-        
-        private decimal chargeTotalField;
-        
-        private string currencyField;
-        
-        private TransactionOrigin transactionOriginField;
-        
-        private bool transactionOriginFieldSpecified;
-        
-        private string invoiceNumberField;
-        
-        private string pONumberField;
-        
-        private string commentsField;
-        
-        public RecurringPaymentValues() {
-            this.transactionOriginField = TransactionOrigin.ECI;
-        }
-        
-        /// <remarks/>
-        public RecurringPaymentValuesState State {
-            get {
-                return this.stateField;
-            }
-            set {
-                this.stateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CreationDate {
-            get {
-                return this.creationDateField;
-            }
-            set {
-                this.creationDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int FailureCount {
-            get {
-                return this.failureCountField;
-            }
-            set {
-                this.failureCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FailureCountSpecified {
-            get {
-                return this.failureCountFieldSpecified;
-            }
-            set {
-                this.failureCountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string NextAttemptDate {
-            get {
-                return this.nextAttemptDateField;
-            }
-            set {
-                this.nextAttemptDateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int RunCount {
-            get {
-                return this.runCountField;
-            }
-            set {
-                this.runCountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool RunCountSpecified {
-            get {
-                return this.runCountFieldSpecified;
-            }
-            set {
-                this.runCountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CreditCardData CreditCardData {
-            get {
-                return this.creditCardDataField;
-            }
-            set {
-                this.creditCardDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DE_DirectDebitData DE_DirectDebitData {
-            get {
-                return this.dE_DirectDebitDataField;
-            }
-            set {
-                this.dE_DirectDebitDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string HostedDataID {
-            get {
-                return this.hostedDataIDField;
-            }
-            set {
-                this.hostedDataIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string HostedDataStoreID {
-            get {
-                return this.hostedDataStoreIDField;
-            }
-            set {
-                this.hostedDataStoreIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal SubTotal {
-            get {
-                return this.subTotalField;
-            }
-            set {
-                this.subTotalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal ValueAddedTax {
-            get {
-                return this.valueAddedTaxField;
-            }
-            set {
-                this.valueAddedTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ValueAddedTaxSpecified {
-            get {
-                return this.valueAddedTaxFieldSpecified;
-            }
-            set {
-                this.valueAddedTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal localTax {
-            get {
-                return this.localTaxField;
-            }
-            set {
-                this.localTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool localTaxSpecified {
-            get {
-                return this.localTaxFieldSpecified;
-            }
-            set {
-                this.localTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal DeliveryAmount {
-            get {
-                return this.deliveryAmountField;
-            }
-            set {
-                this.deliveryAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool DeliveryAmountSpecified {
-            get {
-                return this.deliveryAmountFieldSpecified;
-            }
-            set {
-                this.deliveryAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal CashbackAmount {
-            get {
-                return this.cashbackAmountField;
-            }
-            set {
-                this.cashbackAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool CashbackAmountSpecified {
-            get {
-                return this.cashbackAmountFieldSpecified;
-            }
-            set {
-                this.cashbackAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal TipAmount {
-            get {
-                return this.tipAmountField;
-            }
-            set {
-                this.tipAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TipAmountSpecified {
-            get {
-                return this.tipAmountFieldSpecified;
-            }
-            set {
-                this.tipAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal ChargeTotal {
-            get {
-                return this.chargeTotalField;
-            }
-            set {
-                this.chargeTotalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public string Currency {
-            get {
-                return this.currencyField;
-            }
-            set {
-                this.currencyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public TransactionOrigin TransactionOrigin {
-            get {
-                return this.transactionOriginField;
-            }
-            set {
-                this.transactionOriginField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TransactionOriginSpecified {
-            get {
-                return this.transactionOriginFieldSpecified;
-            }
-            set {
-                this.transactionOriginFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string InvoiceNumber {
-            get {
-                return this.invoiceNumberField;
-            }
-            set {
-                this.invoiceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PONumber {
-            get {
-                return this.pONumberField;
-            }
-            set {
-                this.pONumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comments {
-            get {
-                return this.commentsField;
-            }
-            set {
-                this.commentsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public enum RecurringPaymentValuesState {
-        
-        /// <remarks/>
-        Cancelled,
-        
-        /// <remarks/>
-        Inactivated,
-        
-        /// <remarks/>
-        Installed,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class RecurringPayment {
-        
-        private Function functionField;
-        
-        private string orderIdField;
-        
-        private string storeIdField;
-        
-        private string commentsField;
-        
-        private string invoiceNumberField;
-        
-        private string dynamicMerchantNameField;
-        
-        private string pONumberField;
-        
-        private RecurringPaymentInformation recurringPaymentInformationField;
-        
-        private CreditCardData creditCardDataField;
-        
-        private DE_DirectDebitData dE_DirectDebitDataField;
-        
-        private CardFunctionType cardFunctionField;
-        
-        private bool cardFunctionFieldSpecified;
-        
-        private string mandateReferenceField;
-        
-        private string referencedOrderIdField;
-        
-        private Payment paymentField;
-        
-        private Basket basketField;
-        
-        private Billing billingField;
-        
-        private CreditCard3DSecure creditCard3DSecureField;
-        
-        private Upop upopField;
-        
-        private Shipping shippingField;
-        
-        private string ipField;
-        
-        private RecurringPaymentTransactionOrigin transactionOriginField;
-        
-        private Wallet walletField;
-        
-        private MerchantDetails merchantDetailsField;
-        
-        public RecurringPayment() {
-            this.transactionOriginField = RecurringPaymentTransactionOrigin.ECI;
-        }
-        
-        /// <remarks/>
-        public Function Function {
-            get {
-                return this.functionField;
-            }
-            set {
-                this.functionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string OrderId {
-            get {
-                return this.orderIdField;
-            }
-            set {
-                this.orderIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string StoreId {
-            get {
-                return this.storeIdField;
-            }
-            set {
-                this.storeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Comments {
-            get {
-                return this.commentsField;
-            }
-            set {
-                this.commentsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string InvoiceNumber {
-            get {
-                return this.invoiceNumberField;
-            }
-            set {
-                this.invoiceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string DynamicMerchantName {
-            get {
-                return this.dynamicMerchantNameField;
-            }
-            set {
-                this.dynamicMerchantNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string PONumber {
-            get {
-                return this.pONumberField;
-            }
-            set {
-                this.pONumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public RecurringPaymentInformation RecurringPaymentInformation {
-            get {
-                return this.recurringPaymentInformationField;
-            }
-            set {
-                this.recurringPaymentInformationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CreditCardData CreditCardData {
-            get {
-                return this.creditCardDataField;
-            }
-            set {
-                this.creditCardDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DE_DirectDebitData DE_DirectDebitData {
-            get {
-                return this.dE_DirectDebitDataField;
-            }
-            set {
-                this.dE_DirectDebitDataField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CardFunctionType cardFunction {
-            get {
-                return this.cardFunctionField;
-            }
-            set {
-                this.cardFunctionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cardFunctionSpecified {
-            get {
-                return this.cardFunctionFieldSpecified;
-            }
-            set {
-                this.cardFunctionFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public string MandateReference {
-            get {
-                return this.mandateReferenceField;
-            }
-            set {
-                this.mandateReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string ReferencedOrderId {
-            get {
-                return this.referencedOrderIdField;
-            }
-            set {
-                this.referencedOrderIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Payment Payment {
-            get {
-                return this.paymentField;
-            }
-            set {
-                this.paymentField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Basket Basket {
-            get {
-                return this.basketField;
-            }
-            set {
-                this.basketField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Billing Billing {
-            get {
-                return this.billingField;
-            }
-            set {
-                this.billingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public CreditCard3DSecure CreditCard3DSecure {
-            get {
-                return this.creditCard3DSecureField;
-            }
-            set {
-                this.creditCard3DSecureField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Upop Upop {
-            get {
-                return this.upopField;
-            }
-            set {
-                this.upopField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Shipping Shipping {
-            get {
-                return this.shippingField;
-            }
-            set {
-                this.shippingField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Ip {
-            get {
-                return this.ipField;
-            }
-            set {
-                this.ipField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(RecurringPaymentTransactionOrigin.ECI)]
-        public RecurringPaymentTransactionOrigin TransactionOrigin {
-            get {
-                return this.transactionOriginField;
-            }
-            set {
-                this.transactionOriginField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Wallet Wallet {
-            get {
-                return this.walletField;
-            }
-            set {
-                this.walletField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public MerchantDetails MerchantDetails {
-            get {
-                return this.merchantDetailsField;
-            }
-            set {
-                this.merchantDetailsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public enum Function {
-        
-        /// <remarks/>
-        cancel,
-        
-        /// <remarks/>
-        install,
-        
-        /// <remarks/>
-        modify,
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("perform only in test environment")]
-        performonlyintestenvironment,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public enum RecurringPaymentTransactionOrigin {
-        
-        /// <remarks/>
-        ECI,
-        
-        /// <remarks/>
-        MOTO,
-        
-        /// <remarks/>
-        RETAIL,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public partial class MerchantDetails {
-        
-        private string externalMerchantIDField;
-        
-        private string alternateExternalMerchantIDField;
-        
-        private string endpointIDField;
-        
-        private Terminal terminalField;
-        
-        private MerchantMasterData merchantMasterDataField;
-        
-        /// <remarks/>
-        public string ExternalMerchantID {
-            get {
-                return this.externalMerchantIDField;
-            }
-            set {
-                this.externalMerchantIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string AlternateExternalMerchantID {
-            get {
-                return this.alternateExternalMerchantIDField;
-            }
-            set {
-                this.alternateExternalMerchantIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string EndpointID {
-            get {
-                return this.endpointIDField;
-            }
-            set {
-                this.endpointIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public Terminal Terminal {
-            get {
-                return this.terminalField;
-            }
-            set {
-                this.terminalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public MerchantMasterData MerchantMasterData {
-            get {
-                return this.merchantMasterDataField;
-            }
-            set {
-                this.merchantMasterDataField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class ProductChoice {
-        
-        private string optionNameField;
-        
-        private string nameField;
-        
-        /// <remarks/>
-        public string OptionName {
-            get {
-                return this.optionNameField;
-            }
-            set {
-                this.optionNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string Name {
-            get {
-                return this.nameField;
-            }
-            set {
-                this.nameField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class DataStorageItem {
-        
-        private object itemField;
-        
-        private string hostedDataIDField;
-        
-        private bool declineHostedDataDuplicatesField;
-        
-        private TokenType tokenTypeField;
-        
-        private bool tokenTypeFieldSpecified;
-        
-        private bool assignTokenField;
-        
-        private CardFunctionType cardFunctionField;
-        
-        private bool cardFunctionFieldSpecified;
-        
-        public DataStorageItem() {
-            this.declineHostedDataDuplicatesField = false;
-            this.assignTokenField = false;
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CreditCardData", typeof(CreditCardData))]
-        [System.Xml.Serialization.XmlElementAttribute("DE_DirectDebitData", typeof(DE_DirectDebitData))]
-        [System.Xml.Serialization.XmlElementAttribute("Function", typeof(DataStorageItemFunction))]
-        [System.Xml.Serialization.XmlElementAttribute("OrderId", typeof(string))]
-        public object Item {
-            get {
-                return this.itemField;
-            }
-            set {
-                this.itemField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string HostedDataID {
-            get {
-                return this.hostedDataIDField;
-            }
-            set {
-                this.hostedDataIDField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool DeclineHostedDataDuplicates {
-            get {
-                return this.declineHostedDataDuplicatesField;
-            }
-            set {
-                this.declineHostedDataDuplicatesField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public TokenType TokenType {
-            get {
-                return this.tokenTypeField;
-            }
-            set {
-                this.tokenTypeField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TokenTypeSpecified {
-            get {
-                return this.tokenTypeFieldSpecified;
-            }
-            set {
-                this.tokenTypeFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.ComponentModel.DefaultValueAttribute(false)]
-        public bool AssignToken {
-            get {
-                return this.assignTokenField;
-            }
-            set {
-                this.assignTokenField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public CardFunctionType cardFunction {
-            get {
-                return this.cardFunctionField;
-            }
-            set {
-                this.cardFunctionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cardFunctionSpecified {
-            get {
-                return this.cardFunctionFieldSpecified;
-            }
-            set {
-                this.cardFunctionFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public enum DataStorageItemFunction {
-        
-        /// <remarks/>
-        delete,
-        
-        /// <remarks/>
-        display,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class CardInformation {
-        
-        private string brandField;
-        
-        private string[] cardFunctionField;
-        
-        /// <remarks/>
-        public string Brand {
-            get {
-                return this.brandField;
-            }
-            set {
-                this.brandField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CardFunction")]
-        public string[] CardFunction {
-            get {
-                return this.cardFunctionField;
-            }
-            set {
-                this.cardFunctionField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
-    public partial class ClearingDetails {
-        
-        private ClearingElement[] clearingElementField;
-        
-        private string batchTimeStampField;
-        
-        private int receiptNumberFromField;
-        
-        private bool receiptNumberFromFieldSpecified;
-        
-        private int receiptNumberToField;
-        
-        private bool receiptNumberToFieldSpecified;
-        
-        private int traceNumberField;
-        
-        private bool traceNumberFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ClearingElement")]
-        public ClearingElement[] ClearingElement {
-            get {
-                return this.clearingElementField;
-            }
-            set {
-                this.clearingElementField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string BatchTimeStamp {
-            get {
-                return this.batchTimeStampField;
-            }
-            set {
-                this.batchTimeStampField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int receiptNumberFrom {
-            get {
-                return this.receiptNumberFromField;
-            }
-            set {
-                this.receiptNumberFromField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool receiptNumberFromSpecified {
-            get {
-                return this.receiptNumberFromFieldSpecified;
-            }
-            set {
-                this.receiptNumberFromFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int receiptNumberTo {
-            get {
-                return this.receiptNumberToField;
-            }
-            set {
-                this.receiptNumberToField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool receiptNumberToSpecified {
-            get {
-                return this.receiptNumberToFieldSpecified;
-            }
-            set {
-                this.receiptNumberToFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int traceNumber {
-            get {
-                return this.traceNumberField;
-            }
-            set {
-                this.traceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool traceNumberSpecified {
-            get {
-                return this.traceNumberFieldSpecified;
-            }
-            set {
-                this.traceNumberFieldSpecified = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
-    public partial class ClearingElement {
-        
-        private string brandField;
-        
-        private long valueField;
-        
-        private int countField;
-        
-        /// <remarks/>
-        public string Brand {
-            get {
-                return this.brandField;
-            }
-            set {
-                this.brandField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long Value {
-            get {
-                return this.valueField;
-            }
-            set {
-                this.valueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int Count {
-            get {
-                return this.countField;
-            }
-            set {
-                this.countField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-    public enum SubsequentTransactionType {
-        
-        /// <remarks/>
-        RETURN,
-        
-        /// <remarks/>
-        VOID,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/ipgapi")]
     public partial class IPGApiActionRequest {
         
@@ -9336,7 +10909,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private ClientLocale clientLocaleField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CreatePaymentURL", typeof(CreatePaymentURL))]
         [System.Xml.Serialization.XmlElementAttribute("GetExternalConsumerInformation", typeof(GetExternalConsumerInformation))]
         [System.Xml.Serialization.XmlElementAttribute("GetExternalTransactionStatus", typeof(GetExternalTransactionStatus))]
         [System.Xml.Serialization.XmlElementAttribute("GetLastOrders", typeof(GetLastOrders))]
@@ -9344,7 +10916,6 @@ namespace WebApplicationTest1.IPGWebReference {
         [System.Xml.Serialization.XmlElementAttribute("InitiateClearing", typeof(InitiateClearing))]
         [System.Xml.Serialization.XmlElementAttribute("InquiryCardInformation", typeof(InquiryCardInformation))]
         [System.Xml.Serialization.XmlElementAttribute("InquiryOrder", typeof(InquiryOrder))]
-        [System.Xml.Serialization.XmlElementAttribute("InquiryTransaction", typeof(InquiryTransaction))]
         [System.Xml.Serialization.XmlElementAttribute("ManageProductStock", typeof(ManageProductStock))]
         [System.Xml.Serialization.XmlElementAttribute("ManageProducts", typeof(ManageProducts))]
         [System.Xml.Serialization.XmlElementAttribute("RecurringPayment", typeof(RecurringPayment))]
@@ -9370,102 +10941,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.clientLocaleField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class CreatePaymentURL {
-        
-        private Transaction transactionField;
-        
-        private string transactionNotificationURLField;
-        
-        private bool authenticateTransactionField;
-        
-        private bool authenticateTransactionFieldSpecified;
-        
-        private long expirationField;
-        
-        private bool expirationFieldSpecified;
-        
-        private MCC6012Details mCC6012DetailsField;
-        
-        /// <remarks/>
-        public Transaction Transaction {
-            get {
-                return this.transactionField;
-            }
-            set {
-                this.transactionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string TransactionNotificationURL {
-            get {
-                return this.transactionNotificationURLField;
-            }
-            set {
-                this.transactionNotificationURLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public bool AuthenticateTransaction {
-            get {
-                return this.authenticateTransactionField;
-            }
-            set {
-                this.authenticateTransactionField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool AuthenticateTransactionSpecified {
-            get {
-                return this.authenticateTransactionFieldSpecified;
-            }
-            set {
-                this.authenticateTransactionFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long Expiration {
-            get {
-                return this.expirationField;
-            }
-            set {
-                this.expirationField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ExpirationSpecified {
-            get {
-                return this.expirationFieldSpecified;
-            }
-            set {
-                this.expirationFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public MCC6012Details MCC6012Details {
-            get {
-                return this.mCC6012DetailsField;
-            }
-            set {
-                this.mCC6012DetailsField = value;
             }
         }
     }
@@ -9649,9 +11124,9 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string storeIdField;
         
-        private object[] itemsField;
+        private string orderIdField;
         
-        private ItemsChoiceType6[] itemsElementNameField;
+        private string tDateField;
         
         /// <remarks/>
         public string StoreId {
@@ -9664,50 +11139,24 @@ namespace WebApplicationTest1.IPGWebReference {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IpgTransactionId", typeof(long))]
-        [System.Xml.Serialization.XmlElementAttribute("MerchantTransactionId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("OrderId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("TDate", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public object[] Items {
+        public string OrderId {
             get {
-                return this.itemsField;
+                return this.orderIdField;
             }
             set {
-                this.itemsField = value;
+                this.orderIdField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType6[] ItemsElementName {
+        public string TDate {
             get {
-                return this.itemsElementNameField;
+                return this.tDateField;
             }
             set {
-                this.itemsElementNameField = value;
+                this.tDateField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1", IncludeInSchema=false)]
-    public enum ItemsChoiceType6 {
-        
-        /// <remarks/>
-        IpgTransactionId,
-        
-        /// <remarks/>
-        MerchantTransactionId,
-        
-        /// <remarks/>
-        OrderId,
-        
-        /// <remarks/>
-        TDate,
     }
     
     /// <remarks/>
@@ -9888,10 +11337,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private Terminal terminalField;
         
-        private int traceNumberField;
-        
-        private bool traceNumberFieldSpecified;
-        
         /// <remarks/>
         public string StoreId {
             get {
@@ -9920,27 +11365,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.terminalField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public int traceNumber {
-            get {
-                return this.traceNumberField;
-            }
-            set {
-                this.traceNumberField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool traceNumberSpecified {
-            get {
-                return this.traceNumberFieldSpecified;
-            }
-            set {
-                this.traceNumberFieldSpecified = value;
             }
         }
     }
@@ -10035,90 +11459,6 @@ namespace WebApplicationTest1.IPGWebReference {
                 this.merchantDetailsField = value;
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType=true, Namespace="http://ipg-online.com/ipgapi/schemas/a1")]
-    public partial class InquiryTransaction {
-        
-        private string storeIdField;
-        
-        private object[] itemsField;
-        
-        private ItemsChoiceType5[] itemsElementNameField;
-        
-        private MerchantDetails merchantDetailsField;
-        
-        /// <remarks/>
-        public string StoreId {
-            get {
-                return this.storeIdField;
-            }
-            set {
-                this.storeIdField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("IpgTransactionId", typeof(long))]
-        [System.Xml.Serialization.XmlElementAttribute("MerchantTransactionId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("OrderId", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("TDate", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemsElementName")]
-        public object[] Items {
-            get {
-                return this.itemsField;
-            }
-            set {
-                this.itemsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ItemsElementName")]
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemsChoiceType5[] ItemsElementName {
-            get {
-                return this.itemsElementNameField;
-            }
-            set {
-                this.itemsElementNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public MerchantDetails MerchantDetails {
-            get {
-                return this.merchantDetailsField;
-            }
-            set {
-                this.merchantDetailsField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3163.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/a1", IncludeInSchema=false)]
-    public enum ItemsChoiceType5 {
-        
-        /// <remarks/>
-        IpgTransactionId,
-        
-        /// <remarks/>
-        MerchantTransactionId,
-        
-        /// <remarks/>
-        OrderId,
-        
-        /// <remarks/>
-        TDate,
     }
     
     /// <remarks/>
@@ -10321,10 +11661,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private bool valueAddedTaxFieldSpecified;
         
-        private decimal localTaxField;
-        
-        private bool localTaxFieldSpecified;
-        
         private decimal deliveryAmountField;
         
         private bool deliveryAmountFieldSpecified;
@@ -10332,10 +11668,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private decimal cashbackAmountField;
         
         private bool cashbackAmountFieldSpecified;
-        
-        private decimal tipAmountField;
-        
-        private bool tipAmountFieldSpecified;
         
         private decimal chargeTotalField;
         
@@ -10440,28 +11772,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal localTax {
-            get {
-                return this.localTaxField;
-            }
-            set {
-                this.localTaxField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool localTaxSpecified {
-            get {
-                return this.localTaxFieldSpecified;
-            }
-            set {
-                this.localTaxFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
         public decimal DeliveryAmount {
             get {
                 return this.deliveryAmountField;
@@ -10501,28 +11811,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.cashbackAmountFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public decimal TipAmount {
-            get {
-                return this.tipAmountField;
-            }
-            set {
-                this.tipAmountField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool TipAmountSpecified {
-            get {
-                return this.tipAmountFieldSpecified;
-            }
-            set {
-                this.tipAmountFieldSpecified = value;
             }
         }
         
@@ -10570,7 +11858,7 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string storeIdField;
         
-        private string bINField;
+        private int bINField;
         
         private decimal baseAmountField;
         
@@ -10589,7 +11877,7 @@ namespace WebApplicationTest1.IPGWebReference {
         }
         
         /// <remarks/>
-        public string BIN {
+        public int BIN {
             get {
                 return this.bINField;
             }
@@ -10910,8 +12198,6 @@ namespace WebApplicationTest1.IPGWebReference {
         
         private string mandateReferenceField;
         
-        private Mandate mandateField;
-        
         private Shipping shippingField;
         
         private TransactionValues[] transactionValuesField;
@@ -10935,8 +12221,6 @@ namespace WebApplicationTest1.IPGWebReference {
         private CardInformation[] cardInformationField;
         
         private ClearingDetails clearingDetailsField;
-        
-        private string paymentUrlField;
         
         /// <remarks/>
         public bool successfully {
@@ -11052,17 +12336,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.mandateReferenceField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://ipg-online.com/ipgapi/schemas/v1")]
-        public Mandate Mandate {
-            get {
-                return this.mandateField;
-            }
-            set {
-                this.mandateField = value;
             }
         }
         
@@ -11188,16 +12461,6 @@ namespace WebApplicationTest1.IPGWebReference {
             }
             set {
                 this.clearingDetailsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string paymentUrl {
-            get {
-                return this.paymentUrlField;
-            }
-            set {
-                this.paymentUrlField = value;
             }
         }
     }

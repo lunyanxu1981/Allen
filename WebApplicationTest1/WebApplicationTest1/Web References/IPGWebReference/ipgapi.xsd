@@ -7,7 +7,6 @@
       <xs:sequence>
         <xs:choice>
           <xs:element ref="v1:Transaction" />
-          <xs:element ref="v1:SubsequentTransaction" />
         </xs:choice>
         <xs:element minOccurs="0" ref="v1:MerchantDetails" />
       </xs:sequence>
@@ -30,15 +29,12 @@
         <xs:element minOccurs="0" name="Country" type="xs:string" />
         <xs:element minOccurs="0" name="CommercialServiceProvider" type="xs:string" />
         <xs:element minOccurs="0" name="ErrorMessage" type="xs:string" />
-        <xs:element minOccurs="0" name="ExternalMerchantID" type="xs:string" />
-        <xs:element minOccurs="0" name="FraudScore" type="xs:int" />
         <xs:element minOccurs="0" name="OrderId" type="xs:string" />
         <xs:element minOccurs="0" name="IpgTransactionId" type="v1:PositiveNumeric14max" />
         <xs:element minOccurs="0" name="PayerSecurityLevel" type="xs:string" />
         <xs:element minOccurs="0" name="PaymentType" type="xs:string" />
         <xs:element minOccurs="0" name="ProcessorApprovalCode" type="xs:string" />
         <xs:element minOccurs="0" name="ProcessorReceiptNumber" type="xs:string" />
-        <xs:element minOccurs="0" name="ProcessorBatchNumber" type="xs:string" />
         <xs:element minOccurs="0" name="ProcessorCCVResponse" type="xs:string" />
         <xs:element minOccurs="0" name="ProcessorReferenceNumber" type="xs:string" />
         <xs:element minOccurs="0" name="ProcessorResponseCode" type="xs:string" />
@@ -55,7 +51,6 @@
         <xs:element minOccurs="0" name="ProcessorVoucherRemainingAmount" type="v1:AmountValueType" />
         <xs:element minOccurs="0" name="ProcessorVoucherType" type="xs:string" />
         <xs:element minOccurs="0" name="ReferencedTDate" type="xs:string" />
-        <xs:element minOccurs="0" name="SchemeTransactionId" type="xs:string" />
         <xs:element minOccurs="0" name="TDate" type="xs:string" />
         <xs:element minOccurs="0" name="TDateFormatted" type="xs:string" />
         <xs:element minOccurs="0" name="TerminalID" type="xs:string" />
@@ -63,11 +58,6 @@
         <xs:element minOccurs="0" name="TransactionTime" type="xs:string" />
         <xs:element minOccurs="0" ref="ipgapi:EMVCardPresentResponse" />
         <xs:element minOccurs="0" ref="v1:MandateReference" />
-        <xs:element name="RedirectUrl" type="v1:String100max" />
-        <xs:element minOccurs="0" ref="ipgapi:HostedData" />
-        <xs:element minOccurs="0" name="Secure3DResponse" type="v1:Secure3DResponse" />
-        <xs:element minOccurs="0" name="SecurePlusResponse" type="v1:SecurePlusResponse" />
-        <xs:element minOccurs="0" name="ConvenienceFee" type="v1:AmountValueType" />
       </xs:all>
     </xs:complexType>
   </xs:element>
@@ -76,7 +66,6 @@
       <xs:all>
         <xs:element ref="ipgapi:EMVResponseData" />
         <xs:element ref="v1:TLVData" />
-        <xs:element name="CryptData" type="ipgapi:CryptDataType" />
       </xs:all>
     </xs:complexType>
   </xs:element>
@@ -147,18 +136,10 @@
       </xs:all>
     </xs:complexType>
   </xs:element>
-  <xs:complexType name="CryptDataType">
-    <xs:all>
-      <xs:element name="MAC" type="v1:MACType" />
-    </xs:all>
-  </xs:complexType>
   <xs:complexType name="ClearingDetails">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" ref="ipgapi:ClearingElement" />
       <xs:element name="BatchTimeStamp" type="v1:StringDateTime" />
-      <xs:element minOccurs="0" name="receiptNumberFrom" type="v1:PositiveNumeric4max" />
-      <xs:element minOccurs="0" name="receiptNumberTo" type="v1:PositiveNumeric4max" />
-      <xs:element minOccurs="0" name="traceNumber" type="v1:TraceNumber-DF8260" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ClearingElement">
@@ -183,7 +164,6 @@
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:Product" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:ProductStock" />
         <xs:element minOccurs="0" ref="v1:MandateReference" />
-        <xs:element minOccurs="0" ref="v1:Mandate" />
         <xs:element minOccurs="0" ref="v1:Shipping" />
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="a1:TransactionValues" />
         <xs:element minOccurs="0" name="RecurringPaymentInformation" type="a1:RecurringPaymentValues" />
@@ -200,14 +180,6 @@
           </xs:annotation>
         </xs:element>
         <xs:element minOccurs="0" name="ClearingDetails" type="ipgapi:ClearingDetails" />
-        <xs:element minOccurs="0" name="paymentUrl" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="HostedData">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" name="HostedDataID" type="v1:String128max" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

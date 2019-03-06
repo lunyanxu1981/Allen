@@ -5,12 +5,69 @@ using System.Linq;
 using System.Text;
 using System.Web.Services.Protocols;
 using System.Xml;
+using System.Xml.Serialization;
 using WSIPGClient.WebReference;
 
 namespace WSIPGClient.ExtensionMethods
 {
+    [Serializable]
+    [XmlRoot("IPGApiOrderResponse", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
+    public class FirstDataProcessExceptionResponse
+    {
+        [XmlElement("ApprovalCode")]
+        public string ApprovalCode { get; set; }
+
+        [XmlElement("OrderId")]
+        public string OrderId { get; set; }
+
+        [XmlElement("IpgTransactionId")]
+        public string IpgTransactionId { get; set; }
+
+        [XmlElement("TransactionResult")]
+        public string TransactionResult { get; set; }
+
+        [XmlElement("ErrorMessage")]
+        public string ErrorMessage { get; set; }
+
+        [XmlElement("TransactionTime")]
+        public string TransactionTime { get; set; }
+
+        [XmlElement("CommercialServiceProvider")]
+        public string CommercialServiceProvider { get; set; }
+
+        [XmlElement("AVSResponse")]
+        public string AVSResponse { get; set; }
+
+        [XmlElement("TDate")]
+        public string TDate { get; set; }
+
+        [XmlElement("TerminalID")]
+        public string TerminalID { get; set; }
+
+        [XmlElement("ProcessorReferenceNumber")]
+        public string ProcessorReferenceNumber { get; set; }
+
+        [XmlElement("ProcessorResponseMessage")]
+        public string ProcessorResponseMessage { get; set; }
+
+        [XmlElement("ProcessorResponseCode")]
+        public string ProcessorResponseCode { get; set; }
+
+        [XmlElement("ProcessorApprovalCode")]
+        public string ProcessorApprovalCode { get; set; }
+
+        [XmlElement("ProcessorReceiptNumber")]
+        public string ProcessorReceiptNumber { get; set; }
+
+        [XmlElement("ProcessorTraceNumber")]
+        public string ProcessorTraceNumber { get; set; }
+
+        public string InnerXMLResponse { get; set; }
+    }
+
     public static partial class IPGApiExtensionMethods
     {
+
         /// <summary>
         /// Method returns string value of IPGApiActionResponseObject object
         /// </summary>
@@ -155,9 +212,14 @@ namespace WSIPGClient.ExtensionMethods
                     {
                         result.Append(Environment.NewLine + "Error reported" + Environment.NewLine);
                         result.Append(Environment.NewLine + GetDetailInformationFromProcessingException(DetailInnerXmlValue));
+
+                        
                         break;
                     }
             }
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(FirstDataProcessExceptionResponse));
+            FirstDataProcessExceptionResponse obj = xmlSerializer.Deserialize(new StringReader(DetailInnerXmlValue)) as FirstDataProcessExceptionResponse;
+            obj.InnerXMLResponse = result.ToString();
 
             return result.ToString();
         }

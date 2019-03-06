@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ipg-online.com/ipgapi/schemas/ipgapi" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi">
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://ipg-online.com/ipgapi/schemas/ipgapi"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://ipg-online.com/ipgapi/schemas/ipgapi"
+	targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi">
 
 	<wsdl:types xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1" xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1" elementFormDefault="qualified" targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi">
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			xmlns:a1="http://ipg-online.com/ipgapi/schemas/a1"
+			xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi"
+			xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1"
+			elementFormDefault="qualified"
+			targetNamespace="http://ipg-online.com/ipgapi/schemas/ipgapi">
 
 			<xs:import namespace="http://ipg-online.com/ipgapi/schemas/v1" schemaLocation="../schemas/v1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
 			<xs:import namespace="http://ipg-online.com/ipgapi/schemas/a1" schemaLocation="../schemas/a1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
@@ -57,7 +68,7 @@
 
 	<wsdl:service name="IPGApiOrderService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 		<wsdl:port binding="tns:IPGApiOrderSoap11" name="IPGApiOrderSoap11" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-			<soap:address location="https://ipg-dev-1.1dc.com:443/ipgapi/services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
+			<soap:address location="https://test.ipg-online.com:443/ipgapi/services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>

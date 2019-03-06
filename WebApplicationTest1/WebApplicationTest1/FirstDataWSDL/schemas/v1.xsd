@@ -1,60 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1" targetNamespace="http://ipg-online.com/ipgapi/schemas/v1"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1" xmlns:cab="http://api.clickandbuy.com/webservices/pay_1_0_0/" targetNamespace="http://ipg-online.com/ipgapi/schemas/v1"
 	elementFormDefault="qualified">
+
+	<xs:import namespace="http://api.clickandbuy.com/webservices/pay_1_0_0/" schemaLocation="../schemas/ClickAndBuy/PayTypes_1_0_0.xsd" />
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- main - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 	<xs:element name="Transaction" type="v1:Transaction" />
-	<xs:element name="SubsequentTransaction" type="v1:SubsequentTransaction" />
 
 	<xs:element name="MerchantDetails" type="v1:MerchantDetails">
 		<xs:annotation>
 			<xs:documentation>Please use MerchantDetails instead of StoreId if you are integrating based on the Payment Provider API.</xs:documentation>
 		</xs:annotation>
 	</xs:element>
-
-	<xs:complexType name="AdditionalAmountAndRate">
-		<xs:sequence>
-			<xs:element name="Amount" type="v1:AmountValueType" />
-			<xs:element name="Rate" type="v1:Rate">
-				<xs:annotation>
-					<xs:documentation>rate of the additional amount, e.g. 0.09 (means 9%)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SubsequentTransaction">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="IpgTransactionId" type="v1:PositiveNumeric14max" />
-				<xs:element name="ReferencedMerchantTransactionId" type="v1:String40max" />
-				<xs:sequence>
-					<xs:element name="OrderId" type="v1:String100max"/>
-					<xs:element name="TDate" type="v1:TDateType" />
-				</xs:sequence>
-			</xs:choice>
-			<xs:element name="MerchantTransactionId" type="v1:String40max" minOccurs="0" >
-				<xs:annotation>
-					<xs:documentation>Specify a unique ID for the transaction which can be used to reference the transaction in the request</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="Options" type="v1:Options" minOccurs="0"/>
-			<xs:element name="TransactionType" type="v1:SubsequentTransactionType">
-				<xs:annotation>
-					<xs:documentation>Specify the transaction type which we are going to do (e.g. VOID, RETURN)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element ref="v1:Payment" minOccurs="0" />
-			<xs:element ref="v1:Basket" minOccurs="0" >
-				<xs:annotation>
-					<xs:documentation>Basket items for the subsequent transaction (Will be ignored for the VOID transaction type)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 
 	<xs:complexType name="Transaction">
 		<xs:sequence>
@@ -64,29 +24,14 @@
 					<xs:choice>
 						<xs:sequence>
 							<xs:element name="CreditCardData" type="v1:CreditCardData" minOccurs="0" />
-							<xs:choice>
-								<xs:element ref="v1:CreditCard3DSecure" minOccurs="0" />
-								<xs:element ref="v1:Upop" minOccurs="0" />
-							</xs:choice>
+							<xs:element ref="v1:CreditCard3DSecure" minOccurs="0" />
 							<xs:element ref="v1:MCC6012Details" minOccurs="0" />
 						</xs:sequence>
-						<xs:element name="EMVCardPresentRequest" type="v1:EMVCardPresentRequest"/>
+						<xs:element ref="v1:EMVCardPresentRequest" />
 					</xs:choice>
 					<xs:element name="cardFunction" type="v1:CardFunctionType" minOccurs="0" />
-					<xs:element name="cardAccount" type="v1:CardAccountType" minOccurs="0" />
 					<xs:element name="recurringType" type="v1:RecurringType" minOccurs="0" />
-					<xs:element name="unscheduledCredentialOnFileType" type="v1:UnscheduledCredentialOnFileType" minOccurs="0" />
-					<xs:element name="PaymentFacilitator" type="v1:PaymentFacilitator" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>If only PaymentFacilitator element is given but no SubMerchant element, the transaction is considered as sub merchant transaction started by sub merchant store. </xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="SubMerchant" type="v1:MerchantMasterData" minOccurs="0">
-						<xs:annotation>
-							<xs:documentation>FOR FUTURE USE! Once SubMerchant element is given, the transaction is considered as sub merchant transaction started with master store (aka: Payment Facilitator store). 
-							The payment facilitator information should be either given in the PaymentFacilitator element or configured on store level in the master store. </xs:documentation>
-						</xs:annotation>
-					</xs:element>
+					<xs:element name="PaymentFacilitator" type="v1:PaymentFacilitator" minOccurs="0" />
 					<xs:element name="Wallet" type="v1:Wallet" minOccurs="0" />
 				</xs:sequence>
 				<xs:sequence>
@@ -95,10 +40,16 @@
 				</xs:sequence>
 				<xs:sequence>
 					<xs:element name="DE_DirectDebitTxType" type="v1:DE_DirectDebitTxType" />
-					<xs:choice>
-						<xs:element name="DE_DirectDebitData" type="v1:DE_DirectDebitData" minOccurs="0" />
-						<xs:element name="DE_DirectDebitEMV" type="v1:EMVCardPresentRequest"/>
-					</xs:choice>
+					<xs:element name="DE_DirectDebitData" type="v1:DE_DirectDebitData" minOccurs="0" />
+				</xs:sequence>
+				<xs:sequence>
+					<!-- deprecated -->
+					<xs:element name="UK_DebitCardTxType" type="v1:UK_DebitCardTxType" />
+					<xs:element name="UK_DebitCardData" type="v1:UK_DebitCardData" minOccurs="0" />
+				</xs:sequence>
+				<xs:sequence>
+					<xs:element name="ClickandBuyTxType" type="v1:ClickandBuyTxType" />
+					<xs:element name="ClickandBuyData" type="v1:ClickandBuyData" minOccurs="0" />
 				</xs:sequence>
 				<xs:sequence>
 					<xs:element name="IdealTxType" type="v1:IdealTxType" />
@@ -113,28 +64,11 @@
 					<xs:element name="TopUpTxType" type="v1:TopUpTxType" />
 				</xs:sequence>
 				<xs:sequence>
-					<xs:element name="PaymentUrlTxType" type="v1:PaymentUrlTxType" />
-				</xs:sequence>
-				<xs:sequence>
 					<xs:element name="KlarnaTxType" type="v1:KlarnaTxType" />
 					<xs:element name="KlarnaPClassID" type="xs:int" minOccurs="0">
 						<xs:annotation>
 							<xs:documentation>For Invoice please send -1</xs:documentation>
 						</xs:annotation>
-					</xs:element>
-				</xs:sequence>
-				<xs:sequence>
-					<xs:annotation>
-						<xs:documentation>Sepa transaction type is relevant only for Local Payments (APM)</xs:documentation>
-					</xs:annotation>
-					<xs:element name="SepaTxType" type="v1:SepaTxType"/>
-					<xs:element name="SepaData">
-						<xs:complexType>
-							<xs:sequence>
-								<xs:element name="IBAN" type="v1:IbanType" minOccurs="1"/>
-								<xs:element ref="v1:Mandate" minOccurs="0"/>
-							</xs:sequence>
-						</xs:complexType>
 					</xs:element>
 				</xs:sequence>
 			</xs:choice>
@@ -193,26 +127,6 @@
 								<xs:enumeration value="return" />
 								<xs:enumeration value="sale" />
 								<xs:enumeration value="void" />
-								<xs:enumeration value="payerAuth" />
-								<xs:enumeration value="payerauth" />
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="PaymentUrlTxType">
-		<xs:complexContent>
-			<xs:extension base="v1:Options">
-				<xs:sequence>
-					<xs:element name="Type">
-						<xs:simpleType>
-							<xs:restriction base="xs:string">
-								<xs:enumeration value="preAuth" />
-								<xs:enumeration value="preauth" />
-								<xs:enumeration value="sale" />
 							</xs:restriction>
 						</xs:simpleType>
 					</xs:element>
@@ -251,6 +165,46 @@
 								<xs:enumeration value="credit" />
 								<xs:enumeration value="return" />
 								<xs:enumeration value="sale" />
+								<xs:enumeration value="void" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- deprecated -->
+	<xs:complexType name="UK_DebitCardTxType">
+		<xs:complexContent>
+			<xs:extension base="v1:Options">
+				<xs:sequence>
+					<xs:element name="Type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="credit" />
+								<xs:enumeration value="return" />
+								<xs:enumeration value="sale" />
+								<xs:enumeration value="void" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="ClickandBuyTxType">
+		<xs:complexContent>
+			<xs:extension base="v1:Options">
+				<xs:sequence>
+					<xs:element name="Type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="credit" />
+								<xs:enumeration value="postAuth" />
+								<xs:enumeration value="postauth" />
+								<xs:enumeration value="return" />
 								<xs:enumeration value="void" />
 							</xs:restriction>
 						</xs:simpleType>
@@ -333,23 +287,6 @@
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="SepaTxType">
-		<xs:complexContent>
-			<xs:extension base="v1:Options">
-				<xs:sequence>
-					<xs:element name="Type">
-						<xs:simpleType>
-							<xs:restriction base="xs:string">
-								<xs:enumeration value="credit" />
-								<xs:enumeration value="sale" />
-							</xs:restriction>
-						</xs:simpleType>
-					</xs:element>
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
-	</xs:complexType>
-
 	<xs:complexType name="Options">
 		<xs:sequence>
 			<xs:element name="StoreId" type="v1:String20max" minOccurs="0">
@@ -381,11 +318,10 @@
 						<xs:enumeration value="BCMC" />
 						<xs:enumeration value="CABAL" />
 						<xs:enumeration value="DINERS/DISCOVER" />
-						<xs:enumeration value="DINACARD" />
 						<xs:enumeration value="JCB" />
+						<xs:enumeration value="LASER" />
 						<xs:enumeration value="MAESTRO" />
 						<xs:enumeration value="MASTERCARD" />
-						<xs:enumeration value="MEXICOLOCAL" />
 						<xs:enumeration value="SOROCRED" />
 						<xs:enumeration value="VISA" />
 						<xs:enumeration value="UNIONPAY" />
@@ -408,16 +344,39 @@
 		<xs:sequence>
 			<xs:choice minOccurs="0">
 				<xs:sequence>
-					<xs:element name="BIC" minOccurs="0" type="v1:BICType"/>
-					<xs:element name="IBAN" type="v1:IbanType"/>
+					<xs:element name="BIC" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}(XXX|[A-WY-Z0-9][A-Z0-9]{2})?" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="IBAN">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z]{2}[0-9]{2}[A-Z0-9]{4,30}" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
 				</xs:sequence>
 				<xs:element name="TrackData" type="v1:TrackData" />
 
 				<!-- deprecated -->
 				<xs:sequence>
-					<xs:element name="BankCode" type="v1:BankCodeType"/>
-
-					<xs:element name="AccountNumber" type="v1:AccountNumberType"/>
+					<xs:element name="BankCode">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="([0-9]{8})|([A-Z]{4}DE([A-Z0-9][A-NP-Z0-9])(XXX|[A-WY-Z0-9][A-Z0-9]{2})?)" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="AccountNumber">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="([0-9]{1,10})|(DE[0-9]{2}[0-9]{8}[0-9]{10})" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
 				</xs:sequence>
 
 			</xs:choice>
@@ -427,7 +386,13 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:element name="MandateReference" type="v1:MandateReferenceType" />
+	<xs:element name="MandateReference">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="[A-Za-z0-9+?/\\:().,'-]{1,35}" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
 
 	<xs:element name="MandateType" default="SINGLE">
 		<xs:simpleType>
@@ -435,10 +400,36 @@
 				<xs:enumeration value="SINGLE" />
 				<xs:enumeration value="RECURRING_COLLECTION" />
 				<xs:enumeration value="FIRST_COLLECTION" />
-				<xs:enumeration value="FINAL_COLLECTION" />
 			</xs:restriction>
 		</xs:simpleType>
 	</xs:element>
+
+	<!-- deprecated -->
+	<xs:complexType name="UK_DebitCardData">
+		<xs:sequence>
+			<xs:group ref="v1:Card" />
+			<xs:choice>
+				<xs:element name="CardCodeValue" type="v1:CardCodeValue" />
+				<xs:element name="IssueNo">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]{0,4}" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ClickandBuyData">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="orderDetails" type="cab:OrderDetails">
+				<xs:annotation>
+					<xs:documentation>details of the payment</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 
 	<xs:group name="Card">
 		<xs:sequence>
@@ -516,19 +507,17 @@
 	<!-- Card present - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-	<xs:complexType name="EMVCardPresentRequest">
-		<xs:sequence>
-			<xs:element ref="v1:CryptData" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>CryptData is only optional for the referenced transaction, for the first EMV transaction like sale, preauth, credit etc. it must be given.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:choice>
-				<xs:element ref="v1:EMVRequestData" />
-				<xs:element ref="v1:TLVData" />
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
+	<xs:element name="EMVCardPresentRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="v1:CryptData" />
+				<xs:choice>
+					<xs:element ref="v1:EMVRequestData" />
+					<xs:element ref="v1:TLVData" />
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 
 	<xs:element name="CryptData">
 		<xs:complexType>
@@ -586,7 +575,6 @@
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="MAC" type="v1:MACType" minOccurs="0"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -598,13 +586,6 @@
 					<xs:simpleType>
 						<xs:restriction base="xs:hexBinary">
 							<xs:length value="5" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="AdditionalTerminalReadCapabilities-DF8301" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:hexBinary">
-							<xs:length value="1" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -686,13 +667,6 @@
 					<xs:simpleType>
 						<xs:restriction base="xs:hexBinary">
 							<xs:length value="2" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="CardType-DF60" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:hexBinary">
-							<xs:length value="4" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -856,14 +830,6 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="ReceiptNumber-DF8161" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:int">
-							<xs:minInclusive value="1" />
-							<xs:maxInclusive value="9999" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
 				<xs:element name="ResponseDataInternalAuthenticate-DF04" minOccurs="0">
 					<xs:annotation>
 						<xs:documentation>Response data for emergency transactions</xs:documentation>
@@ -982,19 +948,6 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="IssuerScriptResults-DF31" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:hexBinary"/>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="ApplicationEffectiveDate-5F25" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:int">
-							<!-- YYMMDD -->
-							<xs:pattern value="[0-9][0-9][0-1][0-9][0-3][0-9]" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
@@ -1015,7 +968,16 @@
 	<xs:element name="CreditCard3DSecure">
 		<xs:complexType>
 			<xs:all>
-				<xs:element name="VerificationResponse" type="v1:CardEnrolledType" minOccurs="0"/>
+
+				<xs:element name="VerificationResponse" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="N" />
+							<xs:enumeration value="U" />
+							<xs:enumeration value="Y" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
 				<xs:element name="PayerAuthenticationResponse" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -1039,6 +1001,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
+
 				<xs:element name="AuthenticationValue" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -1055,67 +1018,14 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="AuthenticateTransaction" type="xs:boolean" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>
-							true in case that we would like to authenticate the transaction via secure 3d.
-							If card is enrolled response will contain the VerificationRedirectResponse.
-						</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Secure3DRequest" type="v1:Secure3DRequest" minOccurs="0" />
 			</xs:all>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="Upop">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="SendSmsResponseCode" minOccurs="0">
-					<xs:simpleType>
-						<xs:annotation>
-							<xs:documentation>Response Code from UPOP on Send-SMS request (1st)</xs:documentation>
-						</xs:annotation>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="[0-9]{2}|" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="VCode" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1" />
-							<xs:maxLength value="200" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="ActivateStatus" minOccurs="0">
-					<xs:simpleType>
-						<xs:annotation>
-							<xs:documentation>activateStatus response from UPOP on Verify-Enrollment request (2nd)</xs:documentation>
-						</xs:annotation>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="[AYFNL]{1}|" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="AuthenticateTransaction" type="xs:boolean" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>
-							true in case that we would like to authenticate the transaction via Secure Plus, whic halso requires a billing mobile phone to be
-							sent along with this request.
-						</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="SecurePlusRequest" type="v1:SecurePlusRequest" minOccurs="0" />
-			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 
 	<xs:element name="Payment">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="HostedDataID" type="v1:String128max" minOccurs="0"  maxOccurs="25" />
+				<xs:element name="HostedDataID" type="v1:String128max" minOccurs="0" />
 				<xs:element name="HostedDataStoreID" type="v1:String20max" minOccurs="0" />
 				<xs:element name="DeclineHostedDataDuplicates" type="xs:boolean" minOccurs="0" default="false" />
 				<xs:group ref="v1:Amount" minOccurs="0" />
@@ -1134,22 +1044,8 @@
 							</xs:restriction>
 						</xs:simpleType>
 				</xs:element>
-				<xs:element name="installmentDelayMonths" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:positiveInteger">
-							<xs:maxInclusive value="99" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="installmentPlanID" type="v1:String1max" minOccurs="0" />
-				<xs:element name="TokenType" type="v1:TokenType" minOccurs="0"/>
-				<xs:element name="AssignToken" type="v1:AssignToken" minOccurs="0" default="false"/>
 			</xs:sequence>
 		</xs:complexType>
-		<xs:unique name="uniqueHostedDataId">
-      		<xs:selector xpath="v1:HostedDataID"/>
-      		<xs:field xpath="."/>
-    	</xs:unique>
 	</xs:element>
 
 	<xs:group name="Amount">
@@ -1157,12 +1053,10 @@
 			<xs:sequence minOccurs="0">
 				<xs:element name="SubTotal" type="v1:AmountValueType" />
 				<xs:element name="ValueAddedTax" type="v1:AmountValueType" minOccurs="0" />
-				<xs:element name="localTax" type="v1:AmountValueType" minOccurs="0" />
 				<xs:element name="DeliveryAmount" type="v1:AmountValueType" minOccurs="0" />
 				<xs:element name="CashbackAmount" type="v1:AmountValueType" minOccurs="0" />
-				<xs:element name="TipAmount" type="v1:AmountValueType" minOccurs="0" />
 			</xs:sequence>
-			<!-- ChargeTotal = SubTotal + ValueAddedTax + localTax + DeliveryAmount + CashbackAmount + TipAmount -->
+			<!-- ChargeTotal = SubTotal + ValueAddedTax + DeliveryAmount + CashbackAmount -->
 			<xs:element name="ChargeTotal" type="v1:AmountValueType" />
 			<xs:element name="Currency" type="v1:CurrencyType">
 
@@ -1175,10 +1069,9 @@
 			<xs:sequence minOccurs="0">
 				<xs:element name="SubTotal" type="v1:ItemAmountValueType" />
 				<xs:element name="ValueAddedTax" type="v1:ItemAmountValueType" minOccurs="0" />
-				<xs:element name="localTax" type="v1:ItemAmountValueType" minOccurs="0" />
 				<xs:element name="DeliveryAmount" type="v1:ItemAmountValueType" minOccurs="0" />
 			</xs:sequence>
-			<!-- ChargeTotal = SubTotal + ValueAddedTax + localTax + DeliveryAmount -->
+			<!-- ChargeTotal = SubTotal + ValueAddedTax + DeliveryAmount -->
 			<xs:element name="ChargeTotal" type="v1:ItemAmountValueType" />
 			<xs:element name="Currency" type="v1:CurrencyType">
 				<xs:annotation>
@@ -1188,13 +1081,12 @@
 		</xs:sequence>
 	</xs:group>
 
+
 	<xs:complexType name="TransactionDetails">
 		<xs:all>
 			<xs:element name="AirlineDetails" type="v1:AirlineDetails" minOccurs="0" />
-			<xs:element ref="v1:AdditionalRequestParameters" minOccurs="0" />
 			<xs:element name="CarRental" type="v1:CarRental" minOccurs="0" />
 			<xs:element name="HotelLodging" type="v1:HotelLodging" minOccurs="0" />
-			<xs:element name="PurchaseCard" type="v1:PurchaseCard" minOccurs="0" />
 			<xs:element name="Comments" type="v1:String1024max" minOccurs="0" />
 			<xs:element name="InvoiceNumber" type="v1:String48max" minOccurs="0" />
 			<xs:element name="DynamicMerchantName" type="v1:String100max" minOccurs="0" />
@@ -1202,7 +1094,6 @@
 			<xs:element name="OrderId" type="v1:String100max" minOccurs="0" />
 			<xs:element name="MerchantTransactionId" type="v1:String40max" minOccurs="0" />
 			<xs:element name="ReferencedMerchantTransactionId" type="v1:String40max" minOccurs="0" />
-			<xs:element name="ReferencedSchemeTransactionId" type="v1:String40max" minOccurs="0" />
 			<xs:element name="IpgTransactionId" type="v1:PositiveNumeric14max" minOccurs="0" />
 			<xs:element ref="v1:OfflineApprovalType" minOccurs="0" />
 			<xs:element name="Ip" minOccurs="0">
@@ -1220,7 +1111,13 @@
 				</xs:simpleType>
 			</xs:element>
 			<xs:element name="SplitShipment" type="v1:SplitShipment" minOccurs="0" />
-			<xs:element name="TDate" type="v1:TDateType" minOccurs="0" />
+			<xs:element name="TDate" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{10}|" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
 			<xs:element ref="v1:TransactionOrigin" minOccurs="0" />
 			<xs:element ref="v1:Terminal" minOccurs="0" />
 			<xs:element name="InquiryRateReference" type="v1:InquiryRateReference" minOccurs="0" />
@@ -1228,100 +1125,6 @@
 			<xs:element name="Signature" type="xs:base64Binary" minOccurs="0" />
 		</xs:all>
 	</xs:complexType>
-
-	<xs:element name="AdditionalRequestParameters">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element maxOccurs="10" ref="v1:keyValuePair"/>
-			</xs:sequence>
-		</xs:complexType>
-		<xs:unique name="uniqueKey">
-			<xs:selector xpath="v1:keyValuePair"/>
-			<xs:field xpath="v1:key"/>
-		</xs:unique>
-	</xs:element>
-	<xs:element name="keyValuePair">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="key">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1" />
-							<xs:maxLength value="100" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="value">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1" />
-							<xs:maxLength value="100" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:complexType name="PurchaseCard">
-		<xs:annotation>
-			<xs:documentation>Please use the Payment element of the transaction to advise the ValueAddedTax (relevant in the context) or Shipping amount.</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="CustomerReferenceID" type="v1:String20max">
-				<xs:annotation>
-					<xs:documentation>Customer Code / Customer Reference ID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SupplierInvoiceNumber" type="v1:String30max">
-				<xs:annotation>
-					<xs:documentation>Purchase Identifier/Merchant related data</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="SupplierVATRegistrationNumber" type="v1:String30max">
-				<xs:annotation>
-					<xs:documentation>Merchant VAT registration/Single Business Reference Number/Merchant Tax ID or Corporation VAT Number</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TotalDiscountAmountAndRate" type="v1:AdditionalAmountAndRate" minOccurs="0" />
-			<xs:element name="VATShippingAmountAndRate" type="v1:AdditionalAmountAndRate" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>VAT amount/rate that is owed for shipping charges</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element ref="v1:LineItemData" minOccurs="0" maxOccurs="100" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:element name="LineItemData">
-		<xs:complexType>
-			<xs:all>
-				<xs:element name="CommodityCode" type="v1:PositiveNumeric4max">
-					<xs:annotation>
-						<xs:documentation>The commodity code used to classify the item purchased</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="ProductCode" type="v1:String20max" minOccurs="0">
-					<xs:annotation>
-						<xs:documentation>Merchant product identifier/The Universal Product Code (UPC) of the item purchased</xs:documentation>
-					</xs:annotation>
-				</xs:element>
-				<xs:element name="Description" type="v1:String30max" />
-				<xs:element name="Quantity">
-					<xs:simpleType>
-						<xs:restriction base="xs:int">
-							<xs:minInclusive value="1" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="UnitOfMeasure" type="v1:String3max" />
-				<xs:element name="UnitPrice" type="v1:AmountValueType" />
-				<xs:element name="VATAmountAndRate" type="v1:AdditionalAmountAndRate" minOccurs="0" />
-				<xs:element name="DiscountAmountAndRate" type="v1:AdditionalAmountAndRate" minOccurs="0" />
-				<xs:element name="LineItemTotal" type="v1:AmountValueType" />
-			</xs:all>
-		</xs:complexType>
-	</xs:element>
 
 	<xs:complexType name="CarRental">
 		<xs:sequence>
@@ -1345,17 +1148,6 @@
 			<xs:element name="NoShowIndicator" type="xs:boolean" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
-
-	<xs:element name="Mandate">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Reference" type="v1:MandateReferenceType" minOccurs="0" />
-				<xs:element name="Type" type="v1:MandateType" minOccurs="1" default="SINGLE" />
-				<xs:element name="Date" type="v1:StringDate" minOccurs="0"/>
-				<xs:element name="Url" type="v1:String100max" minOccurs="0" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
 
 	<xs:complexType name="HotelLodging">
 		<xs:sequence>
@@ -1417,16 +1209,6 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="SaleOrganizationID" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Independent Sales Organisation (ISO) ID provided by Mastercard.</xs:documentation>
-				</xs:annotation>
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:pattern value="\d{1,11}" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
 			<xs:element name="Name" type="v1:String50max" />
 		</xs:all>
 	</xs:complexType>
@@ -1453,7 +1235,7 @@
 					<xs:documentation>Doing business as</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Email" type="v1:String254max" minOccurs="0">
+			<xs:element name="Email" type="v1:String100max" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation>Email to send notification</xs:documentation>
 				</xs:annotation>
@@ -1485,35 +1267,6 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="Document" type="v1:Document" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Document information, only evaluated in context of SubMerchant (related to Payment Facilitator)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MerchantID" type="v1:String15max" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Merchant ID, only evaluated in context of SubMerchant (related to Payment Facilitator). 
-					In context of psp for which the Merchant ID shall be passed to the endpoint please use MerchantDetails/ExternalMerchantID</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:all>
-	</xs:complexType>
-
-	<xs:complexType name="Document">
-		<xs:all>
-			<xs:element name="Type">
-				<xs:simpleType>
-					<xs:restriction base="xs:string">
-						<xs:enumeration value="NATIONAL_IDENTITY" />
-						<xs:enumeration value="SINGLE_TAX_IDENTIFICATION" />
-						<xs:enumeration value="SINGLE_CODE_OF_LABOR_IDENTIFICATION" />
-						<xs:enumeration value="BOOK_ENLISTMENT" />
-						<xs:enumeration value="CIVIC_NOTEBOOK" />
-						<xs:enumeration value="PASSPORT" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element name="Number" type="v1:String30max" />
 		</xs:all>
 	</xs:complexType>
 
@@ -1631,17 +1384,17 @@
 				<!-- name section - in case that name is not specified name is created in the application in format "firstname surname"  -->
 				<xs:element name="Name" type="v1:String96max" minOccurs="0" >
 					<xs:annotation>
-						<xs:documentation>Full name of the customer, mandatory for SEPA Direct Debit transactions</xs:documentation>
+						<xs:documentation>Full name of the customer</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="Firstname" type="v1:String48max" minOccurs="0" >
 					<xs:annotation>
-						<xs:documentation>Customer first name - e.g. John (required for KLARNA, required for SEPA Direct Debit transactions when Name is not provided)</xs:documentation>
+						<xs:documentation>Customer first name - e.g. John (required for KLARNA)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="Surname" type="v1:String48max" minOccurs="0" >
 					<xs:annotation>
-						<xs:documentation>Customer surname - e.g. Doe (required for KLARNA, required for SEPA Direct Debit transactions when Name is not provided)</xs:documentation>
+						<xs:documentation>Customer surname - e.g. Doe (required for KLARNA)</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<!-- end of the name section -->
@@ -1686,7 +1439,7 @@
 				</xs:element>
 				<xs:element name="Phone" type="v1:String32max" minOccurs="0" />
 				<xs:element name="Fax" type="v1:String32max" minOccurs="0" />
-				<xs:element name="Email" type="v1:String254max" minOccurs="0" />
+				<xs:element name="Email" type="v1:String64max" minOccurs="0" />
 
 				<xs:element name="PersonalNumber" type="v1:String20max" minOccurs="0" >
 					<xs:annotation>
@@ -1786,7 +1539,11 @@
 
 	<xs:complexType name="AirlineDetails">
 		<xs:sequence>
-			<xs:element name="PassengerName" type="v1:String30max" />
+			<xs:element name="PassengerName" type="v1:String30max" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Passenger name is mandatory for purchase of airline ticket</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="TicketNumber" type="v1:String20max" />
 			<xs:element name="IssuingCarrier" type="v1:String20max" minOccurs="0"/>
 			<xs:element name="CarrierName" type="v1:String20max" minOccurs="0"/>
@@ -1810,7 +1567,6 @@
 			</xs:element>
 			<xs:element name="Restricted" type="xs:boolean" minOccurs="0" />
 			<xs:element ref="v1:TravelRoute" minOccurs="0" maxOccurs="4"/>
-			<xs:element name="RelatedTicketNumber" type="v1:String20max" minOccurs="0" />
 			<xs:element name="AncillaryServiceCategory" minOccurs="0" maxOccurs="unbounded">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -1840,199 +1596,6 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="TicketPurchase" type="xs:boolean" minOccurs="0" default="true">
-				<xs:annotation>
-					<xs:documentation>Identify purchase of ancillary goods or services with false value. If the element is not given, the transaction is assumed to be a purchase of airline ticket.</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Secure3DResponse">
-		<xs:sequence>
-			<xs:element name="ResponseCode3dSecure" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>Response code of the 3d secure processing (not available for Secure3DVerificationResponse)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:choice>
-				<xs:element name="Secure3DVerificationResponse" type="v1:Secure3DVerificationResponse"/>
-				<!-- Authentication will be added in the future -->
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SecurePlusResponse">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="AuthenticateResponse" type="v1:AuthenticateResponse"/>
-				<xs:element name="VerifySmsCodeResponse" type="v1:VerifySmsCodeResponse"/>
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Secure3DRequest">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="Secure3DVerificationRequest" type="v1:Secure3DVerificationRequest"/>
-				<xs:element name="Secure3DAuthenticationRequest" type="v1:Secure3DAuthenticationRequest"/>
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="AuthenticateResponse">
-		<xs:sequence>
-			<xs:element name="smsSent" type="xs:boolean"/>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="VerifySmsCodeResponse">
-		<xs:sequence>
-			<xs:element name="responseCode" type="xs:string" minOccurs="0">
-				<xs:annotation>
-					<xs:documentation>payer security level resulting from sms code verification</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SecurePlusRequest">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="SecurePlusVerifySmsCodeRequest" type="v1:SecurePlusVerifySmsCodeRequest"/>
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Secure3DAuthenticationRequest">
-		<xs:sequence>
-			<xs:choice>
-				<xs:element name="AcsResponse" type="v1:AcsResponse" />
-				<xs:element name="IVRAuthenticationRequest" type="v1:IVRAuthenticationRequest" />
-			</xs:choice>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Secure3DVerificationRequest">
-		<xs:sequence>
-			<xs:element name="IVRVerificationRequest" type="v1:IVRVerificationRequest" minOccurs="0" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="SecurePlusVerifySmsCodeRequest">
-		<xs:sequence>
-			<xs:element name="smsCode" type="v1:String32max">
-				<xs:annotation>
-					<xs:documentation>the SMS code received on the cardholder's mobile phone</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="Secure3DVerificationResponse">
-		<xs:sequence>
-			<xs:element name="VerificationRedirectResponse" type="v1:VerificationRedirectResponse" minOccurs="0" />
-			<xs:element name="IVRVerificationResponse" type="v1:IVRVerificationResponse" minOccurs="0" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="VerificationRedirectResponse">
-		<xs:sequence>
-			<xs:element name="AcsURL" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>
-						target of Secure3d redirection
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PaReq" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>
-						PaReq data which has to be send in the "PaReq" attribute to the AcsURL.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="TermUrl" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>Default IPG TermURL which should be used in order to process
-						the response from Secure3d in IPG. In case that you would like to parse the
-						response by yourself you have to specify the "TermUrl" param in form with
-						your custom URL in which you will process the response and call the API with
-						the response PaRes and MD (Merchant Data)</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="MD" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>
-						Merchant Data which has to be send in the "MD" attribute to the AcsURL.
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="IVRVerificationRequest">
-		<xs:sequence>
-			<xs:element name="IVRDeviceIdFormat" type="v1:IVRDeviceIdFormat" />
-			<xs:element name="IVRDeviceId" type="v1:PositiveNumeric25max" />
-			<xs:element name="IVRShoppingChannel" type="v1:IVRShoppingChannel" />
-			<xs:element name="IVRAuthenticationChannel" type="v1:IVRAuthenticationChannel"/>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="IVRVerificationResponse">
-		<xs:sequence>
-			<xs:element name="IVRAuthData" type="v1:IVRAuthData" minOccurs="1" maxOccurs="99" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="AcsResponse">
-		<xs:annotation>
-			<xs:documentation>
-				use this element to populate the response data ACS redirect to the payment gateway
-			</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="MD" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>
-						Merchant Data from Acs redirection POST attribute ("MD" attribute).
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-			<xs:element name="PaRes" type="xs:string">
-				<xs:annotation>
-					<xs:documentation>
-						PaRes data from Acs redirection POST attribute ("PaRes" attribute).
-					</xs:documentation>
-				</xs:annotation>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="IVRAuthenticationRequest">
-		<xs:sequence>
-			<xs:element name="IVRAuthUserData" type="v1:IVRAuthUserData" minOccurs="1" maxOccurs="99" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="IVRAuthData">
-		<xs:sequence>
-			<xs:element name="IVRAuthDataName" type="v1:IVRAuthDataName" />
-			<xs:element name="IVRAuthDataMaxLen" type="xs:int" minOccurs="0" />
-			<xs:element name="IVRAuthDataType" type="v1:IVRAuthDataType" />
-			<xs:element name="IVRAuthDataLabel" type="xs:string" />
-			<xs:element name="IVRAuthDataPrompt" type="xs:string" />
-			<xs:element name="IVRAuthDataEncrypted" type="xs:boolean" minOccurs="0" />
-		</xs:sequence>
-	</xs:complexType>
-
-	<xs:complexType name="IVRAuthUserData">
-		<xs:sequence>
-			<xs:element name="IVRUserDataName" type="xs:string" />
-			<xs:element name="IVRUserDataValue" type="xs:string" />
-			<xs:element name="IVRUserDataStatus" type="v1:IVRUserDataStatus" />
-			<xs:element name="IVRUserDataEncrypted" type="xs:boolean" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -2058,25 +1621,6 @@
 			</xs:all>
 		</xs:complexType>
 	</xs:element>
-
-	<xs:complexType name="MACType">
-		<xs:sequence>
-			<xs:element name="Value">
-				<xs:simpleType>
-					<xs:restriction base="xs:hexBinary">
-						<xs:maxLength value="8" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-			<xs:element name="KSN">
-				<xs:simpleType>
-					<xs:restriction base="xs:hexBinary">
-						<xs:length value="10" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- reference types   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -2111,21 +1655,12 @@
 	<xs:complexType name="Wallet">
 		<xs:sequence>
 			<xs:element name="WalletType" type="v1:WalletType" />
-			<xs:element name="WalletID" type="v1:String3" minOccurs="0" />
+			<xs:element name="WalletID" type="v1:String3" />
 		</xs:sequence>
 	</xs:complexType>
-
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- simple types - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-	<xs:simpleType name="CardEnrolledType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="N" />
-			<xs:enumeration value="U" />
-			<xs:enumeration value="Y" />
-		</xs:restriction>
-	</xs:simpleType>
 
 	<xs:simpleType name="String4000max">
 		<xs:restriction base="xs:string">
@@ -2136,12 +1671,6 @@
 	<xs:simpleType name="String1024max">
 		<xs:restriction base="xs:string">
 			<xs:maxLength value="1024" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="String254max">
-		<xs:restriction base="xs:string">
-			<xs:maxLength value="254" />
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -2285,12 +1814,6 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="TDateType">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[0-9]{10}|" />
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="CurrencyType">
 		<xs:restriction base="xs:string">
 			<!-- http://de.wikipedia.org/wiki/ISO_4217 -->
@@ -2338,38 +1861,9 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="SubsequentTransactionType">
-		<xs:annotation>
-			<xs:documentation>contains possible transaction types for subsequent transactions</xs:documentation>
-		</xs:annotation>
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="RETURN" />
-			<xs:enumeration value="VOID" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="PositiveNumeric4max">
-		<xs:restriction base="xs:int">
-			<xs:pattern value="\d{1,4}" />
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="PositiveNumeric14max">
 		<xs:restriction base="xs:long">
 			<xs:pattern value="\d{1,14}" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="PositiveNumeric25max">
-		<xs:restriction base="xs:long">
-			<xs:pattern value="\d{1,25}" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="CardAccountType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="saving" />
-			<xs:enumeration value="checking" />
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -2387,36 +1881,16 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="Rate">
-		<xs:restriction base="xs:decimal">
-			<xs:fractionDigits value="2" />
-			<xs:minInclusive value="0" />
-			<xs:maxInclusive value="99.99" />
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:simpleType name="RecurringType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="FIRST" />
 			<xs:enumeration value="REPEAT" />
-			<xs:enumeration value="STANDIN" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="UnscheduledCredentialOnFileType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="FIRST" />
-			<xs:enumeration value="CARDHOLDER_INITIATED" />
-			<xs:enumeration value="MERCHANT_INITIATED" />
 		</xs:restriction>
 	</xs:simpleType>
 
 	<xs:simpleType name="WalletType">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="ANDROID_PAY" />
-			<xs:enumeration value="APPLE_PAY" />
 			<xs:enumeration value="MASTERPASS" />
-			<xs:enumeration value="SAMSUNG_PAY" />
 		</xs:restriction>
 	</xs:simpleType>
 
@@ -2426,211 +1900,5 @@
 			<xs:maxInclusive value="999999" />
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<xs:simpleType name="TokenType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ONETIME" />
-			<xs:enumeration value="MULTIPAY"/>
-		</xs:restriction>
-	</xs:simpleType>
-	
-	<xs:simpleType name="AssignToken" >
-		<xs:restriction base="xs:boolean"/>
-	</xs:simpleType>
 
-	<xs:simpleType name="IVRDeviceIdFormat">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="I">
-				<xs:annotation>
-					<xs:documentation>International format</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="D">
-				<xs:annotation>
-					<xs:documentation>Domestic format</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IVRUserDataStatus">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Y">
-				<xs:annotation>
-					<xs:documentation>Entered</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="N">
-				<xs:annotation>
-					<xs:documentation>Not received</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="T">
-				<xs:annotation>
-					<xs:documentation>Timed out</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="U">
-				<xs:annotation>
-					<xs:documentation>Unknown</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IVRAuthDataName">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SP">
-				<xs:annotation>
-					<xs:documentation>Static password</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="OTP1">
-				<xs:annotation>
-					<xs:documentation>One Time Password – Issued to
-						Cardholder Prior to Entering into
-						Transaction</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="OTP2">
-				<xs:annotation>
-					<xs:documentation>One Time Password – Issued to
-						Cardholder During the Transaction</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TTP">
-				<xs:annotation>
-					<xs:documentation>Authentication Performed by a
-						Trusted Third Party</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="ICB">
-				<xs:annotation>
-					<xs:documentation>Issuer Call-Back</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="other">
-				<xs:annotation>
-					<xs:documentation>Other issuer-specific Authentication
-						Method (e.g., “NETBANKINGPIN”)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IVRAuthDataType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="A">
-				<xs:annotation>
-					<xs:documentation>Text</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="N">
-				<xs:annotation>
-					<xs:documentation>Numeric Only</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IVRShoppingChannel">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="IVR">
-				<xs:annotation>
-					<xs:documentation>Via Interactive Voice Response</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="CLIENT">
-				<xs:annotation>
-					<xs:documentation>Via J2ME (Java2 Micro Edition) or STK application</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="TTP">
-				<xs:annotation>
-					<xs:documentation>Via Trusted Third Party</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="SMS">
-				<xs:annotation>
-					<xs:documentation>Via Short Messaging Service (SMS)
-						OR via Unstructured Supplementary
-						Service Data (USSD)</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="WAP">
-				<xs:annotation>
-					<xs:documentation>Via Wireless Application Protocol</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="native-app">
-				<xs:annotation>
-					<xs:documentation>Other native app</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IVRAuthenticationChannel">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="SMS">
-				<xs:annotation>
-					<xs:documentation>Via Short Messaging Service</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="IVR">
-				<xs:annotation>
-					<xs:documentation>Via Interactive Voice Response</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="USSD">
-				<xs:annotation>
-					<xs:documentation>Via Unstructured Supplementary Service Data</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-			<xs:enumeration value="WAP">
-				<xs:annotation>
-					<xs:documentation>Via Wireless Application Protocol</xs:documentation>
-				</xs:annotation>
-			</xs:enumeration>
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="IbanType">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[A-Z]{2}[0-9]{2}[A-Z0-9]{4,30}" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="BankCodeType">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9]{8})|([A-Z]{4}DE([A-Z0-9][A-NP-Z0-9])(XXX|[A-WY-Z0-9][A-Z0-9]{2})?)" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="AccountNumberType">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="([0-9]{1,10})|(DE[0-9]{2}[0-9]{8}[0-9]{10})" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="BICType">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[A-Z]{4}[A-Z]{2}[A-Z0-9]{2}(XXX|[A-WY-Z0-9][A-Z0-9]{2})?" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="MandateReferenceType">
-			<xs:restriction base="xs:string">
-				<xs:pattern value="[A-Za-z0-9+?/\\:().,'-]{1,35}" />
-			</xs:restriction>
-	</xs:simpleType>
-
-	<xs:simpleType name="MandateType">
-			<xs:restriction base="xs:string">
-				<xs:enumeration value="SINGLE" />
-				<xs:enumeration value="RECURRING_COLLECTION" />
-				<xs:enumeration value="FIRST_COLLECTION" />
-				<xs:enumeration value="FINAL_COLLECTION" />
-			</xs:restriction>
-	</xs:simpleType>
 </xs:schema>

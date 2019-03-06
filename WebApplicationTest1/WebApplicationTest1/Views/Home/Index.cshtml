@@ -27,6 +27,9 @@
             <p>
                 @Html.TextAreaFor(m => m.PayerAuthHTMLEncrypted, new { @class = "paTextArea" })
             </p>
+            <p>
+                @Html.Raw(Request.Browser.Browser)
+            </p>
             <script>
                 var isValid = '@Model.IsValidItem.ToString()';
             </script>
