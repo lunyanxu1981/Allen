@@ -319,7 +319,7 @@ namespace WebApplicationTest1.Controllers
             orderForm += $"item1:<input type=\"input\" name=\"item1\" value=\"{line1}\"><br>";
             orderForm += $"currency:<input type=\"input\" name=\"currency\" value=\"{currency}\"><br>"; //CNY
             orderForm += $"chargetotal:<input type=\"input\" name=\"chargetotal\" value=\"{chargetotal}\"><br>";
-            //orderForm += $"customParam_domesticBankId:<input type=\"input\" name=\"customParam_domesticBankId\" value=\"ccb\"><br>";
+            orderForm += $"customParam_domesticBankId:<input type=\"input\" name=\"customParam_domesticBankId\" value=\"ccb\"><br>";
             orderForm += $"responseFailURL:<input type=\"input\" name=\"responseFailURL\" value=\"{responseFailURL}\"><br>";
             orderForm += $"responseSuccessURL:<input type=\"input\" name=\"responseSuccessURL\" value=\"{responseSuccessURL}\"><br>";
             orderForm += "hash_algorithm:<input type=\"input\" name=\"hash_algorithm\" value=\"SHA256\"><br>";

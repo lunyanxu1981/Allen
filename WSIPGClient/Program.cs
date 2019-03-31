@@ -19,6 +19,7 @@ using WSIPGClient.RequestSamples.Action;
 using WSIPGClient.RequestSamples.Order;
 using WSIPGClient.Certificate;
 using System.Xml.Serialization;
+using System.Linq;
 
 namespace WSIPGClient
 {
@@ -37,12 +38,13 @@ namespace WSIPGClient
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             String RequestResponseMessage = "";
 
+            var ary = RequestResponseMessage.Split(',');
 
-
+            Randomize5DigitNumber();
             //Action
             //RequestResponseMessage = doInitiateClearingActionRequest();
             //RequestResponseMessage = doInquiryOrderActionRequest();
-            RequestResponseMessage = doInquiryOrderActionRequest();
+            //RequestResponseMessage = doInquiryOrderActionRequest();
 
 
             //Order
@@ -55,6 +57,76 @@ namespace WSIPGClient
             Console.WriteLine(RequestResponseMessage);
             Console.ReadLine();
         }
+
+        private static void CartesianJoin2()
+        {
+            string[] firstList = { "A", "B", "C"};
+            string[] secondList = { "1", "2", "3", "4" };
+            string[] thirdList = {"W", "X", "Y", "Z" };
+
+            var result = from x in firstList
+                         from y in secondList
+                         from z in thirdList
+                         select x + y + z;
+            var result2 = firstList.ToList().Intersect(secondList.ToList());
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+            
+            foreach (var item in result2)
+            {
+                Console.WriteLine(item);
+            }
+
+        }
+
+        private static void CartesianJoin()
+        {
+            List<string[]> strListAry = new List<string[]>
+            {
+                new string[] { "A", "B", "C" },
+                new string[] { "1", "2", "3", "4" },
+                new string[] { "W", "X", "Y", "Z" }
+            };
+
+            IEnumerable<string> joinList(string[] firstList, string[] secondList)
+            {
+                var result =
+                from x in firstList
+                from y in secondList
+                select x + y;
+                return result;
+            }
+
+            string[] joinResult = strListAry[0];
+            for (int i = 1; i < strListAry.Count ; ++i)
+            {
+                joinResult = joinList(joinResult, strListAry[i]).ToArray();
+            }
+
+            foreach (var item in joinResult)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+
+        private static void Randomize5DigitNumber()
+        {
+            List<int> result = new List<int>();
+            Random rand = new Random();
+            int digit = rand.Next(1, 8);
+            while (result.Count < 5)
+            {
+                if (!result.Contains(digit))
+                    result.Add(digit);
+                digit = rand.Next(1, 8);
+            }
+            Console.Write(String.Join(string.Empty, result.Select(e => e.ToString())));
+        }
+
+
 
         private static string StringJoinArray()
         {

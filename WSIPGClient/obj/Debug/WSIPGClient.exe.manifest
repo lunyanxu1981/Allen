@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSIPGClient.exe" size="165888">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WSIPGClient.exe" size="169472">
       <assemblyIdentity name="WSIPGClient" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>1jI8J4dDsxup23lfUE7XWkn3f9AWV9VaDVAorEXFwlk=</dsig:DigestValue>
+        <dsig:DigestValue>yPY2AOZc6zFggk+mQb70/zqzs7nWDtqoDi+dA9R0PVc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
