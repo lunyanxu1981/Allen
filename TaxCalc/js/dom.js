@@ -2,11 +2,11 @@ $(function() {
     $('#demo').popover({      
         animation: true,
         placement: 'bottom',
-        delay: { "show": 100, "hide": 100 },   
+        delay: { "show": 100 },   
         content: function() {
           return $('#popover_content_taxrate').html();
         }
-      }).tooltip();
+      }).attr('title','工资个人所得税税率表');
 
       $('.panel-button').on('click',function () {
         if($(this).text()=='收起'){

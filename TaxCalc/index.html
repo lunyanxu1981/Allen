@@ -12,15 +12,15 @@
         <title>Tax Calculator</title>
     </head>
     <body>
-        <div id="app" class="container-fluid">                    
-            <div class="col-md-8 heading"><h1>个税计算器</h1></div>                                     
+        <div id="appTax" class="container-fluid">                    
+            <div class="col-md-8 heading"><h2>个税计算器</h2></div>                                     
             <div class="col-md-8">
                 <div v-show="ShowNoSalaryAlert">&nbsp;</div>
                 <div class="alert alert-danger alertNoSalary" v-show="ShowNoSalaryAlert">
                     <a href="#" class="close" @click="HideNoSalaryAlert">&times;</a><b>错误!</b> 请先输入月薪资额!
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 heading">
                 <table class="table table-striped tax-table">
                     <thead class="table-dark">
                         <tr>
@@ -29,7 +29,7 @@
                                 ￥<input type="text" class="txt" v-model="CurrentYearAvgSalary.toFixed(2)">&nbsp;<label>{{CurrentYear}}平均工资</label><br>
                                 ￥<input type="text" v-model="Salary" class="txt" placeholder="月薪" >&nbsp;
                                 <select v-model="SuppHouseFundRate" class="txt">
-                                        <option disabled value="0">补充公积金</option>
+                                        <option value="0">补充公积金</option>
                                         <option value="0.05">5%</option>
                                         <option value="0.04">4%</option>
                                         <option value="0.03">3%</option>
@@ -41,37 +41,37 @@
                         <tr>
                             <th colspan="2">
                                     <select v-model="ChildrenEducation" class="txt">
-                                            <option disabled value="0">子女教育</option>
-                                            <option value="500">500</option>
-                                            <option value="1000">1000</option>
-                                            <option value="2000">2000</option>
+                                            <option value="0">子女教育</option>
+                                            <option value="500">￥500.00</option>
+                                            <option value="1000">￥1,000.00</option>
+                                            <option value="2000">￥2,000.00</option>
                                     </select>&nbsp;
                                     <select v-model="ParentsSupport" class="txt">
-                                            <option disabled value="0">赡养老人</option>
-                                            <option value="1000">1000</option>
-                                            <option value="2000">2000</option>
+                                            <option value="0">赡养老人</option>
+                                            <option value="1000">￥1,000.00</option>
+                                            <option value="2000">￥2,000.00</option>
                                     </select>&nbsp;
                                     <select v-model="HouseLoanOrRent" class="txt">
-                                            <option disabled value="0">房贷房租</option>
-                                            <option value="500">房贷500</option>
-                                            <option value="1000">房贷1000</option>
-                                            <option value="400">房租400</option>
-                                            <option value="800">房租800</option>
-                                            <option value="550">房租550</option>
-                                            <option value="1100">房租1100</option>
-                                            <option value="750">房租750</option>
-                                            <option value="1500">房租1500</option>
+                                            <option value="0">房贷房租</option>
+                                            <option value="500">房贷 ￥500.00</option>
+                                            <option value="1000">房贷 ￥1,000.00</option>
+                                            <option value="400">房租 ￥400.00</option>
+                                            <option value="800">房租 ￥800.00</option>
+                                            <option value="550">房租 ￥550.00</option>
+                                            <option value="1100">房租 ￥1,100</option>
+                                            <option value="750">房租 ￥750.00</option>
+                                            <option value="1500">房租 ￥1,500.00</option>
                                     </select>&nbsp;
                                     <select v-model="ContinuousEducation" class="txt">
-                                            <option disabled value="0">继续教育</option>
-                                            <option value="400">400</option>
+                                            <option value="0">继续教育</option>
+                                            <option value="400">￥400.00</option>
                                     </select>
                             </th>
                         </tr>
                         <tr>
                             <th colspan="2">
                                 <input type="button" @click="ApplyToWholeYear" data-toggle="tooltip" value="计算" title="计算全年" class="btn btn-primary"/>
-                                <a id="demo" href="#" tabindex="0" class="btn btn-success" data-toggle="tooltip popover" data-html="true"  title="<b>Tax Rate Matrix</b>" data-content=""><span>&#x1F50D</span> </a> 
+                                <a title="<b>工资个人所得税税率表</b>" id="demo" href="#" class="btn btn-success" data-toggle="popover" data-html="true"  data-trigger="focus"><span>&#x1F50D</span> </a> 
                             </th>        
                         </tr>
                         <tr>
@@ -84,13 +84,46 @@
                             <td scope="row">
                                 <input type="text" v-bind:placeholder="TaxItems[index].SalaryPlaceHolder" class="txt" v-model="TaxItems[index].Salary"></td>
                             <td>
+                                <b>({{TaxItems[index].SalaryPlaceHolder}}) <br>
+                                    个税金额: {{FormatCurrency(TaxItems[index].CurrentMonthTax)}}<br>
+                                    实际收入: {{FormatCurrency(TaxItems[index].ActualPayment)}}<br>
+                                </b>
                                 <div class="panel panel-default">
-                                    
                                     <div v-bind:id="TaxItems[index].Id" class="panel-collapse collapse in">
                                         <div class="panel-body">
                                             社保费用: {{FormatCurrency(TaxItems[index].SocialInsurance)}}<br>
                                             公积金: {{FormatCurrency(TaxItems[index].HousingFund)}}<br>
-                                            起征额: {{FormatCurrency(PreDeductible)}}
+                                            起征额: {{FormatCurrency(PreDeductible)}}<br>
+                                            子女教育: <select v-model="TaxItems[index].ChildrenEducation" class="txt">
+                                                    <option value="0">无</option>
+                                                    <option value="500">￥500.00</option>
+                                                    <option value="1000">￥1,000.00</option>
+                                                    <option value="2000">￥2,000.00</option>
+                                            </select><br>
+                                            赡养老人: <select v-model="TaxItems[index].ParentsSupport" class="txt">
+                                                    <option value="0">无</option>
+                                                    <option value="1000">￥1,000.00</option>
+                                                    <option value="2000">￥2,000.00</option>
+                                            </select><br>
+                                            房贷房租: <select v-model="TaxItems[index].HouseLoanOrRent" class="txt">
+                                                    <option value="0">无</option>
+                                                    <option value="500">￥500.00</option>
+                                                    <option value="1000">￥1,000.00</option>
+                                                    <option value="400">￥400.00</option>
+                                                    <option value="800">￥800.00</option>
+                                                    <option value="550">￥550.00</option>
+                                                    <option value="1100">￥1,100</option>
+                                                    <option value="750">￥750.00</option>
+                                                    <option value="1500">￥1,500.00</option>
+                                            </select><br>
+                                            继续教育: <select v-model="TaxItems[index].ContinuousEducation" class="txt">
+                                                    <option value="0">无</option>
+                                                    <option value="400">￥400.00</option>
+                                            </select><br>
+                                            累计抵扣额: {{FormatCurrency(TaxItems[index].AccumulativeDeductible)}}<br>
+                                            累计收入: {{FormatCurrency(TaxItems[index].AccumulativeSalary)}}<br>
+                                            累计应税收入:{{FormatCurrency(TaxItems[index].AccumulativeTaxableSalary)}}<br>
+                                            累计已缴个税:{{FormatCurrency(TaxItems[index].AccumulativePreviousTax)}}
                                             <!--
                                                 Social Base: {{FormatCurrency(TaxItems[index].SocialBase)}} <br>
                                                 House-Fund Base: {{FormatCurrency(TaxItems[index].HousingFundBase)}} <br>
@@ -99,7 +132,7 @@
                                         </div>
                                     </div>
                                     <div class="panel-heading">
-                                            <a class="panel-button" data-toggle="collapse" style="text-decoration: none;" v-bind:href="AppendIdSelector(TaxItems[index].Id)">展开查看</a>  
+                                            <a class="panel-button" data-toggle="collapse" style="text-decoration: none;" v-bind:href="AppendIdSelector(TaxItems[index].Id)">查看明细</a>  
                                     </div>
                                 </div>
                             </td>
@@ -107,73 +140,70 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-8 heading "></div>
+            <div class="col-md-8 ">
+                <div class="footer-copyright text-center py-3">© {{Copyright}} Copyright: Allen Xu</div>
+            </div>
+            
         </div>                 
         <div id="popover_content_taxrate" style="display: none">
             <table class="table table-striped " style="width:100%">
                 <thead class="table-dark">
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Range Start</th>
-                        <th scope="col">Range End</th>
-                        <th scope="col">Tax Rate</th>
-                        <th scope="col">Deductible</th>
+                        <th scope="col">级数</th>
+                        <th scope="col">全年应纳税所得额</th>
+                        <th scope="col">税率</th>
+                        <th scope="col">速算扣除数</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td scope="row">1</td>
-                        <td scope="row">¥0.00</td>
-                        <td scope="row">¥36,000.00</td>
+                        <td scope="row">¥0.00 ~ ¥36,000.00</td>
                         <td scope="row">3%</td>
                         <td scope="row">¥0.00</td>
                     </tr>
                     <tr>
                         <td scope="row">2</td>
-                        <td scope="row">¥36,001.00</td>
-                        <td scope="row">¥144,000.00</td>
+                        <td scope="row">¥36,000.00 ~ ¥144,000.00</td>
                         <td scope="row">10%</td>
                         <td scope="row">¥2,520.00</td>
                     </tr>
                     <tr>
-                        <td scope="row">3</td>
-                        <td scope="row">¥144,001.00</td>
-                        <td scope="row">¥300,000.00</td>
+                        <td scope="row">3</td>                        
+                        <td scope="row">¥144,000.00 ~ ¥300,000.00</td>
                         <td scope="row">20%</td>
                         <td scope="row">¥16,920.00</td>
                     </tr>
                     <tr>
                         <td scope="row">4</td>
-                        <td scope="row">¥300,001.00</td>
-                        <td scope="row">¥420,000.00</td>
+                        <td scope="row">¥300,000.00 ~ ¥420,000.00</td>
                         <td scope="row">25%</td>
                         <td scope="row">¥31,920.00</td>
                     </tr>
                     <tr>
                         <td scope="row">5</td>
-                        <td scope="row">¥420,001.00</td>
-                        <td scope="row">¥660,000.00</td>
+                        <td scope="row">¥420,000.00 ~ ¥660,000.00</td>
                         <td scope="row">30%</td>
                         <td scope="row">¥52,920.00</td>
                     </tr>
                     <tr>
                         <td scope="row">6</td>
-                        <td scope="row">¥660,001.00</td>
-                        <td scope="row">¥960,000.00</td>
+                        <td scope="row">¥660,000.00 ~ ¥960,000.00</td>
                         <td scope="row">35%</td>
                         <td scope="row">¥85,920.00</td>
                     </tr>
                     <tr>
                         <td scope="row">7</td>
-                        <td scope="row">¥960,001.00</td>
-                        <td scope="row"></td>
+                        <td scope="row">>¥960,000.00</td>
                         <td scope="row">45%</td>
                         <td scope="row">¥181,920.00</td>
                     </tr>                                
                 </tbody>
             </table>
         </div>
+        
         <script src="./js/vue.js"></script> 
         <script src="./js/main.js"></script> 
+        
     </body>
 </html>

@@ -1,22 +1,32 @@
+body{
+    font-size: 13px;
+}
+input[type="button"], #demo{
+    font-size: 13px;
+}
 .heading {
     border-bottom: 1px solid #fcab0e;
     margin-bottom: 10px;
-}               
+}     
+
 .txt[type="text"] {
     border: 1px solid #ccc;
     margin: 2px 0;
     padding: 3px 0 6px 5px;
     width: 100px;
 }
+
+.popover{
+    min-width:450px;
+}
+
 select.txt{
     border: 1px solid #ccc;
     margin: 2px 0;
     padding: 3px 0 6px 5px;
     width: 110px;
 }
-.popover{
-    min-width:450px;
-}
+
 #demo{
     float:right;
 }
@@ -27,5 +37,12 @@ select.txt{
     }
     body{
         font-size:60%;
+    }
+    input[type="button"], #demo{
+        font-size: 90%;
+    }
+    .close{
+        position: relative;
+        bottom: 8px;
     }
 } 
