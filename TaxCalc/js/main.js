@@ -1,7 +1,18 @@
 var app = new Vue({
     el: '#appTax',
-    data:{
-        Copyright: new Date().getFullYear(),
+    data:{        
+        Salary:'',
+        ShowNoSalaryAlert: false,
+        PreviousYear: new Date().getFullYear() - 1,
+        CurrentYear: new Date().getFullYear(),
+        PreviousYearAvgSalary: 7132.00,
+        CurrentYearAvgSalary: 7832.00,
+        SuppHouseFundRate : 0,
+        PreDeductible : 5000.00,
+        ChildrenEducationGlobal : 0,
+        ParentsSupportGlobal : 0,
+        HouseLoanOrRentGlobal : 0,
+        ContinuousEducationGlobal : 0,
         TaxRates: [
             { Min : 0.00,      Max : 36000.00,      TaxRate : 0.03,  Deductible : 0.00 },
             { Min : 36000.01,  Max : 144000.00,     TaxRate : 0.1,   Deductible : 2520.00 },
@@ -13,198 +24,67 @@ var app = new Vue({
         ],
         TaxItems: [
             { 
-                Id : 'divTaxJan', SalaryPlaceHolder : "一月",  
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxJan', SalaryPlaceHolder : "一月",  Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxFeb', SalaryPlaceHolder : "二月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxFeb', SalaryPlaceHolder : "二月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxMar', SalaryPlaceHolder : "三月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxMar', SalaryPlaceHolder : "三月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxApr', SalaryPlaceHolder : "四月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxApr', SalaryPlaceHolder : "四月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxMay', SalaryPlaceHolder : "五月",
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxMay', SalaryPlaceHolder : "五月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxJun', SalaryPlaceHolder : "六月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxJun', SalaryPlaceHolder : "六月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxJul', SalaryPlaceHolder : "七月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxJul', SalaryPlaceHolder : "七月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxAug', SalaryPlaceHolder : "八月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxAug', SalaryPlaceHolder : "八月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxSep', SalaryPlaceHolder : "九月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxSep', SalaryPlaceHolder : "九月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxOct', SalaryPlaceHolder : "十月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxOct', SalaryPlaceHolder : "十月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxNov', SalaryPlaceHolder : "十一月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxNov', SalaryPlaceHolder : "十一月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             },
             { 
-                Id : 'divTaxDec', SalaryPlaceHolder : "十二月", 
-                Salary : 0, SocialBase : 0, SocialInsurance : 0, HousingFundBase : 0, 
-                HousingFund : 0, HousingFundRecon : 0, ChildrenEducation : 0, ParentsSupport : 0, 
-                HouseLoanOrRent : 0, ContinuousEducation : 0, AccumulativeDeductible : 0, AccumulativeSalary : 0, 
-                AccumulativeTaxableSalary : 0, AccumulativePreviousTax : 0, CurrentMonthTax : 0, ActualPayment : 0
+                Id : 'divTaxDec', SalaryPlaceHolder : "十二月", Salary : 0,  ChildrenEducation : 0, ParentsSupport : 0, HouseLoanOrRent : 0, ContinuousEducation : 0
             }
-        ],
-        Salary:'',
-        ShowNoSalaryAlert: false,
-        PreviousYear: new Date().getFullYear() - 1,
-        PreviousYearAvgSalary: 7132.00,
-        CurrentYear: new Date().getFullYear(),
-        CurrentYearAvgSalary: 7832.00,
-        SuppHouseFundRate : 0,
-        PreDeductible : 5000,
-        ChildrenEducation : 0,
-        ParentsSupport : 0,
-        HouseLoanOrRent : 0,
-        ContinuousEducation : 0        
+        ]
+          
     },
     methods:{
-        CalculateTax(){
-            if(this.ShowNoSalaryAlert==false){
-                for(var i = 0; i< this.TaxItems.length; i++){
-                    //Set benefit base
-                    var previousMax = this.TaxItems[i].Salary > this.PreviousYearAvgSalary * 3 
-                                        ? this.PreviousYearAvgSalary * 3 
-                                        : this.TaxItems[i].Salary;
-                    var currentMax = this.TaxItems[i].Salary > this.CurrentYearAvgSalary * 3 
-                                        ? this.CurrentYearAvgSalary * 3 
-                                        : this.TaxItems[i].Salary;
-                    //Social insurance
-                    if( i < 3 ) {
-                        this.TaxItems[i].SocialBase = previousMax;
-                    } else {
-                        this.TaxItems[i].SocialBase = currentMax;
-                    }
-                    this.TaxItems[i].SocialInsurance = this.TaxItems[i].SocialBase * 0.105;
-
-                    //House fund
-                    if( i < 6 ) {
-                        this.TaxItems[i].HousingFundBase = previousMax;
-                    } else{
-                        this.TaxItems[i].HousingFundBase = currentMax;
-                    }
-                    var houseFund = this.TaxItems[i].HousingFundBase * 0.07 + this.TaxItems[i].HousingFundBase * this.SuppHouseFundRate;
-                    this.TaxItems[i].HousingFund = Math.ceil(houseFund);
-                    this.TaxItems[i].HousingFundRecon = (Math.ceil(houseFund) - houseFund).toFixed(2); 
-
-                    //Accumulative deductible
-                    var accumulativeDeductible = this.TaxItems[i].SocialInsurance +  this.TaxItems[i].HousingFund + this.PreDeductible + 
-                        parseFloat(this.TaxItems[i].ChildrenEducation) + parseFloat(this.TaxItems[i].ParentsSupport) + 
-                        parseFloat(this.TaxItems[i].HouseLoanOrRent)+ parseFloat(this.TaxItems[i].ContinuousEducation);
-                    if(i > 0) {
-                        accumulativeDeductible += this.TaxItems[i-1].AccumulativeDeductible;
-                    }
-                    this.TaxItems[i].AccumulativeDeductible = accumulativeDeductible;
-
-                    //Accumulative salary
-                    var accumulativeSalary = parseFloat(this.TaxItems[i].Salary);
-                    if(i > 0) {
-                        accumulativeSalary += parseFloat(this.TaxItems[i-1].AccumulativeSalary);
-                    }
-                    this.TaxItems[i].AccumulativeSalary = accumulativeSalary;
-
-                    //Accumulative taxalbe salary
-                    this.TaxItems[i].AccumulativeTaxableSalary = this.TaxItems[i].AccumulativeSalary - this.TaxItems[i].AccumulativeDeductible;
-
-                    //Accumulative prevlously taxed amount
-                    if(i > 0){
-                        this.TaxItems[i].AccumulativePreviousTax = this.TaxItems[i-1].AccumulativePreviousTax + this.TaxItems[i].CurrentMonthTax;
-                    }
-
-                    //Current month tax
-                    var currentMonthTax = 0;
-                    for(var j = 0; j < this.TaxRates.length; j++){
-                        if(this.TaxItems[i].AccumulativeTaxableSalary >= this.TaxRates[j].Min && this.TaxItems[i].AccumulativeTaxableSalary <= this.TaxRates[j].Max){
-                            currentMonthTax = this.TaxItems[i].AccumulativeTaxableSalary * this.TaxRates[j].TaxRate - this.TaxRates[j].Deductible;
-                            break;
-                        }
-                    }
-                    if(currentMonthTax - this.TaxItems[i].AccumulativePreviousTax > 0 ){
-                        this.TaxItems[i].CurrentMonthTax = currentMonthTax - this.TaxItems[i].AccumulativePreviousTax;
-                    }
-
-                    this.TaxItems[i].ActualPayment = this.TaxItems[i].Salary - this.TaxItems[i].SocialInsurance - this.TaxItems[i].HousingFund - this.TaxItems[i].CurrentMonthTax;
-
-                } 
-            }else{
-                for(var i = 0; i<this.TaxItems.length; i++){
-                    this.TaxItems[i].Salary = 0;
-                }
-            }  
-        },
-        ApplyToWholeYear(){
+        VerifySalary(){
             if(this.Salary =='' || isNaN(this.Salary)){
                 this.ShowNoSalaryAlert=true;                
             }else{
                 this.ShowNoSalaryAlert=false;                
             }
+        },
+        /*
+        ApplyToWholeYear(){
+            this.VerifySalary();
             if(this.ShowNoSalaryAlert==false){
-                for(var i = 0; i< this.TaxItems.length; i++){
+                for(let i = 0; i< this.TaxItems.length; i++){
                     this.TaxItems[i].Salary = parseFloat(this.Salary);
                     //Additional deductibles
-                    this.TaxItems[i].ChildrenEducation = this.ChildrenEducation;
-                    this.TaxItems[i].ParentsSupport = this.ParentsSupport;
-                    this.TaxItems[i].HouseLoanOrRent = this.HouseLoanOrRent;
-                    this.TaxItems[i].ContinuousEducation = this.ContinuousEducation;
+                    this.TaxItems[i].ChildrenEducation = parseFloat(this.ChildrenEducationGlobal);
+                    this.TaxItems[i].ParentsSupport = parseFloat(this.ParentsSupportGlobal);
+                    this.TaxItems[i].HouseLoanOrRent = parseFloat(this.HouseLoanOrRentGlobal);
+                    this.TaxItems[i].ContinuousEducation = parseFloat(this.ContinuousEducationGlobal);
                 }
             }
-            this.$options.methods.CalculateTax.bind(this)();
         },
-        AppendIdSelector(Id){
-            return "#" + Id;
-        },
+        */
         FormatCurrency(money){
             return "￥" + parseFloat(money).toFixed(2);
         },
@@ -213,64 +93,207 @@ var app = new Vue({
         }
     },
     computed : {
-        
+        IdSelector(){
+            return (Id) =>{
+                return "#" + Id;
+            }
+        },
+        /* Benefit calculation base on previous year average salary*/
+        PreviousMax(){
+            return (index) => {
+                //console.log('PreviousMax('+index+') ');
+                return this.TaxItems[index].Salary > this.PreviousYearAvgSalary * 3 
+                        ? this.PreviousYearAvgSalary * 3 
+                        : this.TaxItems[index].Salary;
+            }
+        },
+        /* Benefit calculation base on current year average salary*/
+        CurrentMax(){
+            return (index) => {
+                //console.log('CurrentMax('+index+') ');
+                return this.TaxItems[index].Salary > this.CurrentYearAvgSalary * 3 
+                    ? this.CurrentYearAvgSalary * 3 
+                    : this.TaxItems[index].Salary;
+            }
+        },
+        /* Social insurance calculation base*/
+        SocialBase(){
+            return (index) => {
+                //console.log('SocialBase('+index+') ');
+                if( index < 3 ) {
+                    return this.PreviousMax(index);
+                } else {
+                    return this.CurrentMax(index);
+                }
+            }
+        },
+        /* Housing fund calculation base*/
+        HousingFundBase(){
+            return (index) => {
+                //console.log('HousingFundBase('+index+') ');
+                if( index < 6 ) {
+                    return this.PreviousMax(index);
+                } else{
+                    return this.CurrentMax(index);
+                }
+            }
+        },
+        /* Social insurance amount */
+        SocialInsurance() {
+            return (index) => {
+                //console.log('SocialInsurance('+index+') ');
+                /* Retirement 8% Medical 2% Unemployment 0.5% */
+                return this.SocialBase(index) * 0.105;
+            }
+        },
+        /* Housing fund amount (primary 7% + supp 1%~5%)*/
+        HousingFund(){
+            return (index) => {
+                //console.log('HousingFund('+index+') ');
+                return this.HousingFundBase(index) * 0.07 + this.HousingFundBase(index) * this.SuppHouseFundRate;
+            }
+        },
+        /* Return the ceiling integer amount and the reconciliation amount is reflected in HousingFundRecon */
+        HousingFundCeil() {
+            return (index) => {
+                //console.log('HousingFundCeil('+index+') ');
+                return Math.ceil(this.HousingFund(index));
+            }
+        },
+        /* Return the housing fund reconciliation amount in string */
+        HousingFundRecon(){
+            return (index) => {
+                //console.log('HousingFundRecon('+index+') ');
+                return (this.HousingFundCeil(index) - this.HousingFund(index)).toFixed(2);
+            }
+        },        
+        /*Accumulative deductible */
+        AccumulativeDeductible() {
+            return (index) => {
+                let accumulativeDeductible = this.SocialInsurance(index) +  
+                                             this.HousingFundCeil(index) +
+                                             parseFloat(this.PreDeductible) + 
+                                             parseFloat(this.TaxItems[index].ChildrenEducation) + 
+                                             parseFloat(this.TaxItems[index].ParentsSupport) + 
+                                             parseFloat(this.TaxItems[index].HouseLoanOrRent) + 
+                                             parseFloat(this.TaxItems[index].ContinuousEducation);
+                if(index > 0) {
+                    accumulativeDeductible += this.AccumulativeDeductible(index - 1);
+                } 
+                return accumulativeDeductible;
+            }
+        },
+        /* Accoumulative salary */
+        AccumulativeSalary(){
+            return (index) => {
+                let accumulativeSalary = parseFloat(this.TaxItems[index].Salary);
+                if(index > 0) {
+                    accumulativeSalary += parseFloat(this.AccumulativeSalary(index -1));
+                }
+                return accumulativeSalary;
+            }
+        },
+        /* Accoumulative taxable income */
+        AccumulativeTaxableSalary(){
+            return (index) => {
+                return this.AccumulativeSalary(index) - this.AccumulativeDeductible(index);
+            }
+        },
+        CurrentMonthTax(){
+            return (index) => {
+                let currentMonthTax = 0;
+                if(this.TaxItems[index].Salary == 0){
+                    return 0.00
+                }
+                let accumulativeTaxableSalary = this.AccumulativeTaxableSalary(index);
+                for(let i = 0; i < this.TaxRates.length; i++){
+                    if(accumulativeTaxableSalary >= this.TaxRates[i].Min && accumulativeTaxableSalary <= this.TaxRates[i].Max){
+                        currentMonthTax = accumulativeTaxableSalary * this.TaxRates[i].TaxRate - this.TaxRates[i].Deductible;
+                        break;
+                    }
+                }
+                let accumulativePreviousTax = 0.00;
+                for(let j = index - 1; j >= 0; j--){
+                    accumulativePreviousTax += this.CurrentMonthTax(j);
+                }
+                if(currentMonthTax - accumulativePreviousTax > 0 ){
+                    return currentMonthTax - accumulativePreviousTax;
+                }else{
+                    return 0.00;
+                }
+            }
+        },
+        AccumulativePreviousTax() {
+            return (index) => {
+                if(index > 0){
+                    return this.AccumulativePreviousTax(index-1) + this.CurrentMonthTax(index);
+                }else{
+                    return 0.00;
+                }
+
+            }
+        },
+        ActualPayment(){
+            return (index) => {
+                return this.TaxItems[index].Salary - 
+                        this.SocialInsurance(index) - 
+                        this.HousingFundCeil(index) - 
+                        this.CurrentMonthTax(index);
+            }
+        }
     },
-    watch:{
-        TaxItems : {
-            handler : function( after, before ) {
-                this.$options.methods.CalculateTax.bind(this)();
-            },
-            deep : true
-        },
-        SuppHouseFundRate : {
-            handler : function( after, before ) {
-                this.$options.methods.CalculateTax.bind(this)();
-            }
-        },
-        ChildrenEducation : { 
-            handler : function( after, before ) {
+    watch:{        
+        Salary : {
+            handler : function( after, before ){
+                this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(var i = 0; i< this.TaxItems.length; i++){
+                    for(let i = 0; i< this.TaxItems.length; i++){
                         this.TaxItems[i].Salary = parseFloat(this.Salary);
-                        this.TaxItems[i].ChildrenEducation = this.ChildrenEducation;
                     }
                 }
-                this.$options.methods.CalculateTax.bind(this)();
             }
         },
-        ParentsSupport : {
+        ChildrenEducationGlobal : { 
             handler : function( after, before ) {
+                this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(var i = 0; i< this.TaxItems.length; i++){
-                        this.TaxItems[i].Salary = parseFloat(this.Salary);
-                        this.TaxItems[i].ParentsSupport = this.ParentsSupport;
+                    for(let i = 0; i< this.TaxItems.length; i++){
+                        this.TaxItems[i].ChildrenEducation = this.ChildrenEducationGlobal;                        
                     }
                 }
-                this.$options.methods.CalculateTax.bind(this)();
+                
             }
         },
-        HouseLoanOrRent : {
+        ParentsSupportGlobal : {
             handler : function( after, before ) {
+                this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(var i = 0; i< this.TaxItems.length; i++){
-                        this.TaxItems[i].Salary = parseFloat(this.Salary);
-                        this.TaxItems[i].HouseLoanOrRent = this.HouseLoanOrRent;
+                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                        this.TaxItems[i].ParentsSupport = this.ParentsSupportGlobal;
                     }
                 }
-                this.$options.methods.CalculateTax.bind(this)();
             }
         },
-        ContinuousEducation : {
+        HouseLoanOrRentGlobal : {
+            handler : function( after, before ) {
+                this.VerifySalary();
+                if(this.ShowNoSalaryAlert==false){
+                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                        this.TaxItems[i].HouseLoanOrRent = this.HouseLoanOrRentGlobal;
+                    }
+                }
+            }
+        },
+        ContinuousEducationGlobal : {
             handler : function( after, before) {
+                this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(var i = 0; i< this.TaxItems.length; i++){
-                        this.TaxItems[i].Salary = parseFloat(this.Salary);
-                        this.TaxItems[i].ContinuousEducation = this.ContinuousEducation;
+                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                        this.TaxItems[i].ContinuousEducation = this.ContinuousEducationGlobal;
                     }
                 }
-                this.$options.methods.CalculateTax.bind(this)();
+                
             }
         }
     }
-
 })

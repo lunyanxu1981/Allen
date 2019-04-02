@@ -31,6 +31,11 @@ select.txt{
     float:right;
 }
 
+.close{
+    position: relative;
+    bottom: 8px;
+}
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px){
     .txt[type="text"] {
         width: 80px;
@@ -41,8 +46,5 @@ select.txt{
     input[type="button"], #demo{
         font-size: 90%;
     }
-    .close{
-        position: relative;
-        bottom: 8px;
-    }
+    
 } 
