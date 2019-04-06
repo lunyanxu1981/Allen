@@ -24,7 +24,7 @@
                             <th colspan="2"> 
                                 ￥<input type="text" class="txt" v-model="PreviousYearAvgSalary.toFixed(2)">&nbsp;<label>{{PreviousYear}}平均工资</label><br>                                
                                 ￥<input type="text" class="txt" v-model="CurrentYearAvgSalary.toFixed(2)">&nbsp;<label>{{CurrentYear}}平均工资</label><br>
-                                ￥<input type="text" v-model="Salary" class="txt" placeholder="月薪" >&nbsp;
+                                ￥<input type="text" v-model.lazy="Salary" class="txt" placeholder="月薪" >&nbsp;
                                 <select v-model="SuppHouseFundRate" class="txt"><option value="0">补充公积金</option><option value="0.05">5%</option><option value="0.04">4%</option><option value="0.03">3%</option><option value="0.02">2%</option><option value="0.01">1%</option></select> 
                             </th>
                         </tr>   
@@ -37,14 +37,6 @@
                                 <a title="<b>工资个人所得税税率表</b>" id="demo" href="#" class="btn btn-success" data-toggle="popover" data-html="true"  data-trigger="focus"><span>&#x1F50D</span> </a> 
                             </th>
                         </tr>
-                        <!--
-                        <tr>
-                            <th colspan="2">
-                                <input type="button" @click="ApplyToWholeYear" data-toggle="tooltip" value="计算" title="计算全年" class="btn btn-primary"/>
-                                
-                            </th>        
-                        </tr>
-                        -->
                         <tr>
                             <th scope="col" style="width:110px;">税前月薪 ￥</th>
                             <th>扣税明细</th>
@@ -53,11 +45,11 @@
                     <tbody>
                         <tr v-for="(tax, index) in TaxItems">
                             <td scope="row">
-                                <input type="text" v-bind:placeholder="TaxItems[index].SalaryPlaceHolder" class="txt" v-model="TaxItems[index].Salary"></td>
+                                <input type="text" v-bind:placeholder="TaxItems[index].SalaryPlaceHolder" class="txt" v-model.lazy="TaxItems[index].Salary"></td>
                             <td>
                                 <b>({{TaxItems[index].SalaryPlaceHolder}}) <br>
                                     个税金额: {{FormatCurrency(CurrentMonthTax(index))}}<br>
-                                   <!-- 实际收入: {{FormatCurrency(ActualPayment(index))}}<br> -->
+                                    实际收入: {{FormatCurrency(ActualPayment(index))}}<br>
                                 </b>
                                 <div class="panel panel-default">
                                     <div v-bind:id="TaxItems[index].Id" class="panel-collapse collapse in">
@@ -105,7 +97,7 @@
                 </tbody>
             </table>
         </div>
-        <script src="./js/vue.js"></script> 
+        <script src="./js/vue.min.js"></script> 
         <script src="./js/main.js"></script> 
     </body>
 </html>

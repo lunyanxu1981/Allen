@@ -70,21 +70,6 @@ var app = new Vue({
                 this.ShowNoSalaryAlert=false;                
             }
         },
-        /*
-        ApplyToWholeYear(){
-            this.VerifySalary();
-            if(this.ShowNoSalaryAlert==false){
-                for(let i = 0; i< this.TaxItems.length; i++){
-                    this.TaxItems[i].Salary = parseFloat(this.Salary);
-                    //Additional deductibles
-                    this.TaxItems[i].ChildrenEducation = parseFloat(this.ChildrenEducationGlobal);
-                    this.TaxItems[i].ParentsSupport = parseFloat(this.ParentsSupportGlobal);
-                    this.TaxItems[i].HouseLoanOrRent = parseFloat(this.HouseLoanOrRentGlobal);
-                    this.TaxItems[i].ContinuousEducation = parseFloat(this.ContinuousEducationGlobal);
-                }
-            }
-        },
-        */
         FormatCurrency(money){
             return "￥" + parseFloat(money).toFixed(2);
         },
@@ -130,7 +115,6 @@ var app = new Vue({
         /* Housing fund calculation base*/
         HousingFundBase(){
             return (index) => {
-                //console.log('HousingFundBase('+index+') ');
                 if( index < 6 ) {
                     return this.PreviousMax(index);
                 } else{
@@ -141,29 +125,25 @@ var app = new Vue({
         /* Social insurance amount */
         SocialInsurance() {
             return (index) => {
-                //console.log('SocialInsurance('+index+') ');
                 /* Retirement 8% Medical 2% Unemployment 0.5% */
                 return this.SocialBase(index) * 0.105;
             }
         },
         /* Housing fund amount (primary 7% + supp 1%~5%)*/
         HousingFund(){
-            return (index) => {
-                //console.log('HousingFund('+index+') ');
+            return (index) => {                
                 return this.HousingFundBase(index) * 0.07 + this.HousingFundBase(index) * this.SuppHouseFundRate;
             }
         },
         /* Return the ceiling integer amount and the reconciliation amount is reflected in HousingFundRecon */
         HousingFundCeil() {
             return (index) => {
-                //console.log('HousingFundCeil('+index+') ');
                 return Math.ceil(this.HousingFund(index));
             }
         },
         /* Return the housing fund reconciliation amount in string */
         HousingFundRecon(){
             return (index) => {
-                //console.log('HousingFundRecon('+index+') ');
                 return (this.HousingFundCeil(index) - this.HousingFund(index)).toFixed(2);
             }
         },        
