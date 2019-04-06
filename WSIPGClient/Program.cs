@@ -36,11 +36,13 @@ namespace WSIPGClient
             // The request was aborted: Could not create SSL/TLS secure channel.
             ServicePointManager.Expect100Continue = false;
             System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            String RequestResponseMessage = "";
-
+            String RequestResponseMessage = "ABC@travelzoo.com";
+            List<string> toList = new List<string>();
+           // toList.Add("abc@travelzoo.com");
+            //toList.Add("xyz@db.com");
             var ary = RequestResponseMessage.Split(',');
-
-            Randomize5DigitNumber();
+            bool hasMatch = ary.Any(x => toList.Any(y => y.Equals(x, StringComparison.InvariantCultureIgnoreCase)));
+            //Randomize5DigitNumber();
             //Action
             //RequestResponseMessage = doInitiateClearingActionRequest();
             //RequestResponseMessage = doInquiryOrderActionRequest();
