@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/bootstrap.min.css" rel="stylesheet" >        
+        <link href="./css/font-awesome.min.css"  rel="stylesheet">
+        <link href="./css/Style.css"  rel="stylesheet">
+        <script src="./js/popper.min.js" ></script>
+        <script src="./js/jquery-1.11.1.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>   
+        <script src="./js/dom.js" ></script> 
+        <title>Relocation Calculator</title>
+    </head>
+    <body>
+        <div id="appReloc" class="container-fluid">
+            <div class="heading"><h5>动迁补偿计算器 - 乔家路东块</h5></div>    
+            <div class="heading">
+                <div class="input-group mb-1">                    
+                    <input type="text" class="form-control" placeholder="使用面积"  v-model.lazy="LivingArea">
+                    <div class="input-group-append">
+                        <select class="custom-select" v-model="ConstructionAreaFactor">
+                            <option value="2.06">公寓(有电梯、成套) 2.06</option>
+                            <option value="1.83">独立住宅 1.83</option>
+                            <option value="1.82">新里住宅 1.82</option>
+                            <option value="2">新工房(有电梯、成套) 2</option>
+                            <option value="1.98">新工房(无电梯、成套) 1.98</option>
+                            <option value="1.94">新工房(无电梯、不成套) 1.94</option>
+                            <option value="1.65">“两万户”新工房 1.65</option>
+                            <option value="1.54">旧里住宅 1.54</option>
+                            <option value="1.25">简屋 1.25</option>
+                            <option value="1">私宅 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <input type="text" class="form-control" placeholder="阁楼面积" v-model.lazy="AtticArea">
+                    <div class="input-group-append">
+                        <select class="custom-select" v-model="AtticHeightFactor">                                
+                            <option value="1">阁楼高度 >1.7m</option>
+                            <option value="0.5">阁楼高度 1.2M ~ 1.7M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                            <option value="0">阁楼高度 &lt;1.2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text input-label">建筑面积 M<sup>2</sup></span></div>
+                    <span class="form-control">{{ConstructionArea}}</span>                                             
+                </div>          
+                <div class="input-group mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text input-label">评估均价 ￥</span></div>
+                    <input type="text" class="form-control" v-model.lazy="AveragePrice">                                             
+                </div>  
+                <div class="input-group mb-1">
+                    <div class="input-group-prepend"><span class="input-group-text input-label">评估单价 ￥</span></div>
+                    <input type="text" class="form-control" v-model.lazy="EvaluationPrice">                                             
+                </div>                
+                <div class="panel-group mb-3" id="accordion" >
+                    <div class="panel panel-default">
+                        <div class="panel-heading"  id="planPanel">
+                            <div class="panel-title">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#planDetails" aria-expanded="true" aria-controls="planDetails">
+                                    补偿方案&nbsp;<i class="fa" aria-hidden="true"></i></button>
+                            </div>                            
+                        </div>
+                        <div id="planDetails" class="panel-collapse collapse show"  aria-labelledby="planPanel">                                                 
+                            <div class="input-group mb-1">
+                                <div class="panel-heading form-control"  id="planAPanel">
+                                        <div class="panelA-title">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#planADetails" aria-expanded="true" aria-controls="planADetails">
+                                    <i class="fa" aria-hidden="true"></i>&nbsp;<b>三块砖价格 = ￥{{PrimaryCompensation(true)}}</b></button>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" v-model="CalculatePrimaryCompensation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="planADetails" class="panel-collapse collapse" aria-labelledby="planAPanel">
+                                <div class="form-control mb-1">
+                                    <p><b>(A1) 房屋评估价格</b> = ￥{{HouseCompensation(true)}}<br><br>
+                                        <span class="formula-label">= MAX(评估单价,评估均价) × 建筑面积 x 产权系数<br class="mobile-line-break"><br class="mobile-line-break">= ￥{{HigherPrice(true)}} x {{ConstructionArea}} M<sup>2</sup> x 
+                                            <select class="custom-select signup-select" v-model="OwnershipFactor"><option value="" disabled selected>产权系数</option><option value="0.8">公房 0.8</option><option value="1.0">私房 1.0</option></select>
+                                        </span>
+                                    </p>                                    
+                                    <p><b>(A2) 价格补贴</b> = ￥{{SubsidyCompensation(true)}}<br><br>
+                                        <span class="formula-label">= 评估均价 × 建筑面积× 补贴系数<br class="mobile-line-break"><br class="mobile-line-break">= ￥{{AveragePrice}} x {{ConstructionArea}} M<sup>2</sup> x <input type="text" class="underline-input underline-input-small form-control" v-model.lazy="SubsidyFactor"><span>
+                                    </p>
+                                    
+                                    <p><b>(A3) 套型面积补贴</b> = ￥{{AdditionalCompensation(true)}}<br><br>
+                                        <span class="formula-label">= 评估均价 × 补贴面积<br class="mobile-line-break"><br class="mobile-line-break">= ￥{{AveragePrice}} x <input type="text" class="underline-input underline-input-small form-control" v-model.lazy="SubsidyArea"> M<sup>2</sup><span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="input-group mb-1">
+                                <div class="panel-heading form-control" id="planBPanel">
+                                        <div class="panelB-title">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#planBDetails" aria-expanded="true" aria-controls="planBDetails">
+                                    <i class="fa" aria-hidden="true"></i>&nbsp;<b>房屋奖励 = ￥{{AwardCompensation(true)}}</b></button>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" v-model="CalculateAwardCompensation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="planBDetails" class="panel-collapse collapse" aria-labelledby="planBPanel">        
+                                <div class="form-control mb-1">
+                                    <p><b>(B1) 签约奖励费</b> = ￥{{SignupAward(true)}}<br><br>
+                                        <span class="formula-label">
+                                            = <select class="custom-select signup-select" v-model="SignupAwardOption">                                
+                                                <option value="45">1个月内签约 45万</option>
+                                                <option value="43">2个月内签约 43万</option>
+                                                <option value="41">3个月内签约 41万</option>
+                                                <option value="30">签约期满后签约 30万</option>
+                                            </select><br class="mobile-line-break"><br class="mobile-line-break">
+                                            + (建筑面积 {{ConstructionArea}} M<sup>2</sup> -  <input type="text" class="underline-input underline-input-small form-control" v-model.lazy="SignupBasicArea">M<sup>2</sup>) x ￥<input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="SignupPerSqAward">
+                                        </span>
+                                    </p>                                
+                                    <p><b>(B2) 家用设施移装费</b> = ￥<span class="formula-label"><input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="EquipmentRelocationFee"></span></p>                                
+                                    <p><b>(B3) 搬迁费</b>= ￥{{RelocationFee(true)}}<br><br>
+                                        <span class="formula-label">
+                                            ￥<input type="text" class="underline-input underline-input-small form-control" v-model.lazy="RelocationPerSqFee"> x 建筑面积 {{ConstructionArea}} M<sup>2</sup> 不低于 ￥<input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="RelocationMinFee">
+                                        </span>
+                                    </p>                                
+                                    <p><b>(B4) 室内装饰装修补偿</b> = ￥{{DecoCompensation(true)}}<br><br>
+                                        <span class="formula-label">
+                                        ￥<input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="DecoPerSqCompensation"> x 建筑面积 {{ConstructionArea}} M<sup>2</sup> 
+                                        </span>
+                                    </p>                                
+                                    <p><b>(B5) 无搭建补贴</b> = ￥<span class="formula-label"><input type="text" class="underline-input underline-input-large form-control" v-model.lazy="NoIllegalFacilityAward"></span></p>                                
+                                    <p><b>(B6) 均衡实物安置补贴</b> =￥{{CashCompensation(true)}}<br><br>
+                                        <span class="formula-label">
+                                            ￥<input type="text" class="underline-input underline-input-large form-control" v-model.lazy="CashPerSqCompensation"> x 建筑面积 {{ConstructionArea}} M<sup>2</sup> 不低于 ￥<input type="text" class="underline-input underline-input-large form-control" v-model.lazy="CashMinCompensation">
+                                        </span>
+                                    </p>                                
+                                    <p><b>(B7) 临时安置房(纯货币)</b> = ￥<span class="formula-label"><input type="text" class="underline-input underline-input-large form-control" v-model.lazy="TempLodgeFee"></span></p>
+                                </div>
+                            </div> 
+                            <div class="input-group mb-1">
+                                <div class="panel-heading form-control"  id="planCPanel">
+                                    <div class="panelC-title">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#planCDetails" aria-expanded="true" aria-controls="planCDetails">
+                                    <i class="fa" aria-hidden="true"></i>&nbsp;<b>搬迁奖励 = ￥{{RelocationAwardCompensation(true)}}</b></button>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" v-model="CalculateRelocationCompensation">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="planCDetails" class="panel-collapse collapse" aria-labelledby="planCPanel">
+                                <div class="form-control mb-1">
+                                    <p><b>(C1) 搬迁奖励费</b> = ￥{{RelocationAwardTotal(true)}}<br><br>
+                                        ￥<input type="text" class="underline-input underline-input-large form-control" v-model.lazy="RelocationAward"> + (建筑面积 {{ConstructionArea}} M<sup>2</sup> -  <input type="text" class="underline-input underline-input-small form-control" v-model.lazy="RelocationBasicArea">M<sup>2</sup>)<br class="mobile-line-break"><br class="mobile-line-break"> x ￥<input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="RelocationPerSqAward">                                        
+                                    </p>
+                                    <p><b>(C2) 签户奖励</b> = ￥<span class="formula-label"><input type="text" class="underline-input underline-input-large form-control" v-model.lazy="ResidenceRevokeAward"></span></p>
+                                </div>
+                            </div>
+                            <div class="input-group mb-1">
+                                <div class="panel-heading form-control" id="planDPanel">
+                                    <div class="panelD-title">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#planDDetails" aria-expanded="true" aria-controls="planDDetails">
+                                    <i class="fa" aria-hidden="true"></i>&nbsp;<b>利息 = ￥{{BankInterestCompensation(true)}}</b></button>
+                                    </div>
+                                </div>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <input type="checkbox" v-model="CalculateBankInterest">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="planDDetails" class="panel-collapse collapse" aria-labelledby="planDPanel">
+                                <div class="form-control mb-1">
+                                    <p><b>利息补贴</b> = ￥{{BankInterest(true)}}<br><br>
+                                        ( 三块砖价格 ￥{{PrimaryCompensation(true)}} + <br class="mobile-line-break"><br class="mobile-line-break"> 房屋奖励 ￥{{AwardCompensation(true)}} + <br class="mobile-line-break"><br class="mobile-line-break">
+                                        搬迁奖励费 ￥{{RelocationAwardTotal(true)}} - <br class="mobile-line-break"><br class="mobile-line-break"> 临时安置房 ￥{{TempLodgeFee}} )<br class="mobile-line-break"><br class="mobile-line-break">
+                                            x 利率 <input type="text" class="underline-input underline-input-small form-control" v-model.lazy="InterestRate">% ÷ 360 天 x <input type="text" class="underline-input underline-input-medium form-control" v-model.lazy="InterestDayNum"> 天
+                                    </p> 
+                                </div>                               
+                            </div>
+                            <div class="input-group mb-1">
+                                <div class="input-group-prepend"><span class="input-group-text input-label"><b>总价</b></span></div>
+                                <span class="form-control"><b>{{TotalCompensation(true)}}</b></span>                                             
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="footer-copyright text-center py-3">© {{CurrentYear}} Copyright: Allen Xu</div>
+        </div>        
+        <script src="./js/vue.min.js"></script><script src="./js/main.js"></script> 
+    </body>
+</html>

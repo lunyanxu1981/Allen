@@ -1,0 +1,83 @@
+body{
+    font: 12px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    max-width: 800px;
+}
+.heading {
+    border-bottom: 1px solid #fcab0e;
+    margin: 10px 0 10px 0;
+} 
+.input-group-text{
+    font-size: 13px;
+}
+.form-control{
+    min-height: 38px;
+    font-size: 13px;
+}
+.input-label{
+    width: 91px; 
+}
+.formula-label{
+    font-size: 13px;
+}
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+}
+.panel-title >button{
+    text-decoration: none !important;
+    font-size: 14px;
+}
+.panelA-title >button, .panelB-title >button ,.panelC-title >button ,.panelD-title >button {
+    text-decoration: none !important;
+    font-size: 13px;
+    padding-left: 0px;
+}
+.section-label {
+    font-size: 14px;
+    color:#495057;
+}
+.signup-select{
+    width: auto;
+}
+.mobile-line-break{
+    display:none;
+}
+.underline-input{
+    display: inline-block;    
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;    
+    min-height: 22px;
+    text-align: center;
+}
+.underline-input-small{
+    width: 20px;
+}
+.underline-input-medium{
+    width: 35px;
+}
+.underline-input-large{
+    width: 50px;
+}
+[data-toggle="collapse"] .fa:before {   
+    content: "\f139";
+}  
+[data-toggle="collapse"].collapsed .fa:before {
+content: "\f13a";
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px){
+    
+    .formula-label, .underline-input-small, .underline-input-medium{
+        font-size: 11.5px;
+    }
+    .mobile-line-break{
+        display:block;
+    }
+} 
