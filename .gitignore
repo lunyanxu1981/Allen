@@ -6,3 +6,13 @@
 /ConsoleAppTest/ConsoleAppTest/obj/Debug
 /ConsoleAppTest/.vs/ConsoleAppTest/v15
 /WebApplicationTest1/.vs
+WSIPGClient/obj/Debug/WSIPGClient.exe.manifest
+WSIPGClient/bin/Debug/WSIPGClient.application
+WSIPGClient/bin/Debug/WSIPGClient.exe
+WSIPGClient/bin/Debug/WSIPGClient.pdb
+WSIPGClient/bin/Debug/WSIPGClient.exe.manifest
+WSIPGClient/bin/Debug/app.publish/WSIPGClient.exe
+WSIPGClient/obj/Debug/WSIPGClient.application
+WSIPGClient/obj/Debug/WSIPGClient.exe
+WSIPGClient/obj/Debug/WSIPGClient.pdb
+RedisPriorityMQ
