@@ -207,6 +207,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="certs\WS4700000018._.1.p12" />
+    <Content Include="certs\WS4510118120259._.1.p12" />
     <None Include="FirstDataWSDL\schemas\a1.xsd">
       <SubType>Designer</SubType>
     </None>

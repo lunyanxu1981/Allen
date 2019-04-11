@@ -291,20 +291,29 @@ namespace WebApplicationTest1.Controllers
 
         public ActionResult FirstDataSaleTest()
         {
+            string storeName = "4700000018";
+            string sharedsecret = "v14Kx72Qxd";
+            string url = "https://test.ipg-online.com/connect/gateway/processing";
+            if (this.Request.QueryString["isprod"] == "1")
+            {
+                storeName = "4510118120259";
+                sharedsecret = "Br34sHakwc";
+                url = "https://www4.ipg-online.com/connect/gateway/processing";
+            }
             string orderForm = string.Empty;
             string responseFailURL = "http://dev.webmvc-test.com/Home/FirstDataFailCallbackTest/";
             string responseSuccessURL = "http://dev.webmvc-test.com/Home/FirstDataSuccessCallbackTest/";
             string merchantOrderId = $"{ DateTime.Now.Year.ToString()}{ DateTime.Now.Month.ToString()}{ DateTime.Now.Day.ToString()}{ DateTime.Now.Millisecond.ToString()}";
-            string storeName = "4700000018";
+           
             string trxnDate = DateTime.UtcNow.ToString("yyyy:MM:dd-HH:mm:ss");
             string chargetotal = "10.00";
             string currency = "156";
-            string sharedsecret = "v14Kx72Qxd";
+            
             string sharaw = $"{storeName}{trxnDate}{chargetotal}{currency}{sharedsecret}";
             string sha256HashASCII = SHA256Gen2(sharaw);
             string line1 = $"400005;Voucher;1;{chargetotal}";
 
-            orderForm += "<form method=\"post\" action=\"https://test.ipg-online.com/connect/gateway/processing\">";
+            orderForm += $"<form method=\"post\" action=\"{url}\">";
             orderForm += "txntype:<input type=\"input\" name=\"txntype\" value=\"sale\"><br>";
             orderForm += $"storename:<input type=\"input\" name=\"storename\" value=\"{storeName}\"><br>";
             orderForm += $"merchantTransactionId:<input type=\"input\" name=\"merchantTransactionId\" value=\"{merchantOrderId}\"><br>";
@@ -365,7 +374,7 @@ namespace WebApplicationTest1.Controllers
         }
 
 
-        public ActionResult FirstDataRefund(string id)
+        public ActionResult FirstDataRefund(string id, bool isprod = false)
         {
             ViewBag.Message = "FirstData order refund.";
             if (String.IsNullOrEmpty(id))
@@ -376,7 +385,10 @@ namespace WebApplicationTest1.Controllers
             X509Certificate2 certificate = null;
             try
             {
-                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                certificate = isprod
+                    ? new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                    @"certs\WS4510118120259._.1.p12"), "s$efm]33PQ")
+                    : new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                                                     @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
             }
             catch { }
@@ -384,14 +396,14 @@ namespace WebApplicationTest1.Controllers
             {
                 IPGApiOrderService Request = new IPGApiOrderService();
                 Request.ClientCertificates.Add(certificate);
-                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
-                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+                Request.Url = isprod? @"https://www4.ipg-online.com/ipgapi/services" : @"https://test.ipg-online.com/ipgapi/services";
+                Request.Credentials = isprod ? new NetworkCredential("WS4510118120259._.1", "RiS;3X2)gK") : new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
 
                 IPGApiOrderRequest oRefundOrderRequest = new IPGApiOrderRequest();
                 Transaction oTransaction = new Transaction();
                 CreditCardTxType oCreditCardTxType = new CreditCardTxType();
 
-                oCreditCardTxType.StoreId = "4700000018";
+                oCreditCardTxType.StoreId = isprod ? "4510118120259" : "4700000018";
                 oCreditCardTxType.Type = CreditCardTxTypeType.@return;
 
                 oTransaction.Items = new Object[] { oCreditCardTxType };
@@ -438,6 +450,7 @@ namespace WebApplicationTest1.Controllers
                 }
                 catch (SoapException se)
                 {//SoapException: MerchantException or ProcessingException
+                    ViewBag.RequestString = request;
                     ViewBag.ResponseString = se.SoapExceptionResponseToString() ?? "";
                 }
                 catch (Exception ex)
@@ -455,7 +468,7 @@ namespace WebApplicationTest1.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult About(string id)
+        public ActionResult About(string id, bool isprod = false)
         {
             ViewBag.Message = "FirstData order inquiry.";
             if (String.IsNullOrEmpty(id))
@@ -466,7 +479,10 @@ namespace WebApplicationTest1.Controllers
             X509Certificate2 certificate = null;
             try
             {
-                certificate = new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                certificate = isprod
+                    ? new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                                    @"certs\WS4510118120259._.1.p12"), "s$efm]33PQ")
+                    : new X509Certificate2(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                                                     @"certs\WS4700000018._.1.p12"), "P2T$u8%Fhm");
             }
             catch { }
@@ -475,12 +491,13 @@ namespace WebApplicationTest1.Controllers
             {
                 IPGApiOrderService Request = new IPGApiOrderService();
                 Request.ClientCertificates.Add(certificate);
-                Request.Url = @"https://test.ipg-online.com/ipgapi/services";
-                Request.Credentials = new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
+                Request.Url = isprod ? @"https://www4.ipg-online.com/ipgapi/services" : @"https://test.ipg-online.com/ipgapi/services";
+                Request.Credentials = isprod ? new NetworkCredential("WS4510118120259._.1", "RiS;3X2)gK") 
+                    : new NetworkCredential("WS4700000018._.1", "dJV_.2n7uS");
 
                 InquiryOrder oInquiryOrder = new InquiryOrder()
                 {
-                    StoreId = "4700000018",
+                    StoreId = isprod ? "4510118120259" : "4700000018",
                     OrderId = id
                 };
 

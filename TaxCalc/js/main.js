@@ -150,7 +150,7 @@ var app = new Vue({
         /*Accumulative deductible */
         AccumulativeDeductible() {
             return (index) => {
-                let accumulativeDeductible = this.SocialInsurance(index) +  
+                var accumulativeDeductible = this.SocialInsurance(index) +  
                                              this.HousingFundCeil(index) +
                                              parseFloat(this.PreDeductible) + 
                                              parseFloat(this.TaxItems[index].ChildrenEducation) + 
@@ -166,7 +166,7 @@ var app = new Vue({
         /* Accoumulative salary */
         AccumulativeSalary(){
             return (index) => {
-                let accumulativeSalary = parseFloat(this.TaxItems[index].Salary);
+                var accumulativeSalary = parseFloat(this.TaxItems[index].Salary);
                 if(index > 0) {
                     accumulativeSalary += parseFloat(this.AccumulativeSalary(index -1));
                 }
@@ -181,19 +181,19 @@ var app = new Vue({
         },
         CurrentMonthTax(){
             return (index) => {
-                let currentMonthTax = 0;
+                var currentMonthTax = 0;
                 if(this.TaxItems[index].Salary == 0){
                     return 0.00
                 }
-                let accumulativeTaxableSalary = this.AccumulativeTaxableSalary(index);
-                for(let i = 0; i < this.TaxRates.length; i++){
+                var accumulativeTaxableSalary = this.AccumulativeTaxableSalary(index);
+                for(var i = 0; i < this.TaxRates.length; i++){
                     if(accumulativeTaxableSalary >= this.TaxRates[i].Min && accumulativeTaxableSalary <= this.TaxRates[i].Max){
                         currentMonthTax = accumulativeTaxableSalary * this.TaxRates[i].TaxRate - this.TaxRates[i].Deductible;
                         break;
                     }
                 }
-                let accumulativePreviousTax = 0.00;
-                for(let j = index - 1; j >= 0; j--){
+                var accumulativePreviousTax = 0.00;
+                for(var j = index - 1; j >= 0; j--){
                     accumulativePreviousTax += this.CurrentMonthTax(j);
                 }
                 if(currentMonthTax - accumulativePreviousTax > 0 ){
@@ -212,9 +212,9 @@ var app = new Vue({
                 }
 
             }
-        },
+        },        
         ActualPayment(){
-            return (index) => {
+            return (index) =>{            
                 return this.TaxItems[index].Salary - 
                         this.SocialInsurance(index) - 
                         this.HousingFundCeil(index) - 
@@ -227,7 +227,7 @@ var app = new Vue({
             handler : function( after, before ){
                 this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(let i = 0; i< this.TaxItems.length; i++){
+                    for(var i = 0; i< this.TaxItems.length; i++){
                         this.TaxItems[i].Salary = parseFloat(this.Salary);
                     }
                 }
@@ -237,7 +237,7 @@ var app = new Vue({
             handler : function( after, before ) {
                 this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(let i = 0; i< this.TaxItems.length; i++){
+                    for(var i = 0; i< this.TaxItems.length; i++){
                         this.TaxItems[i].ChildrenEducation = this.ChildrenEducationGlobal;                        
                     }
                 }
@@ -248,7 +248,7 @@ var app = new Vue({
             handler : function( after, before ) {
                 this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                    for(var i = 0; i< this.TaxItems.length; i++){                        
                         this.TaxItems[i].ParentsSupport = this.ParentsSupportGlobal;
                     }
                 }
@@ -258,7 +258,7 @@ var app = new Vue({
             handler : function( after, before ) {
                 this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                    for(var i = 0; i< this.TaxItems.length; i++){                        
                         this.TaxItems[i].HouseLoanOrRent = this.HouseLoanOrRentGlobal;
                     }
                 }
@@ -268,7 +268,7 @@ var app = new Vue({
             handler : function( after, before) {
                 this.VerifySalary();
                 if(this.ShowNoSalaryAlert==false){
-                    for(let i = 0; i< this.TaxItems.length; i++){                        
+                    for(var i = 0; i< this.TaxItems.length; i++){                        
                         this.TaxItems[i].ContinuousEducation = this.ContinuousEducationGlobal;
                     }
                 }

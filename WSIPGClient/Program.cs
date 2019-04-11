@@ -40,8 +40,8 @@ namespace WSIPGClient
             List<string> toList = new List<string>();
            // toList.Add("abc@travelzoo.com");
             //toList.Add("xyz@db.com");
-            var ary = RequestResponseMessage.Split(',');
-            bool hasMatch = ary.Any(x => toList.Any(y => y.Equals(x, StringComparison.InvariantCultureIgnoreCase)));
+            //var ary = RequestResponseMessage.Split(',');
+            //bool hasMatch = ary.Any(x => toList.Any(y => y.Equals(x, StringComparison.InvariantCultureIgnoreCase)));
             //Randomize5DigitNumber();
             //Action
             //RequestResponseMessage = doInitiateClearingActionRequest();

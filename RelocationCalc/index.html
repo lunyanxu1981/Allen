@@ -19,7 +19,7 @@
                 <div class="input-group mb-1">                    
                     <input type="text" class="form-control" placeholder="使用面积"  v-model.lazy="LivingArea">
                     <div class="input-group-append">
-                        <select class="custom-select" v-model="ConstructionAreaFactor">
+                        <select class="main-select custom-select" v-model="ConstructionAreaFactor">
                             <option value="2.06">公寓(有电梯、成套) 2.06</option>
                             <option value="1.83">独立住宅 1.83</option>
                             <option value="1.82">新里住宅 1.82</option>
@@ -36,7 +36,7 @@
                 <div class="input-group mb-1">
                     <input type="text" class="form-control" placeholder="阁楼面积" v-model.lazy="AtticArea">
                     <div class="input-group-append">
-                        <select class="custom-select" v-model="AtticHeightFactor">                                
+                        <select class="main-select custom-select" v-model="AtticHeightFactor">                                
                             <option value="1">阁楼高度 >1.7m</option>
                             <option value="0.5">阁楼高度 1.2M ~ 1.7M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
                             <option value="0">阁楼高度 &lt;1.2</option>
