@@ -1,0 +1,34 @@
+/* pages/mine/mine.wxss */
+/* @import "/pages/test/test.wxss"; */
+
+page {
+  background-color: #fff;
+}
+.card-tuan {
+  border-bottom: 1rpx solid #d4d4d4;
+  padding: 20rpx 30rpx;
+}
+.tit-tuan {
+  font-size: 30rpx;
+  color: #000;
+  margin-bottom: 20rpx;
+}
+.card-tuan-bottom {
+  color: #827f7f;
+  font-size: 24rpx;
+}
+.tuan-status {
+  font-size: 32rpx;
+}
+.icon-arrow-right {
+  border-right: 1rpx solid #d4d4d4;
+  border-top: 1rpx solid #d4d4d4;
+  height: 20rpx;
+  width: 20rpx;
+  transform: rotate(45deg);
+  display: inline-block;
+  margin: 0 6rpx 0 2rpx;
+}
+.tuan-time {
+  margin-top: 10rpx;
+}

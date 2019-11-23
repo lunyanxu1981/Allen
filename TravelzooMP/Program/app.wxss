@@ -1,0 +1,90 @@
+/**app.wxss */
+page{
+  background-color:#f1f1f1;
+}
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}  */
+ .b-white{
+  background: #fff;
+} 
+.font-size-30,.f30{
+  font-size:30rpx;
+}
+.f22{
+  font-size:22rpx;
+}
+.f26{
+  font-size:26rpx;
+}
+.f28{
+  font-size:28rpx;
+}
+.font-size-24,.f24{
+  font-size:24rpx;
+}
+.font-size-38{
+  font-size:38rpx;
+}
+.p-10{
+  padding: 10rpx;
+}
+.m-b-20{
+  margin-bottom: 20rpx;
+}
+.m-t-10{
+  margin-top: 10rpx;
+}
+.oh {overflow: hidden;}
+.fl {float: left;}
+.fr {float: right;}
+.dflex {display: flex;}
+.dib {display: inline-block;}
+.flex1 {flex: 1;}
+.fbold {font-weight: 600;}
+.tc {text-align: center;}
+.modal-wrap,.nothings {
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+}
+.modal-cont {
+  background-color: #e7e6e6;
+  margin: 0 110rpx;
+  width: 524rpx;
+  box-sizing: border-box;
+}
+.btn-x {
+  height: 169rpx !important;
+  background-color: #fff !important;
+}
+.btn-blue {
+  background-color: #0276EE;
+}
+.h168 {
+  height: 168rpx !important;
+}
+.mb168 {
+  margin-bottom: 168rpx !important;
+}
+.nothings {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom: 0;
+}
+.nothings text {
+  display: inline-block;
+  font-size: 36rpx;
+  width: 60%;
+  color: #999;
+  text-align: center;
+  line-height: 2;
+}

@@ -1,0 +1,25 @@
+/* pages/test/test.wxss */
+.modal-box,.modal-box2{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  background:rgba(0,0,0,0.63);
+  overflow: hidden;
+  padding:18% 12%;
+  box-sizing: border-box;
+  z-index:1000;
+}
+.modal-box button{
+  position:absolute;
+  top:845rpx;
+  left:20%;
+  width:60%;
+  background: #ff7f7b;
+  color: #fff;
+}
+.close-hide{width:50rpx;height:50rpx;position:absolute;top:90rpx;right:50rpx;}
+.fenxiang-btn{width: 100%;height: 844rpx;}
+.color-blue,.cblue{color: #0276ee}
+.pr {position: relative;}

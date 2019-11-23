@@ -1,0 +1,276 @@
+
+*, html{
+	font-family: 'Open Sans', sans-serif;
+	font-size:10pt;
+	color: #3b3b3b;
+}
+
+#container{
+	max-width: 1000px;
+	position :relative;
+	margin-left: auto;
+	margin-right: auto;
+	
+	background-size: cover;
+	background-position: -1px -80px;
+	background-repeat: no-repeat;730
+}
+
+#inner_container {
+	position: relative;
+	width: 100%;
+	height: 650px;
+}
+
+#container.mobileContainer #map_controls{
+	display: none;
+}
+#container.mobileContainer{
+	border: 0px;
+}
+#container.mobileContainer #inner_container{
+	height: auto;
+}
+
+#map{
+	
+	height: 730px;
+
+	border: 0px solid transparent;
+
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+	top: 00px;
+	bottom: 0;
+	right: 0;
+}
+
+
+.mapplic-element{
+	background-color: transparent;
+}
+
+.mapplic-pin{
+	width: 35px;
+	height: 35px;
+	background-size: contain;
+}
+
+.mapplic-tooltip{
+	z-index: 5000;
+}
+
+.pin_cat_a{ background-image: url(assets/location_trinken.svg); }
+.pin_cat_e{ background-image: url(assets/location_essen.svg); }
+.pin_cat_h{ background-image: url(assets/location_hotels.svg); }
+.pin_cat_b{ background-image: url(assets/location_besondere-orte.svg); }
+
+
+.mapplic-levels>a{
+	display : none;
+}
+
+.mapplic-zoom-buttons{
+	left: unset;
+	bottom: unset;
+	margin: 0px;
+	top: unset;
+	position: relative;
+	float: left;
+	height: 28px;
+}
+
+
+
+.mapplic-zoom-buttons a.mapplic-disabled{
+	opacity: .5;
+	background-color: #3b3b3b;
+}
+
+
+.mapplic-control-new{
+	position: absolute;
+	right: 0px;
+	top: 10px;
+	min-height: 20px;
+	min-width: 230px;
+	background-color: white;
+	z-index: 500;
+	padding: 10px;
+
+	box-shadow: 0 0 25px rgba(0,0,0,.075);
+	border-radius: 0px;
+}
+
+
+a.mapplic-clear-button,
+.mapplic-zoom-buttons a{
+	display: inline-block;
+	border-radius: 0;
+	background-size: contain;
+	background-color: transparent;
+	position: relative;
+	border: 0;
+	margin: 0;
+}
+
+.mapplic-zoom-buttons a{
+	margin-right: 2px;
+}
+
+a.mapplic-zoomin-button{
+	background-image: url(assets/menu_zoon-in.svg);
+	border-radius: 0px;
+}
+a.mapplic-zoomout-button{
+	background-image: url(assets/menu_zoon-out.svg);
+	border-radius: 0px;
+}
+a.mapplic-clear-button{
+	background-image: url(assets/menu_zoon-adjust.svg);
+		
+}
+
+
+.mapplic-levels{
+	float: left;
+	position:relative;
+	margin: 0px;
+}
+
+.mapplic-levels-select{
+	height: 28px;
+	line-height: 28px;
+	padding: 0px .5rem;
+	background-color: #f3cf57;	
+	color: white;
+	border-radius: 0px;
+}
+
+
+
+.mapplic-levels-select option{
+	color: white;
+}
+
+
+.mapplic-tooltip h4{
+	margin: 0px;
+	margin-bottom: 2px;
+	font-size: 125%;
+	line-height: 20px;
+	font-weight: 600;
+	text-align: left;
+	color: #abc859;
+	/* color: #34b5e7; */
+	text-transform: uppercase;
+}
+
+.mapplic-tooltip-description,
+.mapplic-tooltip p{
+	line-height: 1.25rem;
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
+	color: #6a6a6a;
+	font-size: 100%;
+}
+
+.mapplic-tooltip.mapplic-hovertip,
+.mapplic-tooltip{
+	padding: 16px;
+}
+
+.mapplic-tooltip{
+	max-width: 400px;
+	max-height: inherit;
+}
+
+.mapplic-description-new div.col1,
+.mapplic-description-new div.col2{
+
+	display: table-cell;
+    vertical-align: middle;
+    padding: 4px;
+    white-space: normal;
+    border-top: 1px solid #cfcfcf;
+
+}
+
+.mapplic-description-new div.col1{
+	width: 25%;
+	font-weight: 600;
+	padding-left: 3rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	min-height: 2.5rem;
+
+
+}
+.mapplic-description-new div.col2{
+	width: 55%;
+
+	padding-left: 0.25rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+	min-height: 2.5rem;
+	border-left: 1px solid #cfcfcf;
+}
+
+.mapplic-description-new div.col2 a{
+	text-decoration: underline !important;
+}
+
+.mapplic-description-new div.row{
+	display: table-row;
+    border-top: 1px solid #cfcfcf;
+    /* width: 460px; */
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+
+.icon{
+
+	height: 1rem;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+}
+
+
+.icon_oeffnungszeiten{ background-image: url(assets/time.png?t112t); }
+.icon_oeffis{ background-image: url(assets/train.png?t112t); }
+.icon_besonderheiten{ background-image: url(assets/info.png?t21t);	}
+.icon_link{ background-image: url(assets/link.png?t21t);	}
+.icon_map{ background-image: url(assets/location.png); }
+
+.knopf.tGoogle{
+	 background-image: url(assets/menu_google-maps.svg); 
+	 width: 28px;
+	 height: 28px;
+	 float: left;
+	 margin-left: 10px;
+	 margin-right: 10px;
+}
+
+.knopf.tMaplic{
+	background-image: url(assets/gmaps_white.png);
+    width: 29px;
+    height: 29px;
+    /* float: left; */
+    right: 120px;
+    top: 10px;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    /* box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+.mapplic-tooltip-content {
+    max-width: 50vw;
+	max-height: 10vw;
+    overflow: auto;
+}

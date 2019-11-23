@@ -1,0 +1,1053 @@
+{
+    "mapwidth": 4393,
+    "mapheight": 2856,
+    "levels": {
+        "5": {
+            "id": "3ae3a963e4085e2f9d3357187915afba",
+            "title": "Alle",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Berlin.jpg",
+            "locations": {
+                "4e67c2ed780148de8b8e605b735d4ae5": {
+                    "id": "4e67c2ed780148de8b8e605b735d4ae5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Rathausstra\u00dfe 1, 10178 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Berlin Alexanderplatz Bahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden ge\u00f6ffnet<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Eine der \u00e4ltesten Schwulen-Kneipen Berlins. Die nur 20qm gro\u00dfe Bar war bereits in den 70ern in der DDR ein Ort der Begegnung f\u00fcr homosexuelle M\u00e4nner.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6322",
+                    "y": "0.3762",
+                    "pin": "pin_cat_a"
+                },
+                "3a182013238ff7fa04d61a3083087789": {
+                    "id": "3a182013238ff7fa04d61a3083087789",
+                    "title": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Reichenberger Str. 177, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich ab 18:00 Uhr, Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die queere Bar in einem ehemaligen M\u00f6belhaus bezeichnet sich selbst als \"Trinkhalle\" und zieht ein hippes, diverses Publikum an.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6295",
+                    "y": "0.5030",
+                    "pin": "pin_cat_a"
+                },
+                "34f2bccf96f3855e515cdc715b62c5df": {
+                    "id": "34f2bccf96f3855e515cdc715b62c5df",
+                    "title": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Rollbergstra\u00dfe 26, 12053<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Bhf Rathaus Neuk\u00f6lln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Freitag und Samstag von 23:00 bis 09:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1977 gegr\u00fcndet, ist das SchwuZ ein absoluter Klassiker des Berliner LGBT*-Lebens. Inzwischen ist es nicht nur Club, sondern auch Kulturzentrum f\u00fcr queere Menschen und deren Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6624",
+                    "y": "0.6191",
+                    "pin": "pin_cat_a"
+                },
+                "ef78b771125732daaa29bef3e24d56b9": {
+                    "id": "ef78b771125732daaa29bef3e24d56b9",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 20, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 08:00 bis 20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Nicht umsonst eines der beliebtesten Gay-Caf\u00e9s in Sch\u00f6neberg: neben ausgezeichnetem Kaffee in entspannter Atmosph\u00e4re gibt es hier auch die M\u00f6glichkeit, entspannt drau\u00dfen zu sitzen und das bunte Treiben in der Motzstra\u00dfe zu beobachten.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.3811",
+                    "y": "0.5511",
+                    "pin": "pin_cat_e"
+                },
+                "3761a16bc2748b63269c9c6673789e0f": {
+                    "id": "3761a16bc2748b63269c9c6673789e0f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Gleimstra\u00dfe 23, 10437 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S + U Sch\u00f6nhauser Allee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Freitag 08:00 bis 00:00 Uhr, Samstag und Sonntag 08:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Schall und Rauch gilt schon als Klassiker der schwulen Ostszene. Morgens gibt es im stilvollenn Caf\u00e9 leckeres Fr\u00fchst\u00fcck und guten Kaffee, abends kann man Weine in angenehmer Atmoshph\u00e4re genie\u00dfen. Dazu geh\u00f6rt auch ein Hotelbetrieb.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5860",
+                    "y": "0.2189",
+                    "pin": "pin_cat_e"
+                },
+                "20efec338ba55412973b0ca9ab107817": {
+                    "id": "20efec338ba55412973b0ca9ab107817",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mehringdamm 61, 10961 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Mehringdamm<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag von 17:00 bis 01:00 Uhr, Freitag von 17:00 bis 03:00 Uhr, Samstag von 16:00 bis 03:00 Uhr, Sonntag von 16:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Tags\u00fcber ein Caf\u00e9 und abends Bar, ist das Sundstr\u00f6m einer der bekanntesten Orte der schwul-lesbischen-Szene. Der Name will an die Souls\u00e4ngerin Melitta Sundstr\u00f6m erinnern, die 1993 im Alter von nur 29 Jahren an den Folgen von Aids starb.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5285",
+                    "y": "0.5874",
+                    "pin": "pin_cat_e"
+                },
+                "4377b4aef2149668cae246ce9a5b2c45": {
+                    "id": "4377b4aef2149668cae246ce9a5b2c45",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Lietzenburger Str. 13 \/ 15, 10789 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Wittenbergplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Berliner Haus der LGBT*-Hotelkette ist ein 4-Sterne Hotel in Berlin Sch\u00f6neberg. Neben den eleganten, stilvollen Zimmern gibt es auch einen Fitnessraum, eine Sauna, Bar und Restaurant sowie eine Lounge auf dem Dach.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3799",
+                    "y": "0.5364",
+                    "pin": "pin_cat_h"
+                },
+                "8594e726a692020ddfaf18d96d38859f": {
+                    "id": "8594e726a692020ddfaf18d96d38859f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Martin-Luther-Stra\u00dfe 21, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ganz in der N\u00e4he des Guesthouse 21 liegen die Bars und Restaurants des Rainbow-Kiezes rund um die Motz- und Fuggerstrasse.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3902",
+                    "y": "0.5578",
+                    "pin": "pin_cat_h"
+                },
+                "4df1fd4bfb1b29840e1ad536576459a4": {
+                    "id": "4df1fd4bfb1b29840e1ad536576459a4",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Ebertstra\u00dfe, 10557 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Brandenburger Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Gedenkst\u00e4tte am Berliner Tiergarten ist ein Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen. Das Denkmal besteht aus einem Betonquader mit einer gl\u00e4sernen \u00d6ffnung, durch die hindurch Besucher einen Kurzfilm sehen k\u00f6nnen. Es liegt gegen\u00fcber des Holocaust-Mahnmals-<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4228",
+                    "y": "0.3879",
+                    "pin": "pin_cat_b"
+                },
+                "5c9094b265bb0e4c06809c0f67ea1568": {
+                    "id": "5c9094b265bb0e4c06809c0f67ea1568",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">L\u00fctzowstra\u00dfe 73, 10785 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kurf\u00fcrstenstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Freitag und Sonntag von 14:00 bis 18:00 Uhr, Donnerstag von 14:00 bis 20:00 Uhr, Samstag von 14:00 bis 19:00 Uhr, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1985 gegr\u00fcndet beheimatet das Schwule Museum Ausstellungen, verschiedene Veranstaltungen und Archivarbeiten, die sich mit lesbischen, schwulen, transsexuellen, bisexuellen und queeren Lebensgeschichten, Themen und Konzepten in Geschichte, Kunst und Kultur auseinandersetzen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4035",
+                    "y": "0.5028",
+                    "pin": "pin_cat_b"
+                },
+                "9e4f1e90be7079b4a83b2c95c3afdb30": {
+                    "id": "9e4f1e90be7079b4a83b2c95c3afdb30",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Potsdamer Stra\u00dfe 139, 10783 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U B\u00fclowstra\u00dfe \/ Kurf\u00fcrstenstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Freitag ab 17:00 Uhr, Samstag ab 19:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Kulturzentrum ist ein exklusiver Ort f\u00fcr Frauen. Der alternativen Veranstaltungsort f\u00fcr Lesben und Feminist*innen ist ein Berliner Kulturort f\u00fcr Frauen geworden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4374",
+                    "y": "0.5465",
+                    "pin": "pin_cat_b"
+                },
+                "2eeb17d23357159f3eb0dfe538bf4846": {
+                    "id": "2eeb17d23357159f3eb0dfe538bf4846",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Greifenhagener Str. 28, 10437 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Sch\u00f6nhauser Allee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich ab 18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Beratungs- und Informationszentrum ist gleichzeitig Treffpunkt, Caf\u00e9 und Kulturort f\u00fcr Lesben, Schwule,  Bisexuelle, Trans*, Inter* und ihre Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6035",
+                    "y": "0.1962",
+                    "pin": "pin_cat_b"
+                },
+                "056e9b84b020fb145ae701052fead83a": {
+                    "id": "056e9b84b020fb145ae701052fead83a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Magnus-Hirschfeld-Ufer, 10557 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Bellevue<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Denkmal f\u00fcr die (weltweit) erste homosexuelle Emanzipationsbewegung, die Ende des 19. Jahrhunderts in Berlin begann.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4006",
+                    "y": "0.3705",
+                    "pin": "pin_cat_b"
+                },
+                "e8b471e0f1523cd7d1a31af936c0ddd2": {
+                    "id": "e8b471e0f1523cd7d1a31af936c0ddd2",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Naunynstra\u00dfe 72, 10997 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag 14:00 bis 23:00 Uhr, Dienstag-Sonntag 11:00 bis 23:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Frauenzentrum bietet als Verein Beratungsm\u00f6glichkeiten sowie verschiedene Veranstaltungen und Angebote von und f\u00fcr Frauen. Im Keller befindet sich ein Hamam, ein t\u00fcrkisches Bad f\u00fcr Frauen, das oft von Lesben besucht wird.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6487",
+                    "y": "0.5078",
+                    "pin": "pin_cat_b"
+                },
+                "c31eecf426b6f5b4a45aeb0a01046395": {
+                    "id": "c31eecf426b6f5b4a45aeb0a01046395",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Stra\u00dfenecke Eisenacher Stra\u00dfe und Winterfeldtstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Gedenkort erinnert an die lesbische Aktivistin und Antifaschistin Hilde Radusch. Sie war unter anderem Mitbegr\u00fcnderin des Frauenforschungs-, -bildungs- und -informationszentrums (FFBIZ).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4039",
+                    "y": "0.5600",
+                    "pin": "pin_cat_b"
+                },
+                "dce554ff31f6cd192c2c16a90e05e803": {
+                    "id": "dce554ff31f6cd192c2c16a90e05e803",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Naumannstra\u00dfe 47, 10829 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Julius-Leber-Br\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kitty Kuse war eine wichtige Aktivistin f\u00fcr die Rechte lesbischer Frauen. Nach ihr wurde der Platz in Sch\u00f6neberg benannt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4694",
+                    "y": "0.6642",
+                    "pin": "pin_cat_b"
+                },
+                "ca10db0ee00925bcbb8cea47e34793ed": {
+                    "id": "ca10db0ee00925bcbb8cea47e34793ed",
+                    "title": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Nollendorfplatz 10777  Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Nollendorfplatz und der sich dort befindende Regenbogenkiez sind international bekannt. Hier tobte bereits in der Weimarer Republik das queere Leben. Am U Bahnhof erinnert eine Gedenktafel an die von den Nationalsozialisten verfolgten und get\u00f6teten Homosexuellen. Zudem wird das Dach nachts in Regenbogenfarben beleuchtet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4152",
+                    "y": "0.5577",
+                    "pin": "pin_cat_b"
+                },
+                "c858a8690c34136c388a4abc75c8b708": {
+                    "id": "c858a8690c34136c388a4abc75c8b708",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 23, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 10:00 bis 20:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Prinz Eisenherz Buchhandlung wurde im November 1978 in Berlin als erster schwuler Buchladen Deutschlands gegr\u00fcndet. Neben einem umfangreichen Sortiment queerer Literatur finden dort auch regelm\u00e4\u00dfig Lesungen und Veranstaltungen statt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3995",
+                    "y": "0.5734",
+                    "pin": "pin_cat_b"
+                },
+                "1e86f41756394b4e465e13561f51e09f": {
+                    "id": "1e86f41756394b4e465e13561f51e09f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Niederkirchnerstra\u00dfe 8, 10963 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kochstra\u00dfe\/Checkpoint Charlie<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 10:00 bis 20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Einer der meist besuchten Erinnerungsorte und Museen Berlins. Auf dem Gel\u00e4nde, auf dem sich einst die wichtigsten Einrichtungen des nationalsozialistischen Verfolgungs- und Terrorapparates befanden, befinden sich heute verschiedene Austellungen und Gedenkst\u00e4tten, die auch an die Verfolgung Homosexueller erinnern.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4982",
+                    "y": "0.4714",
+                    "pin": "pin_cat_b"
+                },
+                "20027073eb4c51f7b3c0aaf11caac967": {
+                    "id": "20027073eb4c51f7b3c0aaf11caac967",
+                    "title": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Karl-Marx-Allee 33, 10178 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Schillingstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Montag um 22:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Jeden Montag werden im Kino International in famili\u00e4rer Atmosph\u00e4re queere Filme gezeigt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4843",
+                    "y": "0.4721",
+                    "pin": "pin_cat_b"
+                },
+                "f6955ad6254fc16ca583f5d335b10936": {
+                    "id": "f6955ad6254fc16ca583f5d335b10936",
+                    "title": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Admiralstra\u00dfe 1-2, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag von 11:00 bis 01:00 Uhr, Freitag und Samstag von 11:00 bis 02:00 Uhr, Sonntag von 10:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Im dem queeren Caf\u00e9- und Biergarten gibt es nicht nur leckeren Kaffee und hausgemachten Kuchen, sondern auch Hartz 4-Beratung, einen Queer-Treff und einen Haarsalon sowie Livemusik und Kunstevents.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6212",
+                    "y": "0.5342",
+                    "pin": "pin_cat_b"
+                },
+                "3ff2a3a34d8b8b507ead121911fa071b": {
+                    "id": "3ff2a3a34d8b8b507ead121911fa071b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Oranienstra\u00dfe 190, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Meist am letzten Samstag im Monat, 22:00 bis 06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bereits seit \u00fcber zwei Jahrzehnten findet im Club SO36 in Kreuzberg monatlich die schwul-lesbische HomOriental-Party\"Gayhane\" statt. Zu orientalischer Musik wird hier queere Kultur gefeiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6443",
+                    "y": "0.5039",
+                    "pin": "pin_cat_b"
+                },
+                "db57bfb68b7529ad8433acfd37717035": {
+                    "id": "db57bfb68b7529ad8433acfd37717035",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mehringdamm 79, 10965 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Platz der Luftbr\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Donnerstag und Freitag von 11:00 bis 20:00 Uhr, Dienstag von 11:00 bis 18:00, Samstag von 11:00 bis 19:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Other Nature ist ein alternativer Sexshop in Berlin: nach eigener Aussage \"feminist, queer, sex-positive, vegan and eco-friendly\".<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5320",
+                    "y": "0.6100",
+                    "pin": "pin_cat_b"
+                },
+                "1e8536ed93215f24b3670a59bc5aae0c": {
+                    "id": "1e8536ed93215f24b3670a59bc5aae0c",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Steinstra\u00dfe 21, 10119 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weinmeisterstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Donnerstag, Sonntag von 19:00 bis 02:00 Uhr, Freitag und Samstag von 21:00 bis 03:00 Uhr, Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In der kleinen Souterrain-Bar werden hochwertige Longdrinks in entspannter Einrichtung serviert. Die Bar hat sich zu einer der beliebtesten Szene-Bars in Berlin-Mitte entwickelt und ist ein Treffpunkt f\u00fcr schwule M\u00e4nner.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5791",
+                    "y": "0.3228",
+                    "pin": "pin_cat_a"
+                },
+                "59135b2bd2414138d41ea0de2dea28c6": {
+                    "id": "59135b2bd2414138d41ea0de2dea28c6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Nollendorfstra\u00dfe 11, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mittwoch - Samstag 13:00 bis 19:00 Uhr, Sonntag - Dienstag nur mit Termin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der unabh\u00e4ngige Non-profit-Kunstraum strebt eine ausgewogene Repr\u00e4sentation der Gesellschaft an. Der Schwerpunkt liegt auf der Darstellung von Perspektiven, die die Vielfalt und Gleichstellung innerhalb der Gemeinschaft f\u00f6rdern, wobei verschiedenste k\u00fcnstlerische Ans\u00e4tze aufgegriffen werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4185",
+                    "y": "0.5604",
+                    "pin": "pin_cat_b"
+                },
+                "c4023722d6bfc151c5e9f8979351b621": {
+                    "id": "c4023722d6bfc151c5e9f8979351b621",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mulackstra\u00dfe 13, 10119 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weinmeisterstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Freitag und Samstag von 20:00 bis 05:00 Uhr, Sonntag - Donnerstag von 20:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die kleine Bar mit \u00fcberwiegend schwul-lesbischem Publikum \u00fcberzeugt durch ihre gem\u00fctlich-trashige Einrichtung. Hier ist gute Stimmung garantiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5885",
+                    "y": "0.3082",
+                    "pin": "pin_cat_a"
+                },
+                "f9f21405d81c96e3853afbaa40252503": {
+                    "id": "f9f21405d81c96e3853afbaa40252503",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Revaler Str. 99, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Warschauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag 19:30 bis 04:00 Uhr, Freitag und Samstag 20:00 Uhr bis 06:00 Uhr, Sonntag 19:30 bis 02:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Bar mit dem au\u00dfergew\u00f6hnlichen Namen befindet sich auf dem RAW Gel\u00e4nde. Hier finden des \u00f6fteren Veranstaltungen wie Public Viewings, Open-Stage-Abende oder originelle Themenpartys statt. Jeder ist willkommen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.7111",
+                    "y": "0.4764",
+                    "pin": "pin_cat_a"
+                },
+                "c4686e5fefd73488bd90cb44aaeff98d": {
+                    "id": "c4686e5fefd73488bd90cb44aaeff98d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schlesische Str. 16, 10997 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Schlesisches Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Donnerstag 18:00 bis 03:00 Uhr, Freitag und Samstag 18:00 bis 05:00 Uhr, Sonntag und Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Barbie Deinhoffs ist eine extravagante, in rosa Licht getauchte Bar mit internationalem gemischtem LGBT-Publikum. Hier finden auch oft Performances statt. Am Dienstag ist die ganze Nacht \u00fcber Happy Hour.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6785",
+                    "y": "0.5090",
+                    "pin": "pin_cat_a"
+                },
+                "bf1e05a0b449c681992c40b6d1e6f652": {
+                    "id": "bf1e05a0b449c681992c40b6d1e6f652",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Simon-Dach-Stra\u00dfe 36, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Frankfurter Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Samstag: 18:00 bis sp\u00e4t in die Nacht Sonntag: 16:00 Uhr bis in die Nacht<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In dieser ungezwungenen Bar treffen sich Menschen unterschiedlichsten Alters und unabh\u00e4ngig von ihrer Sexualit\u00e4t.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6853",
+                    "y": "0.4314",
+                    "pin": "pin_cat_e"
+                },
+                "5d25d7f0853d16fe90bf50c11c8159df": {
+                    "id": "5d25d7f0853d16fe90bf50c11c8159df",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Warschauer Pl. 18, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Warschauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Freitag und Samstag ab 22:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Busche ist Berlins gr\u00f6\u00dfter Party-Club f\u00fcr Gays, Lesben, Transen, Bisexuelle und deren Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6819",
+                    "y": "0.4629",
+                    "pin": "pin_cat_a"
+                },
+                "4779a309e19e8db8d5bdb3355158df33": {
+                    "id": "4779a309e19e8db8d5bdb3355158df33",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Weserstra\u00dfe 206, 12047 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Hermannplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 17:00 bis 02:00 Uhr, Freitag und Samstag 17:00 - 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar mit schwul-lesbischem Publikum, Konzerten, Ausstellungen und alternativem Vintage-Dekor.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6508",
+                    "y": "0.5668",
+                    "pin": "pin_cat_e"
+                },
+                "603a4da185e7d9d8f82d8e970d4419a7": {
+                    "id": "603a4da185e7d9d8f82d8e970d4419a7",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Anklamer Str. 38, 10115 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Bernauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mittwoch und Freitag 14:00 bis 19:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Spinnboden\" ist eine Spezialbibliothek und ein Archiv zu lesbischen Themen. Dort ist die gr\u00f6\u00dfte Sammlung von Zeugnissen und Spuren lesbischer Existenz zu finden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5498",
+                    "y": "0.2796",
+                    "pin": "pin_cat_b"
+                },
+                "40d05ceb416571bf6690f0eb938eb64c": {
+                    "id": "40d05ceb416571bf6690f0eb938eb64c",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Urbanstra\u00dfe 70, 10967 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Hermannplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Tag 22:00 bis 08:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Ficken 3000 ist seit rund 20 Jahren eine Institution im Berliner Nachtleben. Bar und Dark Room mit \u00fcberwiegend schwulem Publikum.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6385",
+                    "y": "0.5675",
+                    "pin": "pin_cat_a"
+                },
+                "f438890c26761595b6ba3db9f0df916c": {
+                    "id": "f438890c26761595b6ba3db9f0df916c",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Hauptstra\u00dfe 157, 10827 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kleistpark<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Sonntag 14:00 - 02:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Caf\u00e9 Neues Ufer war als \"Anderes Ufer\" einst das erste offen schwul-lesbische Caf\u00e9 Berlins. Auch David Bowie ging hier ein und aus. Es ist bis heute ein Traditionslokal der queeren Szene.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4552",
+                    "y": "0.6151",
+                    "pin": "pin_cat_e"
+                },
+                "c242c19dd47fe47c914fb9bb823a44ab": {
+                    "id": "c242c19dd47fe47c914fb9bb823a44ab",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kolonnenstra\u00dfe 5, 10827 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Julius-Leber-Br\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselndes Programm<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1909 er\u00f6ffnet, ist es das erste nachweisbare Kinematographentheater Sch\u00f6nebergs. Der Schwerpunkt des kleinen Kinos liegt auf Queer Film, Kinderkino, Dokumentationen und OmU.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4452",
+                    "y": "0.6369",
+                    "pin": "pin_cat_b"
+                },
+                "2bef3dc66114c30ea3d8cd54ef625b08": {
+                    "id": "2bef3dc66114c30ea3d8cd54ef625b08",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 19, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein zentral gelegenes Gay Hotel in der Hauptstadt inklusive Hotel-Pass f\u00fcr die Erkundgung der umliegenden schwulen Szene.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4042",
+                    "y": "0.5400",
+                    "pin": "pin_cat_h"
+                },
+                "efc0f4e2893de9be6259ba176a218f15": {
+                    "id": "efc0f4e2893de9be6259ba176a218f15",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kulmer Str. 20A, 10783 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Yorckstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Freitag 14:00 bis 17:00 Uhr, Dienstag 10:00 bis 18:00 Uhr, Donnerstag 15:00 bis 18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Lesbenberatung bietet Beratung, Casemanagement und Raum f\u00fcr Begegnung in einem gesch\u00fctzten Rahmen f\u00fcr Frauen, M\u00e4dchen, Trans* und Inter* in unterschiedlichen Lebenssituationen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4667",
+                    "y": "0.6042",
+                    "pin": "pin_cat_b"
+                },
+                "ad79730015b9f488fb1bc90efdcb0862": {
+                    "id": "ad79730015b9f488fb1bc90efdcb0862",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Sonnenallee 221, 12059 Berlin Neukoelln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Sonnenallee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselndes Programm, Flohmarkt jeden ersten und dritten Freitag im Monat<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ehemaliges Industriegel\u00e4nde dient als Kleinkunstb\u00fchne, Tanzfl\u00e4che und Clubgarten und l\u00e4dt zum Flohmarktbesuch.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.7312",
+                    "y": "0.6627",
+                    "pin": "pin_cat_b"
+                },
+                "04113b2983bc3a4b4bcd6c6886ec4a0e": {
+                    "id": "04113b2983bc3a4b4bcd6c6886ec4a0e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Reuterstra\u00dfe 85, 12053 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Boddinstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 18:00 bis 00:30 Uhr, Freitag und Samstag 18:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche, vegane, queer Bar mit spanischen Tapas und Sonntagsbrunch ohne tierische Produkte sowie Cocktails.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6582",
+                    "y": "0.6054",
+                    "pin": "pin_cat_e"
+                },
+                "2a50cfc77fb9a874dc220c964e8d9bcd": {
+                    "id": "2a50cfc77fb9a874dc220c964e8d9bcd",
+                    "title": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Fuggerstra\u00dfe 33, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das ArtHotel Connection beschreibt sich selbst als \"heterofreundliches\" Gay-Hotel im Berliner Jugendstil. Es befindet sich mitten im Gay-Kiez in Sch\u00f6neberg, dicht am Nollendorfplatz.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3892",
+                    "y": "0.5407",
+                    "pin": "pin_cat_h"
+                },
+                "a36e79a9066c0d2c272b1485d4106d46": {
+                    "id": "a36e79a9066c0d2c272b1485d4106d46",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kalckreuthstra\u00dfe 12, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz \/ U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Hotel im Boutique-Stil liegt zentral im Berliner Stadtteil Sch\u00f6neberg und mitten im Gay-Viertel. Es ist einen 8-min\u00fctigen Spaziergang vom Kaufhaus KaDeWe und vom Kurf\u00fcrstendamm entfernt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3982",
+                    "y": "0.5762",
+                    "pin": "pin_cat_h"
+                },
+                "25175b0057a4786df8b535cefe6d9640": {
+                    "id": "25175b0057a4786df8b535cefe6d9640",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kalckreuthstra\u00dfe 10, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz \/ U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das GAY HOSTEL liegt zentral in Sch\u00f6neberg - mitten im schwulen Kiez. Mit dem Hostel-Pass, der inklusive ist, erh\u00e4ltst du in der schwulen Szene verschiedene, exklusive Vorteile.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4001",
+                    "y": "0.5670",
+                    "pin": "pin_cat_h"
+                },
+                "8e0fcc8c6a70b0a9802730c792865bcb": {
+                    "id": "8e0fcc8c6a70b0a9802730c792865bcb",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Am Wriezener Bahnhof, 10243 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Berlin Ostbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Donnerstag 22:00 bis 04:00 Uhr, Freitag 23:59 bis 09:00 Uhr, Samstag 23:59 bis Sonntag 24 Stunden<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Berliner Berghain ist ein Techno-Club im Berliner Ortsteil Friedrichshain und gilt als einer der besten Clubs der Welt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6978",
+                    "y": "0.4491",
+                    "pin": "pin_cat_a"
+                },
+                "5c17a4199f20786cec864e0c3564ef19": {
+                    "id": "5c17a4199f20786cec864e0c3564ef19",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 5, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 19:00 bis 02:00 Uhr, Freitag und Samstag 19:00 bis 04:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Heile Welt ist eine Szene-Bar und eine Institution im Sch\u00f6neberger Kiez rund um den Nollendorfplatz. Die moderne Bar hat vorwiegend schwule und lesbische G\u00e4ste.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4327",
+                    "y": "0.5697",
+                    "pin": "pin_cat_a"
+                },
+                "3081c9330aa7f8e1eee3d04d5bebb441": {
+                    "id": "3081c9330aa7f8e1eee3d04d5bebb441",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Marienburger Str. 7, 10405 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Senefelderplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Freitag 19:00 Uhr bis open end, Samstag 20:00 Uhr bis open end, Sonntag und Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In der traditionsreichen Kiezbar finden regelm\u00e4\u00dfig Mottopartys und monatliche Drag-Bingo-Abende statt (erster Freitag im Monat).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6110",
+                    "y": "0.3008",
+                    "pin": "pin_cat_a"
+                },
+                "4e7750d31e282d2907a5e6b93563d1f8": {
+                    "id": "4e7750d31e282d2907a5e6b93563d1f8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Novalisstra\u00dfe 11, 10115 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Oranienburger Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Samstag 20:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Reingold z\u00e4hlt zu den besten Bars in Berlin: Die Cocktails werden von Kennern der \u201eBarschule Berlin\u201c in hoher Qualit\u00e4t gemixt und die Inneneinrichtung erinnert an die edlen Drei\u00dfigerjahre.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5299",
+                    "y": "0.2987",
+                    "pin": "pin_cat_a"
+                }
+            }
+        },
+        "4": {
+            "id": "990f9158026f54f02b0cecfdcd35db5e",
+            "title": "Besondere Orte",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Berlin.jpg",
+            "locations": {
+                "5427741829f0383cdbd0b9906d4e0a5f": {
+                    "id": "5427741829f0383cdbd0b9906d4e0a5f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Ebertstra\u00dfe, 10557 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Brandenburger Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Gedenkst\u00e4tte am Berliner Tiergarten ist ein Denkmal f\u00fcr die im Nationalsozialismus verfolgten Homosexuellen. Das Denkmal besteht aus einem Betonquader mit einer gl\u00e4sernen \u00d6ffnung, durch die hindurch Besucher einen Kurzfilm sehen k\u00f6nnen. Es liegt gegen\u00fcber des Holocaust-Mahnmals-<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4228",
+                    "y": "0.3879",
+                    "pin": "pin_cat_b"
+                },
+                "15d6a7835586aefd3aa7c9738e06c8ad": {
+                    "id": "15d6a7835586aefd3aa7c9738e06c8ad",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schwules Museum<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">L\u00fctzowstra\u00dfe 73, 10785 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kurf\u00fcrstenstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Freitag und Sonntag von 14:00 bis 18:00 Uhr, Donnerstag von 14:00 bis 20:00 Uhr, Samstag von 14:00 bis 19:00 Uhr, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1985 gegr\u00fcndet beheimatet das Schwule Museum Ausstellungen, verschiedene Veranstaltungen und Archivarbeiten, die sich mit lesbischen, schwulen, transsexuellen, bisexuellen und queeren Lebensgeschichten, Themen und Konzepten in Geschichte, Kunst und Kultur auseinandersetzen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4035",
+                    "y": "0.5028",
+                    "pin": "pin_cat_b"
+                },
+                "703e11291458b5e3db5f85802c2018b0": {
+                    "id": "703e11291458b5e3db5f85802c2018b0",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Begine<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Potsdamer Stra\u00dfe 139, 10783 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U B\u00fclowstra\u00dfe \/ Kurf\u00fcrstenstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Freitag ab 17:00 Uhr, Samstag ab 19:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Kulturzentrum ist ein exklusiver Ort f\u00fcr Frauen. Der alternativen Veranstaltungsort f\u00fcr Lesben und Feminist*innen ist ein Berliner Kulturort f\u00fcr Frauen geworden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4374",
+                    "y": "0.5465",
+                    "pin": "pin_cat_b"
+                },
+                "2d23fdd2613becee5bd7ce7320c30717": {
+                    "id": "2d23fdd2613becee5bd7ce7320c30717",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Sonntagsclub<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Greifenhagener Str. 28, 10437 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Sch\u00f6nhauser Allee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich ab 18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Beratungs- und Informationszentrum ist gleichzeitig Treffpunkt, Caf\u00e9 und Kulturort f\u00fcr Lesben, Schwule,  Bisexuelle, Trans*, Inter* und ihre Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6035",
+                    "y": "0.1962",
+                    "pin": "pin_cat_b"
+                },
+                "6a77c81abb886f5c87366b3133b7397e": {
+                    "id": "6a77c81abb886f5c87366b3133b7397e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Magnus-Hirschfeld-Denkmal<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Magnus-Hirschfeld-Ufer, 10557 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Bellevue<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Denkmal f\u00fcr die (weltweit) erste homosexuelle Emanzipationsbewegung, die Ende des 19. Jahrhunderts in Berlin begann.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4006",
+                    "y": "0.3705",
+                    "pin": "pin_cat_b"
+                },
+                "edc1f5dabdadf5bb641e2781e9a68c9b": {
+                    "id": "edc1f5dabdadf5bb641e2781e9a68c9b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schokofabrik<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Naunynstra\u00dfe 72, 10997 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag 14:00 bis 23:00 Uhr, Dienstag-Sonntag 11:00 bis 23:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Frauenzentrum bietet als Verein Beratungsm\u00f6glichkeiten sowie verschiedene Veranstaltungen und Angebote von und f\u00fcr Frauen. Im Keller befindet sich ein Hamam, ein t\u00fcrkisches Bad f\u00fcr Frauen, das oft von Lesben besucht wird.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6487",
+                    "y": "0.5078",
+                    "pin": "pin_cat_b"
+                },
+                "50e6e3b884e7c2ddc4b8036e614db4ab": {
+                    "id": "50e6e3b884e7c2ddc4b8036e614db4ab",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gedenkort Hilde Radusch<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Stra\u00dfenecke Eisenacher Stra\u00dfe und Winterfeldtstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Gedenkort erinnert an die lesbische Aktivistin und Antifaschistin Hilde Radusch. Sie war unter anderem Mitbegr\u00fcnderin des Frauenforschungs-, -bildungs- und -informationszentrums (FFBIZ).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4039",
+                    "y": "0.5600",
+                    "pin": "pin_cat_b"
+                },
+                "46ca5e138bd1c1c25a834e5256a593b9": {
+                    "id": "46ca5e138bd1c1c25a834e5256a593b9",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Kitty-Kuse-Platz<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Naumannstra\u00dfe 47, 10829 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Julius-Leber-Br\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kitty Kuse war eine wichtige Aktivistin f\u00fcr die Rechte lesbischer Frauen. Nach ihr wurde der Platz in Sch\u00f6neberg benannt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4694",
+                    "y": "0.6642",
+                    "pin": "pin_cat_b"
+                },
+                "b1f44ec3bd62d6896badd9ec4da46fd8": {
+                    "id": "b1f44ec3bd62d6896badd9ec4da46fd8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>U Bahnhof Nollendorfplatz<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Nollendorfplatz 10777  Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Nollendorfplatz und der sich dort befindende Regenbogenkiez sind international bekannt. Hier tobte bereits in der Weimarer Republik das queere Leben. Am U Bahnhof erinnert eine Gedenktafel an die von den Nationalsozialisten verfolgten und get\u00f6teten Homosexuellen. Zudem wird das Dach nachts in Regenbogenfarben beleuchtet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4152",
+                    "y": "0.5577",
+                    "pin": "pin_cat_b"
+                },
+                "ad6ed7efcb5953b3170e72aa0a5a936c": {
+                    "id": "ad6ed7efcb5953b3170e72aa0a5a936c",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Prinz Eisenherz Buchhandlung<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 23, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 10:00 bis 20:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Prinz Eisenherz Buchhandlung wurde im November 1978 in Berlin als erster schwuler Buchladen Deutschlands gegr\u00fcndet. Neben einem umfangreichen Sortiment queerer Literatur finden dort auch regelm\u00e4\u00dfig Lesungen und Veranstaltungen statt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3995",
+                    "y": "0.5734",
+                    "pin": "pin_cat_b"
+                },
+                "5962ea3aded43c653c2c7844ad0f675a": {
+                    "id": "5962ea3aded43c653c2c7844ad0f675a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Topographie des Terrors<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Niederkirchnerstra\u00dfe 8, 10963 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kochstra\u00dfe\/Checkpoint Charlie<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 10:00 bis 20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Einer der meist besuchten Erinnerungsorte und Museen Berlins. Auf dem Gel\u00e4nde, auf dem sich einst die wichtigsten Einrichtungen des nationalsozialistischen Verfolgungs- und Terrorapparates befanden, befinden sich heute verschiedene Austellungen und Gedenkst\u00e4tten, die auch an die Verfolgung Homosexueller erinnern.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4982",
+                    "y": "0.4714",
+                    "pin": "pin_cat_b"
+                },
+                "6b612049378e80efb62e3d472c81ace9": {
+                    "id": "6b612049378e80efb62e3d472c81ace9",
+                    "title": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>MonGay<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Karl-Marx-Allee 33, 10178 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Schillingstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Montag um 22:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Jeden Montag werden im Kino International in famili\u00e4rer Atmosph\u00e4re queere Filme gezeigt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4843",
+                    "y": "0.4721",
+                    "pin": "pin_cat_b"
+                },
+                "4a813aa90b6846968e380a9a8485a734": {
+                    "id": "4a813aa90b6846968e380a9a8485a734",
+                    "title": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>S\u00fcdblock<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Admiralstra\u00dfe 1-2, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag von 11:00 bis 01:00 Uhr, Freitag und Samstag von 11:00 bis 02:00 Uhr, Sonntag von 10:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Im dem queeren Caf\u00e9- und Biergarten gibt es nicht nur leckeren Kaffee und hausgemachten Kuchen, sondern auch Hartz 4-Beratung, einen Queer-Treff und einen Haarsalon sowie Livemusik und Kunstevents.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6212",
+                    "y": "0.5342",
+                    "pin": "pin_cat_b"
+                },
+                "30e8ac0655814f0b3a8f3141d0d24414": {
+                    "id": "30e8ac0655814f0b3a8f3141d0d24414",
+                    "title": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>SO36\/Gayhane<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Oranienstra\u00dfe 190, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Meist am letzten Samstag im Monat, 22:00 bis 06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bereits seit \u00fcber zwei Jahrzehnten findet im Club SO36 in Kreuzberg monatlich die schwul-lesbische HomOriental-Party\"Gayhane\" statt. Zu orientalischer Musik wird hier queere Kultur gefeiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6443",
+                    "y": "0.5039",
+                    "pin": "pin_cat_b"
+                },
+                "73d27157c8a44eb3e7d5b80f4206e77d": {
+                    "id": "73d27157c8a44eb3e7d5b80f4206e77d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Other Nature<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mehringdamm 79, 10965 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Platz der Luftbr\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Donnerstag und Freitag von 11:00 bis 20:00 Uhr, Dienstag von 11:00 bis 18:00, Samstag von 11:00 bis 19:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Other Nature ist ein alternativer Sexshop in Berlin: nach eigener Aussage \"feminist, queer, sex-positive, vegan and eco-friendly\".<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5320",
+                    "y": "0.6100",
+                    "pin": "pin_cat_b"
+                },
+                "a571f74b25ee3cdc7e462dff4f12ee43": {
+                    "id": "a571f74b25ee3cdc7e462dff4f12ee43",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Galerie The Ballery<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Nollendorfstra\u00dfe 11, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mittwoch - Samstag 13:00 bis 19:00 Uhr, Sonntag - Dienstag nur mit Termin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der unabh\u00e4ngige Non-profit-Kunstraum strebt eine ausgewogene Repr\u00e4sentation der Gesellschaft an. Der Schwerpunkt liegt auf der Darstellung von Perspektiven, die die Vielfalt und Gleichstellung innerhalb der Gemeinschaft f\u00f6rdern, wobei verschiedenste k\u00fcnstlerische Ans\u00e4tze aufgegriffen werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4185",
+                    "y": "0.5604",
+                    "pin": "pin_cat_b"
+                },
+                "ea22e7c6feba39e721855c8cf96ecc87": {
+                    "id": "ea22e7c6feba39e721855c8cf96ecc87",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Spinnboden. Lesbenarchiv und Bibliothek<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Anklamer Str. 38, 10115 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Bernauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mittwoch und Freitag 14:00 bis 19:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Spinnboden\" ist eine Spezialbibliothek und ein Archiv zu lesbischen Themen. Dort ist die gr\u00f6\u00dfte Sammlung von Zeugnissen und Spuren lesbischer Existenz zu finden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5498",
+                    "y": "0.2796",
+                    "pin": "pin_cat_b"
+                },
+                "4ebfb5bab2fb5432e24c7d94fde2d029": {
+                    "id": "4ebfb5bab2fb5432e24c7d94fde2d029",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Xenon Kino<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kolonnenstra\u00dfe 5, 10827 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Julius-Leber-Br\u00fccke<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselndes Programm<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1909 er\u00f6ffnet, ist es das erste nachweisbare Kinematographentheater Sch\u00f6nebergs. Der Schwerpunkt des kleinen Kinos liegt auf Queer Film, Kinderkino, Dokumentationen und OmU.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4452",
+                    "y": "0.6369",
+                    "pin": "pin_cat_b"
+                },
+                "100a7a8dc4ffa624046289e0caffad32": {
+                    "id": "100a7a8dc4ffa624046289e0caffad32",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Lesbenberatung<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kulmer Str. 20A, 10783 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Yorckstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag, Mittwoch, Freitag 14:00 bis 17:00 Uhr, Dienstag 10:00 bis 18:00 Uhr, Donnerstag 15:00 bis 18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Lesbenberatung bietet Beratung, Casemanagement und Raum f\u00fcr Begegnung in einem gesch\u00fctzten Rahmen f\u00fcr Frauen, M\u00e4dchen, Trans* und Inter* in unterschiedlichen Lebenssituationen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4667",
+                    "y": "0.6042",
+                    "pin": "pin_cat_b"
+                },
+                "9ee63663bb90de0493f0ee46dcb3f187": {
+                    "id": "9ee63663bb90de0493f0ee46dcb3f187",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Griessm\u00fchle<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Sonnenallee 221, 12059 Berlin Neukoelln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Sonnenallee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselndes Programm, Flohmarkt jeden ersten und dritten Freitag im Monat<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ehemaliges Industriegel\u00e4nde dient als Kleinkunstb\u00fchne, Tanzfl\u00e4che und Clubgarten und l\u00e4dt zum Flohmarktbesuch.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.7312",
+                    "y": "0.6627",
+                    "pin": "pin_cat_b"
+                }
+            }
+        },
+        "3": {
+            "id": "c7079898101e2ecafd0af6061f8d936f",
+            "title": "Hotels & Unterk\u00fcnfte",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Berlin.jpg",
+            "locations": {
+                "393561afd79c540fb6dd78bff2599d89": {
+                    "id": "393561afd79c540fb6dd78bff2599d89",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Axel Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Lietzenburger Str. 13 \/ 15, 10789 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Wittenbergplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Berliner Haus der LGBT*-Hotelkette ist ein 4-Sterne Hotel in Berlin Sch\u00f6neberg. Neben den eleganten, stilvollen Zimmern gibt es auch einen Fitnessraum, eine Sauna, Bar und Restaurant sowie eine Lounge auf dem Dach.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3799",
+                    "y": "0.5364",
+                    "pin": "pin_cat_h"
+                },
+                "4f75472f363fd73f093ea2a2cf06bf0e": {
+                    "id": "4f75472f363fd73f093ea2a2cf06bf0e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Guesthouse 21<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Martin-Luther-Stra\u00dfe 21, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ganz in der N\u00e4he des Guesthouse 21 liegen die Bars und Restaurants des Rainbow-Kiezes rund um die Motz- und Fuggerstrasse.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3902",
+                    "y": "0.5578",
+                    "pin": "pin_cat_h"
+                },
+                "5dad5ecb345ccd9df873ee8c49b41327": {
+                    "id": "5dad5ecb345ccd9df873ee8c49b41327",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Tom's Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 19, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein zentral gelegenes Gay Hotel in der Hauptstadt inklusive Hotel-Pass f\u00fcr die Erkundgung der umliegenden schwulen Szene.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4042",
+                    "y": "0.5400",
+                    "pin": "pin_cat_h"
+                },
+                "f0a96f65efc0656d43bdf2ce50c67942": {
+                    "id": "f0a96f65efc0656d43bdf2ce50c67942",
+                    "title": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>ArtHotel Connection<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Fuggerstra\u00dfe 33, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das ArtHotel Connection beschreibt sich selbst als \"heterofreundliches\" Gay-Hotel im Berliner Jugendstil. Es befindet sich mitten im Gay-Kiez in Sch\u00f6neberg, dicht am Nollendorfplatz.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3892",
+                    "y": "0.5407",
+                    "pin": "pin_cat_h"
+                },
+                "dbf797b72502f251076001e5aeb84562": {
+                    "id": "dbf797b72502f251076001e5aeb84562",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Quentin Design Hotel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kalckreuthstra\u00dfe 12, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz \/ U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Hotel im Boutique-Stil liegt zentral im Berliner Stadtteil Sch\u00f6neberg und mitten im Gay-Viertel. Es ist einen 8-min\u00fctigen Spaziergang vom Kaufhaus KaDeWe und vom Kurf\u00fcrstendamm entfernt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3982",
+                    "y": "0.5762",
+                    "pin": "pin_cat_h"
+                },
+                "effb4c5c70dfad1f16012363a3caeb09": {
+                    "id": "effb4c5c70dfad1f16012363a3caeb09",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gay Hostel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kalckreuthstra\u00dfe 10, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Viktoria-Luise-Platz \/ U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das GAY HOSTEL liegt zentral in Sch\u00f6neberg - mitten im schwulen Kiez. Mit dem Hostel-Pass, der inklusive ist, erh\u00e4ltst du in der schwulen Szene verschiedene, exklusive Vorteile.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4001",
+                    "y": "0.5670",
+                    "pin": "pin_cat_h"
+                }
+            }
+        },
+        "2": {
+            "id": "adf73ad98b0be46f0604d3f30fabc624",
+            "title": "Essen & Trinken",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Berlin.jpg",
+            "locations": {
+                "d4fc9fdd16f28b8fd5e61509da89b669": {
+                    "id": "d4fc9fdd16f28b8fd5e61509da89b669",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Romeo & Romeo<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 20, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich von 08:00 bis 20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Nicht umsonst eines der beliebtesten Gay-Caf\u00e9s in Sch\u00f6neberg: neben ausgezeichnetem Kaffee in entspannter Atmosph\u00e4re gibt es hier auch die M\u00f6glichkeit, entspannt drau\u00dfen zu sitzen und das bunte Treiben in der Motzstra\u00dfe zu beobachten.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.3811",
+                    "y": "0.5511",
+                    "pin": "pin_cat_e"
+                },
+                "420b56a99afe4c6b3635a4e923974339": {
+                    "id": "420b56a99afe4c6b3635a4e923974339",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schall und Rauch<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Gleimstra\u00dfe 23, 10437 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S + U Sch\u00f6nhauser Allee<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Freitag 08:00 bis 00:00 Uhr, Samstag und Sonntag 08:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Schall und Rauch gilt schon als Klassiker der schwulen Ostszene. Morgens gibt es im stilvollenn Caf\u00e9 leckeres Fr\u00fchst\u00fcck und guten Kaffee, abends kann man Weine in angenehmer Atmoshph\u00e4re genie\u00dfen. Dazu geh\u00f6rt auch ein Hotelbetrieb.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5860",
+                    "y": "0.2189",
+                    "pin": "pin_cat_e"
+                },
+                "61cf00cdc844d6d64c903a7fc5466dc8": {
+                    "id": "61cf00cdc844d6d64c903a7fc5466dc8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Melitta Sundstr\u00f6m<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mehringdamm 61, 10961 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Mehringdamm<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag von 17:00 bis 01:00 Uhr, Freitag von 17:00 bis 03:00 Uhr, Samstag von 16:00 bis 03:00 Uhr, Sonntag von 16:00 bis 01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Tags\u00fcber ein Caf\u00e9 und abends Bar, ist das Sundstr\u00f6m einer der bekanntesten Orte der schwul-lesbischen-Szene. Der Name will an die Souls\u00e4ngerin Melitta Sundstr\u00f6m erinnern, die 1993 im Alter von nur 29 Jahren an den Folgen von Aids starb.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5285",
+                    "y": "0.5874",
+                    "pin": "pin_cat_e"
+                },
+                "a276789bfbdbdb28c55b857de4c86e10": {
+                    "id": "a276789bfbdbdb28c55b857de4c86e10",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 & Bar Himmelreich<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Simon-Dach-Stra\u00dfe 36, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Frankfurter Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Samstag: 18:00 bis sp\u00e4t in die Nacht Sonntag: 16:00 Uhr bis in die Nacht<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In dieser ungezwungenen Bar treffen sich Menschen unterschiedlichsten Alters und unabh\u00e4ngig von ihrer Sexualit\u00e4t.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6853",
+                    "y": "0.4314",
+                    "pin": "pin_cat_e"
+                },
+                "f4bbd7e2c183cf321e7933d6be870ce4": {
+                    "id": "f4bbd7e2c183cf321e7933d6be870ce4",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Silver Future<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Weserstra\u00dfe 206, 12047 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Hermannplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 17:00 bis 02:00 Uhr, Freitag und Samstag 17:00 - 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar mit schwul-lesbischem Publikum, Konzerten, Ausstellungen und alternativem Vintage-Dekor.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6508",
+                    "y": "0.5668",
+                    "pin": "pin_cat_e"
+                },
+                "215b08c2ff793a91ee9892ef2a109de8": {
+                    "id": "215b08c2ff793a91ee9892ef2a109de8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Neues Ufer<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Hauptstra\u00dfe 157, 10827 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kleistpark<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Sonntag 14:00 - 02:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Caf\u00e9 Neues Ufer war als \"Anderes Ufer\" einst das erste offen schwul-lesbische Caf\u00e9 Berlins. Auch David Bowie ging hier ein und aus. Es ist bis heute ein Traditionslokal der queeren Szene.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4552",
+                    "y": "0.6151",
+                    "pin": "pin_cat_e"
+                },
+                "3682fe8b089aae7aab87355670cbc169": {
+                    "id": "3682fe8b089aae7aab87355670cbc169",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Alaska Bar<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Reuterstra\u00dfe 85, 12053 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Boddinstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 18:00 bis 00:30 Uhr, Freitag und Samstag 18:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche, vegane, queer Bar mit spanischen Tapas und Sonntagsbrunch ohne tierische Produkte sowie Cocktails.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.6582",
+                    "y": "0.6054",
+                    "pin": "pin_cat_e"
+                }
+            }
+        },
+        "1": {
+            "id": "9ae289d8a28bd49d6d7d93b27281b27d",
+            "title": "Ausgehen",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Berlin.jpg",
+            "locations": {
+                "81aa23f290537ac7d54e9b0c00793101": {
+                    "id": "81aa23f290537ac7d54e9b0c00793101",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Besenkammer<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Rathausstra\u00dfe 1, 10178 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Berlin Alexanderplatz Bahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden ge\u00f6ffnet<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Eine der \u00e4ltesten Schwulen-Kneipen Berlins. Die nur 20qm gro\u00dfe Bar war bereits in den 70ern in der DDR ein Ort der Begegnung f\u00fcr homosexuelle M\u00e4nner.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6322",
+                    "y": "0.3762",
+                    "pin": "pin_cat_a"
+                },
+                "ec998380e0521d931f0aec78792022e5": {
+                    "id": "ec998380e0521d931f0aec78792022e5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>M\u00f6bel Olfe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Reichenberger Str. 177, 10999 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Kottbusser Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich ab 18:00 Uhr, Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die queere Bar in einem ehemaligen M\u00f6belhaus bezeichnet sich selbst als \"Trinkhalle\" und zieht ein hippes, diverses Publikum an.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6295",
+                    "y": "0.5030",
+                    "pin": "pin_cat_a"
+                },
+                "b31e9a80bfdd5ac6dfb719a626f6beb6": {
+                    "id": "b31e9a80bfdd5ac6dfb719a626f6beb6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>SchwuZ<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Rollbergstra\u00dfe 26, 12053<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Bhf Rathaus Neuk\u00f6lln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Freitag und Samstag von 23:00 bis 09:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">1977 gegr\u00fcndet, ist das SchwuZ ein absoluter Klassiker des Berliner LGBT*-Lebens. Inzwischen ist es nicht nur Club, sondern auch Kulturzentrum f\u00fcr queere Menschen und deren Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6624",
+                    "y": "0.6191",
+                    "pin": "pin_cat_a"
+                },
+                "eb22795e3ba4b3b3812ec0f1b4594845": {
+                    "id": "eb22795e3ba4b3b3812ec0f1b4594845",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Saint Jean<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Steinstra\u00dfe 21, 10119 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weinmeisterstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Donnerstag, Sonntag von 19:00 bis 02:00 Uhr, Freitag und Samstag von 21:00 bis 03:00 Uhr, Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In der kleinen Souterrain-Bar werden hochwertige Longdrinks in entspannter Einrichtung serviert. Die Bar hat sich zu einer der beliebtesten Szene-Bars in Berlin-Mitte entwickelt und ist ein Treffpunkt f\u00fcr schwule M\u00e4nner.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5791",
+                    "y": "0.3228",
+                    "pin": "pin_cat_a"
+                },
+                "2583f49f309d3016e3abcc35a1cd060e": {
+                    "id": "2583f49f309d3016e3abcc35a1cd060e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Betty F***<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mulackstra\u00dfe 13, 10119 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weinmeisterstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Freitag und Samstag von 20:00 bis 05:00 Uhr, Sonntag - Donnerstag von 20:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die kleine Bar mit \u00fcberwiegend schwul-lesbischem Publikum \u00fcberzeugt durch ihre gem\u00fctlich-trashige Einrichtung. Hier ist gute Stimmung garantiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5885",
+                    "y": "0.3082",
+                    "pin": "pin_cat_a"
+                },
+                "4230ea6f6abd19b5343e04c86d871ca5": {
+                    "id": "4230ea6f6abd19b5343e04c86d871ca5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zum schmutzigen Hobby<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Revaler Str. 99, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Warschauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Montag - Donnerstag 19:30 bis 04:00 Uhr, Freitag und Samstag 20:00 Uhr bis 06:00 Uhr, Sonntag 19:30 bis 02:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Bar mit dem au\u00dfergew\u00f6hnlichen Namen befindet sich auf dem RAW Gel\u00e4nde. Hier finden des \u00f6fteren Veranstaltungen wie Public Viewings, Open-Stage-Abende oder originelle Themenpartys statt. Jeder ist willkommen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.7111",
+                    "y": "0.4764",
+                    "pin": "pin_cat_a"
+                },
+                "02ecde12d7c1e67804c52d4306356de3": {
+                    "id": "02ecde12d7c1e67804c52d4306356de3",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Barbie Deinhoff's<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schlesische Str. 16, 10997 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Schlesisches Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Donnerstag 18:00 bis 03:00 Uhr, Freitag und Samstag 18:00 bis 05:00 Uhr, Sonntag und Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Barbie Deinhoffs ist eine extravagante, in rosa Licht getauchte Bar mit internationalem gemischtem LGBT-Publikum. Hier finden auch oft Performances statt. Am Dienstag ist die ganze Nacht \u00fcber Happy Hour.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6785",
+                    "y": "0.5090",
+                    "pin": "pin_cat_a"
+                },
+                "dccc46f0e14e665ecf4c95ae991a9e4b": {
+                    "id": "dccc46f0e14e665ecf4c95ae991a9e4b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Busche<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Warschauer Pl. 18, 10245 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Warschauer Stra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Freitag und Samstag ab 22:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Busche ist Berlins gr\u00f6\u00dfter Party-Club f\u00fcr Gays, Lesben, Transen, Bisexuelle und deren Freunde.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6819",
+                    "y": "0.4629",
+                    "pin": "pin_cat_a"
+                },
+                "ef8479ed843e43415f3e1dc7add0553d": {
+                    "id": "ef8479ed843e43415f3e1dc7add0553d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ficken 3000<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Urbanstra\u00dfe 70, 10967 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Hermannplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden Tag 22:00 bis 08:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Ficken 3000 ist seit rund 20 Jahren eine Institution im Berliner Nachtleben. Bar und Dark Room mit \u00fcberwiegend schwulem Publikum.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6385",
+                    "y": "0.5675",
+                    "pin": "pin_cat_a"
+                },
+                "97149e56eb928bdf48b3ec30b36bb2de": {
+                    "id": "97149e56eb928bdf48b3ec30b36bb2de",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Berghain<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Am Wriezener Bahnhof, 10243 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">Berlin Ostbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Donnerstag 22:00 bis 04:00 Uhr, Freitag 23:59 bis 09:00 Uhr, Samstag 23:59 bis Sonntag 24 Stunden<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Berliner Berghain ist ein Techno-Club im Berliner Ortsteil Friedrichshain und gilt als einer der besten Clubs der Welt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6978",
+                    "y": "0.4491",
+                    "pin": "pin_cat_a"
+                },
+                "b7e468ba64c4937fb04a229e17de09fe": {
+                    "id": "b7e468ba64c4937fb04a229e17de09fe",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Heile Welt<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Motzstra\u00dfe 5, 10777 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Nollendorfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Sonntag - Donnerstag 19:00 bis 02:00 Uhr, Freitag und Samstag 19:00 bis 04:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Heile Welt ist eine Szene-Bar und eine Institution im Sch\u00f6neberger Kiez rund um den Nollendorfplatz. Die moderne Bar hat vorwiegend schwule und lesbische G\u00e4ste.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4327",
+                    "y": "0.5697",
+                    "pin": "pin_cat_a"
+                },
+                "b7b3f96de3e6e8f664303c4e6fc12e80": {
+                    "id": "b7b3f96de3e6e8f664303c4e6fc12e80",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Bar \/ Caf\u00e9 Marienhof<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Marienburger Str. 7, 10405 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Senefelderplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Freitag 19:00 Uhr bis open end, Samstag 20:00 Uhr bis open end, Sonntag und Montag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">In der traditionsreichen Kiezbar finden regelm\u00e4\u00dfig Mottopartys und monatliche Drag-Bingo-Abende statt (erster Freitag im Monat).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.6110",
+                    "y": "0.3008",
+                    "pin": "pin_cat_a"
+                },
+                "16f773fc2ea0f6f7eef3009b70dfb112": {
+                    "id": "16f773fc2ea0f6f7eef3009b70dfb112",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Bar Reingold<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Novalisstra\u00dfe 11, 10115 Berlin<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Oranienburger Tor<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Dienstag - Samstag 20:00 bis 03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Reingold z\u00e4hlt zu den besten Bars in Berlin: Die Cocktails werden von Kennern der \u201eBarschule Berlin\u201c in hoher Qualit\u00e4t gemixt und die Inneneinrichtung erinnert an die edlen Drei\u00dfigerjahre.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5299",
+                    "y": "0.2987",
+                    "pin": "pin_cat_a"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import "../info/info.wxss" ; 
+@import "../logs/logs.wxss" ;
+li view{display:flex;flex:1;}
+/* .er-top{width: 100%;background:#0276ee;display: flex;color:#fff;justify-content: center;border-bottom:1px solid #E5E5E5;font-size: 14px;} */
+.er-top{
+text-align:center;
+position:fixed;
+top:0;
+z-index:1;
+background:#0276ee;
+color:#fff;
+width:100%;
+font-size:16px;
+height:60rpx;
+line-height:60rpx;
+}
+.color{color: #000}
+.m-t-31{margin-top: 31px}
+.er-sure{width: 100%;background: #fff;padding:15rpx 0;display: flex;justify-content: center;}
+.er-sure image{width: 250rpx;height: 250rpx;}
+.er-sure text{color: #0276EE}

@@ -1,0 +1,23 @@
+<view class='tipt' style='display:none'><image src='../../img/gantanhao.png'></image><text>您有<text style='color:#e64340'> {{num}} </text>张优惠券即将过期</text></view>
+
+<block wx:for="{{discount}}" wx:key="id" wx:if="{{discount.length > 0}}">
+  <view class='discount' data-id='{{item.disId}}'>
+    <image src='../../img/discount.png'></image>
+    <view class='info'>{{item.couponArr.title}}</view>
+    <view class='dis-coupou'>{{item.couponArr.desc}}</view>
+
+    <view class='dis-price' wx:if='{{item.status==0}}'><text style='font-size:40rpx;font-weight: 400;'>￥</text>{{item.couponArr.price}}</view>
+    <view class='dis-price col-gary' wx:if='{{item.status==1}}'><text style='font-size:40rpx;font-weight: 400;'>￥</text>{{item.couponArr.price}}</view>
+    <view class='dis-price col-gary' wx:if='{{item.status==2}}'><text style='font-size:40rpx;font-weight: 400;'>￥</text>{{item.couponArr.price}}</view>
+
+    <view class='dis-time'>有效期：{{item.smartCreateTime}}-{{item.smartExpirationTime}}</view>
+
+    <view class='dis-end' wx:if='{{item.status==0}}'>未使用</view> 
+    <view class='dis-end col-gary' wx:if='{{item.status==1}}'>已使用</view> 
+    <view class='dis-end col-gary' wx:if='{{item.status==2}}'>已过期</view> 
+  </view>
+</block>
+
+<view class="nothings" wx:if="{{discount.length === 0}}">
+  <text>还没有券哦~</text>
+</view>

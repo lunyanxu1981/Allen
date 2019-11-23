@@ -75,6 +75,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
@@ -125,6 +126,7 @@
     </None>
     <Compile Include="ExtensionMethods\IPGApiExtensionMethods.Action.cs" />
     <None Include="Certificate\WS4700000018._.1.p12" />
+    <None Include="Certificate\WS4700000054._.1.p12" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

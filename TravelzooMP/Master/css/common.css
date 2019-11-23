@@ -1,0 +1,5 @@
+.span-red{color:red}
+.span-green{color:green}
+
+input.input_bad {border:1px dotted red;}
+label.input_bad {color: red;padding-left:5px;}

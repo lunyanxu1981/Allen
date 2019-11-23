@@ -1,0 +1,62 @@
+.tipt{
+  /* width: 100%; */
+  padding:25rpx 0rpx 0rpx 32rpx;
+  
+  font-size:14px; 
+}
+.tipt image{
+  width: 20px;
+  height: 20px;
+  margin-right: 20rpx;
+  vertical-align:middle;
+}
+.discount image{
+  width: 100%;
+  height: 253rpx;
+  vertical-align: bottom;
+}
+.discount{
+  overflow: hidden;
+  position: relative;
+  margin: 25rpx;
+}
+.discount .info{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  font-size:35rpx;
+
+}
+.dis-price{
+  position:absolute;
+  top:36rpx;
+  right:30rpx;
+  font-size: 85rpx;
+  font-weight: bold;
+  color: #e64340;
+}
+.dis-time{
+  position:absolute;
+  bottom:8px;
+  left:30rpx;
+  font-size: 26rpx;
+  color: #9b9b9b;
+}
+.dis-end{
+  position:absolute;
+  right:30rpx;
+  bottom: 8px;
+  font-size: 26rpx;
+  color: #e64340;
+}
+.dis-coupou{
+  position:absolute;
+  top:85rpx;
+  left:30rpx;
+  font-size:25rpx;
+  color: #9b9b9b;
+  border: 1px solid #9b9b9b;
+  border-radius: 5rpx;
+  padding: 0rpx 5rpx;
+}
+.col-gary{color:#9b9b9b;}

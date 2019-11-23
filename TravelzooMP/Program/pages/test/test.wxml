@@ -1,0 +1,23 @@
+<!--pages/test/test.wxml-->
+  <!-- <web-view src="https://www.baidu.com"></web-view>   -->
+   <!-- <web-view src="https://devtravelzoo.m-int.cn/esteelauder_index.html"></web-view>    -->
+
+ <view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      点击查看优惠券    {{array[index]}}
+    </view>
+  </picker>
+</view> 
+
+<!--触发弹出层 bindtap="show"  -->
+  <view class='fenxiang-box'> 
+    <button bindtap="show">新人</button>
+</view>  
+
+<!--弹出层内容,其中的"我知道" 中绑定让弹出层消失的函数:bindtap="hide" -->
+<view class="modal-box" hidden="{{flag}}">
+  <image src='../../img/new-people.png'class='fenxiang-btn'></image>
+  <image src='../../img/close1.png' class='close-hide' bindtap="hide"></image>
+  <button type="default" bindtap='receive' hover-class="other-button-hover"> 立即领取 </button> 
+</view>

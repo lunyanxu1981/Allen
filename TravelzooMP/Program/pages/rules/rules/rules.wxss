@@ -1,0 +1,7 @@
+.f-w-b{
+  font-weight: bold;
+  font-size: 26rpx;
+}
+view{
+  margin: 10px;
+}

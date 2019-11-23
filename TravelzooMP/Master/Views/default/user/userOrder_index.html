@@ -1,0 +1,231 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 订单管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						
+						<button class="btn btn-default btn-sm ajax-all" onclick="location.href='/userOrder_index.html'"><i class="glyphicon glyphicon-list"></i>显示全部</button>
+						<!--<span style="padding-left:20px;"></span>
+						 <button class="btn btn-default btn-sm ajax-add" onclick="location.href='/userOrder_add.html'"><i class="glyphicon glyphicon-plus"></i> 新 增</button>
+						<span style="padding-left:20px;"></span>
+						 -->
+
+						<select id="type" name="type">
+							<option value=""{if $getArr["type"] == ""} selected{/if}>产品类别</option>
+							<option value="Restaurant"{if $getArr["type"] == "Restaurant"} selected{/if}>Restaurant</option>
+	                        <option value="Entertainment"{if $getArr["type"] == "Entertainment"} selected{/if}>Entertainment</option>
+	                        <option value="Spa"{if $getArr["type"] == "Spa"} selected{/if}>Spa</option>
+	                        <option value="Getaway"{if $getArr["type"] == "Getaway"} selected{/if}>Getaway</option>
+	                        <option value="Other"{if $getArr["type"] == "Other"} selected{/if}>Other</option>
+	                    </select>
+						<!-- <select id="category" name="category">
+	                        <option value="0"{if $getArr["category"] == "0"} selected{/if}>请选择</option>
+	                        <option value="1"{if $getArr["category"] == "1"} selected{/if}>亚冠</option>
+	                        <option value="2"{if $getArr["category"] == "2"} selected{/if}>足协杯</option>
+	                    </select>
+	                    <input type="text" id="title" name="title" value="{$getArr['title']}">
+	                     -->
+
+	                    <select id="skey" name="skey">
+							<option value=""{if $getArr["skey"] == ""} selected{/if}>搜索项</option>
+	                        <option value="title"{if $getArr["skey"] == "title"} selected{/if}>产品名</option>
+	                        <option value="bar_code"{if $getArr["skey"] == "bar_code"} selected{/if}>券号</option>
+	                        <option value="email"{if $getArr["skey"] == "email"} selected{/if}>邮箱</option>
+	                        <option value="phone"{if $getArr["skey"] == "phone"} selected{/if}>手机号</option>
+	                        <option value="username"{if $getArr["skey"] == "username"} selected{/if}>姓名</option>
+	                        <option value="order_no"{if $getArr["skey"] == "order_no"} selected{/if}>订单号</option>
+	                        <option value="total_price"{if $getArr["skey"] == "total_price"} selected{/if}>订单总价</option>
+	                        <option value="status"{if $getArr["skey"] == "status"} selected{/if}>订单状态</option>
+	                    </select>
+	                    <input type="text" id="svalue" name="svalue" value="{$getArr['svalue']}">
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button>
+
+	                    <span style="padding-left:20px;"></span>
+	                    <button class="btn btn-default btn-sm" onclick="location.href='/userOrder_index.html?special=1'">未生成券的订单</button>
+	                    
+	                    <span style="display:inline-block;margin-left:50px;">
+		                    从<input type="text" id="start" name="start" value="{$getArr['start']}">
+		                    到<input type="text" id="end" name="end" value="{$getArr['end']}">
+		                    <a href="#" class="btn btn-default" data-dismiss="modal" onclick="doExcel();">导出Excel</a>
+						</span>
+
+	                    <p>(0待付款 1已完成 5交易关闭 6已退款)</p>
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="2%">id</th>
+							<th width="15%">订单信息</th>
+							<th width="10%">联系人信息</th>
+							<th width="15%">付款人信息</th>
+							<th width="5%">订单状态</th>
+							<th width="5%">管理</th>
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">{$itemArr["id"]}</td>
+							<td class="center">
+								订单号：{$itemArr["order_no"]}<br>
+								产品名：{$itemArr["productArr"]["Title"]}<br>
+								<img src="{$itemArr["productArr"]["imgList"][0]["img_name"]}" width="200"><br>
+								【{$itemArr["productArr"]["Category"]}】<br>
+								数量：{$itemArr["num"]}<br>
+								单价：{$itemArr["product_price"]}<br>
+								总价：{$itemArr["total_price"]}<br><br>
+								<!-- 留言：{if $itemArr["message"]==""}无{else}{$itemArr["message"]}{/if} -->
+							</td>
+							<td class="center">
+								{$itemArr["username"]}<br>
+								{$itemArr["phone"]}<br>
+								{$itemArr["email"]}
+							</td>
+							<td class="center">
+								付款人UID：{$itemArr["uid"]}<br>
+								微信昵称：{$itemArr["userArr"]["nickname"]}<br>
+								下单时间：{$itemArr["create_time"]}<br>
+								付款时间：{$itemArr["pay_time"]}<br><br>
+							{if $itemArr["status"]=="1" && empty($itemArr["detailList"])}
+								<font color="red">已付款未生成券</font>
+							{else}
+								{loop $itemArr["detailList"] $detailArr}
+									优惠券码：{$detailArr["bar_code"]}<br>
+									密钥：{$detailArr["pin"]}<br>
+									状态：
+									{if $detailArr["status"]=="0"}未使用
+									{elseif $detailArr["status"]=="1"}<font color="green">已使用</font>
+									{elseif $detailArr["status"]=="2"}已过期
+									{elseif $detailArr["status"]=="6"}
+										<font color="red">已退款</font>
+										{if $detailArr["refund_reason"]!=""}({$detailArr["refund_reason"]}){/if}
+									{/if}<br>
+									过期时间：{$detailArr["expiration_time"]}<br><br>
+								{/loop}
+							{/if}
+							</td>
+							<td class="center">
+								{if $itemArr["status"]=="0"}待付款
+								{elseif $itemArr["status"]=="1"}<font color="green">已完成</font>
+								{elseif $itemArr["status"]=="5"}交易关闭
+								{elseif $itemArr["status"]=="6"}已退款
+								{/if}
+							</td>
+							<td class="center">
+								<!-- <a class="btn btn-success btn-xs ajax-view" href="userOrder_findById_id_{$itemArr['id']}.html">
+									<i class="glyphicon glyphicon-zoom-in icon-white"></i> 
+									View
+								</a>  -->
+								<a class="btn btn-info btn-xs ajax-edit" href="/userOrder_edit_eid_{$itemArr['id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+								<!-- <a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a> -->
+							</td>
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/userOrder_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setRank = function(eid){
+	var v = $.trim($("#rank_"+eid).val());
+	$.ajax({ url: "/userOrder_setRank.html",dataType:"html",type:"POST",data:"eid="+eid+"&rank="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+
+$(".ajax-search").click(function(){
+	var type = $("#type").val();
+	var skey = $("#skey").val();
+	var svalue = $('#svalue').val();
+	location.href='/userOrder_index.html?type='+type+'&skey='+skey+'&svalue='+svalue;
+});
+
+var doExcel = function(){
+	var start = $("#start").val();
+	var end = $('#end').val();
+	window.open('/userOrder_exportExcel.html?start='+start+'&end='+end);
+};
+/*
+$(".ajax-search").click(function(){
+	var type = $("#type").val();
+	var category = $('#category').val();
+	var title = $("#title").val();
+	location.href='/userOrder_index.html?type='+type+'&category='+category+'&title='+title;
+});
+
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+
+$("#type").change(function(){
+	var pid = $(this).val();
+	$.get("/tree_getSubclass.html?pid="+pid,function(v){
+		$("#category").html(v);
+	});
+});
+*/
+//-->
+</script>
+
+{$footer}

@@ -1,0 +1,41 @@
+<scroll-view class='container'>
+ <view class='topDay' wx:if="{{productDetail.status == 1}}">已兑换</view> 
+ <view class='topDay' wx:if="{{productDetail.status == 2}}">已过期：{{productDetail.smartExpirationTime}}</view> 
+ <view class='topDay' wx:if="{{productDetail.status == 0}}">待使用：{{productDetail.smartExpirationTime}}</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" indicator-active-color="#0276EE" duration="1000">
+  <block wx:for="{{productDetail.productArr.imgList}}" wx:key="index">
+  <swiper-item>  
+    <image src="{{item.img_name}}" class="slide-image" mode="aspectFill"/>  
+  </swiper-item>  
+  </block>    
+</swiper>
+  <!-- <navigator url='/pages/conPon/conPon?did={{productDetail.id}}' class='btn-book' data-id="{{productDetail.id}}">查看兑换券</navigator>   -->
+<block wx:key="id">
+  <view class='tave-item-title b-white m-b-20'>
+    <view class='shop-title font-size-28'>{{productDetail.productArr.Title}}</view>
+    <view class='item-price'>{{productDetail.productArr.Price}}</view>
+    <text class='from shop-from'>{{productDetail.productArr.LocationName}}</text>
+    <text class='from shop-Selected'>{{productDetail.productArr.storeArr.DisplayName}}</text>
+  </view>
+</block>
+<view class="b-white">
+    <view class="nav">
+      <view class="{{selected?'red':'default'}}" bindtap="selected">商品信息</view>
+      <view class="{{selected1?'red':'default'}}" bindtap="selected1">使用说明</view>
+    </view>
+    <view class="{{selected?'show':'hidden'}} showText mb-113">
+      <view class="f-w-b">地址：</view>
+      <view>{{productDetail.parentProductArr.storeArr.StreetAddress1}}</view>
+      <view class="f-w-b">联系方式：</view>
+      <view>{{productDetail.parentProductArr.storeArr.Phone}}</view>
+      <view class="f-w-b">包含内容：</view>
+      <text>{{productDetail.productArr.RedeemFinePrint}}</text> 
+    </view>
+    <view class="{{selected1?'show':'hidden'}} showText mb-113">
+      <view class="f-w-b">如何使用兑换券？</view>
+      <text>{{productDetail.productArr.HowToRedeem}}</text>
+      <view class="f-w-b m-t-20">条款及细则：</view>
+      <text>{{productDetail.productArr.RedeemTermsAndConditions}}</text>    
+    </view>
+</view>
+</scroll-view>

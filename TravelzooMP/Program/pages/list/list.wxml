@@ -1,0 +1,17 @@
+<!--pages/test1/test1.wxml-->
+<navigator wx:for="{{product}}" class='shop-item' wx:key="Id" data-id='{{item.Id}}' url="/pages/info/info?id={{item.Id}}">
+  <image wx:if="{{item.imgList[0].img_name}}" class='tave-item-img ' src='{{item.imgList[0].img_name}}'></image>
+  <view class='tave-item-title'>
+   
+    <view class='shop-title font-size-28'>
+    <text wx:if="{{item.Category == 'Getaway'}}">酒店</text>
+    <text wx:if="{{item.Category == 'Entertainment'}}">休闲娱乐</text>
+    <text wx:if="{{item.Category == 'Other'}}">其他</text>
+    <text wx:if="{{item.Category == 'Restaurant'}}">美食</text>
+    <text wx:if="{{item.Category == 'Spa'}}">水疗</text>
+    {{item.Title}}</view>
+    <view class='item-price'>{{item.Price}}</view>
+    <text class='from shop-from'>{{item.LocationName}}</text>
+    <text class='from shop-Selected'>{{item.storeArr.DisplayName}}</text>
+  </view>
+</navigator>

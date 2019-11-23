@@ -1,0 +1,256 @@
+<scroll-view>
+  <view class="product_card oh">
+    <view class="pro-left fl">
+      <image src="{{firstImg}}"></image>
+    </view>
+    <view class="pro-right oh">
+      <view class="pro-name">
+        <text class="f30">{{productDetail.title}}</text>
+      </view>
+      <text class="price-wrap">
+        <text wx:if="{{group_status === '0'}}">活动倒计时：{{endTime}}</text>
+        <text wx:if="{{group_status !== '0'}}">\r</text>
+      </text>
+      <view>
+        <text class="n-price">￥{{productDetail.price}}</text>
+        <text class="o-price">￥{{productDetail.value}}</text>
+        <text class="tuan-price">拼团价</text>
+      </view>
+    </view>
+  </view>
+  <view class="tuan-order-wrap">
+    <view wx:if="{{inGroup === 0 && expiredStatus == 1}}">
+      <text class="tuan-status cstatus" wx:if="{{group_status === '0' || group_status === '1'}}">{{tStatus[group_status]}}
+      </text>
+      <text class="tuan-status" wx:if="{{group_status !== '0' && group_status !== '1'}}">此团已满</text>
+      <view class="tuan-people-num">
+        <text class="f31" wx:if="{{group_status !== '0' && group_status !== '1'}}">
+          <text>赶快</text>
+          <text class="cstatus">发起拼团</text>
+        </text>
+        <text class="f31" wx:if="{{group_status === '0' || group_status === '1'}}">
+          <text>还差</text>
+          <text class="cstatus">{{cnum}}人</text>
+          <text>参团</text>
+        </text>
+        <view wx:if="{{group_status === '0'}}" class="dib">
+          <view class="tuan-cur-time">
+            <text>{{timeObj.hour}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+          <text class="tuan-num">:</text>
+          <view class="tuan-cur-time">
+            <text>{{timeObj.min}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+          <text class="tuan-num">:</text>
+          <view class="tuan-cur-time">
+            <text>{{timeObj.second}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{inGroup === 1 && expiredStatus == 1}}">
+      <text wx:if="{{group_status === '1'}}" class="mr10">已退款</text>
+      <text class="tuan-status cstatus">{{tStatus[group_status]}}</text>
+      <text wx:if="{{group_status === '0'}}" class="ml10">分享给更多的好友组团</text>
+      <view class="tuan-people-num">
+        <text class="f31" wx:if="{{group_status === '0' || group_status === '1'}}">
+          <text>还差</text>
+          <text class="cstatus">{{cnum}}人</text>
+          <text>参团</text>
+        </text>
+        <text class="f31" wx:if="{{group_status === '2' || group_status === '3'}}">
+          <text>共</text>
+          <text class="cstatus">{{num}}人</text>
+          <text>参团</text>
+        </text>
+        <view wx:if="{{group_status === '0'}}" class="dib">
+          <view class="tuan-cur-time">
+            <text>{{timeObj.day}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+          <text class="tuan-num f28">天</text>
+          <view class="tuan-cur-time">
+            <text>{{timeObj.hour}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+          <text class="tuan-num">:</text>
+          <view class="tuan-cur-time">
+            <text>{{timeObj.min}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+          <text class="tuan-num">:</text>
+          <view class="tuan-cur-time">
+            <text>{{timeObj.second}}</text>
+            <image src="../../img/bg_num.png" class="bg-num" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{expiredStatus == 0}}">
+      <text wx:if="{{inGroup !== 1}}" class="tuan-status cstatus">已过期</text>
+      <text wx:if="{{inGroup === 1}}" class="mr10">已退款</text>
+      <text wx:if="{{inGroup === 1}}" class="tuan-status cstatus">{{tStatus[group_status]}}</text>
+      <view wx:if="{{inGroup === 1}}" class="tuan-people-num">
+        <text class="f31">
+          <text>还差</text>
+          <text class="cstatus">{{cnum}}人</text>
+          <text>参团</text>
+        </text>
+      </view>      
+    </view>
+    <view class="tuan-people-list">
+      <block wx:for="{{userList}}" wx:key="index">
+        <view class="tuan-header">
+          <image class="user-header" src="{{item.userArr.headimgurl}}" />
+          <image class="bg-header" src="../../img/bg_header.png" />
+          <text class="tuan-user-role" wx:if="{{item.gid === '0'}}">团长</text>
+        </view>
+      </block>
+    </view>
+    <view class="flowing">
+      <view class="mb20 ctuan">
+        <text>拼团流程</text>
+      </view>
+      <view class="f26 mb10">
+        <text class="wf-num">1</text>
+        <text>发起拼团或者参加好友的拼团</text>
+      </view>
+      <view class="f26 mb10">
+        <text class="wf-num">2</text>
+        <text>在活动时间内邀请好友一起拼团</text>
+      </view>
+      <view class="f26 mb10">
+        <text class="wf-num">3</text>
+        <text>拼团进程及中奖结果可至“我的拼团订单”列表查看，
+        　 请密切关注</text>
+      </view>
+      <view class="f26 mb10">
+        <text class="wf-num">4</text>
+        <text>若活动结束时拼团失败，预付款将原路退回并可获赠5
+        　 元无门槛优惠券</text>
+      </view>
+    </view>
+
+    <view class="b-white">
+      <view class="nav">
+        <view class="{{selected?'red':'default'}}" data-index="1" bindtap="selected">
+          <text>推荐理由</text>
+        </view>
+        <view class="{{!selected?'red':'default'}}" data-index="2" bindtap="selected">服务包含</view>
+      </view>
+      <view class="{{selected?'show':'hidden'}} showText">
+        <view class="f-w-b">优惠：</view>
+        <text>{{productDetail.lead}}</text>
+        <view wx:if="{{seeAllGoods}}">
+          <view class="f-w-b m-t-20">亮点：</view>
+          <text>{{productDetail.why_we_love}}</text>
+        </view>
+        <view class="laa" bindtap="goodsmore">
+          {{btnMsg}}
+          <image src="{{seeAllGoods?'../../img/arrow_up.png':'../../img/arrow_down.png'}}" mode="aspectFill"></image>
+        </view>
+      </view>
+      <view class="{{!selected?'show':'hidden'}} showText">
+        <view class="f-w-b">优惠详情及有效期：</view>
+        <text>{{productDetail.valid_date}}</text>
+        <text>{{productDetail.what_is_included}}</text>
+        <view class="f-w-b m-t-20">温馨提示：</view>
+        <text>{{productDetail.fine_print}}</text>
+        <view class="f-w-b m-t-20">地址：</view>
+        <view class="f-w-b">{{productDetail.storeArr.DisplayName}}</view>
+        <view class="f-w-b">{{productDetail.storeArr.StreetAddress1}}</view>
+        <view class="f-w-b m-t-20 color-blue" bindtap="calling" data-phone="{{productDetail.storeArr.Phone}}">
+          <view style="display: inline-block;margin-bottom: 0;position: relative;top: -6px;">
+            立即电话预定：
+          </view>
+          <image src="../../img/phone.png" style="width: 25px;height: 25px;"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="a dflex {{isIphoneX}}">
+    <view catchtap="goHome" style="width: 25%;background: #fff;color:#b9b9b9;text-align:center;" class="{{isIphoneX === 'btn-x' ? 'h169' : ''}}">
+      <view><image src="../../img/family.png" style="width:63rpx;height:63rpx"></image></view>
+      <view style="margin-top: -16rpx;font-size:28rpx;">首页</view>
+    </view>
+    <view class="flex1" wx:if="{{inGroupProduct == 0 && expiredStatus == 1}}">
+      <view wx:if="{{inGroup === 0}}">
+        <button class="btn btn-pay" catchtap="goPay" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{group_status === '0'}}">立即参团</button>
+        <button class="btn btn-pay" catchtap="goTuan" wx:if="{{group_status !== '0'}}">一键开团</button>
+      </view>
+      <view wx:if="{{inGroup === 1}}">
+        <button class="btn btn-pay" catchtap="shared" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{group_status === '0'}}">邀请好友参团</button>
+        <view class="dflex" wx:if="{{group_status === '1'}}">
+          <view class="flex1">
+            <button class="btn btn-pay bor" bindtap="goTuan">更多新团</button>
+          </view>
+          <navigator class="flex1" url="/pages/discount/discount">
+            <button class="btn btn-pay">领取安慰奖</button>
+          </navigator>
+        </view>
+        <button class="btn btn-pay" wx:if="{{group_status === '2'}}">
+          等待开奖
+        </button>
+        <button class="btn btn-pay" catchtap="viewResult" wx:if="{{group_status === '3' || group_status === '4' || group_status === '5'}}">
+          立即开奖
+        </button>
+      </view>
+    </view>
+    <view class="flex1" wx:if="{{inGroupProduct == 1 && expiredStatus == 1}}">
+      <view wx:if="{{inGroup === 0}}">
+        <button class="btn btn-pay" catchtap="viewMyTuan">查看我的拼团</button>
+      </view>
+      <view wx:if="{{inGroup === 1}}">
+        <button class="btn btn-pay" catchtap="shared" open-type="getUserInfo" wx:if="{{group_status === '0'}}">邀请好友参团</button>
+        <view class="dflex" wx:if="{{group_status === '1'}}">
+          <view class="flex1">
+            <button class="btn btn-pay bor" bindtap="goTuan">一键开团</button>
+          </view>
+          <navigator class="flex1" url="/pages/discount/discount">
+            <button class="btn btn-pay">查看优惠券</button>
+          </navigator>
+        </view>
+        <button class="btn btn-pay" wx:if="{{group_status === '2'}}">
+          等待开奖
+        </button>
+        <button class="btn btn-pay" catchtap="viewResult" wx:if="{{group_status === '3' || group_status === '4' || group_status === '5'}}">
+          立即开奖
+        </button>
+      </view>
+    </view>
+    <view wx:if="{{expiredStatus == 0}}" class="flex1">
+      <button wx:if="{{inGroup !== 1}}" class="btn btn-pay" catchtap="goTuan">重开新团</button>
+      <view class="dflex" wx:if="{{inGroup === 1}}">
+        <view class="flex1">
+          <button class="btn btn-pay bor" bindtap="goTuan">更多新团</button>
+        </view>
+        <navigator class="flex1" url="/pages/discount/discount">
+          <button class="btn btn-pay">领取安慰奖</button>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="modal-box2" style="padding: 0" id="modal-box2" bindtap="hideShareWrap" hidden="{{shareWrap}}">
+  <view class="share-wrap">
+    <button class="btn-shared shared1" open-type="share" bindtap="shared1"></button>
+    <button class="btn-shared shared2" bindtap="shared2"></button>
+    <image src="../../img/share.png" class="shareImg" style="height: {{shareHeight}}px"></image>  
+  </view>
+</view>
+<view class="modal-box2 modal-wrap" hidden="{{jiangWrap}}">
+  <view class="jiang-wrap pr">
+    <navigator class="jiang-btn-wrap" url="/pages/discount/discount" wx:if="{{jiangResult === '3'}}">
+      <image src="https://devtravelzoo.m-int.cn/images/jiang1.png" class="jiang"></image>
+    </navigator>
+    <navigator class="jiang-btn-wrap" url="/pages/order/order" wx:if="{{jiangResult === '4'}}">
+      <image src="https://devtravelzoo.m-int.cn/images/jiang3.png" class="jiang"></image>
+    </navigator>
+    <image src="https://devtravelzoo.m-int.cn/images/jiang2.png" wx:if="{{jiangResult === '5'}}" class="jiang"></image>
+    <button class="btn-closej" bindtap="closeJiang"></button>
+  </view>
+</view>
+<canvas wx:if="{{canvasWrap}}" class="share-canvas" style="height: {{rHeight}}px; width: {{rWidth}}px" canvas-id="share-canvas" />

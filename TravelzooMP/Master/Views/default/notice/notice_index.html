@@ -1,0 +1,196 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 公告管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						
+						<button class="btn btn-default btn-sm ajax-all" onclick="location.href='/notice_index.html'"><i class="glyphicon glyphicon-list"></i>显示全部</button>
+						
+						<span style="padding-left:20px;"></span>
+						<button class="btn btn-default btn-sm ajax-add" onclick="location.href='/notice_add.html'"><i class="glyphicon glyphicon-plus"></i> 新 增</button>
+						<!-- 
+						<span style="padding-left:20px;"></span>
+						<select id="type" name="type">
+							<option value="0"{if $getArr["type"] == "0"} selected{/if}>请选择</option>
+	                        <option value="1"{if $getArr["type"] == "1"} selected{/if}>一线队</option>
+	                        <option value="2"{if $getArr["type"] == "2"} selected{/if}>预备队</option>
+	                    </select>
+						<select id="category" name="category">
+	                        <option value="0"{if $getArr["category"] == "0"} selected{/if}>请选择</option>
+	                        <option value="1"{if $getArr["category"] == "1"} selected{/if}>亚冠</option>
+	                        <option value="2"{if $getArr["category"] == "2"} selected{/if}>足协杯</option>
+	                    </select>
+	                    <input type="text" id="title" name="title" value="{$getArr['title']}">
+
+	                    <select id="skey" name="skey">
+							<option value=""{if $getArr["skey"] == ""} selected{/if}>请选择</option>
+	                        <option value="phone"{if $getArr["skey"] == "phone"} selected{/if}>手机号</option>
+	                        <option value="member_code"{if $getArr["skey"] == "member_code"} selected{/if}>会员编号</option>
+	                        <option value="realname"{if $getArr["skey"] == "realname"} selected{/if}>真实姓名</option>
+	                        <option value="waitCheck"{if $getArr["skey"] == "waitCheck"} selected{/if}>待认证</option>
+	                        <option value="checked"{if $getArr["skey"] == "checked"} selected{/if}>已认证</option>
+	                    </select>
+	                    <input type="text" id="svalue" name="svalue" value="{$getArr['svalue']}">
+	                    
+						<select id="order" name="order">
+							<option value=""{if $getArr["order"] == ""} selected{/if}>排序内容</option>
+	                        <option value="point"{if $getArr["order"] == "point"} selected{/if}>可用积分</option>
+	                        <option value="level_point"{if $getArr["order"] == "level_point"} selected{/if}>等级分值</option>
+	                    </select>
+	                    <select id="by" name="by">
+							<option value=""{if $getArr["by"] == ""} selected{/if}>排序方式</option>
+	                        <option value="desc"{if $getArr["by"] == "desc"} selected{/if}>降序</option>
+	                        <option value="asc"{if $getArr["by"] == "asc"} selected{/if}>升序</option>
+	                    </select>
+
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button>
+	                     -->
+
+	                    <!-- 
+	                    <span style="display:inline-block;margin-left:400px;">
+		                    从<input type="text" id="start" name="start" value="{$getArr['start']}">
+		                    到<input type="text" id="end" name="end" value="{$getArr['end']}">
+		                    <a href="#" class="btn btn-default" data-dismiss="modal" onclick="doExcel();">导出Excel</a>
+						</span>
+						 -->
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="2%">id</th>
+							<th width="20%">内容</th>
+							<th width="10%">审核状态</th>
+							<th width="10%">创建时间</th>
+							<th width="5%">排序</th>
+							<th width="8%">管理</th>
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">{$itemArr["id"]}</td>
+							<td class="center">{$itemArr["content"]}</td>
+							<td class="center">
+								{if $itemArr["status"]=="0"}<font color="red">未审核</font>
+								{else}<font color="blue">审核通过</font>
+								{/if}
+							</td>
+							<td class="center">{$itemArr["create_time"]}</td>
+							<td class="center">
+								<input type="text" class="form-control" id="rank_{$itemArr['id']}" onblur="setItem({$itemArr['id']},'rank');" value="{$itemArr["rank"]}">
+							</td>
+							<!-- <td class="center"><span class="span-red">active</span></td> -->
+							<td class="center">
+								<!-- <a class="btn btn-success btn-xs ajax-view" href="notice_findById_id_{$itemArr['id']}.html">
+									<i class="glyphicon glyphicon-zoom-in icon-white"></i> 
+									View
+								</a>  -->
+								<a class="btn btn-info btn-xs ajax-edit" href="/notice_edit_eid_{$itemArr['id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+								<a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a>
+							</td>
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/notice_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setItem = function(eid,item){
+	var v = $.trim($("#"+item+"_"+eid).val());
+	$.ajax({ url: "/notice_setItem.html",dataType:"html",type:"POST",data:"eid="+eid+"&item="+item+"&value="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+
+/*
+$(".ajax-search").click(function(){
+	var type = $("#type").val();
+	var category = $('#category').val();
+	var title = $("#title").val();
+	location.href='/notice_index.html?type='+type+'&category='+category+'&title='+title;
+});
+
+$(".ajax-search").click(function(){
+	var skey = $("#skey").val();
+	var svalue = $('#svalue').val();
+	var order = $('#order').val();
+	var by = $('#by').val();
+	location.href='/notice_index.html?skey='+skey+'&svalue='+svalue+'&order='+order+'&by='+by;
+});
+
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+
+$("#type").change(function(){
+	var pid = $(this).val();
+	$.get("/notice_getSubclass.html?pid="+pid,function(v){
+		$("#category").html(v);
+	});
+});
+*/
+//-->
+</script>
+
+{$footer}

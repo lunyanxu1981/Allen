@@ -1,0 +1,49 @@
+<view data-url="/pages/info/info?id={{aid}}" data-ty="banner" data-banner="1" bindtap="goUrl" class="top-one-nav">
+  <image wx:if="{{httpPostImg}}" src="{{httpPostImg}}" class="tave-item-img-360"></image>
+</view>
+<!-- <view><button open-type="contact">进入客服会话</button></view> -->
+<!-- 导航 -->
+<view class="ui-flex">
+  <block wx:for="{{navs}}" wx:key="index">
+    <view wx:if="{{item.type == 3}}" class="nav-item nav-item-{{item.id}}" data-type="{{item.id}}" data-ty="nav" bindtap="goUrl" data-title="{{item.title}}" data-url="/pages/list/list?rid={{item.type}}&tid={{item.id}}">
+      <image class="nav-img" src="{{item.httpPostImg}}"></image>
+      <text class="nav-text">{{item.title}}</text>
+    </view>
+  </block>
+</view>
+<!-- 弹出层内容,其中的"我知道" 中绑定让弹出层消失的函数:bindtap="hide" -->
+<view class="modal-box" hidden="{{flag}}">
+  <image src="../../img/50.jpg" class="fenxiang-btn"></image>
+  <image src="../../img/close1.png" class="close-hide" bindtap="hide"></image>
+  <button type="default" catchtap="receive_50" hover-class="other-button-hover">立即领取</button>
+</view>
+<view class="modal-box" hidden="{{true}}">
+  <image src="../../img/68.jpg" class="fenxiang-btn"></image>
+  <image src="../../img/close1.png" class="close-hide" bindtap="hide"></image>
+  <button type="default" catchtap="receive_68" hover-class="other-button-hover">立即领取</button>
+</view>
+<view class="navi-1" data-ty="banner" data-banner="2" bindtap="goUrl" data-url="/pages/select/select?rid={{2}}&tid={{tid1}}">
+  <image wx:if="{{PostImg}}" src="{{PostImg}}" class="tave-item-img-320"></image>
+</view>
+<view class="navi-2" data-ty="banner" data-banner="3" bindtap="goUrl" data-url="/pages/select/select?rid={{2}}&tid={{tid2}}" style="margin-bottom:-5px;">
+  <image wx:if="{{PostPic}}" src="{{PostPic}}" class="tave-item-img-320"></image>
+</view>
+<view class="popuer">
+  <image src="../../img/selected.png"></image>
+</view>
+<view wx:for="{{product}}" wx:key="index" class="shop-item" data-id="{{item.Id}}" data-ty="product" data-product="{{item.id}}" bindtap="goUrl" data-url="/pages/info/info?id={{item.Id}}">
+  <image wx:if="{{item.imgList[0].img_name}}" class="tave-item-img " src="{{item.imgList[0].img_name}}"></image>
+  <view class="tave-item-title">
+    <view class="shop-title font-size-28">
+      <text wx:if="{{item.Category == 'Getaway'}}">酒店</text>
+      <text wx:if="{{item.Category == 'Entertainment'}}">休闲娱乐</text>
+      <text wx:if="{{item.Category == 'Other'}}">其他</text>
+      <text wx:if="{{item.Category == 'Restaurant'}}">美食</text>
+      <text wx:if="{{item.Category == 'Spa'}}">水疗</text>
+      {{item.Title}}
+    </view>
+    <view class="item-price">{{item.Price}}</view>
+    <text class="from shop-from">{{item.LocationName}}</text>
+    <text class="from shop-Selected">{{item.storeArr.DisplayName}}</text>
+  </view>
+</view>

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Travelzoo1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="members_g_wechat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppType" Type="int" Nullable="false" />
+          <Property Name="OpenId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UnionId" Type="varchar" MaxLength="50" />
+          <Property Name="Subscribe" Type="bit" />
+          <Property Name="Nickname" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="Language" Type="varchar" MaxLength="20" />
+          <Property Name="City" Type="nvarchar" MaxLength="100" />
+          <Property Name="Province" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="HeadimgUrl" Type="varchar" MaxLength="1000" />
+          <Property Name="SubscribeTime" Type="int" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="TagIdList" Type="varchar" MaxLength="500" />
+          <Property Name="SubscribeScene" Type="varchar" MaxLength="50" />
+          <Property Name="QRScene" Type="int" />
+          <Property Name="QRSceneStr" Type="varchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="LastModified" Type="datetime" />
+        </EntityType>
+        <EntityType Name="members_g_wechat_staging">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AppType" Type="int" Nullable="false" />
+          <Property Name="OpenId" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UnionId" Type="varchar" MaxLength="50" />
+          <Property Name="Subscribe" Type="bit" />
+          <Property Name="Nickname" Type="nvarchar" MaxLength="200" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="Language" Type="varchar" MaxLength="20" />
+          <Property Name="City" Type="nvarchar" MaxLength="100" />
+          <Property Name="Province" Type="nvarchar" MaxLength="100" />
+          <Property Name="Country" Type="nvarchar" MaxLength="100" />
+          <Property Name="HeadimgUrl" Type="varchar" MaxLength="1000" />
+          <Property Name="SubscribeTime" Type="int" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="TagIdList" Type="varchar" MaxLength="500" />
+          <Property Name="SubscribeScene" Type="varchar" MaxLength="50" />
+          <Property Name="QRScene" Type="int" />
+          <Property Name="QRSceneStr" Type="varchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="LastModified" Type="datetime" />
+        </EntityType>
+        <EntityContainer Name="Travelzoo1ModelStoreContainer">
+          <EntitySet Name="members_g_wechat" EntityType="Self.members_g_wechat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="members_g_wechat_staging" EntityType="Self.members_g_wechat_staging" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Travelzoo1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="members_g_wechat">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppType" Type="Int32" Nullable="false" />
+          <Property Name="OpenId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UnionId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Subscribe" Type="Boolean" />
+          <Property Name="Nickname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="Int32" />
+          <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HeadimgUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="SubscribeTime" Type="Int32" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="TagIdList" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubscribeScene" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QRScene" Type="Int32" />
+          <Property Name="QRSceneStr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModified" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Travelzoo1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="members_g_wechat" EntityType="Self.members_g_wechat" />
+          <EntitySet Name="members_g_wechat_staging" EntityType="Travelzoo1Model.members_g_wechat_staging" />
+        </EntityContainer>
+        <EntityType Name="members_g_wechat_staging">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AppType" Type="Int32" Nullable="false" />
+          <Property Name="OpenId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UnionId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Subscribe" Type="Boolean" />
+          <Property Name="Nickname" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="Int32" />
+          <Property Name="Language" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HeadimgUrl" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="SubscribeTime" Type="Int32" />
+          <Property Name="GroupId" Type="Int32" />
+          <Property Name="TagIdList" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubscribeScene" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QRScene" Type="Int32" />
+          <Property Name="QRSceneStr" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastModified" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Travelzoo1ModelStoreContainer" CdmEntityContainer="Travelzoo1Entities">
+          <EntitySetMapping Name="members_g_wechat">
+            <EntityTypeMapping TypeName="Travelzoo1Model.members_g_wechat">
+              <MappingFragment StoreEntitySet="members_g_wechat">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AppType" ColumnName="AppType" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+                <ScalarProperty Name="Subscribe" ColumnName="Subscribe" />
+                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="HeadimgUrl" ColumnName="HeadimgUrl" />
+                <ScalarProperty Name="SubscribeTime" ColumnName="SubscribeTime" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="TagIdList" ColumnName="TagIdList" />
+                <ScalarProperty Name="SubscribeScene" ColumnName="SubscribeScene" />
+                <ScalarProperty Name="QRScene" ColumnName="QRScene" />
+                <ScalarProperty Name="QRSceneStr" ColumnName="QRSceneStr" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="members_g_wechat_staging">
+            <EntityTypeMapping TypeName="Travelzoo1Model.members_g_wechat_staging">
+              <MappingFragment StoreEntitySet="members_g_wechat_staging">
+                <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="QRSceneStr" ColumnName="QRSceneStr" />
+                <ScalarProperty Name="QRScene" ColumnName="QRScene" />
+                <ScalarProperty Name="SubscribeScene" ColumnName="SubscribeScene" />
+                <ScalarProperty Name="TagIdList" ColumnName="TagIdList" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="SubscribeTime" ColumnName="SubscribeTime" />
+                <ScalarProperty Name="HeadimgUrl" ColumnName="HeadimgUrl" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+                <ScalarProperty Name="Subscribe" ColumnName="Subscribe" />
+                <ScalarProperty Name="UnionId" ColumnName="UnionId" />
+                <ScalarProperty Name="OpenId" ColumnName="OpenId" />
+                <ScalarProperty Name="AppType" ColumnName="AppType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

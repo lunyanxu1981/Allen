@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+input {
+    font-family:georgia,times;
+    line-height:1.2em;
+}
+
+a {
+    color:blue;
+    font-family:georgia,times;
+    line-height:1.2em;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+h1 {
+    color:#000000;
+    border-bottom:1px dotted #cccccc;
+}
+
+td {padding: 1px 30px 1px 0;}

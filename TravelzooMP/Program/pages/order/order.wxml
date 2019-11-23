@@ -1,0 +1,27 @@
+<view class="txt-show" hidden="{{txtShow}}">
+  <text>您的订单未显示？请重启微信后，再点开看看</text>
+</view>
+<view class='nogoods'>{{nogoods}}</view>
+<navigator class="car_item_wrap" wx:for="{{carArray}}" wx:key="index" url='/pages/conPon/conPon?did={{item.id}}'>
+  <view class='car_image_wrap'>
+    <image src='{{item.productArr.imgList[0].img_name}}' wx:if="{{item.productArr.imgList[0].img_name}}" class='car_item_image'></image>
+  </view>
+  <view class='car_image_title' wx:if="{{item.status == 0}}">
+    <view>{{item.productArr.shortTitle}}</view>
+  </view>
+  <view class='car_item_bot' wx:if="{{item.status == 0}}">
+    <text class='car_item_day'>有效期至：{{item.smartExpirationTime}}</text>
+  </view>
+  <view class='car_image_title txt-cor' wx:if="{{item.status == 1}}">
+    <view>{{item.productArr.shortTitle}}</view>
+  </view>
+  <view class='car_item_bot txt-cor' wx:if="{{item.status == 1}}">
+    <text class='car_item_day'>已兑换</text>
+  </view>
+  <view class='car_image_title txt-cor' wx:if="{{item.status == 2}}">
+    <view>{{item.productArr.shortTitle}}</view>
+  </view>
+  <view class='car_item_bot txt-cor' wx:if="{{item.status == 2}}">
+    <text class='car_item_day'>已过期：{{item.smartExpirationTime}}</text>
+  </view>
+</navigator>

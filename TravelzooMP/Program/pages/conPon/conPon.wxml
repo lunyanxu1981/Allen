@@ -1,0 +1,33 @@
+
+<scroll-view class='container'>
+<view style='font-size: 14px;background:#fff;'>
+  <view class='er-top'wx:for="{{productDetail.orderArr}}">
+    <view wx:if="{{productDetail.status == 1}}">已兑换</view>
+    <view wx:if="{{productDetail.status == 2}}">已过期：{{productDetail.smartExpirationTime}}</view>
+    <view wx:if="{{productDetail.status == 0}}">有效期至：{{productDetail.smartExpirationTime}}</view>
+  </view>
+  <view class='table-top m-b-20 m-t-31 color'>{{productDetail.parentProductArr.Title}}</view>
+  <ul class="color">
+    <li class="b-t-l">
+      <view>姓名</view>
+      <span>{{productDetail.orderArr.username}}</span>
+    </li>
+    <li>
+      <view>兑换券号码</view>
+      <span>{{productDetail.bar_code}}</span>
+    </li>
+    <li>
+      <view>PIN码</view>
+      <span>{{productDetail.pin}}</span>
+    </li>   
+    <li>
+      <view>状态</view>
+      <span wx:if="{{productDetail.status == 0}}">待使用</span>
+      <span wx:if="{{productDetail.status == 1}}">已兑换</span>
+      <span wx:if="{{productDetail.status == 2}}">已过期</span>
+    </li> 
+  </ul>
+  <view class='er-sure' wx:if="{{productDetail.status == 0}}"><image wx:if="{{productDetail.QRcodeUrl}}" src='{{productDetail.QRcodeUrl}}'></image></view>
+  <navigator url='/pages/OrderDetails/OrderDetails?did={{productDetail.id}}' class='er-sure' wx:if="{{productDetail.status == 0}}"><text>点击查看订单详情</text></navigator>
+</view>
+</scroll-view>

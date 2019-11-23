@@ -1,0 +1,200 @@
+img{
+	vertical-align:bottom;
+	display:block
+}
+a{
+	text-decoration: none;
+}
+button {
+  cursor: pointer;
+  outline: 0;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+button:active {
+  outline: 0;
+}
+
+menu, li, ul, p {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html {
+  font-size: 50px;
+}
+
+.fwb{
+  font-weight:bold;
+  text-align: center;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+}
+
+body {
+  width: 7.5rem;
+  padding: 0;
+  margin: 0 auto;
+  height:12.06rem;
+  font: .22rem/.4rem april;
+}
+.bg{
+  background: url("bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  width:100%;
+  height:100vh;
+}
+.content {
+  padding:4.45rem .6rem 0 .6rem;
+  font: .22rem/.4rem april;
+}
+.content ul{
+	height:.8rem;
+	overflow:hidden;
+}
+.content ul li{
+	width:50%;
+	float: left;
+}
+.content i{
+    width: .1rem;
+    height: .1rem;
+    border-radius: 50%;
+    line-height: .5rem;
+    /* text-align: center; */
+    background: #bb1b22;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .1rem;
+}
+.content .des p{
+	color:#696969;
+	height:.5rem;
+}
+.content .des p span{
+	height: .4rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .1rem;
+}
+.content .form p span{
+	display: inline-block;
+	width:1.5rem;
+	text-align:right;
+}
+.content .form p input{
+	display: inline-block;
+	border:1px #bb1b22 solid;
+	height:.55rem;
+	font-size: .22rem;
+	box-sizing: border-box;
+	padding-left: .15rem;
+}
+.content .form #phone{	
+	margin-top:.15rem;
+	width:100%;
+}
+.content .form #name{
+	width:49%;
+}
+.content .form #city{
+	width:49%;
+	float:right;
+}
+.content .form .submit{
+	display: block;
+    text-align: center;
+    width: 2rem;
+    border: 1px #bb1b22 solid;
+    background: #bb1b22;
+    height: .5rem;
+    color: #fff;
+    margin: .2rem auto 0rem auto;
+    font: .22rem/.4rem april;
+}
+.content .rule{
+	font: .2rem/.35rem april;
+	margin-top:.15rem;
+}   
+.content .rule p{
+	color: #696969;
+    display: inline-block;
+}
+.content .rule p a{
+	color: #bb1b22;	
+}
+.hide {
+  display: none;
+}
+.popup{
+    position: absolute;
+    width: 100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    z-index: 100;	
+	display:none;
+	font-size:.26rem;
+}
+.popup .popup-box{
+	width: 5rem;
+    height: 2.3rem;
+    background: rgba(187, 27, 34, 1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.5rem;
+    margin-top: -1.15rem;
+    color: #fff;
+    text-align: center;
+    z-index: 200;
+}
+.popup .popup-content{
+	/*border-bottom: 1px white solid;*/
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.popup .popup-button{
+	background: #bb1b22;
+    height: .8rem;
+    line-height: .8rem;
+}
+.popup .popup-line{
+	height: 1px;;
+    background: #fff;
+}
+.active{
+	display:block;
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation:zoomIn 0.5s ease;
+  -webkit-animation:zoomIn 0.5s ease;
+}

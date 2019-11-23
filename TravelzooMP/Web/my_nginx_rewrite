@@ -1,0 +1,5 @@
+
+#rewrite ^/([a-z0-9]+)$ /main_shorturl_u_$1.html;
+rewrite ^/([a-z0-9]+)$ /space_index_u_$1.html;
+
+if (!-e $request_filename) { rewrite ^/(.*)$ /index.php/$1 last; }

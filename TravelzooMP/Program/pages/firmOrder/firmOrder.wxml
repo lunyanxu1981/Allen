@@ -1,0 +1,54 @@
+<scroll-view>
+<view class='pay_order_wrap'>
+  <view class='table_header'>
+    <span class="table_goods_name">商品</span>
+    <span class="table_goods_num">数量</span>
+    <span class="table_goods_con">总价</span>
+  </view>
+  <view class='table_content'>
+    <span class="table_goods_name">{{name1}}</span>
+    <span class="table_goods_num">x {{num}}</span>
+    <span class="table_goods_con">{{con}}</span>
+  </view>
+</view>
+
+<view class='pay_order_wrap section'>
+  <picker bindchange='bindPickerChange' value="{{index}}" range='{{array}}' range-key="{{'title'}}">
+    <view class='picker lookdis'>
+      <view>点击查看优惠券</view>
+      <span>{{array[index].couponArr.title}}</span>
+        <!-- <input value="{{array[index].id}}"></input>    -->
+    </view>
+  </picker>
+</view>
+
+<view class='pay_order_wrap' >
+  <ul >
+    <li>
+      <view class='txt'>姓名</view>
+      <input placeholder-class='placeholder-class' type='text' bindinput='get_name' class='userName' placeholder='请输入真实姓名' value='{{username}}'></input>
+    </li>
+    <li>
+      <view class='txt'style="color:#0276ee">+86</view>
+      <input placeholder-class='placeholder-class' type='number' bindinput='get_phone' class='userName' placeholder='请输入联系电话' value='{{phone}}'></input>
+    </li>
+    <li>
+      <view class='txt'>邮箱</view>
+      <input placeholder-class='placeholder-class' type='text' bindinput='get_email' class='userName' placeholder='请输入邮箱账号（必填）' value='{{email}}'></input>
+    </li>
+  </ul>
+  <view class='table_fotter'>确认信息将以短信的形式发送，为不影响您的体验请正确填写</view>
+</view>
+<view class='agree'>
+  <view class='radio' catchtap='agree'>
+     <icon wx:if="{{agree}}" color='#0276ee' class='icon' type='success_no_circle' size='14'></icon>
+  </view>
+  我已阅读并同意<navigator url="/pages/rules/service/service">《服务条款》</navigator>
+  <navigator url="/pages/rules/sale/sale">《销售条款》</navigator>
+  <navigator url="/pages/rules/privacy/privacy">《隐私权政策》</navigator>
+</view>
+<view class="a {{isIphoneX}}">
+  <view class='b d btn'>￥{{con}}</view> 
+  <button class='c d btn' catchtap="goPay" disabled="{{disabled}}">去支付</button>
+</view>
+</scroll-view>

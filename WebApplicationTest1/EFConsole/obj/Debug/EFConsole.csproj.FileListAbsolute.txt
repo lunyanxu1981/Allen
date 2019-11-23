@@ -1,0 +1,12 @@
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EFConsole.exe.config
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EFConsole.exe
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EFConsole.pdb
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EntityFramework.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EntityFramework.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\obj\Debug\EFConsole.csprojAssemblyReference.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\obj\Debug\EFConsole.csproj.CoreCompileInputs.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\obj\Debug\EFConsole.csproj.CopyComplete
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\obj\Debug\EFConsole.exe
+D:\Work\GitHub\Allen\WebApplicationTest1\EFConsole\obj\Debug\EFConsole.pdb

@@ -1,0 +1,236 @@
+@import "/pages/info/info.wxss";
+/**
+ * tuanPay
+ */
+ page {
+   background-color: #fff;
+ }
+.product_card {
+  background-color: #fff;
+  box-shadow: 0 0 16px rgba(0,0,0,.3);
+  margin: 20rpx;
+  padding: 30rpx 20rpx;
+}
+.pro-left image {
+  width: 172rpx;
+  height: 198rpx;
+}
+.pro-right {
+  padding: 0 20rpx;
+}
+.pro-name {
+  margin: -6rpx 0 15rpx 0;
+  line-height: 1.2;
+}
+.price-wrap {
+  color: #c44;
+  font-size: 22.4rpx;
+}
+.n-price {
+  font-weight: 600;
+  font-size: 48rpx;
+  color: #c44;
+}
+.o-price {
+  font-size: 22rpx;
+  color: #7a7878;
+  text-decoration: line-through;
+}
+.tuan-price {
+  background-color: #c44;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0 4rpx;
+  margin-left: 5rpx;
+}
+.jiang {
+  height: 451rpx;
+  width: 608rpx;
+}
+.jiang-wrap {
+
+}
+.btn-closej {
+  position: absolute;
+  right: 60rpx;
+  top:0;
+  background-color: #f00;
+  height: 80rpx;
+  width: 80rpx;
+  opacity: 0;
+}
+.tuan-order-wrap {
+  padding: 40rpx 35rpx 228rpx;
+}
+.cstatus {color: #c44;}
+.tuan-status {
+  font-size: 40rpx;
+}
+.f31 {
+  font-size: 31rpx;
+  margin-right: 10rpx;
+}
+.jiang-btn-wrap {
+  background: none;
+}
+.share-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200rpx;
+  background-color: #fff;
+}
+.btn-shared {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 3;
+  background: none;
+  border: none !important;
+  opacity: 0;
+}
+.shared1 {
+  left: 0;
+}
+.shared2 {
+  right: 0;
+}
+.shareImg {
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  width: 100%;
+}
+.share-canvas {
+  position: fixed;
+  transform: translateX(-50%);
+  top: 50rpx;
+  left: 50%;
+  z-index: 1000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+/* end */
+.btn{
+  border-radius: 0;border: none;margin-bottom:-5px;
+}
+.btn::after {
+    border-radius: 0;
+}
+.tuan-cur-time {
+  color: #fff;
+  display: inline-block;
+  height: 44rpx;
+  width: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  position: relative;
+}
+.tuan-cur-time text {
+  position: relative;
+  z-index: 2;
+  font-size: 28rpx;
+}
+.bg-num {
+  z-index: 1;
+  height: 44rpx;
+  width: 44rpx;
+  position: absolute;
+  top:2rpx;
+  left:0;
+}
+.tuan-num {
+  margin: 0 5rpx;
+  color: #a4a4a4;
+}
+.btn-pay {
+  background: #0276EE;
+  color: #fff;
+  line-height: 100rpx;
+  height: 100rpx;
+  margin-bottom: 0; 
+}
+.bor {
+  border-right: 1px solid #fff;
+}
+.btn-db {
+  display: block;
+  text-align: center;
+}
+.tuan-header {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+.tuan-header image {
+  height: 94rpx;
+  width: 94rpx;
+  box-sizing: border-box;
+}
+.bg-header {
+  position: absolute;
+  top: 0;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.tuan-people-list {
+  display: flex;
+  margin: 40rpx 0;
+}
+.user-header {
+  border: 1px solid #ddd;
+  position: relative;
+  border-radius: 50%;
+  z-index: 2;
+}
+.tuan-user-role {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c44;  
+  color: #fff;
+  height: 38rpx;
+  line-height: 38rpx;
+  border-radius: 19rpx;
+  text-align: center;
+  font-size: 22rpx;
+  width: 80rpx;
+}
+.flowing {
+  color: #3568a0;
+  margin-bottom: 30rpx;
+}
+.ctuan {
+  font-size: 32rpx;
+}
+.wf-num {
+  color: #fff;
+  background-color: #3568a0;
+  border-radius: 50%;
+  height: 28rpx;
+  width: 28rpx;
+  display: inline-block;
+  text-align: center;
+  line-height: 28rpx;
+  margin-right: 10rpx;
+  font-size: 22rpx;
+}
+.mb10 {
+  margin-bottom: 10rpx;
+}
+.mb20 {
+  margin-bottom: 20rpx;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}

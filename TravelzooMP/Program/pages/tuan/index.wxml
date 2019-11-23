@@ -1,0 +1,50 @@
+<view class="tuan-header-wrap">
+  <image wx:if="{{httpPostImg}}" src="{{httpPostImg}}" class="tuan-header"></image>
+</view>
+<!-- 导航 -->
+<view class="tuan-result-wrap oh" wx:if="{{tuanOrderList.length !== 0}}">
+  <swiper class="swiper" autoplay="true" circular="true" interval="2000" duration="500">
+    <block wx:for="{{tuanOrderList}}" wx:key="item">
+      <swiper-item>
+        <text>{{item}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="tuan-wrap {{tuanOrderList.length === 0 ? 'mt20' : ''}}">
+  <view class="ui-flex">
+    <view class="tuan-title {{titleNum === 1 ? 'curTitle1' : ''}}" catchtap="_tabTuan" data-num="1">
+      <text>今日拼团</text>
+    </view>
+    <view class="tuan-title {{titleNum === 2 ? 'curTitle2' : ''}}" catchtap="_tabTuan" data-num="2">
+      <text>明日预告</text>
+    </view>
+  </view>
+  <view class="list-tuan">
+    <block wx:for="{{cardList}}" wx:key="index">
+      <navigator url="/pages/tuanDetails/index?pid={{item.tid}}&state={{titleNum}}">
+        <view class="list-card">
+          <view class="img-wrap">
+            <image src="{{item.img}}"></image>
+          </view>
+          <view class="tuan-info">
+            <view class="title-tuan">
+              <text>{{item.title}}</text>
+            </view>
+            <view class="cut-time" style="visibility:{{titleNum === 2 ? 'hidden' : 'visible'}}">
+              <text>活动倒计时 {{countDownList[index]}}</text>
+            </view>
+            <view class="pr">
+              <text class="n-price">￥{{item.newPrice}}</text>
+              <text class="o-price">￥{{item.oldPrice}}</text>
+              <button bindgetuserinfo="getUserInfo" open-type="getUserInfo" class="btn-ktuan {{titleNum === 1 ? '' : 'btn-ktuan2'}}">
+                <text wx:if="{{titleNum === 1}}">去开团</text>
+                <text wx:if="{{titleNum === 2}}">敬请期待</text>
+              </button>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>

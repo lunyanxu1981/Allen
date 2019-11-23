@@ -1,0 +1,116 @@
+{$header}
+<!-- <script type="text/javascript" src="/js/ueditor1_2_3_0/editor_config.js"></script>
+<script type="text/javascript" src="/js/ueditor1_2_3_0/editor_all.js"></script>
+<link rel="stylesheet" href="/js/ueditor1_2_3_0/themes/default/ueditor.css">  -->
+
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 用户反馈管理
+				</h2>
+			</div>					
+			<div class="box-content">
+			<form method="post" action="" id="item_form" enctype="multipart/form-data" target="head">
+                <div class="modal-body">              
+                    <table class="table table-bordered table-striped table-condensed">
+            			<tr>
+            				<td class="center" width="10%">用户id</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   {$itemArr['uid']}
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">微信昵称</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								  {$itemArr["userArr"]["nickname"]}
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">内容</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   {$itemArr['content']}
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">状态</td>
+							<td class="center">
+								<div class="form-group" id="status">
+									<label class="radio-inline">
+										<input type="radio" value="0" name="status"{if $itemArr["status"] == 0} checked{/if}>未处理
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="1" name="status"{if $itemArr["status"] == 1} checked{/if}>已处理
+									</label>
+								</div>
+							</td>
+            			</tr>
+            		</table>
+               
+                </div>
+                
+                <div class="modal-footer" style="text-align: center;">
+					<input type="hidden" name="eid" value="{$itemArr['id']}">
+					<input type="hidden" name="frontURL" id="frontURL" value="{$frontURL}">
+                	<!-- <a id="sub-form" href="#" class="btn btn-primary" data-dismiss="modal">保存</a> -->
+                	<input type="submit" class="btn btn-primary" value="保存" id="sub_btn" />　
+                    <a href="javascript:window.history.go(-1);" class="btn btn-default" data-dismiss="modal">取消</a>                   
+                </div>
+                </form>
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+$(function () {
+	$("#item_form").validate({
+		rules: {
+			title: {
+				required: true
+			},
+			user_pwd: {
+				required: true,
+				minlength: 6
+			},
+			email: {
+				email: true
+			},
+			phone: {
+				phone: true
+			}
+		},
+		messages: {
+			title: {
+				required: "标题不能为空哦"
+			},
+			user_pwd: {
+				required: "请输入您的密码",
+				minlength: "密码至少6位数哦"
+			},
+			email: {
+				email: "您的email输入有误"
+			},
+			phone: {
+				phone: "您的手机号输入有误"
+			}
+		},
+		errorClass: "input_bad",
+	});
+
+});
+//-->
+</script>
+
+{$footer}

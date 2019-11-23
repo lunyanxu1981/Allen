@@ -1,0 +1,27 @@
+<view class="show-pac">
+  <image mode="{{mode}}" src="{{userInfo.avatarUrl}}" wx:if="{{userInfo.avatarUrl}}" class="personal_info"></image>
+</view>
+<view class="photo_wrap">
+  <image src="{{userInfo.avatarUrl}}" wx:if="{{userInfo.avatarUrl}}" class="photo"></image>
+  <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+<navigator class="tableviecell" url="/pages/order/order">
+  <text>我的订单</text>
+  <span class="arrow_wrap"></span>
+</navigator>
+<navigator class="tableviecell" url="/pages/tuanList/index">
+  <text>我的拼团订单</text>
+  <span class="arrow_wrap"></span>
+</navigator>
+<navigator class="tableviecell" url="/pages/discount/discount">
+  <text>优惠券</text>
+  <span class="arrow_wrap"></span>
+</navigator>
+<navigator class="tableviecell" url="/pages/rules/contact/contact">
+  <text>联系我们</text>
+  <span class="arrow_wrap"></span>
+</navigator>
+<navigator class="tableviecell" url="/pages/rules/rules/rules">
+  <text>法律细则</text>
+  <span class="arrow_wrap"></span>
+</navigator>

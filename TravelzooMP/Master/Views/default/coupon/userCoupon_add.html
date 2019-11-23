@@ -1,0 +1,228 @@
+{$header}
+<!-- <script type="text/javascript" src="/js/ueditor1_2_3_0/editor_config.js"></script>
+<script type="text/javascript" src="/js/ueditor1_2_3_0/editor_all.js"></script>
+<link rel="stylesheet" href="/js/ueditor1_2_3_0/themes/default/ueditor.css"> -->
+
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 用户优惠券管理
+				</h2>
+			</div>					
+			<div class="box-content">
+			<form method="post" action="" id="item_form" enctype="multipart/form-data" target="head">
+                <div class="modal-body">              
+                    <table class="table table-bordered table-striped table-condensed">
+            			<tr>
+            				<td class="center" width="10%">类别</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   	<select name="type" id="type" class="sel" data-rel="chosen">
+									{loop $typeList $typeArr}
+										<option value="{$typeArr["id"]}">{$typeArr["title"]}</option>
+									{/loop}
+									</select>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center" width="10%">标题</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <input id="title" class="form-control" type="text" name="title">
+								</div>
+							</td>
+            			</tr>
+            			<!-- <tr>
+            				<td class="center">内容</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea id="myContent" name="content"></textarea>
+									<script type="text/javascript">
+										var editorOption = {
+											toolbars:[['source', 'undo', 'redo','bold', 'italic', 'underline', 'removeformat', 'pasteplain', 'forecolor', 'backcolor','fontfamily',
+											'fontsize','justifyleft', 'justifycenter', 'justifyright', 'justifyjustify','link', 'unlink', 'anchor', 'insertimage', 'emotion','scrawl',
+											'attachment', 'map', 'gmap','horizontal', 'spechars', 'wordimage', '|','inserttable', 'deletetable', 'insertparagraphbeforetable', 'insertrow',
+											'deleterow', 'insertcol', 'deletecol', 'mergecells', 'mergeright', 'mergedown', 'splittocells', 'splittorows', 'splittocols', '|',
+							                'preview', 'searchreplace']],
+											wordCount:false,
+											elementPathEnabled : false,
+											enterTag:'',
+											initialContent:'',
+										};
+										var editor = new baidu.editor.ui.Editor(editorOption);
+										editor.render("myContent");
+										//UE.getEditor('content',editorOption);
+									</script>
+								</div>
+							</td>
+            			</tr> -->
+            			<tr>
+            				<td class="center">活动图片</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <input id="img_arr" class="form-control" type="file" name="img_arr">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">地点</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="address" class="form-control" type="text" name="address">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">人数</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="num" class="form-control" type="text" name="num">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">价格</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="price" class="form-control" type="text" name="price">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">开始时间</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="from_time" class="form-control" type="text" name="from_time">
+								</div>
+							</td>
+            			</tr>
+               			<tr>
+            				<td class="center">结束时间</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="to_time" class="form-control" type="text" name="to_time">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">简介</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea name="description" id="description" cols="60" rows="8"></textarea>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">是否推荐</td>
+							<td class="center">
+								<div class="form-group" id="is_recommend">
+									<label class="radio-inline">
+										<input type="radio" value="0" name="is_recommend" checked="checked">不推荐
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="1" name="is_recommend">推荐
+									</label>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">排序值</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="rank" class="form-control" type="text" name="rank"> (大数排在前面)
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">状态</td>
+							<td class="center">
+								<div class="form-group" id="status">
+									<label class="radio-inline">
+										<input type="radio" value="0" name="status" checked="checked">未审核
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="1" name="status">审核通过
+									</label>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">状态</td>
+							<td class="center">
+								<div class="form-group" id="status">
+									<label class="radio-inline">
+										<input type="radio" value="0" name="status" checked="checked">未开始
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="1" name="status">已开始
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="2" name="status">已结束
+									</label>
+								</div>
+							</td>
+            			</tr>
+            		</table>
+               
+                </div>
+                
+                <div class="modal-footer" style="text-align: center;">
+	  				<input type="hidden" name="frontURL" id="frontURL" value="{$frontURL}">
+                	<!-- <a id="sub-form" href="#" class="btn btn-primary" data-dismiss="modal">保存</a> -->
+                	<input type="submit" class="btn btn-primary" value="保存" id="sub_btn" />　
+                    <a href="javascript:window.history.go(-1);" class="btn btn-default" data-dismiss="modal">取消</a>                   
+                </div>
+                </form>
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+$(function () {
+	$("#item_form").validate({
+		rules: {
+			title: {
+				required: true
+			},
+			user_pwd: {
+				required: true,
+				minlength: 6
+			},
+			email: {
+				email: true
+			},
+			phone: {
+				phone: true
+			}
+		},
+		messages: {
+			title: {
+				required: "标题不能为空哦"
+			},
+			user_pwd: {
+				required: "请输入您的密码",
+				minlength: "密码至少6位数哦"
+			},
+			email: {
+				email: "您的email输入有误"
+			},
+			phone: {
+				phone: "您的手机号输入有误"
+			}
+		},
+		errorClass: "input_bad",
+	});
+
+});
+//-->
+</script>
+
+{$footer}

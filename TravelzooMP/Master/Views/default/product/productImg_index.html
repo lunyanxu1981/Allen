@@ -1,0 +1,146 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 商品图片管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						<!-- <button class="btn btn-default btn-sm ajax-all" onclick="location.href='/product_index.html'"><i class="glyphicon glyphicon-list"></i>商品管理</button> -->
+						<span style="padding-left:20px;"></span>
+						<button class="btn btn-default btn-sm ajax-add" onclick="location.href='/productImg_add.html?pid={$getArr["pid"]}'"><i class="glyphicon glyphicon-plus"></i> 新 增</button>
+						<!-- <span style="padding-left:20px;"></span>
+						<select id="search_item" name="search_item" data-rel="chosen" style="width:85px;">
+	                          <option value="storename" {if $searchArr["item"] == "storename"} selected{/if}>店铺名</option>
+	                          <option value="telephone" {if $searchArr["item"] == "telephone"} selected{/if}>电话</option>
+	                    </select>
+	                    <input type="text" id="search_txt" value="{$searchArr['txt1']}" name="search_txt">
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button> -->
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="2%">id</th>
+							<th width="5%">商品ID</th>
+							<th width="20%">图片</th>
+							<th width="5%">排序</th>
+							<th width="8%">管理</th>
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">{$itemArr["id"]}</td>
+							<td class="center">{$itemArr["pid"]}</td>
+							<td class="center">
+								{if $itemArr["img_name"] != ""}<img src="{$itemArr["img_name"]}" height="150">{/if}
+							</td>
+							<td class="center"><input type="text" class="form-control" style="width:50px;" id="rank_{$itemArr['id']}" onblur="setRank({$itemArr['id']});" value="{$itemArr["rank"]}"></td>
+							<!-- <td class="center"><span class="span-red">active</span></td> -->
+							<td class="center">
+								<!-- <a class="btn btn-success btn-xs ajax-view" href="productImg_findById_id_{$itemArr['id']}.html">
+									<i class="glyphicon glyphicon-zoom-in icon-white"></i> 
+									View
+								</a>  -->
+								<a class="btn btn-info btn-xs ajax-edit" href="/productImg_edit_eid_{$itemArr['id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+								<a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a>
+							</td>
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/productImg_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setRank = function(eid){
+	var v = $.trim($("#rank_"+eid).val());
+	$.ajax({ url: "/productImg_setRank.html",dataType:"html",type:"POST",data:"eid="+eid+"&rank="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+/*
+$(".ajax-search").click(function(){
+	var item = $('#search_item').val();
+	if(item != "createTime"){
+		var txt1 = $.trim($('#search_txt').val());
+	}else{
+		var txt1 = $.trim($('#time_from').val());
+		var txt2 = $.trim($('#time_to').val());
+	}
+	if(txt1 == ""){
+		return false;
+	}
+	location.href='/process_index.html?item='+item+'&txt1='+txt1+'&txt2='+txt2;
+});
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+$("#type").change(function(){
+	var pid = $(this).val();
+	$.get("/tree_getSubclass.html?pid="+pid,function(v){
+		$("#category").html(v);
+	});
+});
+*/
+//-->
+</script>
+
+{$footer}

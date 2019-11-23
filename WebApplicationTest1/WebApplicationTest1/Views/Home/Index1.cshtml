@@ -1,0 +1,84 @@
+﻿@model WebApplicationTest1.Models.SignupUser
+@{
+    /**/
+
+    ViewBag.Title = "Test Ajax in MVC";
+}
+
+<h2>Index1</h2>
+<div class="row">
+    <div>
+        @using (Html.BeginForm("SignUp", "Home", FormMethod.Post, new { id = "RegisterForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <!-- input user id -->
+            <div class="form-group">
+
+                <div style="margin-bottom: 5px" class="col-md-9">
+                    @Html.LabelFor(model => model.SysUserId)
+                    @Html.EditorFor(model => model.SysUserId)
+                    @Html.ValidationMessageFor(model => model.SysUserId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- input user email -->
+            <div class="form-group">
+                <div style="margin-bottom: 5px" class="col-md-9">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.EditorFor(model => model.Email )
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <!-- Sign up button -->
+            <div class="form-group">
+                <div class="col-md-9">
+                    <input type="button" id="submitButton" value="Sign Up Ajax" class="btn btn-info" />
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+@section scripts {
+    <script>
+    $(document).ready(function () {
+        // submit data to server
+        $('#submitButton').click(function () {
+
+            var myForm = $("#RegisterForm");
+
+            var validator = myForm.validate();
+            if (myForm.valid()) {
+
+                var dataForm = myForm.serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: '@Url.Action("SignUpAjax", "Home")',
+                    data: dataForm,
+                    cache: false,
+                    async: false,
+                    success: function (data) {
+                        if (data.IsSuccess) {
+
+                            alert('register done');
+                            window.location = '@Url.Action("Index", "Home")';
+
+                        } else {
+
+                            if (data.ModelStateErrors != null) {
+                                // show model state error
+                                validator.showErrors(data.ModelStateErrors);
+                                alert('please check all required info');
+                            } else {
+                                alert('register fail');
+                            }
+                        }
+                    }
+                });
+
+            }
+          });
+    });
+    </script>
+}

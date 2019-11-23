@@ -1,0 +1,15 @@
+@import "/pages/index/index.wxss";
+page image{
+  width: 100%;
+  height: 100vh;
+  box-sizing:border-box;
+}
+.shop-select{
+  height:auto;
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  margin:0px 30rpx;
+}
+.posttion{position: relative;text-align: center;color: #fff;padding:35rpx 0rpx;}
+.posttion view{font-size: 28rpx;margin-top: 10px}

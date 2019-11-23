@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/info/info",
+    "pages/wode/wode",
+    "pages/order/order",
+    "pages/rules/contact/contact",
+    "pages/rules/rules/rules",
+    "pages/rules/privacy/privacy",
+    "pages/rules/sale/sale",
+    "pages/rules/service/service",
+    "pages/OrderDetails/OrderDetails",
+    "pages/firmOrder/firmOrder",
+    "pages/conPon/conPon",
+    "pages/test/test",
+    "pages/list/list",
+    "pages/select/select",
+    "pages/discount/discount",
+    "pages/tuan/index",
+    "pages/tuanDetails/index",
+    "pages/tuanPay/index",
+    "pages/tuanList/index",
+    "pages/tuanOrderDetails/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Travelzoo",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#0276ee",
+    "backgroundColor": "#fff",
+    "borderStyle": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/family.png",
+        "selectedIconPath": "img/our-family.png"
+      },
+      {
+        "pagePath": "pages/wode/wode",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/our-my.png"
+      }
+    ]
+  },
+  "debug": false
+}

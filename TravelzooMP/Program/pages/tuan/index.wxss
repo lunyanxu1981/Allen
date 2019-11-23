@@ -1,0 +1,119 @@
+/* pages/mine/mine.wxss */
+@import "/pages/test/test.wxss";
+page {
+  background-color: #f4f4f4;
+}
+navigator{
+  background:#fff;
+}
+image {
+  width: 100%;
+}
+.tuan-header-wrap {
+  padding: 0;
+  opacity: 1;
+  overflow: hidden;
+  height: 260rpx;
+}
+.tuan-header {
+  height: 100%;
+}
+.tuan-result-wrap {
+  margin: 15rpx 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #cdcdcd;
+}
+.swiper {
+  height: 100%;
+  width: 100%;
+  padding: 0 20rpx;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+}
+.tuan-title {
+  background-color: #f4f4f4;
+  height: 80rpx;
+  line-height: 80rpx;
+  flex:1;
+  text-align: center;
+  color: #000;
+  font-size: 35.8rpx;
+}
+.curTitle1 {
+  color: #0276ef;
+  background-color: #fff;
+  border-radius: 0 6px 0 0;
+}
+.curTitle2 {
+  color: #0276ef;
+  background-color: #fff;
+  border-radius: 6px 0 0 0;
+}
+.ui-flex {
+  display:flex;
+}
+.list-tuan {
+  background-color: #fff;
+  min-height: 840rpx;
+  padding: 20rpx 40rpx 40rpx;
+}
+.list-card {
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,.2);
+  padding-bottom: 20rpx;
+  margin-bottom: 40rpx;
+}
+.tuan-info {
+  padding: 0 25rpx;
+}
+.img-wrap image {
+  height: 374rpx;
+  border-radius: 8px 8px 0 0;
+}
+.title-tuan {
+  font-size: 30rpx;
+  margin: 5rpx 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #000;
+}
+.cut-time {
+  color: #c44;
+  font-size: 22.4rpx;
+  font-weight: 600;
+  margin: 12rpx 0 6rpx;
+}
+.n-price {
+  font-size: 48rpx;
+  color: #c44;
+}
+.o-price {
+  font-size: 22rpx;
+  color: #7a7878;
+  text-decoration: line-through;
+}
+.pr {
+  position: relative;
+}
+.btn-ktuan {
+  width: 190rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  position: absolute;
+  right: 0;
+  bottom:0;
+  background-color: #0276ef;
+  font-size: 32rpx;
+}
+.btn-ktuan2 {
+  background-color: #b4b4b4;
+}
+.mt20 {
+  margin-top: 20px;
+}

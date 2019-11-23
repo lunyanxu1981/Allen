@@ -1,0 +1,193 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 商品管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						<!-- <button class="btn btn-default btn-sm ajax-all" onclick="location.href='/product_index.html'"><i class="glyphicon glyphicon-list"></i>显示全部</button>
+						<span style="padding-left:20px;"></span> -->
+						<!-- <button class="btn btn-default btn-sm ajax-add" onclick="location.href='/product_add.html'"><i class="glyphicon glyphicon-plus"></i> 新 增</button>
+						<span style="padding-left:20px;"></span>
+						 -->
+						<select id="type" name="type">
+							<option value="0"{if $getArr["type"] == "0"} selected{/if}>商品分类</option>
+                		{loop $typeList $typeArr}
+							<option value="{$typeArr["id"]}"{if $getArr["type"] == $typeArr["id"]} selected{/if}>{$typeArr["title"]}</option>
+						{/loop}
+	                    </select>
+	                    <select id="banner" name="banner">
+							<option value="0"{if $getArr["type"] == "0"} selected{/if}>banner分类</option>
+                		{loop $bannerList $bannerArr}
+							<option value="{$bannerArr["id"]}"{if $getArr["banner"] == $bannerArr["id"]} selected{/if}>{$bannerArr["title"]}</option>
+						{/loop}
+	                    </select>
+	                    <select id="skey" name="skey">
+							<option value=""{if $getArr["skey"] == ""} selected{/if}>搜索项</option>
+	                        <option value="Title"{if $getArr["skey"] == "Title"} selected{/if}>商品名</option>
+	                        <option value="Id"{if $getArr["skey"] == "Id"} selected{/if}>商品ID</option>
+	                        <option value="Price"{if $getArr["skey"] == "Price"} selected{/if}>商品价格</option>
+	                        <option value="LocationName"{if $getArr["skey"] == "LocationName"} selected{/if}>位置</option>
+	                        <option value="ByLine"{if $getArr["skey"] == "ByLine"} selected{/if}>制作人</option>
+	                    </select>
+	                    <input type="text" id="svalue" name="svalue" value="{$getArr['svalue']}">
+
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button>
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="3%">id</th>
+							<th width="8%">类别</th>
+							<th width="12%">标题</th>
+							<th width="5%">价格</th>
+							<th width="5%">位置</th>
+							<th width="10%">酒店信息</th>
+							<th width="10%">其它信息</th>
+							<!-- <th width="5%">推荐</th> -->
+							<th width="8%">排序</th>
+							<th width="8%">管理</th>
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">
+								{$itemArr["Id"]}
+							</td>
+							<td class="center">
+								{$itemArr["typeName"]}<br><br>
+								{$itemArr["bannerName"]}
+							</td>
+							<td class="center">
+								<a href="{$itemArr["Url"]}" target="_blank">{$itemArr["Title"]}</a><br>
+								<img src="{$itemArr["imgList"][0]["img_name"]}" width="200">
+							</td>
+							<td class="center"><del>￥{$itemArr["Value"]}</del> ￥{$itemArr["Price"]}</td>
+							<td class="center">{$itemArr["LocationName"]}</td>
+							<td class="center">
+								酒店名:<br>{$itemArr["storeArr"]["DisplayName"]}<br><br>
+								地址:<br>{$itemArr["storeArr"]["StreetAddress1"]}<br><br>
+								电话:<br>{$itemArr["storeArr"]["Phone"]}<br><br>
+							</td>
+							<td class="center">
+								发布时间：<br>{$itemArr["PublishDateUtc"]}<br><br>
+								过期时间：<br>{$itemArr["PurchaseExpiryDateUtc"]}<br><br>
+								制作人:{$itemArr["ByLine"]}<br>
+								库存：{$itemArr["MaximumPurchases"]}<br>
+								<!-- 是否售罄：
+								{if $itemArr["IsPurchasable"]=="0"}<font color="red">已售罄</font>
+								{else}<font color="blue">可售</font>
+								{/if} -->
+							</td>
+							<!-- <td class="center">
+								<input type="text" class="form-control" id="is_recommend_{$itemArr['Id']}" onblur="setItem({$itemArr['Id']},'is_recommend');" value="{$itemArr["is_recommend"]}">
+							</td> -->
+							<td class="center">
+								首页排序：<br>
+								<input type="text" class="form-control" id="rank_{$itemArr['Id']}" onblur="setItem({$itemArr['Id']},'rank');" value="{$itemArr["rank"]}"><br>
+								banner排序：<br>
+								<input type="text" class="form-control" id="banner_rank_{$itemArr['Id']}" onblur="setItem({$itemArr['Id']},'banner_rank');" value="{$itemArr["banner_rank"]}">
+							</td>
+							<td class="center">
+								<a class="btn btn-info btn-xs ajax-edit" href="/product_edit_eid_{$itemArr['Id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+								<a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['Id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a>
+							</td>
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/product_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setItem = function(eid,item){
+	var v = $.trim($("#"+item+"_"+eid).val());
+	$.ajax({ url: "/product_setItem.html",dataType:"html",type:"POST",data:"eid="+eid+"&item="+item+"&value="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+
+$(".ajax-search").click(function(){
+	var type = $('#type').val();
+	var banner = $('#banner').val();
+	var skey = $("#skey").val();
+	var svalue = $('#svalue').val();
+	location.href='/product_index.html?type='+type+'&banner='+banner+'&skey='+skey+'&svalue='+svalue;
+});
+/*
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+
+$("#type").change(function(){
+	var pid = $(this).val();
+	if(pid>0){
+		$.get("/product_getSubclass.html?pid="+pid,function(v){
+			$("#category").html(v);
+		});
+	}
+});
+*/
+//-->
+</script>
+
+{$footer}

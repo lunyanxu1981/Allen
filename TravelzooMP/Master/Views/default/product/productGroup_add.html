@@ -1,0 +1,275 @@
+{$header}
+<!-- <script type="text/javascript" src="/js/ueditor1_2_3_0/editor_config.js"></script>
+<script type="text/javascript" src="/js/ueditor1_2_3_0/editor_all.js"></script>
+<link rel="stylesheet" href="/js/ueditor1_2_3_0/themes/default/ueditor.css"> -->
+
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 拼团产品管理
+				</h2>
+			</div>					
+			<div class="box-content">
+			<form method="post" action="" id="item_form" enctype="multipart/form-data" target="head">
+                <div class="modal-body">              
+                    <table class="table table-bordered table-striped table-condensed">
+            			<tr>
+            				<td class="center" width="10%">类别</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   	<select name="type" id="type" class="sel" data-rel="chosen">
+										<option value="1">正常Deal</option>
+										<option value="2">拼团专属</option>
+									</select>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">Deal Id</td>
+							<td class="center">
+								<div class="form-group col-md-2">
+								   <input id="tzoo_pid" class="form-control" type="text" name="tzoo_pid">
+								</div>
+								<input type="button" name="getInfoBtn" id="getInfoBtn" value="获取资料">
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">标题</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <input id="title" class="form-control" type="text" name="title">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">类别</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="category" class="form-control" type="text" name="category">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">地区</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="location_name" class="form-control" type="text" name="location_name">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">价格</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="price" class="form-control" type="text" name="price">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">原价</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="value" class="form-control" type="text" name="value">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">优惠</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea name="lead" id="lead" cols="60" rows="8"></textarea>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">亮点</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea name="why_we_love" id="why_we_love" cols="60" rows="8"></textarea>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">有效期</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <input id="valid_date" class="form-control" type="text" name="valid_date">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">优惠详情</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea name="what_is_included" id="what_is_included" cols="60" rows="8"></textarea>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">温馨提示</td>
+							<td class="center">
+								<div class="form-group col-md-12">
+								   <textarea name="fine_print" id="fine_print" cols="60" rows="8"></textarea>
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">开始时间</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="from_time" class="form-control" type="text" name="from_time" readonly="true">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">结束时间</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="to_time" class="form-control" type="text" name="to_time" readonly="true">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">限制人数</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="num" class="form-control" type="text" name="num">
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">分享图片</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="img_arr" class="form-control" type="file" name="img_arr">（172*198）
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">排序值</td>
+							<td class="center">
+								<div class="form-group col-md-4">
+								   <input id="rank" class="form-control" type="text" name="rank"> (大数排在前面)
+								</div>
+							</td>
+            			</tr>
+            			<tr>
+            				<td class="center">状态</td>
+							<td class="center">
+								<div class="form-group" id="status">
+									<label class="radio-inline">
+										<input type="radio" value="0" name="status" checked="checked">未审核
+									</label>
+									<label class="radio-inline">
+										<input type="radio" value="1" name="status">审核通过
+									</label>
+								</div>
+							</td>
+            			</tr>
+            		</table>
+               
+                </div>
+                
+                <div class="modal-footer" style="text-align: center;">
+	  				<input type="hidden" name="frontURL" id="frontURL" value="{$frontURL}">
+                	<!-- <a id="sub-form" href="#" class="btn btn-primary" data-dismiss="modal">保存</a> -->
+                	<input type="submit" class="btn btn-primary" value="保存" id="sub_btn" />　
+                    <a href="javascript:window.history.go(-1);" class="btn btn-default" data-dismiss="modal">取消</a>                   
+                </div>
+                </form>
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+$(function () {
+
+$("#getInfoBtn").click(function(){
+	var did = $("#tzoo_pid").val();
+	$.ajax({ url: "/productGroup_getProductDetail.html",dataType:"html",type:"POST",data:"dealid="+did,
+		 success:function(v) {
+		 	var obj = $.parseJSON(v);
+			if (obj.status=="401") {
+				alert(obj.data);
+			}else{
+				var pArr = obj.data;
+				$("#title").val(pArr.Title);
+				$("#category").val(pArr.Category);
+				$("#location_name").val(pArr.LocationName);
+				$("#price").val(pArr.Price);
+				$("#value").val(pArr.Value);
+				$("#lead").val(pArr.Lead);
+				$("#why_we_love").val(pArr.WhyWeLoveIt);
+				$("#valid_date").val(pArr.When);
+				$("#what_is_included").val(pArr.WhatIsIncluded);
+				$("#fine_print").val(pArr.FinePrint);
+			}
+		 }
+	});
+});
+
+$("#from_time").datetimepicker({
+	// defaultDate: $("#from_time").val(),
+    dateFormat: "yy-mm-dd",
+    showSecond: true,
+    timeFormat: 'HH:mm:ss',
+    stepHour: 1,
+    stepMinute: 1,
+    stepSecond: 1
+});
+$("#to_time").datetimepicker({
+	// defaultDate: $("#to_time").val(),
+    dateFormat: "yy-mm-dd",
+    showSecond: true,
+    timeFormat: 'HH:mm:ss',
+    stepHour: 1,
+    stepMinute: 1,
+    stepSecond: 1
+});
+
+$("#item_form").validate({
+	rules: {
+		title: {
+			required: true
+		},
+		user_pwd: {
+			required: true,
+			minlength: 6
+		},
+		email: {
+			email: true
+		},
+		phone: {
+			phone: true
+		}
+	},
+	messages: {
+		title: {
+			required: "标题不能为空哦"
+		},
+		user_pwd: {
+			required: "请输入您的密码",
+			minlength: "密码至少6位数哦"
+		},
+		email: {
+			email: "您的email输入有误"
+		},
+		phone: {
+			phone: "您的手机号输入有误"
+		}
+	},
+	errorClass: "input_bad",
+});
+
+});
+//-->
+</script>
+
+{$footer}

@@ -1,0 +1,242 @@
+﻿body{
+	color:#808080
+	}
+.T-wrapper,.T-header div.auto{
+    width:980px;
+	}
+.T-beta-banner{
+	margin-bottom:8px;
+	height:85px;
+	background:url(/images/beta/banner-login.png) no-repeat 50% 50%;
+	}
+.T-beta-nav{
+	bottom:0;
+	margin:0
+	}
+	
+.T-form{
+	font-size:14px;
+	width:980px;
+	height:390px;
+	border-radius:6px;
+	box-shadow:0 -1px 3px rgba(0,0,0,0.2);
+	background:#fff url(/images/beta/illustration-login.jpg) no-repeat 95% 90%;
+	}
+.T-form.go{
+	height:250px;
+	}
+.T-form.go th{
+	display:none
+	}
+.T-form.go tbody td{
+	padding:10px 0 10px 105px;
+	}
+.T-form.go .form-r{
+	display:none
+	}
+.T-register{
+	background:#fff url(/images/beta/illustration-reg.jpg) no-repeat 100% 90%;
+	}
+.T-resetpassword{
+	background:#fff url(/images/beta/illustration-reset.jpg) no-repeat 95% 90%;
+	}
+.T-form .inner{
+	padding-top:30px;
+	}
+	
+.T-form .form-l{
+	width:530px;
+	float:left;
+	}
+.T-form .form-r{
+	float: right;
+	padding: 20px 0 0 40px;
+	width: 409px;
+	height:300px;
+	border-left:1px dotted #999
+	}
+.T-form .form-r h3{
+    color: #636363;
+    font-size: 18px;
+    line-height: 60px;
+    padding: 0;
+	}
+.T-form .form-r label{
+	padding-right:10px
+	}
+.T-form .form-r p{
+	padding:6px 0;
+	color:#5f5f5f
+	}
+.T-form .form-r span{
+	font-size:12px;
+	color:#aaaaaa
+	}
+.T-form table{
+	width:100%
+	}
+.T-form a{
+	color:#3a80bc
+	}
+
+.T-form th{
+	padding-right:10px;
+	width:130px;
+	height:40px;
+	text-align:right
+	}
+.T-form tbody input{
+	width:200px;
+	color:#999;
+	}
+.T-form input[type=radio],.T-form input[type=checkbox]{
+	width:auto;
+	height:auto;
+	vertical-align:middle
+	}
+.T-form input[type=radio]{
+	margin:0 20px 0 3px;
+	}
+.T-form tfoot td{
+	height:50px;
+	}
+
+.T-form  label.error i{
+	display:inline-block;
+	width:15px;height:15px;
+	margin:0 3px 0 10px;
+	background:url(/images/-T-sprite.png) no-repeat;
+	background-position:-50px -600px;
+	}
+.T-form  label.valid{
+	background-position:-50px -648px;
+	}
+
+
+.T-form tfoot button,.T-form tfoot .button{
+	display:inline-block;
+	margin-left:105px;
+	padding:8px 30px;
+    background-color:#2c2c2c;
+	color:#e8e8e8;
+	font-size:18px;
+	font-weight:600;
+    border-radius:5px;
+	}
+.i-2-0{
+	margin-right:5px;
+	width:19px;
+	height:19px;
+	background-position:-100px 0;
+	}
+.T-form tfoot button:hover,.T-form tfoot .button:hover{
+	color:#fff;
+    background-color:#e70b6f;
+	}
+.T-form tfoot button:hover i{
+	background-position:-100px -50px;
+	}
+.T-form  caption{
+	line-height:40px;
+	color:#3d3d3d;
+	font-size:24px;
+	padding-left:105px;
+	}
+#phone{
+	width:200px;
+	}
+
+.T-openid{
+	text-align:right;
+	border-top:1px solid #ccc
+	}
+
+.T-openid i{
+	width:25px;
+	height:25px;
+	}
+.T-openid .i-2-0{
+	background-position:-95px 5px;
+	}
+.T-openid .i-2-1{
+	background-position:-93px -45px;
+	}
+.T-openid .i-2-2{
+	background-position:-94px -95px;
+	}
+.T-openid a{
+	border-left:1px solid #ccc;
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	background: linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+	}
+	
+.T-openid a:hover{
+	background:#fff;
+	}
+	
+	
+.T-footer {
+	bottom:0;
+	position:absolute;
+	width:100%;
+	}
+	
+	
+.i-2-4{
+	width:26px;
+	height:13px;
+	background-position:-100px -200px;
+	}
+.T-form tfoot .button:hover .i-2-4{
+	background-position:-100px -250px;
+	}
+.i-2-6{
+	width:16px;
+	height:17px;
+	background-position:-100px -300px;
+	}
+a:hover .i-2-6{
+	background-position:-100px -350px;
+	}
+	
+.i-2-8{
+	width:19px;
+	height:18px;
+	background-position:-100px -400px;
+	}
+button:hover .i-2-8{
+	background-position:-100px -450px!important;
+	}
+	
+	
+.T-form .form-r a{
+	padding:5px 20px;
+    border: 1px solid #DADADA;
+    border-radius:5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+    color: #6a6a6a;
+    font-size: 14px;
+	}
+.T-form .form-r a:hover{
+	color:#fff;
+	background-color:#797979
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

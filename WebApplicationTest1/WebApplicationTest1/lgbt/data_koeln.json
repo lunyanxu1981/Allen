@@ -1,0 +1,1053 @@
+{
+    "mapwidth": 4393,
+    "mapheight": 2856,
+    "levels": {
+        "5": {
+            "id": "3ae3a963e4085e2f9d3357187915afba",
+            "title": "Alle",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Koeln.jpg",
+            "locations": {
+                "f9ad6f7e3200ddd26b28299d24230f2a": {
+                    "id": "f9ad6f7e3200ddd26b28299d24230f2a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 45, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di 19:00-02:00 Uhr, Mi-Do 19:00-03:00 Uhr, Fr-Sa 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Moderne LGBT*-Bar mit klassischen und selbst kreierten Cocktails sowie wechselnden DJs.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4585",
+                    "y": "0.5689",
+                    "pin": "pin_cat_a"
+                },
+                "daf4c8d186daf9c5aa64c583e3f85241": {
+                    "id": "daf4c8d186daf9c5aa64c583e3f85241",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Hohe Pforte 29, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Fr 11:00-19:00 Uhr; So 12:00-18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein kleines Caf\u00e9 mit leckeren Zimtschnecken. Dabei werden ausschlie\u00dflich hochwertige und nat\u00fcrliche Zutaten verwendet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5136",
+                    "y": "0.5953",
+                    "pin": "pin_cat_e"
+                },
+                "62dc12bdb8e263e82736b323ee32ff1f": {
+                    "id": "62dc12bdb8e263e82736b323ee32ff1f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mauritiuswall 43, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bereits seit 30 Jahren gibt es diese alternative Schwulenkneipe im K\u00f6lner Bermudadreieck.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4563",
+                    "y": "0.5769",
+                    "pin": "pin_cat_a"
+                },
+                "eed86d7ab78bbb54270ce3397e79e4ad": {
+                    "id": "eed86d7ab78bbb54270ce3397e79e4ad",
+                    "title": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 57-59, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do, So 19:00-04:00 Uhr, Fr-Sa 19:00-06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gay-Bar im ber\u00fchmten \"Bermudadreieck\" in K\u00f6ln.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4562",
+                    "y": "0.5697",
+                    "pin": "pin_cat_a"
+                },
+                "80d23bb15108f1e396ef3b64249294c2": {
+                    "id": "80d23bb15108f1e396ef3b64249294c2",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 51, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo, Mi-Do, So 19:00-02:00 Uhr, Di 19:00-05:00 Uhr, Fr-Sa 19:00-06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bekannte Bar in der Schaafenstra\u00dfe K\u00f6ln, ohne Ruhetage und mit einigen Specials und Partys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4571",
+                    "y": "0.5671",
+                    "pin": "pin_cat_a"
+                },
+                "ecdabaebe907f14eff5e27316f328a4b": {
+                    "id": "ecdabaebe907f14eff5e27316f328a4b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kamekestra\u00dfe 14, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Friesenplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 17:00-22:00 Uhr, Fr 19:00-01:00 Uhr, 1. So 14:00-19:00 Uhr, 3. Sa 12:00-16:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Anyway wurde bereits 1998 als queeres Jugendzentrum gegr\u00fcndet. Neben Beratungsm\u00f6glichkeiten gibt es auch ein Caf\u00e9 f\u00fcr Besucher*innen zwischen 14 und 27 Jahren.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4245",
+                    "y": "0.4976",
+                    "pin": "pin_cat_b"
+                },
+                "8d24ea56a078af9f6ad1ebdc1d745575": {
+                    "id": "8d24ea56a078af9f6ad1ebdc1d745575",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Greesbergstra\u00dfe 2, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Ebertplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Sa ab 18:00 Uhr, So & Feiertage ab 15:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar und Caf\u00e9 mit verschiedenen Themenpartys. Mehrfach ausgezeichnet mit dem Goldenen RIK als beste Bar\/Cafe des Jahres.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5103",
+                    "y": "0.4128",
+                    "pin": "pin_cat_e"
+                },
+                "dbb9449270eb2babff07239a403c91d3": {
+                    "id": "dbb9449270eb2babff07239a403c91d3",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Turinerstra\u00dfe 3, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Hauptbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Showtime: Do, So ab 19:30 Uhr, Fr ab 20:30 Uhr, Sa ab 18:00 und 21:15 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Travestie-Theater in barockem Ambiente. Auf dem Programm stehen klassische Travestie, Kabarett, Tanz und parodistische Einlagen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5115",
+                    "y": "0.4406",
+                    "pin": "pin_cat_b"
+                },
+                "32ce96cc562ff8564dcccafc4d2baee6": {
+                    "id": "32ce96cc562ff8564dcccafc4d2baee6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Balduinstra\u00dfe 20, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Fr 18:00-01:00 Uhr, Sa 19:00-04:00 Uhr, So 19:00-01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Caf\u00e9-Bar mit kulturellen Verantaltungen und Themen- und Geburstagspartys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4590",
+                    "y": "0.5732",
+                    "pin": "pin_cat_e"
+                },
+                "1a1c0611c619ba983c6c49493fd17088": {
+                    "id": "1a1c0611c619ba983c6c49493fd17088",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mittelstra\u00dfe 31-33, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Mi: 9:00-20:00 Uhr, Do-Sa 09:00-21:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Caf\u00e9 mit umfangreichem gastronomischen Angebot, das auch vegane und glutenfreie K\u00fcche anbietet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4581",
+                    "y": "0.5511",
+                    "pin": "pin_cat_e"
+                },
+                "c8a7b24a0752e72cba8db99c191e2b0d": {
+                    "id": "c8a7b24a0752e72cba8db99c191e2b0d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Pipinstra\u00dfe 3, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Do 18:00-00:00 Uhr, Fr-Sa 18:00-02:00 Uhr, So 14:00-23:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Bar, die sich ganz dem katalanischen Stil Barcelonas verschrieben hat. Vor aufwendigen Fliesenmosaiken im Stile Gaudis werden erlesene Weine, Cocktails, Longdrinks und Bier serviert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5174",
+                    "y": "0.5723",
+                    "pin": "pin_cat_a"
+                },
+                "ec914240b0ce3c7aee8b67c57c13f2ba": {
+                    "id": "ec914240b0ce3c7aee8b67c57c13f2ba",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Pipinstra\u00dfe 5, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do, So 14:00-01:00 Uhr, Fr-Sa 14:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Name ist Programm: Die Inneneinrichtung der klassischen Kneipe besticht durch selbstgebaute Tische, einzigartige T\u00fcrgriffe und wechselnde Dekorationen. Hier l\u00e4sst sich sowohl Bier trinken und Party machen als auch  Kuchen essen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5199",
+                    "y": "0.5800",
+                    "pin": "pin_cat_a"
+                },
+                "1dc7e5a78ae248ee549535824ff62b27": {
+                    "id": "1dc7e5a78ae248ee549535824ff62b27",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kasinostra\u00dfe 1A, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Di, Do 16;00-01:00 Uhr, Fr-Sa 16:00-03:00 Uhr, So 16:00-00:00 Uhr, Mittwoch ist Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Entspannte Raucherkneipe mit Themenpartys und Motto-Abenden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5105",
+                    "y": "0.5827",
+                    "pin": "pin_cat_a"
+                },
+                "5978469e7e10255969681ddee01ec1c7": {
+                    "id": "5978469e7e10255969681ddee01ec1c7",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Friesenwall 26, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 10:00-01:00 Uhr, Fr-Sa 10:00-02:00 Uhr, So 10:00-00:00<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Tags\u00fcber Kaffee und Kuchen und kleine Speisen, abends Barbetrieb mit Cocktails an langer Bar in entspanntem Ambiente mit gro\u00dfen Fenstern.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4436",
+                    "y": "0.5341",
+                    "pin": "pin_cat_a"
+                },
+                "1f4d28c9e94c98c14a647ff3bf258091": {
+                    "id": "1f4d28c9e94c98c14a647ff3bf258091",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Apostelnstr. 11, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-So 10:00-23:00 Uhr (kann variieren, je nach Veranstaltung)<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Traditionsreiches Theater, in dem zahlreiche unterschiedliche Veranstatltungen stattfinden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4695",
+                    "y": "0.5461",
+                    "pin": "pin_cat_b"
+                },
+                "9322ae67e26d57830bfb22c06903d62b": {
+                    "id": "9322ae67e26d57830bfb22c06903d62b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schwalbengasse 2, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Appellhofplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Do-So ab 17:00 Uhr, Mo-Mi Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kneipe und Theater mit vielf\u00e4ltigem Unterhaltungsprogramm.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4805",
+                    "y": "0.5196",
+                    "pin": "pin_cat_b"
+                },
+                "a3185b61828548f37ea92f26b10704bd": {
+                    "id": "a3185b61828548f37ea92f26b10704bd",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Marsilstein 25-27, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Rezeption besetzt Mo-Fr 09:00-21:00 Uhr, Sa-So 09:00-20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Modernes Designhotel in denkmalgesch\u00fctztem Altbau, das seit 1999 in Familienhand ist.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4676",
+                    "y": "0.5693",
+                    "pin": "pin_cat_h"
+                },
+                "0c9dc65a194797b9d5df06067aab4a0e": {
+                    "id": "0c9dc65a194797b9d5df06067aab4a0e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Waidmarkt 2, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Severinstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 16:00-01:00 Uhr, Sa 12:00-01:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar mit unkonventioneller Einrichtung und toller Musik. Benannt wurde sie \u00fcbrigens nach dem Hund des Besitzers, Rudi<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5391",
+                    "y": "0.5917",
+                    "pin": "pin_cat_a"
+                },
+                "f19d5982fe151be41086521c992e22de": {
+                    "id": "f19d5982fe151be41086521c992e22de",
+                    "title": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">M\u00fchlenbach 57, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 17:00-01:00 Uhr, Fr-Sa 17:00-03:00 Uhr, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleine, mit dunklem Holz eingerichtete Gay-Bar, in der haupts\u00e4chlich Oldies gespielt werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5252",
+                    "y": "0.5887",
+                    "pin": "pin_cat_a"
+                },
+                "cf10cf40780993ad0678fe988f404df5": {
+                    "id": "cf10cf40780993ad0678fe988f404df5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Seidmacherinneng\u00e4\u00dfchen 1, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 10:00-03:00 Uhr, Fr-Sa 10:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Diese Bar lockt mit g\u00fcnstigen Preisen, langen \u00d6ffnungszeiten und gemischtem Publikum (gayfriendly).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5305",
+                    "y": "0.5412",
+                    "pin": "pin_cat_a"
+                },
+                "730762413d662e3c432b28d3a2ec7ce3": {
+                    "id": "730762413d662e3c432b28d3a2ec7ce3",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Vor St. Martin 8, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 18:00-01:00 Uhr, Fr-Sa 18:00-03:00 Uhr, So 14:00-22:00, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar, die mit gro\u00dfer Sonnenterrasse, schillernden Parties und ausgelassener Stimmung punktet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5096",
+                    "y": "0.5706",
+                    "pin": "pin_cat_a"
+                },
+                "f5935491020e497dedc50428221f1e28": {
+                    "id": "f5935491020e497dedc50428221f1e28",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">J\u00fclicher Stra\u00dfe 1, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Chelsea Hotel verbindet Kunst und Logis. \u00dcber die Jahre haben G\u00e4ste ihre Kunstwerke aus Zeichen ihrer Verbundenheit dort gelassen und so das Hotel in eine Bildergalerie verwandelt. Jeder Fan des individuellem Geschmacks f\u00fchlt sich hier wohl.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4124",
+                    "y": "0.5933",
+                    "pin": "pin_cat_h"
+                },
+                "cadd63315db98289cd27bb68e64033c4": {
+                    "id": "cadd63315db98289cd27bb68e64033c4",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">M\u00fchlenbach 53, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Mi 18:00-00:00 Uhr, Do 18:00-01:00 Uhr, Fr-Sa 18:00-04:00 Uhr, So 17:00-24:00 Uhr, Mo Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Bar f\u00fcr b\u00e4rtige M\u00e4nner und ihre Freunde ist ein Ort, an dem man(n) sich wohlf\u00fchlen und ins Gespr\u00e4ch kommen soll.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5332",
+                    "y": "0.5883",
+                    "pin": "pin_cat_a"
+                },
+                "972eb0ad01465c40c52b13210ae76f8b": {
+                    "id": "972eb0ad01465c40c52b13210ae76f8b",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 61a, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mi-Sa 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar und Club mit zahlreichen Partys und Veranstaltungen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4440",
+                    "y": "0.5904",
+                    "pin": "pin_cat_a"
+                },
+                "584e9f4e37ecbffb2dd5e66b7fcfe2cd": {
+                    "id": "584e9f4e37ecbffb2dd5e66b7fcfe2cd",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mauritiuswall 102, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">t\u00e4glich 18:00-00:00 Uhr (im Sommer 12:00-00:00 Uhr) wetterabh\u00e4ngig<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Entspannte Open Air Lounge mit wechselndem Wochen-Cocktail .<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4438",
+                    "y": "0.5758",
+                    "pin": "pin_cat_a"
+                },
+                "eca82b3c9eecdd390e040d54d55cf649": {
+                    "id": "eca82b3c9eecdd390e040d54d55cf649",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Richard-Wagner-Stra\u00dfe 25, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 20:00-02:00 Uhr, Fr-Sa 20:00-04:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleine Keller-Lounge-Bar mit Karaoke und vielf\u00e4ltiger Getr\u00e4nkekarte.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4067",
+                    "y": "0.5805",
+                    "pin": "pin_cat_a"
+                },
+                "ad79a6d79fd889f6713aecc088c3c22a": {
+                    "id": "ad79a6d79fd889f6713aecc088c3c22a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Am Rinkenpfuhl 51, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Do 20:00-00:00 Uhr, Fr-Sa 20:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Bar mit entspannem Holzambiente, im Herzen K\u00f6lns gelegen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4690",
+                    "y": "0.5911",
+                    "pin": "pin_cat_a"
+                },
+                "825c4cd8584026c903dcb76f708e63d8": {
+                    "id": "825c4cd8584026c903dcb76f708e63d8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Alter Markt 58-60, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rathaus<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 14:00-03:00 Uhr, Sa-So 12:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Seit \u00fcber 40 Jahren ist diese in der S\u00fcdstadt gelegene Kneipe fester Bestandteil der LGBT*-Szene. Beim Pitter gibt es Live-Musik, Fu\u00dfball\u00fcbertragung und entspanntes K\u00f6lsch.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5318",
+                    "y": "0.5009",
+                    "pin": "pin_cat_a"
+                },
+                "c4d2261ba2c9e11eeb87aada438a31b4": {
+                    "id": "c4d2261ba2c9e11eeb87aada438a31b4",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Ehrenfeldg\u00fcrtel 127, 50823 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das hippe Theater bietet zeitgen\u00f6ssisches Schauspiel, Open-Stage-Events, Konzerte und am Wochenende DJ-Partys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3659",
+                    "y": "0.4077",
+                    "pin": "pin_cat_b"
+                },
+                "47fcde297c45d19d699e3ec3c119ab9a": {
+                    "id": "47fcde297c45d19d699e3ec3c119ab9a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Richard-Wagner-Stra\u00dfe 39, K\u00f6ln 50674<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kreatives Hostel im coolen Belgischen Viertel. Nur wenige Gehminuten vom Rainbowkiez am Rudolfplatz entfernt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4186",
+                    "y": "0.5739",
+                    "pin": "pin_cat_h"
+                },
+                "ceb931d761af3851dba9252725138e58": {
+                    "id": "ceb931d761af3851dba9252725138e58",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Filzengraben 26-32, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">4-Sterne Design-Hotel in der Altstadt von K\u00f6ln. Nur wenige Gehminuten entfernt vom Rainbowkiez umd Heumarkt und Rudolfplatz.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5474",
+                    "y": "0.5735",
+                    "pin": "pin_cat_h"
+                },
+                "ecf58c85e0bd492b67709776ca6fdb50": {
+                    "id": "ecf58c85e0bd492b67709776ca6fdb50",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Melateng\u00fcrtel 15, 50933 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Oskar-J\u00e4ger-Stra\u00dfe\/G\u00fcrtel<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Modernes, LGBT*-freundliches Hotel mit gehobenem Restaurant, Spa-Bereich und Blick auf den K\u00f6lner Dom.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3308",
+                    "y": "0.5167",
+                    "pin": "pin_cat_h"
+                },
+                "1940d09ee2183519202367f2de059902": {
+                    "id": "1940d09ee2183519202367f2de059902",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Brandenburger Stra\u00dfe 22 - 24, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Hauptbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Einfaches, LGBT*-freundliches Hotel in der N\u00e4he von Breslauer Platz, Hauptbahnhof und dem K\u00f6lner Dom.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5335",
+                    "y": "0.4445",
+                    "pin": "pin_cat_h"
+                },
+                "192a925a7d3c61bc93d184f5b193cff0": {
+                    "id": "192a925a7d3c61bc93d184f5b193cff0",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Flandrische Stra\u00dfe 3-11, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein LGBT*-freundliches Hotel, zentral in der Innenstadt am Rudolfplatz gelegen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4225",
+                    "y": "0.5425",
+                    "pin": "pin_cat_h"
+                },
+                "c6affb82c3872b403df3d03d03ba5878": {
+                    "id": "c6affb82c3872b403df3d03d03ba5878",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Allerheiligenstra\u00dfe 15, 50668  K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Breslauer Platz\/Hbf<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LGBT*-freundliches Backpacker Hostel in der N\u00e4he des K\u00f6lner Hauptbahnhofs in einer ehemaligen Kirche.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5208",
+                    "y": "0.4452",
+                    "pin": "pin_cat_h"
+                },
+                "dbe67c0481c62b978e6ee3adff0a43af": {
+                    "id": "dbe67c0481c62b978e6ee3adff0a43af",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Bartholom\u00e4us-Schink-Stra\u00dfe 65, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Monatliche Gay Party im Underground Club Sounds. Musikalisch auf House und Techno fokussiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.3432",
+                    "y": "0.4286",
+                    "pin": "pin_cat_a"
+                },
+                "ec72082e8e390c086fd913dcec97ba27": {
+                    "id": "ec72082e8e390c086fd913dcec97ba27",
+                    "title": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Betzdorfer Stra\u00dfe 2, 50679 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Deutz Technische Hochschule<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Gespr\u00e4chstermine via Facebook oder E-Mail vereinbar<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LGBT*-Referat  der AStA mit vielen Angeboten f\u00fcr die Community - bspw. die Queer-Night-Out. Zentrale Anlaufstelle bei allgemeinen Problemen und Fragen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6336",
+                    "y": "0.5101",
+                    "pin": "pin_cat_b"
+                },
+                "b72531d8c1ffc33784f423dc9c6d97b2": {
+                    "id": "b72531d8c1ffc33784f423dc9c6d97b2",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Quatermarkt 1, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Di Ruhetag, Mi-Do 12:00-20:00 Uhr, Fr-Sa 12:00 bis 00:00 Uhr, So 12:00-18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Club mit Au\u00dfenbereich und wechselnden Partyreihen und Veranstaltungen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5191",
+                    "y": "0.5444",
+                    "pin": "pin_cat_a"
+                },
+                "2f77d1aaa5f2d85cc47152b05145eaf0": {
+                    "id": "2f77d1aaa5f2d85cc47152b05145eaf0",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Brabanter Stra\u00dfe 15, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Inspiriert von angesagten Istanbuler Szeneclubs, kann hier seit 2017 zu Turkish Pop, RnB und Dancehall getanzt werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4214",
+                    "y": "0.5336",
+                    "pin": "pin_cat_a"
+                },
+                "da86ae73f90b0f86c2b4ead28f37fe3d": {
+                    "id": "da86ae73f90b0f86c2b4ead28f37fe3d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Vogelsanger Str. 197, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleiner Club mit Industrie-Charme und Electro- und Hip Hop-Sounds.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.3410",
+                    "y": "0.4414",
+                    "pin": "pin_cat_a"
+                },
+                "01bc6e2cc360c2c2c5d80ef2de602a98": {
+                    "id": "01bc6e2cc360c2c2c5d80ef2de602a98",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Aachener Stra\u00dfe 2, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Roxy an den K\u00f6lner Ringen gibt es seit \u00fcber 30 Jahren und ist mittlerweile Kult.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4291",
+                    "y": "0.5500",
+                    "pin": "pin_cat_a"
+                },
+                "03a77eb1deef9dacc0b967c00c739383": {
+                    "id": "03a77eb1deef9dacc0b967c00c739383",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">An der Bottm\u00fchle 13, 50678 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Ubierring<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-So 10:00-19:00 Uhr, Montag ist Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kultiges Lokal und Caf\u00e9 in der S\u00fcdstadt. \u00dcberzeugt mit Retro-Einrichtung, kleiner Bistrokarte und Au\u00dfenpl\u00e4tzen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5519",
+                    "y": "0.7063",
+                    "pin": "pin_cat_e"
+                },
+                "dd457afba062f9a985d1125f998839a8": {
+                    "id": "dd457afba062f9a985d1125f998839a8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">G\u00fcrzenichstra\u00dfe 8, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Mo 12:00-00:00 Uhr, Fr-Sa 12:00-01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ber\u00fchmte Kette mit amerikanischen Klassikern auf der Speisekarte und Rock 'n' Roll Musik. Hier findet K\u00f6lns erster Drag Brunch statt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5136",
+                    "y": "0.5489",
+                    "pin": "pin_cat_e"
+                },
+                "f83fe7a97a7700902bb0b561c291000d": {
+                    "id": "f83fe7a97a7700902bb0b561c291000d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Universit\u00e4tsstra\u00dfe 16, 50937 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weyertal<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden ersten Montag im Monat um 19:30 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LUSK ist das autonome Lesben- & Schwulenreferat der Universit\u00e4t zu K\u00f6ln und vesteht sich als Interessenvertretung queerer Studierender.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3774",
+                    "y": "0.6517",
+                    "pin": "pin_cat_b"
+                },
+                "f1d11cbaba6aa9b347bdc6446e1f35e2": {
+                    "id": "f1d11cbaba6aa9b347bdc6446e1f35e2",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Gustav-Heinemann-Ufer 58, 50968 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Sch\u00f6nhauser Str<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 10:00-17:00 Uhr, Sa & So nach Anmeldung<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Centrum Schwule Geschichte ist Archiv und Forschungsst\u00e4tte der Schwulenbewegung im Rheinland. Es bietet u.a. Stadtf\u00fchrungen, Ausstellungen und verschiedene Aktivit\u00e4ten an.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5673",
+                    "y": "0.6881",
+                    "pin": "pin_cat_b"
+                },
+                "9c4d42f3bd3a2869bae2a9f5863638fb": {
+                    "id": "9c4d42f3bd3a2869bae2a9f5863638fb",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Venloerstr. 561, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U \u00c4u\u00dfere Kanalstr\/ K\u00f6ln-Bickendorf<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Villa anders ist ein Mehrgenerationenwohnprojekt. Es ist offen f\u00fcr Lesben, Schwule und Transgender*-Personen - die sexuelle Orientierung spielt keinerlei Rolle.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3130",
+                    "y": "0.3842",
+                    "pin": "pin_cat_b"
+                }
+            }
+        },
+        "4": {
+            "id": "990f9158026f54f02b0cecfdcd35db5e",
+            "title": "Besondere Orte",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Koeln.jpg",
+            "locations": {
+                "d0df7b47b8c8a8c9ccfb79b092ca8472": {
+                    "id": "d0df7b47b8c8a8c9ccfb79b092ca8472",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Anyway<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kamekestra\u00dfe 14, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Friesenplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 17:00-22:00 Uhr, Fr 19:00-01:00 Uhr, 1. So 14:00-19:00 Uhr, 3. Sa 12:00-16:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Anyway wurde bereits 1998 als queeres Jugendzentrum gegr\u00fcndet. Neben Beratungsm\u00f6glichkeiten gibt es auch ein Caf\u00e9 f\u00fcr Besucher*innen zwischen 14 und 27 Jahren.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4245",
+                    "y": "0.4976",
+                    "pin": "pin_cat_b"
+                },
+                "60d4eabc3291d1d6affae3d116c60836": {
+                    "id": "60d4eabc3291d1d6affae3d116c60836",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Star-Treff Follies<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Turinerstra\u00dfe 3, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Hauptbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Showtime: Do, So ab 19:30 Uhr, Fr ab 20:30 Uhr, Sa ab 18:00 und 21:15 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Travestie-Theater in barockem Ambiente. Auf dem Programm stehen klassische Travestie, Kabarett, Tanz und parodistische Einlagen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5115",
+                    "y": "0.4406",
+                    "pin": "pin_cat_b"
+                },
+                "8be8451d0e5542445ad462d928dd904e": {
+                    "id": "8be8451d0e5542445ad462d928dd904e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gloria<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Apostelnstr. 11, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-So 10:00-23:00 Uhr (kann variieren, je nach Veranstaltung)<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Traditionsreiches Theater, in dem zahlreiche unterschiedliche Veranstatltungen stattfinden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4695",
+                    "y": "0.5461",
+                    "pin": "pin_cat_b"
+                },
+                "0778f4313420a3390b1596e042fcc813": {
+                    "id": "0778f4313420a3390b1596e042fcc813",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Mittelblond Kulturkneipe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schwalbengasse 2, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Appellhofplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Do-So ab 17:00 Uhr, Mo-Mi Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kneipe und Theater mit vielf\u00e4ltigem Unterhaltungsprogramm.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.4805",
+                    "y": "0.5196",
+                    "pin": "pin_cat_b"
+                },
+                "db4afb18d52e5efac1eb51b3176b9d00": {
+                    "id": "db4afb18d52e5efac1eb51b3176b9d00",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Artheater<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Ehrenfeldg\u00fcrtel 127, 50823 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das hippe Theater bietet zeitgen\u00f6ssisches Schauspiel, Open-Stage-Events, Konzerte und am Wochenende DJ-Partys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3659",
+                    "y": "0.4077",
+                    "pin": "pin_cat_b"
+                },
+                "2a6ab91fb5d34edd3d1b9576aa92fd25": {
+                    "id": "2a6ab91fb5d34edd3d1b9576aa92fd25",
+                    "title": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>AStA<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Betzdorfer Stra\u00dfe 2, 50679 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Deutz Technische Hochschule<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Gespr\u00e4chstermine via Facebook oder E-Mail vereinbar<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LGBT*-Referat  der AStA mit vielen Angeboten f\u00fcr die Community - bspw. die Queer-Night-Out. Zentrale Anlaufstelle bei allgemeinen Problemen und Fragen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.6336",
+                    "y": "0.5101",
+                    "pin": "pin_cat_b"
+                },
+                "6f62c6128ea559046ea4e535ec6063da": {
+                    "id": "6f62c6128ea559046ea4e535ec6063da",
+                    "title": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>LUSK<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Universit\u00e4tsstra\u00dfe 16, 50937 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Weyertal<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Jeden ersten Montag im Monat um 19:30 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LUSK ist das autonome Lesben- & Schwulenreferat der Universit\u00e4t zu K\u00f6ln und vesteht sich als Interessenvertretung queerer Studierender.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3774",
+                    "y": "0.6517",
+                    "pin": "pin_cat_b"
+                },
+                "bbbd02a9c19be1d850bcbdf7336a3b79": {
+                    "id": "bbbd02a9c19be1d850bcbdf7336a3b79",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Centrum Schwule Geschichte e.V.<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Gustav-Heinemann-Ufer 58, 50968 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Sch\u00f6nhauser Str<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 10:00-17:00 Uhr, Sa & So nach Anmeldung<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Centrum Schwule Geschichte ist Archiv und Forschungsst\u00e4tte der Schwulenbewegung im Rheinland. Es bietet u.a. Stadtf\u00fchrungen, Ausstellungen und verschiedene Aktivit\u00e4ten an.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.5673",
+                    "y": "0.6881",
+                    "pin": "pin_cat_b"
+                },
+                "78884400d7b17bf35391fa2c499cbc98": {
+                    "id": "78884400d7b17bf35391fa2c499cbc98",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Villa anders<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Venloerstr. 561, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U \u00c4u\u00dfere Kanalstr\/ K\u00f6ln-Bickendorf<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Villa anders ist ein Mehrgenerationenwohnprojekt. Es ist offen f\u00fcr Lesben, Schwule und Transgender*-Personen - die sexuelle Orientierung spielt keinerlei Rolle.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_b",
+                    "x": "0.3130",
+                    "y": "0.3842",
+                    "pin": "pin_cat_b"
+                }
+            }
+        },
+        "3": {
+            "id": "c7079898101e2ecafd0af6061f8d936f",
+            "title": "Hotels & Unterk\u00fcnfte",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Koeln.jpg",
+            "locations": {
+                "45d2bacedba7f09070398b104fef3251": {
+                    "id": "45d2bacedba7f09070398b104fef3251",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Marsil<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Marsilstein 25-27, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Rezeption besetzt Mo-Fr 09:00-21:00 Uhr, Sa-So 09:00-20:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Modernes Designhotel in denkmalgesch\u00fctztem Altbau, das seit 1999 in Familienhand ist.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4676",
+                    "y": "0.5693",
+                    "pin": "pin_cat_h"
+                },
+                "14e7b15b5884a8c4849c78e040856162": {
+                    "id": "14e7b15b5884a8c4849c78e040856162",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Chelsea<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">J\u00fclicher Stra\u00dfe 1, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Chelsea Hotel verbindet Kunst und Logis. \u00dcber die Jahre haben G\u00e4ste ihre Kunstwerke aus Zeichen ihrer Verbundenheit dort gelassen und so das Hotel in eine Bildergalerie verwandelt. Jeder Fan des individuellem Geschmacks f\u00fchlt sich hier wohl.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4124",
+                    "y": "0.5933",
+                    "pin": "pin_cat_h"
+                },
+                "187df369063e9e453c9b43167e4ceea0": {
+                    "id": "187df369063e9e453c9b43167e4ceea0",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Wohngemeinschaft<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Richard-Wagner-Stra\u00dfe 39, K\u00f6ln 50674<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kreatives Hostel im coolen Belgischen Viertel. Nur wenige Gehminuten vom Rainbowkiez am Rudolfplatz entfernt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4186",
+                    "y": "0.5739",
+                    "pin": "pin_cat_h"
+                },
+                "c9886fd01b79028306ed01e439eb0c19": {
+                    "id": "c9886fd01b79028306ed01e439eb0c19",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Lyskirchen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Filzengraben 26-32, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">4-Sterne Design-Hotel in der Altstadt von K\u00f6ln. Nur wenige Gehminuten entfernt vom Rainbowkiez umd Heumarkt und Rudolfplatz.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5474",
+                    "y": "0.5735",
+                    "pin": "pin_cat_h"
+                },
+                "83fa54aea714bc8ea75f3ce420f3b396": {
+                    "id": "83fa54aea714bc8ea75f3ce420f3b396",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ameron Hotel Regent<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Melateng\u00fcrtel 15, 50933 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Oskar-J\u00e4ger-Stra\u00dfe\/G\u00fcrtel<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Modernes, LGBT*-freundliches Hotel mit gehobenem Restaurant, Spa-Bereich und Blick auf den K\u00f6lner Dom.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.3308",
+                    "y": "0.5167",
+                    "pin": "pin_cat_h"
+                },
+                "3da91e7d7ac147bbc90b0be662eb0070": {
+                    "id": "3da91e7d7ac147bbc90b0be662eb0070",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hotel Ludwig Superior<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Brandenburger Stra\u00dfe 22 - 24, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Hauptbahnhof<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Einfaches, LGBT*-freundliches Hotel in der N\u00e4he von Breslauer Platz, Hauptbahnhof und dem K\u00f6lner Dom.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5335",
+                    "y": "0.4445",
+                    "pin": "pin_cat_h"
+                },
+                "957ad67eeef22428407e7a31f30c87f6": {
+                    "id": "957ad67eeef22428407e7a31f30c87f6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hotel Flandrischer Hof<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Flandrische Stra\u00dfe 3-11, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein LGBT*-freundliches Hotel, zentral in der Innenstadt am Rudolfplatz gelegen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.4225",
+                    "y": "0.5425",
+                    "pin": "pin_cat_h"
+                },
+                "710494005436cab2972768cf968e4e25": {
+                    "id": "710494005436cab2972768cf968e4e25",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Pathpoint Cologne<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Allerheiligenstra\u00dfe 15, 50668  K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Breslauer Platz\/Hbf<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">24 Stunden-Rezeption<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">LGBT*-freundliches Backpacker Hostel in der N\u00e4he des K\u00f6lner Hauptbahnhofs in einer ehemaligen Kirche.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_h",
+                    "x": "0.5208",
+                    "y": "0.4452",
+                    "pin": "pin_cat_h"
+                }
+            }
+        },
+        "2": {
+            "id": "adf73ad98b0be46f0604d3f30fabc624",
+            "title": "Essen & Trinken",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Koeln.jpg",
+            "locations": {
+                "04ad7a90fc63dcb789d327e22fa5eac6": {
+                    "id": "04ad7a90fc63dcb789d327e22fa5eac6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zimt & S\u00fcnde<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Hohe Pforte 29, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Fr 11:00-19:00 Uhr; So 12:00-18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ein kleines Caf\u00e9 mit leckeren Zimtschnecken. Dabei werden ausschlie\u00dflich hochwertige und nat\u00fcrliche Zutaten verwendet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5136",
+                    "y": "0.5953",
+                    "pin": "pin_cat_e"
+                },
+                "fa60f78d8bd46e57c3691f44dbe77182": {
+                    "id": "fa60f78d8bd46e57c3691f44dbe77182",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Kattwinkel<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Greesbergstra\u00dfe 2, 50668 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Ebertplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Sa ab 18:00 Uhr, So & Feiertage ab 15:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar und Caf\u00e9 mit verschiedenen Themenpartys. Mehrfach ausgezeichnet mit dem Goldenen RIK als beste Bar\/Cafe des Jahres.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5103",
+                    "y": "0.4128",
+                    "pin": "pin_cat_e"
+                },
+                "9667ae58db54b6b1cf50adc75bc1964e": {
+                    "id": "9667ae58db54b6b1cf50adc75bc1964e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Ruhrpott<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Balduinstra\u00dfe 20, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Fr 18:00-01:00 Uhr, Sa 19:00-04:00 Uhr, So 19:00-01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Caf\u00e9-Bar mit kulturellen Verantaltungen und Themen- und Geburstagspartys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4590",
+                    "y": "0.5732",
+                    "pin": "pin_cat_e"
+                },
+                "a896dc86172fa2d5ffd012a7cf42b9c7": {
+                    "id": "a896dc86172fa2d5ffd012a7cf42b9c7",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Rico<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mittelstra\u00dfe 31-33, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Mi: 9:00-20:00 Uhr, Do-Sa 09:00-21:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Caf\u00e9 mit umfangreichem gastronomischen Angebot, das auch vegane und glutenfreie K\u00fcche anbietet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.4581",
+                    "y": "0.5511",
+                    "pin": "pin_cat_e"
+                },
+                "cd7b2373cb62e8726f1b58d6e250a6b5": {
+                    "id": "cd7b2373cb62e8726f1b58d6e250a6b5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Caf\u00e9 Walter<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">An der Bottm\u00fchle 13, 50678 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Ubierring<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-So 10:00-19:00 Uhr, Montag ist Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kultiges Lokal und Caf\u00e9 in der S\u00fcdstadt. \u00dcberzeugt mit Retro-Einrichtung, kleiner Bistrokarte und Au\u00dfenpl\u00e4tzen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5519",
+                    "y": "0.7063",
+                    "pin": "pin_cat_e"
+                },
+                "653767860ed137061323a61cf077e0be": {
+                    "id": "653767860ed137061323a61cf077e0be",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hard Rock Cafe<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">G\u00fcrzenichstra\u00dfe 8, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Mo 12:00-00:00 Uhr, Fr-Sa 12:00-01:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Ber\u00fchmte Kette mit amerikanischen Klassikern auf der Speisekarte und Rock 'n' Roll Musik. Hier findet K\u00f6lns erster Drag Brunch statt.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_e",
+                    "x": "0.5136",
+                    "y": "0.5489",
+                    "pin": "pin_cat_e"
+                }
+            }
+        },
+        "1": {
+            "id": "9ae289d8a28bd49d6d7d93b27281b27d",
+            "title": "Ausgehen",
+            "map": "https://ssl.tzoo-img.com/images/LGBT_Koeln.jpg",
+            "locations": {
+                "9f9a26bc3422d3f63d54c1441986b22e": {
+                    "id": "9f9a26bc3422d3f63d54c1441986b22e",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Iron<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 45, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di 19:00-02:00 Uhr, Mi-Do 19:00-03:00 Uhr, Fr-Sa 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Moderne LGBT*-Bar mit klassischen und selbst kreierten Cocktails sowie wechselnden DJs.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4585",
+                    "y": "0.5689",
+                    "pin": "pin_cat_a"
+                },
+                "8d0829aaa088b0d8b668c747f492e2b8": {
+                    "id": "8d0829aaa088b0d8b668c747f492e2b8",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Schampanja<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mauritiuswall 43, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">T\u00e4glich 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bereits seit 30 Jahren gibt es diese alternative Schwulenkneipe im K\u00f6lner Bermudadreieck.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4563",
+                    "y": "0.5769",
+                    "pin": "pin_cat_a"
+                },
+                "7e36510cad83ce05795f68714d9416a7": {
+                    "id": "7e36510cad83ce05795f68714d9416a7",
+                    "title": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>ExCorner<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 57-59, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do, So 19:00-04:00 Uhr, Fr-Sa 19:00-06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gay-Bar im ber\u00fchmten \"Bermudadreieck\" in K\u00f6ln.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4562",
+                    "y": "0.5697",
+                    "pin": "pin_cat_a"
+                },
+                "ccf923b47cdb7c072c9db13f0f709e4d": {
+                    "id": "ccf923b47cdb7c072c9db13f0f709e4d",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Die Mumu<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 51, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo, Mi-Do, So 19:00-02:00 Uhr, Di 19:00-05:00 Uhr, Fr-Sa 19:00-06:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bekannte Bar in der Schaafenstra\u00dfe K\u00f6ln, ohne Ruhetage und mit einigen Specials und Partys.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4571",
+                    "y": "0.5671",
+                    "pin": "pin_cat_a"
+                },
+                "297ed7fe58a06a92bc1d0356478a483f": {
+                    "id": "297ed7fe58a06a92bc1d0356478a483f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Barcelon Colonia<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Pipinstra\u00dfe 3, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Do 18:00-00:00 Uhr, Fr-Sa 18:00-02:00 Uhr, So 14:00-23:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Bar, die sich ganz dem katalanischen Stil Barcelonas verschrieben hat. Vor aufwendigen Fliesenmosaiken im Stile Gaudis werden erlesene Weine, Cocktails, Longdrinks und Bier serviert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5174",
+                    "y": "0.5723",
+                    "pin": "pin_cat_a"
+                },
+                "a4da4dbb685dbcffb04257e29e846e99": {
+                    "id": "a4da4dbb685dbcffb04257e29e846e99",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Baustelle4U<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Pipinstra\u00dfe 5, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do, So 14:00-01:00 Uhr, Fr-Sa 14:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Der Name ist Programm: Die Inneneinrichtung der klassischen Kneipe besticht durch selbstgebaute Tische, einzigartige T\u00fcrgriffe und wechselnde Dekorationen. Hier l\u00e4sst sich sowohl Bier trinken und Party machen als auch  Kuchen essen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5199",
+                    "y": "0.5800",
+                    "pin": "pin_cat_a"
+                },
+                "992406715a719bbfcec0f523e7a6fd21": {
+                    "id": "992406715a719bbfcec0f523e7a6fd21",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Casino-Eck<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Kasinostra\u00dfe 1A, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Di, Do 16;00-01:00 Uhr, Fr-Sa 16:00-03:00 Uhr, So 16:00-00:00 Uhr, Mittwoch ist Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Entspannte Raucherkneipe mit Themenpartys und Motto-Abenden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5105",
+                    "y": "0.5827",
+                    "pin": "pin_cat_a"
+                },
+                "88b9825f29f89296b2c3c20a6583b64f": {
+                    "id": "88b9825f29f89296b2c3c20a6583b64f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Era<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Friesenwall 26, 50672 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 10:00-01:00 Uhr, Fr-Sa 10:00-02:00 Uhr, So 10:00-00:00<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Tags\u00fcber Kaffee und Kuchen und kleine Speisen, abends Barbetrieb mit Cocktails an langer Bar in entspanntem Ambiente mit gro\u00dfen Fenstern.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4436",
+                    "y": "0.5341",
+                    "pin": "pin_cat_a"
+                },
+                "cf68c147b9ee6a7149d2007d7c32a741": {
+                    "id": "cf68c147b9ee6a7149d2007d7c32a741",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Papa Rudis<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Waidmarkt 2, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Severinstra\u00dfe<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 16:00-01:00 Uhr, Sa 12:00-01:00 Uhr, Sonntag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar mit unkonventioneller Einrichtung und toller Musik. Benannt wurde sie \u00fcbrigens nach dem Hund des Besitzers, Rudi<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5391",
+                    "y": "0.5917",
+                    "pin": "pin_cat_a"
+                },
+                "ff24ad8960c2f268dc008f593725e006": {
+                    "id": "ff24ad8960c2f268dc008f593725e006",
+                    "title": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>My Lord<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">M\u00fchlenbach 57, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 17:00-01:00 Uhr, Fr-Sa 17:00-03:00 Uhr, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleine, mit dunklem Holz eingerichtete Gay-Bar, in der haupts\u00e4chlich Oldies gespielt werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5252",
+                    "y": "0.5887",
+                    "pin": "pin_cat_a"
+                },
+                "f45b20a368a6d9fc4ac27d5f0a37b5a1": {
+                    "id": "f45b20a368a6d9fc4ac27d5f0a37b5a1",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Rathausgl\u00f6ckchen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Seidmacherinneng\u00e4\u00dfchen 1, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 10:00-03:00 Uhr, Fr-Sa 10:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Diese Bar lockt mit g\u00fcnstigen Preisen, langen \u00d6ffnungszeiten und gemischtem Publikum (gayfriendly).<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5305",
+                    "y": "0.5412",
+                    "pin": "pin_cat_a"
+                },
+                "8431a2ed88a6def98949304fca45bdd6": {
+                    "id": "8431a2ed88a6def98949304fca45bdd6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Amadeus<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Vor St. Martin 8, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Do 18:00-01:00 Uhr, Fr-Sa 18:00-03:00 Uhr, So 14:00-22:00, Dienstag Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar, die mit gro\u00dfer Sonnenterrasse, schillernden Parties und ausgelassener Stimmung punktet.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5096",
+                    "y": "0.5706",
+                    "pin": "pin_cat_a"
+                },
+                "ef4e4541d9453b9a21c98c10dd3328b6": {
+                    "id": "ef4e4541d9453b9a21c98c10dd3328b6",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gentle-Bears<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">M\u00fchlenbach 53, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Di-Mi 18:00-00:00 Uhr, Do 18:00-01:00 Uhr, Fr-Sa 18:00-04:00 Uhr, So 17:00-24:00 Uhr, Mo Ruhetag<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Die Bar f\u00fcr b\u00e4rtige M\u00e4nner und ihre Freunde ist ein Ort, an dem man(n) sich wohlf\u00fchlen und ins Gespr\u00e4ch kommen soll.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5332",
+                    "y": "0.5883",
+                    "pin": "pin_cat_a"
+                },
+                "85477818885e14ede2ccca0a52050e69": {
+                    "id": "85477818885e14ede2ccca0a52050e69",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Exile on Main Street<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Schaafenstra\u00dfe 61a, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mi-Sa 20:00-05:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Bar und Club mit zahlreichen Partys und Veranstaltungen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4440",
+                    "y": "0.5904",
+                    "pin": "pin_cat_a"
+                },
+                "259c4b848663906799c73e40ada5681f": {
+                    "id": "259c4b848663906799c73e40ada5681f",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Hennes' Terrasse<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Mauritiuswall 102, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">t\u00e4glich 18:00-00:00 Uhr (im Sommer 12:00-00:00 Uhr) wetterabh\u00e4ngig<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Entspannte Open Air Lounge mit wechselndem Wochen-Cocktail .<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4438",
+                    "y": "0.5758",
+                    "pin": "pin_cat_a"
+                },
+                "061c29154f99338f066fb3f8484699db": {
+                    "id": "061c29154f99338f066fb3f8484699db",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Macky's Asia Lounge<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Richard-Wagner-Stra\u00dfe 25, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">So-Do 20:00-02:00 Uhr, Fr-Sa 20:00-04:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleine Keller-Lounge-Bar mit Karaoke und vielf\u00e4ltiger Getr\u00e4nkekarte.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4067",
+                    "y": "0.5805",
+                    "pin": "pin_cat_a"
+                },
+                "b294f74842ab0f07ee0d041a8c56a464": {
+                    "id": "b294f74842ab0f07ee0d041a8c56a464",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Mariechen<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Am Rinkenpfuhl 51, 50676 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Neumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Do 20:00-00:00 Uhr, Fr-Sa 20:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Gem\u00fctliche Bar mit entspannem Holzambiente, im Herzen K\u00f6lns gelegen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4690",
+                    "y": "0.5911",
+                    "pin": "pin_cat_a"
+                },
+                "d22d1d9ef7e3f83b4a74c9b913e5a9ad": {
+                    "id": "d22d1d9ef7e3f83b4a74c9b913e5a9ad",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Zum Pitter<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Alter Markt 58-60, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rathaus<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Fr 14:00-03:00 Uhr, Sa-So 12:00-03:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Seit \u00fcber 40 Jahren ist diese in der S\u00fcdstadt gelegene Kneipe fester Bestandteil der LGBT*-Szene. Beim Pitter gibt es Live-Musik, Fu\u00dfball\u00fcbertragung und entspanntes K\u00f6lsch.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5318",
+                    "y": "0.5009",
+                    "pin": "pin_cat_a"
+                },
+                "609d6d2a20b13b9d206349c5d632055a": {
+                    "id": "609d6d2a20b13b9d206349c5d632055a",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Gravity<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Bartholom\u00e4us-Schink-Stra\u00dfe 65, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Monatliche Gay Party im Underground Club Sounds. Musikalisch auf House und Techno fokussiert.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.3432",
+                    "y": "0.4286",
+                    "pin": "pin_cat_a"
+                },
+                "1f10251d832b4802bac9b50491b32998": {
+                    "id": "1f10251d832b4802bac9b50491b32998",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Quater1<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Quatermarkt 1, 50667 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Heumarkt<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Mo-Di Ruhetag, Mi-Do 12:00-20:00 Uhr, Fr-Sa 12:00 bis 00:00 Uhr, So 12:00-18:00 Uhr<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Club mit Au\u00dfenbereich und wechselnden Partyreihen und Veranstaltungen.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.5191",
+                    "y": "0.5444",
+                    "pin": "pin_cat_a"
+                },
+                "5b2d97769482713d36d54736ad0771e5": {
+                    "id": "5b2d97769482713d36d54736ad0771e5",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Rich Club<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Brabanter Stra\u00dfe 15, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Inspiriert von angesagten Istanbuler Szeneclubs, kann hier seit 2017 zu Turkish Pop, RnB und Dancehall getanzt werden.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4214",
+                    "y": "0.5336",
+                    "pin": "pin_cat_a"
+                },
+                "abce5e323811d6efc4e539dfaac08afd": {
+                    "id": "abce5e323811d6efc4e539dfaac08afd",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Heinz Gaul<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Vogelsanger Str. 197, 50825 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">S Ehrenfeld<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Kleiner Club mit Industrie-Charme und Electro- und Hip Hop-Sounds.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.3410",
+                    "y": "0.4414",
+                    "pin": "pin_cat_a"
+                },
+                "78468f1721e568c46d80a5e2f78ea458": {
+                    "id": "78468f1721e568c46d80a5e2f78ea458",
+                    "title": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "titleHover": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "about": "<div class=\"mapplic-description-new\"><h4>Roxy<\/h4><\/div>",
+                    "description": "<div class=\"mapplic-description-new\"><div class=\"tab\"><div class=\"row\"><div class=\"col1 icon icon_map\"><\/div><div class=\"col2\">Aachener Stra\u00dfe 2, 50674 K\u00f6ln<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffis\"><\/div><div class=\"col2\">U Rudolfplatz<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_oeffnungszeiten\"><\/div><div class=\"col2\">Wechselnde Veranstaltungen<\/div><\/div><div class=\"row\"><div class=\"col1 icon icon_besonderheiten\"><\/div><div class=\"col2\">Das Roxy an den K\u00f6lner Ringen gibt es seit \u00fcber 30 Jahren und ist mittlerweile Kult.<\/div><\/div><\/div><\/div>",
+                    "category": "cat_a",
+                    "x": "0.4291",
+                    "y": "0.5500",
+                    "pin": "pin_cat_a"
+                }
+            }
+        }
+    }
+}

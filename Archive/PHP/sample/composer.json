@@ -1,0 +1,17 @@
+{
+    "name": "themainframe/php-mvc-sample",
+    "authors": [
+        {
+            "name": "Damien Walsh",
+            "email": "me@damow.net"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "": ["controller/", "model/", "./"]
+        }
+    }
+}

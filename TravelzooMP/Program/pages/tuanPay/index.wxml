@@ -1,0 +1,49 @@
+<scroll-view>
+  <view class="product_card oh">
+    <view class="pro-left fl">
+      <image src="{{productDetail.httpShareImg}}"></image>
+    </view>
+    <view class="pro-right oh">
+      <view class="pro-name">
+        <text class="f30">{{productDetail.title}}{{gid}}</text>
+      </view>
+      <text class="price-wrap">活动倒计时：{{endTime}}</text>
+      <view>
+        <text class="n-price">￥{{productDetail.price}}</text>
+        <text class="o-price">￥{{productDetail.value}}</text>
+        <text class="tuan-price">拼团价</text>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="goPay" report-submit="true">
+    <view class="pay_order_wrap">
+      <ul>
+        <li>
+          <view class="txt">姓名</view>
+          <input placeholder-class="placeholder-class" type="text" name="username" bindinput="get_name" class="userName" placeholder="请输入真实姓名" value="{{username}}"></input>
+        </li>
+        <li>
+          <view class="txt" style="color:#0276ee">+86</view>
+          <input placeholder-class="placeholder-class" type="number" name="phone" maxlength="11" bindinput="get_phone" class="userName" placeholder="请输入联系电话" value="{{phone}}"></input>
+        </li>
+        <li>
+          <view class="txt">邮箱</view>
+          <input placeholder-class="placeholder-class" type="text" name="email" bindinput="get_email" class="userName" placeholder="请输入邮箱账号（必填）" value="{{email}}"></input>
+        </li>
+      </ul>
+      <view class="table_fotter">确认信息将发送至您的邮箱，为不影响您的体验请正确填写</view>
+    </view>
+    <view class="agree">
+      <view class="radio" catchtap="agree">
+        <icon wx:if="{{agree}}" color="#0276ee" class="icon" type="success_no_circle" size="14"></icon>
+      </view>
+      我已阅读并同意
+      <navigator url="/pages/rules/service/service">《服务条款》</navigator>
+      <navigator url="/pages/rules/sale/sale">《销售条款》</navigator>
+      <navigator url="/pages/rules/privacy/privacy">《隐私权政策》</navigator>
+    </view>
+    <view class="a {{isIphoneX}}">
+      <button class="btn btn-pay" formType="submit" disabled="{{disabled}}">去支付</button>
+    </view>
+  </form>
+</scroll-view>

@@ -1,0 +1,139 @@
+<scroll-view class='container' scroll-y="{{isScroll}}">
+  <swiper class="swiper" indicator-dots="false" indicator-active-color="#0276EE" autoplay="true" interval="3000" duration="500">  
+    <block wx:for="{{productDetail.imgList}}" wx:key="index">
+    <swiper-item>  
+     <image wx:if="{{item.img_name}}" src="{{item.img_name}}" class="slide-image"/>
+    </swiper-item>  
+    </block>  
+  </swiper>
+
+
+    
+    <view class='btn-book {{isIphoneX}}'>
+      <view catchtap='goHome' style='width: 25%;float: left;background: #fff;color:#b9b9b9;' class="{{isIphoneX === 'btn-x' ? 'h169' : ''}}">
+        <image src='../../img/family.png' style='width:63rpx;height:63rpx'></image>
+        <view style='margin-top:-74rpx;font-size:28rpx;'>首页</view>
+      </view>
+      <button bindtap='showModal' bindgetuserinfo="getUserInfo" open-type="getUserInfo" class="btn-blue noRadius">立即预定</button>
+    </view>
+
+  
+<view>
+  <view class='tave-item-title b-white m-b-20'>
+    <view class='shop-title font-size-28'>
+    <text wx:if="{{productDetail.Category == 'Getaway'}}">酒店</text>
+    <text wx:if="{{productDetail.Category == 'Entertainment'}}">休闲娱乐</text>
+    <text wx:if="{{productDetail.Category == 'Other'}}">其他</text>
+    <text wx:if="{{productDetail.Category == 'Restaurant'}}">美食</text>
+    <text wx:if="{{productDetail.Category == 'Spa'}}">水疗</text>
+    {{productDetail.Title}}</view>
+    <view class='item-price'>￥{{productDetail.Price}}</view>
+    <text class='from shop-from'>{{productDetail.LocationName}}</text>
+    <text class='from shop-Selected'>{{productDetail.storeArr.DisplayName}}</text> 
+  </view>
+</view>
+
+<view class="b-white">
+    <view wx:if="{{productDetail.Update}}" class='banner'>
+      <view>更新</view>
+      <view>{{productDetail.UpdateTextTimeStampUTC}}</view>
+      <view>{{productDetail.Update}}</view>
+    </view>
+    
+    <view class="nav">
+      <view class="{{selected?'red':'default'}}" bindtap="selected">
+        <text>推荐理由</text>
+      </view>
+      <view class="{{selected1?'red':'default'}}" bindtap="selected1">服务包含</view>
+    </view>
+
+    <view class="{{selected?'show':'hidden'}} showText">
+      <view class="f-w-b">优惠：</view>
+      <text>{{productDetail.Lead}}</text>
+      <view wx:if="{{seeAllGoods}}">
+      <view class="f-w-b m-t-20">亮点：</view>
+      <text>{{productDetail.WhyWeLoveIt}}</text>
+    </view>
+
+    <view class='laa' bindtap="goodsmore">
+      {{btnMsg}}
+      <image src="{{seeAllGoods?'../../img/arrow_up.png':'../../img/arrow_down.png'}}" mode='aspectFill'></image>  
+    </view>
+
+ </view>
+    <view class="{{selected1?'show':'hidden'}} showText">
+      <view class="f-w-b">优惠详情及有效期：</view>
+      <text>{{productDetail.When}}</text>
+      <text>{{productDetail.WhatIsIncluded}}</text>
+      <view class="f-w-b m-t-20">温馨提示：</view>
+      <text>{{productDetail.FinePrint}}</text>
+      <view class="f-w-b m-t-20">地址：</view>
+      <view class="f-w-b">{{productDetail.storeArr.DisplayName}}</view>
+      <view class="f-w-b">{{productDetail.storeArr.StreetAddress1}}</view>  
+      <view class="f-w-b m-t-20 color-blue" bindtap='calling' data-phone='{{productDetail.storeArr.Phone}}'><view style="display: inline-block;margin-bottom: 0;position: relative;top: -6px;">立即电话预定：</view><image src='../../img/phone.png' style="width: 25px;height: 25px;"></image></view> 
+    </view>
+           
+</view> 
+
+
+
+  <!--遮罩 -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹窗  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class='headerlay'>
+      <text>套餐选择</text>
+      <image src='/img/close.png' class="close" bindtap="hideModal"></image>
+    </view>
+    <view class="section {{isIphoneX === 'btn-x' ? 'mb85' : ''}}">
+       <view class='tave-item-title b-t-l' wx:for="{{numItem}}" wx:key="index">
+        <view class='shop-title font-size-28'>{{item.Title}}</view>
+        <!--购买数量-->
+        <view class="ui-flex select-info-buy-bum">
+          <view class="ui-width-100 item-price">{{item.Price}}</view>
+          <view class="ui-flex" wx:if="{{item.IsPurchasable == 1}}">
+            <view class="numsub" catchtap="shopCountSub" data-id="{{key}}">-</view>
+            <text>{{item.count}}</text>
+            <view class="{{item.select? 'numadd':'numadd disabled'}}" catchtap="shopCountAdd" data-id="{{index}}">+</view>
+          </view>
+          <view class=" over" wx:if="{{item.IsPurchasable == 0}}" >
+            <text>已售罄</text>
+          </view>
+        </view>
+        </view>
+    </view>
+    <view class="a {{isIphoneX === 'btn-x' ? 'h168' : ''}}">
+      <view class="b d {{isIphoneX === 'btn-x' ? 'h168' : ''}}">总计￥{{total}}</view>
+      <view class="{{selectbtn ? 'c':'c disabled'}} d {{isIphoneX === 'btn-x' ? 'h169' : ''}}" catchtap="goSet">去结算</view>
+    </view> 
+  </view>
+
+<view class="b-white m-b-100 {{isIphoneX === 'btn-x' ? 'mb168' : ''}}">
+  <view class='caption'>你可能还喜欢</view>
+  <view class='main-goods'>
+  <block wx:for="{{goods}}" wx:key="Id">
+    <navigator class='single-goods' url="/pages/info/info?id={{item.Id}}" open-type="redirect">
+      <image wx:if="{{item.imgList[0].img_name}}" class='avatar' src='{{item.imgList[0].img_name}}' mode='aspectFill'></image>
+      <text class='title'>{{item.Title}}</text>
+      <view class='summary'>
+        <view class='price'>￥{{item.Price}}</view>
+        <!-- <view class='sale'>{{item.ByLine}}</view> -->
+      </view>
+    </navigator>
+  </block>
+</view>
+</view>
+</scroll-view>
+
+<!-- 优惠券弹层 -->
+<view class="modal-box" hidden="{{flag}}">
+  <image src='../../img/50.jpg'class='fenxiang-btn'></image>
+  <image src='../../img/close1.png' class='close-hide' bindtap="hide"></image>
+  <button type="default" catchtap='receive_50' hover-class="other-button-hover"> 立即领取 </button> 
+</view>
+
+<view class="modal-box" hidden="{{true}}">
+  <image src='../../img/68.jpg'class='fenxiang-btn'></image>
+  <image src='../../img/close1.png' class='close-hide' bindtap="hide"></image>
+  <button type="default" catchtap='receive_68'  hover-class="other-button-hover"> 立即领取 </button> 
+</view>

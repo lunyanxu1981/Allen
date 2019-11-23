@@ -1,0 +1,162 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i>推荐管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						<!-- <button class="btn btn-default btn-sm ajax-all"><i class="glyphicon glyphicon-list"></i>显示全部</button>
+						<span style="padding-left:20px;"></span> -->
+						<button class="btn btn-default btn-sm ajax-add" onclick="location.href='/recommend_add.html'"><i class="glyphicon glyphicon-plus"></i> 新 增</button>
+						<span style="padding-left:20px;"></span>
+						<select id="search_item" name="search_item" data-rel="chosen" style="width:100px;">
+	                          <option value="" {if $searchArr["item"] == ""} selected{/if}>全部</option>
+	                          <option value="1" {if $searchArr["item"] == "1"} selected{/if}>首页推荐</option>
+	                          <option value="2" {if $searchArr["item"] == "2"} selected{/if}>首页banner列表</option>
+	                          <option value="3" {if $searchArr["item"] == "3"} selected{/if}>首页四小类</option>
+	                          <option value="4" {if $searchArr["item"] == "4"} selected{/if}>拼团banner</option>
+	                    </select>
+	                    <!-- <input type="text" id="search_txt" value="{$searchArr['txt1']}" name="search_txt"> -->
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button>
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="3%">id</th>
+							<th width="10%">类别</th>
+							<th width="15%">标题</th>
+							<th width="10%">图片</th>
+							<th width="5%">审核状态</th>
+							<th width="5%">更新时间</th>
+							<th width="5%">排序</th>
+							<th width="8%">管理</th>
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">{$itemArr["id"]}</td>
+							<td class="center">
+								{if $itemArr["type"] == "1"}首页推荐
+								{elseif $itemArr["type"] == "2"}首页banner列表
+								{elseif $itemArr["type"] == "3"}首页四小类
+								{elseif $itemArr["type"] == "4"}拼团banner
+								{/if}<br>
+							</td>
+							<td class="center">{$itemArr["title"]}<br>{$itemArr["desc"]}</td>
+							<td class="center">
+								{if $itemArr["httpPostImg"] != ""}<img src="{$itemArr["httpPostImg"]}" height="100">{/if}<br>
+								{$itemArr["url"]}
+							</td>
+							<td class="center">
+								{if $itemArr["status"]=="1"}<font color="blue">审核通过</font>
+								{else}<font color="red">未审核</font>
+								{/if}
+							</td>
+							<td class="center">{$itemArr["update_time"]}</td>
+							<td class="center"><input type="text" class="form-control" style="width:50px;" id="rank_{$itemArr['id']}" onblur="setRank({$itemArr['id']});" value="{$itemArr["rank"]}"></td>
+							<!-- <td class="center"><span class="span-red">active</span></td> -->
+							<td class="center">
+								<!-- <a class="btn btn-success btn-xs ajax-view" href="recommend_findById_id_{$itemArr['id']}.html">
+									<i class="glyphicon glyphicon-zoom-in icon-white"></i> 
+									View
+								</a>  -->
+								<a class="btn btn-info btn-xs ajax-edit" href="/recommend_edit_eid_{$itemArr['id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+
+								<a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a>
+							</td>
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/recommend_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setRank = function(eid){
+	var v = $.trim($("#rank_"+eid).val());
+	$.ajax({ url: "/recommend_setRank.html",dataType:"html",type:"POST",data:"eid="+eid+"&rank="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+
+$(".ajax-search").click(function(){
+	var item = $('#search_item').val();
+	// if(item != "createTime"){
+	// 	var txt1 = $.trim($('#search_txt').val());
+	// }else{
+	// 	var txt1 = $.trim($('#time_from').val());
+	// 	var txt2 = $.trim($('#time_to').val());
+	// }
+	// if(txt1 == ""){
+	// 	return false;
+	// }
+	location.href='/recommend_index.html?item='+item;
+});
+/*
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+*/
+//-->
+</script>
+
+{$footer}

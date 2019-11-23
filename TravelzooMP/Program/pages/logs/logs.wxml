@@ -1,0 +1,32 @@
+<view class="our">
+  <view class="cuccess m-b-20">
+    <icon wx:if="{{from !== 'tuan'}}" type="success" size="60" color="#38da71" />
+    <icon wx:if="{{from === 'tuan'}}" type="success" size="60" color="#0276EE" />
+  </view>
+  <view id="color" class="{{from === 'tuan' ? 'color2' : 'color1'}}">支付成功</view>
+</view>
+<view class="our m-b-20">
+  <view class="priceCen">￥{{pay}}</view>
+  <view class="coupon" wx:if="{{ucid > 0}}">
+    <image src="../../img/jian.png"></image>
+    <text class="utitle">{{utitle}}</text>
+    <text class="upic">-￥{{upic}}</text>
+  </view>
+  <view class="cred" wx:if="{{from === 'tuan'}}">
+    <view>【重要提示】</view>
+    <view>请进入您刚才填写的邮箱激活账户，即可额外</view>
+    <view>获赠一张50元无门槛优惠券（新会员专享）！</view>
+  </view>
+  <view class="tips" wx:if="{{from !== 'tuan'}}">
+    <view class="m-t-10">本产品目前销售火爆</view>
+    <view class="m-t-10">到店使用兑换券前务必致电商家提前预定</view>
+    <view class="color-blue m-t-10">*订单详情中可查看商家电话*</view>
+  </view>
+  <view class="mt20mb30" wx:if="{{from === 'tuan'}}">
+    <button type="primary" catchtap="lookDetil" wx:if="{{from === 'tuan'}}">分享会提高中奖率哦~</button>
+  </view>
+  <view class="table-top">
+    <text>安全提醒：\nTravelzoo旅游族与商家均不会以订单问题，付款异常，系统升级等理由，通过微信，短信等发送给您退款链接。请提高警惕预防诈骗！</text>
+  </view>
+</view>
+<button type="primary" catchtap="lookDetil" wx:if="{{from !== 'tuan'}}">查看订单</button>

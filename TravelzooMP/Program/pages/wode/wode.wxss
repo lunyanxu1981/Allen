@@ -1,0 +1,59 @@
+image{
+  display: block;
+  width: 100%;
+  height: 100%
+}
+.show-pac {
+  width: 100%;
+  overflow: hidden;
+}
+ .show-pac image{
+  width: 100%;
+  height: 319px;
+} 
+ .personal_info {
+  background:#fff;
+  filter:blur(40rpx); 
+} 
+.photo_wrap {
+	text-align: center;
+  position:absolute;
+  top:170rpx;
+  width:100%;
+}
+.photo {
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+  border: 2px solid #fff;
+  position:relative;
+  left:50%;
+  margin-left:-45px;
+
+}
+.nickname {
+	margin-top: 15px;
+	text-align: center;
+	color: #fff;
+  font-size: 24px;
+}
+.arrow_wrap {
+  position: absolute;
+  right: 30rpx;
+  top: 38rpx;
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #7f7f7f;
+  border-right: 4rpx solid #7f7f7f;
+  transform: rotate(45deg);
+ } 
+.tableviecell{
+  padding: 26rpx 40rpx;
+  border-bottom: 1rpx solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin:20rpx 0;
+  font-size: 16px;
+}

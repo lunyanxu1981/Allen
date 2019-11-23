@@ -1,0 +1,113 @@
+@import "/pages/info/info.wxss";
+/**
+ * tuanPay
+ */
+.product_card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  margin: 20rpx;
+  padding: 30rpx 20rpx;
+}
+.pro-left image {
+  width: 172rpx;
+  height: 198rpx;
+}
+.pro-right {
+  padding: 0 20rpx;
+}
+.pro-name {
+  margin: -6rpx 0 15rpx 0;
+  line-height: 1.2;
+}
+.price-wrap {
+  color: #c44;
+  font-size: 22.4rpx;
+}
+.n-price {
+  font-weight: 600;
+  font-size: 48rpx;
+  color: #c44;
+}
+.o-price {
+  font-size: 22rpx;
+  color: #7a7878;
+  text-decoration: line-through;
+}
+.tuan-price {
+  background-color: #c44;
+  color: #fff;
+  font-size: 22rpx;
+  padding: 0 4rpx;
+  margin-left: 5rpx;
+}
+.jiang {
+  height: 451rpx;
+  width: 608rpx;
+}
+.btn-closej {
+  position: absolute;
+  right: 60rpx;
+  top:0;
+  background-color: #f00;
+  height: 80rpx;
+  width: 80rpx;
+  opacity: 0;
+}
+/* end */
+.pay_order_wrap{background: #fff;margin: 10px 0px;}
+.table_header{padding: 10px;font-size: 16px;border-bottom: 1px solid #E5E5E5;}
+.table_content{font-size: 14px;padding:15px 10px;}
+.table_goods_name{display: inline-block;width: 60%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.table_goods_num{display: inline-block;width: 20%;text-align: right;}
+.table_goods_con{display: inline-block;width: 20%;text-align: right;}
+.pay_order_wrap ul{
+  padding: 0 22rpx;
+  display: flex;
+  flex-direction: column;
+}
+.pay_order_wrap ul li{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  flex-direction: row;
+  border-bottom: 1px solid #E5E5E5;
+}
+.pay_order_wrap ul li .txt{
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #000;
+  width: 120rpx;
+  font-size: 28rpx;
+}
+.pay_order_wrap ul li input{
+  flex: 1;
+}
+.placeholder-class{font-size: 24rpx;}
+.table_fotter{font-size: 24rpx;text-align: center;color: #fcb971;line-height: 50px;}
+.agree{display: flex;padding: 24rpx;font-size: 24rpx;line-height: 36rpx;}
+.radio{
+  border: 2rpx solid #0276ee;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 3rpx;
+  display: flex;
+  text-align: center;
+  margin-right: 20rpx;
+}
+.radio .icon{margin: 5rpx auto;}
+.agree navigator {color: #0276ee;}
+.lookdis{display:flex;align-items:center;flex-direction:row;border-bottom:1px solid #e5e5e5;font-size:14px;padding:15px 10px;}
+.lookdis view{display:flex;flex:1;}
+.lookdis span{color: #e64340;}
+.btn{border-radius: 0;border: none;margin-bottom:-5px;
+}
+.btn::after {
+    border-radius: 0;
+}
+.btn-pay {
+  background: #0276EE;
+  color: #fff;
+  line-height: 100rpx;
+  height: 100rpx;
+  margin-bottom: 0;  
+}

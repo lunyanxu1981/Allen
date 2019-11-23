@@ -1,0 +1,202 @@
+﻿<html lang="zh">
+<head>
+
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+    <link href="css/common.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="/js/plugin/jquery.validate.js"></script>
+
+    <link href="js/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
+    <link href="js/jquery-ui-1.12.1/jquery-ui-timepicker-addon.min.css" rel="stylesheet">
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui-timepicker-addon.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui-timepicker-zh-CN.js"></script>
+    
+    <!-- <link rel="stylesheet" href="/js/ui/jquery.ui.all.css">
+    <script src="/js/ui/jquery.ui.core.js"></script>
+    <script src="/js/ui/jquery.ui.widget.js"></script>
+    <script src="/js/ui/jquery.ui.datepicker.js"></script>
+    <script src="/js/ui/i18n/jquery.ui.datepicker-zh-CN.js"></script> -->
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+</head>
+
+<body>
+{if $no_visible_elements != 1}
+<!-- topbar starts -->
+<div class="navbar navbar-default" role="navigation">
+
+    <div class="navbar-inner">
+        <button type="button" class="navbar-toggle pull-left animated flip">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <!-- <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/> -->
+            <span>Travel Zoo</span></a>
+
+        <!-- user dropdown starts -->
+        <div class="btn-group pull-right">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-user"></i><span class="hidden-sm hidden-xs">{$bkUserArr['nickname']}</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <!-- <li><a href="#">Profile</a></li>
+                <li class="divider"></li> -->
+                <li><a href="main_logout.html">Logout</a></li>
+            </ul>
+        </div>
+        <!-- user dropdown ends -->
+
+        <!-- theme selector starts -->
+        <!--
+        <div class="btn-group pull-right theme-container animated tada">
+            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="glyphicon glyphicon-tint"></i><span
+                    class="hidden-sm hidden-xs"> Change Theme / Skin</span>
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="themes">
+                <li><a data-value="classic" href="#"><i class="whitespace"></i> Classic</a></li>
+                <li><a data-value="cerulean" href="#"><i class="whitespace"></i> Cerulean</a></li>
+                <li><a data-value="cyborg" href="#"><i class="whitespace"></i> Cyborg</a></li>
+                <li><a data-value="simplex" href="#"><i class="whitespace"></i> Simplex</a></li>
+                <li><a data-value="darkly" href="#"><i class="whitespace"></i> Darkly</a></li>
+                <li><a data-value="lumen" href="#"><i class="whitespace"></i> Lumen</a></li>
+                <li><a data-value="slate" href="#"><i class="whitespace"></i> Slate</a></li>
+                <li><a data-value="spacelab" href="#"><i class="whitespace"></i> Spacelab</a></li>
+                <li><a data-value="united" href="#"><i class="whitespace"></i> United</a></li>
+            </ul>
+        </div> -->
+        <!-- theme selector ends -->
+        <!--
+        <ul class="collapse navbar-collapse nav navbar-nav top-menu">
+            <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Visit Site</a></li>
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown"><i class="glyphicon glyphicon-star"></i> Dropdown <span
+                        class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">One more separated link</a></li>
+                </ul>
+            </li>
+            <li>
+                <form class="navbar-search pull-left">
+                    <input placeholder="Search" class="search-query form-control col-md-10" name="query"
+                           type="text">
+                </form>
+            </li>
+        </ul> -->
+
+    </div>
+</div>
+<!-- topbar ends -->
+{/if}
+<div class="ch-container">
+    <div class="row">
+        {if $no_visible_elements != 1}
+
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">Main</li>
+                        <!-- 超级管理员  -->
+                        {if $bkUserArr['level'] == 1}
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span>小程序管理</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a class="ajax-link" href="/user_index.html">用户管理</a></li>
+                                <li><a class="ajax-link" href="/product_index.html">商品管理</a></li>
+                                <li><a class="ajax-link" href="/userOrder_index.html">订单管理</a></li>
+                                <li><a class="ajax-link" href="/recommend_index.html">首页管理</a></li>
+                                <li><a class="ajax-link" href="/coupon_index.html">优惠券管理</a></li>
+                                <li><a class="ajax-link" href="/userCoupon_index.html">用户优惠券管理</a></li>
+                                <li><a class="ajax-link" href="/bannerList_index.html">banner列表管理</a></li>
+                            </ul>
+                         </li>
+                        <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span>拼团管理</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a class="ajax-link" href="/productGroup_index.html">商品管理</a></li>
+                                <li><a class="ajax-link" href="/userOrderGroup_index.html">订单管理</a></li>
+                                <li><a class="ajax-link" href="/userFeedback_index.html">用户反馈管理</a></li>
+                                <li><a class="ajax-link" href="/notice_index.html">公告管理</a></li>
+                            </ul>
+                         </li>
+                        <!-- sharing  -->
+                        {elseif $bkUserArr['level'] == 2}
+                        <!--  <li class="accordion">
+                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span>日常管理</span></a>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a class="ajax-link" href="/manager_index.html">员工管理</a></li>
+                                <li><a class="ajax-link" href="/event_index.html">中奖名单</a></li>
+                                <li><a class="ajax-link" href="/dataStat_index.html">数据统计</a></li>
+                            </ul>
+                         </li> -->
+
+                        {/if}
+                        <li class="nav-header"></li>
+                    </ul>
+                    <!-- 
+                    <label id="for-is-ajax" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
+                	 -->
+
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            {/if}
+            <iframe name="head" src='' height=0 width=0 style="display:none;"></iframe>
+

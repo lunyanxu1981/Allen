@@ -1,0 +1,163 @@
+{$header}
+<!-- <div>
+	<ul class="breadcrumb">
+		<li><a href="#">基础设置</a></li>
+		<li><a href="#">店铺管理</a></li>
+	</ul>
+</div>
+ -->
+<div class="row">
+	<div class="box col-md-12">
+		<div class="box-inner">
+			<div class="box-header well" data-original-title="">
+				<h2>
+					<i class="glyphicon glyphicon-th-large"></i> 用户管理
+				</h2>
+			</div>					
+			<div class="box-content">
+				<div class="row" style="padding-bottom:10px;">
+					<div class="col-xs-12">
+						<!-- <button class="btn btn-default btn-sm ajax-all" onclick="location.href='/photo_index.html'"><i class="glyphicon glyphicon-list"></i>显示全部</button>
+						<span style="padding-left:20px;"></span> -->
+						<!-- <button class="btn btn-default btn-sm ajax-add" onclick="location.href='/user_add.html'"><i class="glyphicon glyphicon-plus"></i> 新 增</button> -->
+						<span style="padding-left:20px;"></span>
+						<select id="skey" name="skey">
+							<option value=""{if $getArr["skey"] == ""} selected{/if}>请选择</option>
+	                        <option value="id"{if $getArr["skey"] == "id"} selected{/if}>id</option>
+	                        <option value="openid"{if $getArr["skey"] == "openid"} selected{/if}>openid</option>
+	                        <option value="nickname"{if $getArr["skey"] == "nickname"} selected{/if}>昵称</option>
+	                        <!-- <option value="phone"{if $getArr["skey"] == "phone"} selected{/if}>手机号</option>
+	                        <option value="waitCheck"{if $getArr["skey"] == "waitCheck"} selected{/if}>待认证</option>
+	                        <option value="checked"{if $getArr["skey"] == "checked"} selected{/if}>已认证</option> -->
+	                    </select>
+	                    <input type="text" id="svalue" name="svalue" value="{$getArr['svalue']}">
+	                    <!-- <select id="order" name="order">
+							<option value=""{if $getArr["order"] == ""} selected{/if}>排序内容</option>
+	                        <option value="point"{if $getArr["order"] == "point"} selected{/if}>可用积分</option>
+	                        <option value="level_point"{if $getArr["order"] == "level_point"} selected{/if}>等级分值</option>
+	                    </select>
+	                    <select id="by" name="by">
+							<option value=""{if $getArr["by"] == ""} selected{/if}>排序方式</option>
+	                        <option value="desc"{if $getArr["by"] == "desc"} selected{/if}>降序</option>
+	                        <option value="asc"{if $getArr["by"] == "asc"} selected{/if}>升序</option>
+	                    </select> -->
+	                    <button class="btn btn-default btn-sm ajax-search"><i class="glyphicon glyphicon-search"></i> 搜 索</button>
+					</div>
+				</div>
+				<table class="table table-bordered table-striped table-condensed">
+					<thead>
+						<tr>
+							<th width="3%">id</th>
+							<th width="10%">openid</th>
+							<th width="15%">微信资料</th>
+							<!-- <th width="8%">积分</th> -->
+							<th width="10%">创建时间</th>
+							<!-- <th width="8%">管理</th> -->
+						</tr>
+					</thead>
+					<tbody>
+					{loop $itemList $itemArr}
+						<tr>
+							<td class="center">{$itemArr["id"]}</td>
+							<td class="center">
+								{$itemArr["openid"]}
+							</td>
+							<td class="center">
+								{$itemArr["nickname"]}<br>
+								{if $itemArr["headimgurl"] != ""}<img src="{$itemArr["headimgurl"]}" height="100">{/if}<br>
+								{if $itemArr["sex"] == "1"}男
+								{elseif $itemArr["sex"] == "2"}女
+								{/if}<br>
+								{$itemArr["country"]} {$itemArr["province"]} {$itemArr["city"]}<br>
+							</td>
+							<td class="center">{$itemArr["create_time"]}</td>
+							<!-- <td class="center"><input type="text" class="form-control" style="width:50px;" id="rank_{$itemArr['id']}" onblur="setRank({$itemArr['id']});" value="{$itemArr["rank"]}"></td> -->
+							<!-- <td class="center"><span class="span-red">active</span></td> -->
+							<!-- <td class="center">
+								<a class="btn btn-info btn-xs ajax-edit" href="/user_edit_eid_{$itemArr['id']}.html"> 
+									<i class="glyphicon glyphicon-edit icon-white"></i>
+									编辑
+								</a>
+								<a class="btn btn-danger btn-xs ajax-del" href="#" id="{$itemArr['id']}">
+									<i class="glyphicon glyphicon-trash icon-white"></i> 
+									删除
+								</a>
+							</td> -->
+						</tr>
+					{/loop}
+					</tbody>
+				</table>
+				{$page}
+			</div>
+		</div>
+	</div>
+	<!--/span-->
+
+</div>
+
+<script type="text/javascript">
+<!--
+$('.ajax-del').click(function(){
+	var eid = $(this).attr('id');
+	if (confirm("你确认删除吗?")==true){
+		$.ajax({ url: "/user_del.html",dataType:"html",type:"POST",data:"eid="+eid,
+			 success:function(v) {
+				if (v=="-1") {
+					alert("尚未登录！");
+					return false;
+				}else{
+					alert("删除成功！");
+					window.location.reload();
+				}
+			 }
+		});
+		return false;
+	}
+});
+var setRank = function(eid){
+	var v = $.trim($("#rank_"+eid).val());
+	$.ajax({ url: "/user_setRank.html",dataType:"html",type:"POST",data:"eid="+eid+"&rank="+v,
+		 success:function(v) {
+			if (v=="1") {
+				return true;
+			}
+		 }
+	});
+};
+
+$(".ajax-search").click(function(){
+	var skey = $("#skey").val();
+	var svalue = $('#svalue').val();
+	var order = $('#order').val();
+	var by = $('#by').val();
+	// location.href='/user_index.html?skey='+skey+'&svalue='+svalue+'&order='+order+'&by='+by;
+	location.href='/user_index.html?skey='+skey+'&svalue='+svalue;
+});
+/*
+$(function(){
+	$("#search_item").change(function(){
+		var item = $('#search_item').val();
+		if(item == "createTime"){
+			$("#time_txt_span").show();
+			$("#id_txt_span").hide();
+			$('#time_from').val("");
+			$('#time_to').val("");
+		}else{
+			$("#time_txt_span").hide();
+			$("#id_txt_span").show();
+		}
+	});
+
+});
+
+$("#type").change(function(){
+	var pid = $(this).val();
+	$.get("/activity_getSubclass.html?pid="+pid,function(v){
+		$("#category").html(v);
+	});
+});
+*/
+//-->
+</script>
+
+{$footer}

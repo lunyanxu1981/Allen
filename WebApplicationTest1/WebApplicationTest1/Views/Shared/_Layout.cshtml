@@ -39,12 +39,12 @@
                             <li>@Html.ActionLink("Payease Gift Card Orders Inquiry", "PayeaseGiftCardOrderInquiry", "Home")</li>
                             <li>@Html.ActionLink("Payease Gift Card Refund Inquiry", "PayeaseGiftCardRefundInquiry", "Home")</li>
                         </ul>
-                    
+
                     </li>
-                    
+
                 </ul>
-            </div>
         </div>
+    </div>
     </div>
     <div class="container body-content">
         @RenderBody()
@@ -55,6 +55,7 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

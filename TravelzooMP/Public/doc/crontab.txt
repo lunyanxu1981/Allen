@@ -1,0 +1,2 @@
+10 0 * * * /alidata/server/php/bin/php -r 'file_get_contents("https://travelzoo.m-int.cn/mall_updateAllDeals.html");' 2>&1
+10 12 * * * /alidata/server/php/bin/php -r 'file_get_contents("https://travelzoo.m-int.cn/mall_updateVoucherStatus.html");' 2>&1

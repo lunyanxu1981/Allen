@@ -1,0 +1,92 @@
+/* pages/mine/mine.wxss */
+@import "/pages/test/test.wxss";
+navigator{
+  background:#fff;
+}
+.shop-title{
+  font-size:28rpx;
+  line-height:1.7em;
+
+}
+.shop-item{
+  height:auto;
+  position:relative;
+  overflow: hidden;
+  padding-bottom:20rpx;
+  background:#fff;
+}
+.tave-item-img{
+  width:100%;
+  height:380rpx;
+}
+.tave-item-img-320{
+  width:100%; 
+  height:320rpx; 
+}
+.tave-item-img-360{
+  width:100%;
+  height:360rpx; 
+}
+.tave-item-title{
+  width: 100%;
+  height:auto;
+  padding:15rpx 20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.item-price{
+  color:#0276ee;
+  font-weight: 700;
+  margin: 15rpx 0rpx;
+}
+.from{
+  font-size: 22rpx;
+  color:#b9b9b9;
+}
+.shop-from{
+  float: left;
+}
+.shop-Selected{
+  float: right;
+}
+/*二期修改样式  */
+.shop-title text{
+  border:1px solid #0276ee;
+  padding:3rpx;
+  color:#0276ee;
+  font-size:23rpx;
+}
+.ui-flex {
+  display:flex;
+}
+.nav-item {
+  width:25%;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  padding:40rpx 20rpx;
+  background:#ffffff;
+
+}
+.nav-img {
+  width:100rpx;
+  height:100rpx;
+}
+.nav-text {
+  padding-top:20rpx;
+  font-size:28rpx;
+}
+.top-one-nav{
+  margin-bottom: -5px;
+  background:#fff;
+}
+.popuer{
+  width: 100%;
+  height: auto;
+}
+.popuer image{
+  width: 230rpx;
+  height:30rpx;
+  margin: 30rpx auto;
+  display: block;
+}

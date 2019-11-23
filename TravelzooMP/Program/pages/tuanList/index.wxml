@@ -1,0 +1,26 @@
+<scroll-view>
+  <view class="list-tuancard" wx:if="{{tuanList.length > 0}}">
+    <block wx:for="{{tuanList}}" wx:key="{{index}}">
+      <navigator url="/pages/tuanOrderDetails/index?gid={{item.id}}&state={{stateArr[index]}}">
+        <view class="card-tuan">
+          <view class="tit-tuan">
+            <text>{{item.productArr.title}}</text>
+          </view>
+          <view class="oh card-tuan-bottom">
+            <view class="fl tuan-time">
+              <text>拼团成功后次日中午12点发布中奖结果</text>
+              <!-- <text>购买时间{{item.pay_time}}</text> -->
+            </view>
+            <view class="fr tuan-status">
+              <text>{{tStatus[item.group_status]}}</text>
+              <view class="icon-arrow-right"></view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+  <view class="nothings" wx:if="{{tuanList.length === 0}}">
+    <text>您的拼团订单空空如也，\n快去和好友一起拼团吧！</text>
+  </view>
+</scroll-view>

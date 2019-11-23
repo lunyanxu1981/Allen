@@ -1,0 +1,138 @@
+<scroll-view class="container" scroll-y="{{isScroll}}">
+  <swiper class="swiper" indicator-dots="false" indicator-active-color="#0276EE" autoplay="true" interval="3000" duration="500">
+    <block wx:for="{{productDetail.imgList}}" wx:key="item">
+      <swiper-item>
+        <image wx:if="{{item.img_name}}" src="{{item.img_name}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="btn-book {{isIphoneX}} {{state == 1 ? '' : 'btn-book2'}}">
+    <view catchtap="goHome" style="width: 25%;float: left;background: #fff;color:#b9b9b9;" class="{{isIphoneX === 'btn-x' ? 'h169' : ''}}">
+      <image src="../../img/family.png" style="width:63rpx;height:63rpx"></image>
+      <view style="margin-top:-74rpx;font-size:28rpx;">首页</view>
+    </view>
+    <view catchtap="goPay" wx:if="{{expiredStatus == 1}}" class="btn-blue {{state==2 ? 'btn-book2' : ''}}">
+      <text wx:if="{{state == 1 && gid == 0}}">发起拼团</text>
+      <text wx:if="{{state == 1  && gid != 0}}">查看拼团进程</text>
+      <text wx:if="{{state == 2}}">敬请期待</text>
+    </view>
+    <view wx:if="{{expiredStatus == 0}}" class="btn-blue btn-book2">
+      <text>产品已过期</text>
+    </view>
+  </view>
+  <view>
+    <view class="tave-item-title b-white">
+      <view class="shop-title font-size-30">{{productDetail.title}}</view>
+      <view class="price-wrap oh">
+        <text class="fl mt10" style="visibility:{{state == 2 ? 'hidden' : 'visible'}}">活动倒计时：{{endTime}}</text>
+        <view class="fr">
+          <text class="n-price">￥{{productDetail.price}}</text>
+          <text class="o-price">￥{{productDetail.value}}</text>
+        </view>
+      </view>
+      <view class="oh">
+        <text class="from shop-from">{{productDetail.location_name}}</text>
+        <text class="from shop-Selected">{{productDetail.storeArr.DisplayName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="tuan-wf">
+    <view class="f28">
+      <text>拼团玩法</text>
+    </view>
+    <view class="f22 dflex">
+      <view class="flex1">
+        <text class="wf-num">1</text>
+        <text>选择商品，开团或拼团</text>
+      </view>
+      <view class="flex1">
+        <text class="wf-num">2</text>
+        <text>付款后邀请好友参团</text>
+      </view>
+    </view>
+    <view class="f22 dflex">
+      <view class="flex1">
+        <text class="wf-num">3</text>
+        <text>达到人数顺利成团，等待开奖</text>
+      </view>
+      <view class="flex1">
+        <text class="wf-num">4</text>
+        <text>若拼团失败，全额退款</text>
+      </view>
+    </view>
+  </view>
+  <view class="b-white">
+    <view class="nav">
+      <view class="{{selected?'red':'default'}}" data-index="1" bindtap="selected">
+        <text>推荐理由</text>
+      </view>
+      <view class="{{!selected?'red':'default'}}" data-index="2" bindtap="selected">服务包含</view>
+    </view>
+    <view class="{{selected?'show':'hidden'}} showText">
+      <view class="f-w-b">优惠：</view>
+      <text>{{productDetail.lead}}</text>
+      <view wx:if="{{seeAllGoods}}">
+        <view class="f-w-b m-t-20">亮点：</view>
+        <text>{{productDetail.why_we_love}}</text>
+      </view>
+      <view class="laa" bindtap="goodsmore">
+        {{btnMsg}}
+        <image src="{{seeAllGoods?'../../img/arrow_up.png':'../../img/arrow_down.png'}}" mode="aspectFill"></image>
+      </view>
+    </view>
+    <view class="{{!selected?'show':'hidden'}} showText">
+      <view class="f-w-b">优惠详情及有效期：</view>
+      <text>{{productDetail.valid_date}}</text>
+      <text>{{productDetail.what_is_included}}</text>
+      <view class="f-w-b m-t-20">温馨提示：</view>
+      <text>{{productDetail.fine_print}}</text>
+      <view class="f-w-b m-t-20">地址：</view>
+      <view class="f-w-b">{{productDetail.storeArr.DisplayName}}</view>
+      <view class="f-w-b">{{productDetail.storeArr.StreetAddress1}}</view>
+      <view class="f-w-b m-t-20 color-blue" bindtap="calling" data-phone="{{productDetail.storeArr.Phone}}">
+        <view style="display: inline-block;margin-bottom: 0;position: relative;top: -6px;">
+          立即电话预定：
+        </view>
+        <image src="../../img/phone.png" style="width: 25px;height: 25px;"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tuan-rule {{isIphoneX === 'btn-x' ? 'pb228' : ''}}">
+    <text class="f26 fbold c0">拼团活动规则</text>
+    <view class="f26 c60">
+      <text>1. 在活动期间内邀请规定数量的好友参与拼团，拼团成功后该团所有成员均获得抽奖资格。\n</text>
+      <text>2. 每期拼团产品的中奖者在所有具备抽奖资格的用户中随机抽取产生。\n</text>
+      <text>3. 拼团成功后次日中午12点开奖，中奖结果可至“我的拼团订单”列表查看。\n</text>
+      <text>4. 若拼团失败将全额退款，并获得5元无门槛优惠券。拼团成功但未中奖可获得10元无门槛优惠券。\n</text>
+      <text>5. 每个拼团产品，每位用户有且只有一次参与机会，包含开团和参团两种形式。\n</text>
+      <text>6. 如有其他疑问，</text>
+      <text class="btn-yj" bindtap="showForm">可填写反馈意见</text>
+      <text>。\n</text>
+      <text>7. 本次活动最终解释权归Travelzoo旅游族所有。\n</text>
+    </view>
+  </view>
+  <!-- 遮罩 -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+</scroll-view>
+<!-- 反馈意见弹层 -->
+<view class="modal-box2 modal-wrap" hidden="{{box2Status}}">
+  <view class="modal-cont pr">
+    <view class="tc">
+      <text class="tit-fk">反馈意见</text>
+    </view>
+    <textarea class="area-fk" bindinput="inputAreaEvent" value="{{areaValue}}" placeholder="您的意见是我们进步的动力！"></textarea>
+    <button class="btn-sub" bindtap="fkSubmit">提 交</button>
+    <image src="../../img/close1.png" class="btn-close" bindtap="hideBox2"></image>
+  </view>
+</view>
+<!-- 优惠券弹层 -->
+<view class="modal-box" hidden="{{true}}">
+  <image src="../../img/50.jpg" class="fenxiang-btn"></image>
+  <image src="../../img/close1.png" class="close-hide" bindtap="hide"></image>
+  <button type="default" catchtap="receive_50" hover-class="other-button-hover">立即领取</button>
+</view>
+<view class="modal-box" hidden="{{true}}">
+  <image src="../../img/68.jpg" class="fenxiang-btn"></image>
+  <image src="../../img/close1.png" class="close-hide" bindtap="hide"></image>
+  <button type="default" catchtap="receive_68" hover-class="other-button-hover">立即领取</button>
+</view>
