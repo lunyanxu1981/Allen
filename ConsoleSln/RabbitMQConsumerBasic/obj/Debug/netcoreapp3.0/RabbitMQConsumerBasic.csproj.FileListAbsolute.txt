@@ -1,0 +1,12 @@
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.exe
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\obj\Debug\netcoreapp3.0\RabbitMQConsumerBasic.AssemblyInfoInputs.cache
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\obj\Debug\netcoreapp3.0\RabbitMQConsumerBasic.AssemblyInfo.cs
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.deps.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.runtimeconfig.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.runtimeconfig.dev.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQConsumerBasic.pdb
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\bin\Debug\netcoreapp3.0\RabbitMQ.Client.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\obj\Debug\netcoreapp3.0\RabbitMQConsumerBasic.csproj.CopyComplete
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\obj\Debug\netcoreapp3.0\RabbitMQConsumerBasic.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQConsumerBasic\obj\Debug\netcoreapp3.0\RabbitMQConsumerBasic.pdb

@@ -49,13 +49,22 @@ namespace WebApplicationTest1.Controllers
             public string Item2 { get; set; }
             public string Item3 { get; set; }
         }
+
         public string TestWelcome(string name, int num = 1)
         {
             return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: ");
         }
 
+        
+
         public ActionResult TestTuple()
         {
+            string boolstr = "False";
+            bool bvar = true;
+            if (bool.TryParse(boolstr, out bvar))
+            {
+
+            }
             EntityTest obj = new EntityTest();
             (obj.Item1, obj.Item2, obj.Item3) = GetTuple();
             return Content($"{obj.Item1} {obj.Item2} {obj.Item3}");
@@ -206,7 +215,6 @@ namespace WebApplicationTest1.Controllers
             }
             return Content(content);
         }
-
 
         public static string MaskCreditCard(string creditCardNumber)
         {
@@ -1159,6 +1167,21 @@ namespace WebApplicationTest1.Controllers
 
 
             string resStr = string.Empty;
+            try
+            {
+                
+                var httpWebRequest = new HttpWebRequester(Encoding.UTF8)
+                {
+                    IgnoreHttpsCertificateValidation = true,
+                    ContentType = "text/xml;charset=\"utf-8\"",
+                    Accept = "text/xml"
+                };
+                string res = httpWebRequest.SoapPost(request, GetFirstDataAPIUrl(), GetFirstDataHKCert(is3DS), GetFirstDataHKNetCredential(is3DS));
+                EnvelopeFDCC obj = SOAPToObject<EnvelopeFDCC>(res);
+                resStr = res;
+                resStr = XDocument.Parse(resStr).ToString();
+            }
+            /*
             XmlDocument soapEnvelopeXml = new XmlDocument();
             soapEnvelopeXml.LoadXml(request);
             HttpWebRequest webRequest = CreateHttpWebRequest(is3DS);
@@ -1180,7 +1203,7 @@ namespace WebApplicationTest1.Controllers
                         resStr = XDocument.Parse(resStr).ToString();
                     }
                 }
-            }
+            }*/
             catch (WebException ex)
             {
                 resStr = new StreamReader(ex.Response.GetResponseStream()).ReadToEnd();

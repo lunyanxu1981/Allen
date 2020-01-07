@@ -126,6 +126,10 @@ namespace WebApplicationTest1.Models
         [XmlElement(ElementName = "TransactionTime", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
         public string TransactionTime { get; set; }
 
+        [XmlElement(ElementName = "HostedData", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
+        public HostedDataFDCC HostedData { get; set; }
+
+
         [XmlElement(ElementName = "Secure3DResponse", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
         public Secure3DResponse Secure3DResponse { get; set; }
 
@@ -165,7 +169,12 @@ namespace WebApplicationTest1.Models
         public string ResponseCode3dSecure { get; set; }
     }
 
-    
+    [XmlRoot(ElementName = "HostedData", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
+    public class HostedDataFDCC
+    {
+        [XmlElement(ElementName = "HostedDataID", Namespace = "http://ipg-online.com/ipgapi/schemas/ipgapi")]
+        public string HostedDataID { get; set; }
+    }
 
     [XmlRoot(ElementName = "Fault", Namespace = "http://schemas.xmlsoap.org/soap/envelope/")]
     public class FaultFDCC

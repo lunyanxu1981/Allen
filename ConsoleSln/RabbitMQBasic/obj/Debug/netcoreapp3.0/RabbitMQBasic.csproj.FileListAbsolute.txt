@@ -1,0 +1,13 @@
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.exe
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.csprojAssemblyReference.cache
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.AssemblyInfoInputs.cache
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.AssemblyInfo.cs
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.deps.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.runtimeconfig.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.runtimeconfig.dev.json
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQBasic.pdb
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\bin\Debug\netcoreapp3.0\RabbitMQ.Client.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.csproj.CopyComplete
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.dll
+D:\Work\GitHub\Allen\ConsoleSln\RabbitMQBasic\obj\Debug\netcoreapp3.0\RabbitMQBasic.pdb

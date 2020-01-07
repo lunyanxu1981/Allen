@@ -1,0 +1,11 @@
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.exe
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.deps.json
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.runtimeconfig.json
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.runtimeconfig.dev.json
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.dll
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\bin\Debug\netcoreapp3.0\ConsoleAlgorithm.pdb
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\obj\Debug\netcoreapp3.0\ConsoleAlgorithm.csprojAssemblyReference.cache
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\obj\Debug\netcoreapp3.0\ConsoleAlgorithm.AssemblyInfoInputs.cache
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\obj\Debug\netcoreapp3.0\ConsoleAlgorithm.AssemblyInfo.cs
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\obj\Debug\netcoreapp3.0\ConsoleAlgorithm.dll
+D:\Work\GitHub\Allen\VSCodeWorkspace\ConsoleAlgorithm\obj\Debug\netcoreapp3.0\ConsoleAlgorithm.pdb

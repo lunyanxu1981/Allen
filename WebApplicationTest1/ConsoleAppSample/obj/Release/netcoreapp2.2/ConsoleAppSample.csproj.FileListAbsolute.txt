@@ -1,0 +1,11 @@
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\bin\Release\netcoreapp2.2\ConsoleAppSample.deps.json
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\bin\Release\netcoreapp2.2\ConsoleAppSample.runtimeconfig.json
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\bin\Release\netcoreapp2.2\ConsoleAppSample.runtimeconfig.dev.json
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\bin\Release\netcoreapp2.2\ConsoleAppSample.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\bin\Release\netcoreapp2.2\ConsoleAppSample.pdb
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.csprojAssemblyReference.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.csproj.CoreCompileInputs.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.AssemblyInfoInputs.cache
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.AssemblyInfo.cs
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.dll
+D:\Work\GitHub\Allen\WebApplicationTest1\ConsoleAppSample\obj\Release\netcoreapp2.2\ConsoleAppSample.pdb

@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Xml;
 
 namespace WebApplicationTest1.App_Start
 {
@@ -18,6 +19,7 @@ namespace WebApplicationTest1.App_Start
 
         public string UserAgent { get; set; }
         public string ContentType { get; set; }
+        public string Accept { get; set; }
 
         public bool? Expect100Continue { get; set; }
         public bool? IgnoreHttpsCertificateValidation { get; set; }
@@ -87,6 +89,7 @@ namespace WebApplicationTest1.App_Start
 
             httpRequest.UserAgent = this.UserAgent;
             httpRequest.ContentType = this.ContentType;
+            httpRequest.Accept = string.IsNullOrEmpty(this.Accept) ? httpRequest.Accept : this.Accept;
 
             //if set expect-100-continue
             if ((httpRequest.ServicePoint != null) &&
@@ -188,6 +191,40 @@ namespace WebApplicationTest1.App_Start
 
         }
 
+        public string SoapPost(string soapContent, string url, X509Certificate2 certificate = null, NetworkCredential credential = null)
+        {
+            try
+            {
+                this.SetSecurityProtocolType();
+                XmlDocument soapEnvelopeXml = new XmlDocument();
+                soapEnvelopeXml.LoadXml(soapContent);
+                HttpWebRequest httpRequest = this.CreateHttpRequest(url);
+                httpRequest.Method  = "POST";
+                if (certificate != null)
+                {
+                    httpRequest.ClientCertificates.Add(certificate);
+                }
+
+                if (credential != null)
+                {
+                    httpRequest.Credentials = credential;
+                }
+                using (Stream requestStream = httpRequest.GetRequestStream())
+                {
+                    soapEnvelopeXml.Save(requestStream);
+                }
+
+                return this.GetResponse(httpRequest);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.RetrieveSecurityProtocolType();
+            }
+        }
         public string Post(byte[] data, string url)
         {
             return this.Submit(data, url, "POST");
